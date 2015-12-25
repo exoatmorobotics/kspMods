@@ -1,0 +1,35 @@
+{
+    "NAME":"UbioWeldingLtd 1.0.5 Release",
+    "URL":"https://raw.githubusercontent.com/UbioWeldingLtd/UbioWeldContinued/dev-1.0/GameData/UbioWeldingLtd/UbioWeldingLtd.version",
+    "GITHUB":
+    {
+        "USERNAME":"UbioWeldingLtd",
+        "REPOSITORY":"UbioWeldContinued",
+        "ALLOW_PRE_RELEASE":false,
+    },
+    "VERSION":
+    {
+        "MAJOR":2,
+        "MINOR":2,
+        "PATCH":2,
+        "BUILD":0
+    },
+    "KSP_VERSION":
+    {
+        "MAJOR":1,
+        "MINOR":0,
+        "PATCH":4
+    },
+    "KSP_VERSION":
+    {
+        "MAJOR":1,
+        "MINOR":0,
+        "PATCH":4
+    },
+    "KSP_VERSION_MAX":
+    {
+        "MAJOR":1,
+        "MINOR":0,
+        "PATCH":5
+    }
+} 

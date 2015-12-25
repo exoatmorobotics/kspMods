@@ -1,0 +1,18 @@
+{
+	"NAME":"Spacetux",
+	"URL":"http://ksp-avc.cybutek.net/version.php?id=139",
+        "DOWNLOAD":"https://kerbalstuff.com/mod/656/Spacetux%20Shared%20Assets/download/",
+	"VERSION":
+	{
+		"MAJOR":0,
+		"MINOR":3,
+		"PATCH":9,
+		"BUILD":0
+	},
+	"KSP_VERSION":
+	{
+		"MAJOR":1,
+		"MINOR":0,
+		"PATCH":5
+	}
+}

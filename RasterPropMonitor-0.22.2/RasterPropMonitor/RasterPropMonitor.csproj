@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F19C7AB4-50C2-4378-9673-CC039CA12E10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JSI</RootNamespace>
+    <AssemblyName>RasterPropMonitor</AssemblyName>
+    <ReleaseVersion>0.22.2</ReleaseVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <CodePage>65001</CodePage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LangVersion>4</LangVersion>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="..\bin\Release\BumpBuildNumber.exe" workingdir="${SolutionDir}" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\Games\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\RPMVesselComputer.cs" />
+    <Compile Include="Core\CustomVariable.cs" />
+    <Compile Include="Core\MappedVariable.cs" />
+    <Compile Include="Core\Protractor.cs" />
+    <Compile Include="Core\TextRenderer.cs" />
+    <Compile Include="Handlers\IJSIModule.cs" />
+    <Compile Include="Handlers\JSIFAR.cs" />
+    <Compile Include="Handlers\JSIGimbal.cs" />
+    <Compile Include="Handlers\JSIGraphingBackground.cs" />
+    <Compile Include="Handlers\JSIMechJeb.cs" />
+    <Compile Include="Handlers\JSIParachute.cs" />
+    <Compile Include="Handlers\JSISASMenu.cs" />
+    <Compile Include="Handlers\MechJebRPM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\ButtonHandler.cs" />
+    <Compile Include="Core\FlyingCamera.cs" />
+    <Compile Include="Auxiliary modules\InternalCameraTargetHelper.cs" />
+    <Compile Include="Auxiliary modules\JSIActionGroupSwitch.cs" />
+    <Compile Include="Auxiliary modules\JSIExternalCameraSelector.cs" />
+    <Compile Include="Auxiliary modules\JSIPropTextureShift.cs" />
+    <Compile Include="Auxiliary modules\JSIVariableAnimator.cs" />
+    <Compile Include="Core\MonitorPage.cs" />
+    <Compile Include="Core\SIFormatter.cs" />
+    <Compile Include="Core\UtilityFunctions.cs" />
+    <Compile Include="Core\PropMonitorComputer.cs" />
+    <Compile Include="Core\RasterPropMonitor.cs" />
+    <Compile Include="Auxiliary modules\JSIInternalBackgroundNoise.cs" />
+    <Compile Include="Auxiliary modules\JSIVariableLabel.cs" />
+    <Compile Include="Core\StringProcessor.cs" />
+    <Compile Include="Handlers\JSIFlightLog.cs" />
+    <Compile Include="Handlers\JSIPrimaryFlightDisplay.cs" />
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Auxiliary modules\JSISetInternalCameraFOV.cs" />
+    <Compile Include="Handlers\JSITargetMenu.cs" />
+    <Compile Include="Handlers\JSIVariableGraph.cs" />
+    <Compile Include="Handlers\JSIVariablePageTextSwitcher.cs" />
+    <Compile Include="Core\VariableOrNumber.cs" />
+    <Compile Include="Handlers\JSISteerableCamera.cs" />
+    <Compile Include="Core\TextMenu.cs" />
+    <Compile Include="Auxiliary modules\JSIInternalFlagDecal.cs" />
+    <Compile Include="Core\PersistenceAccessor.cs" />
+    <Compile Include="Auxiliary modules\JSIInternalEVAHatch.cs" />
+    <Compile Include="Auxiliary modules\JSIPropIDFinder.cs" />
+    <Compile Include="Handlers\JSIHeadsUpDisplay.cs" />
+    <Compile Include="Core\OrbitExtensions.cs" />
+    <Compile Include="Core\MathExtensions.cs" />
+    <Compile Include="Core\CelestialBodyExtensions.cs" />
+    <Compile Include="Handlers\JSIOrbitDisplay.cs" />
+    <Compile Include="Auxiliary modules\JSISwitchableVariableLabel.cs" />
+    <Compile Include="Core\ResourceDataStorage.cs" />
+    <Compile Include="Core\VariableHandler.cs" />
+    <Compile Include="Handlers\JSIInternalRPMButtons.cs" />
+    <Compile Include="Handlers\JSIOdometer.cs" />
+    <Compile Include="Auxiliary modules\JSITransparentPod.cs" />
+    <Compile Include="Auxiliary modules\JSISelectivelyVisibleProp.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <NameConventionPolicy>
+            <Rules>
+              <NamingRule Name="Namespaces" AffectedEntity="Namespace" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Types" AffectedEntity="Class, Struct, Enum, Delegate" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Interfaces" AffectedEntity="Interface" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredPrefixes>
+                  <String>I</String>
+                </RequiredPrefixes>
+              </NamingRule>
+              <NamingRule Name="Attributes" AffectedEntity="CustomAttributes" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>Attribute</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Event Arguments" AffectedEntity="CustomEventArgs" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>EventArgs</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Exceptions" AffectedEntity="CustomExceptions" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>Exception</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Methods" AffectedEntity="Methods" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Static Readonly Fields" AffectedEntity="ReadonlyField" VisibilityMask="Internal, Protected, Public" NamingStyle="PascalCase" IncludeInstanceMembers="False" IncludeStaticEntities="True" />
+              <NamingRule Name="Fields (Non Private)" AffectedEntity="Field" VisibilityMask="Internal, Protected, Public" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="ReadOnly Fields (Non Private)" AffectedEntity="ReadonlyField" VisibilityMask="Internal, Protected, Public" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="False" />
+              <NamingRule Name="Fields (Private)" AffectedEntity="Field, ReadonlyField" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="False">
+                <AllowedPrefixes>
+                  <String>_</String>
+                  <String>m_</String>
+                </AllowedPrefixes>
+              </NamingRule>
+              <NamingRule Name="Static Fields (Private)" AffectedEntity="Field" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="False" IncludeStaticEntities="True" />
+              <NamingRule Name="ReadOnly Fields (Private)" AffectedEntity="ReadonlyField" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="False">
+                <AllowedPrefixes>
+                  <String>_</String>
+                  <String>m_</String>
+                </AllowedPrefixes>
+              </NamingRule>
+              <NamingRule Name="Constant Fields" AffectedEntity="ConstantField" VisibilityMask="VisibilityMask" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Properties" AffectedEntity="Property" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Events" AffectedEntity="Event" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Enum Members" AffectedEntity="EnumMember" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Parameters" AffectedEntity="Parameter" VisibilityMask="VisibilityMask" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Type Parameters" AffectedEntity="TypeParameter" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredPrefixes>
+                  <String>T</String>
+                </RequiredPrefixes>
+              </NamingRule>
+            </Rules>
+          </NameConventionPolicy>
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\RPM-DisplayShader-compiled.shader" />
+    <EmbeddedResource Include="Shaders\RPM-CroppedDisplayShader-compiled.shader" />
+    <None Include="Shaders\RPM-CroppedDisplayShader.shader" />
+    <None Include="Shaders\RPM-DisplayShader.shader" />
+    <EmbeddedResource Include="Shaders\RPM-FontShader-compiled.shader" />
+    <None Include="Shaders\RPM-FontShader.shader" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)GameData\JSI\RasterPropMonitor\Plugins\</PostBuildEvent>
+  </PropertyGroup>
+</Project>

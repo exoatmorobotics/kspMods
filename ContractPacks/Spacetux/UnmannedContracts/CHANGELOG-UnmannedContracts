@@ -1,0 +1,28 @@
+ 0.1.0 - Initial Release
+	Contracts for unmanned missions to the Mun
+ 0.1.1 - Update for weights
+	Weights were much too high, reduced to 10 on all except for the initial one
+	updated .version file for AVC
+ 0.1.2 - Updated rewards
+	Rewards were reduced, they were much too high
+ 0.2.0 - Minmus addition
+	Updated cancellable- Only the first contract in the Mun config should be uncancellable and undeclinable
+	Added CONTRACT_GROUP
+	Moved agency into separate cfg file
+	added group.cfg for the contract group
+	Added SpaceTuxGroup group to all contracts
+	Added Minmus contracts
+ 0.3.0 - MOAR contracts
+	Added contracts for all planetary bodies
+	Added requirement for  CoherentContracts
+ 0.3.1
+	Renamed CHANGELOG
+	Updated AVC
+ 0.3.4
+	Added missing parameters
+	Added RemoteTech requirements
+
+0.3.8	updated for 1.0.2
+0.3.10	updated weighting
+0.3.11	Fixed missing part for Minmus contracts
+0.3.12	Added missing VisitWaypoint parameter for the landing and impact contracts
