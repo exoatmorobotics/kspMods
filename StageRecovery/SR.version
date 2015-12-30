@@ -1,0 +1,27 @@
+{
+    "NAME":"StageRecovery",
+    "URL":"http://magico13.net/KCT/SR.version",
+    "DOWNLOAD":"http://forum.kerbalspaceprogram.com/threads/86677-0-24-2-StageRecovery-Recover-Funds-from-Dropped-Stages-v1-1-4-0-%287-28-14%29",
+	"CHANGE_LOG_URL":"http://magico13.net/KCT/SR-Readme.txt",
+         "VERSION":{
+         "MAJOR":1,
+         "MINOR":6,
+         "PATCH":0,
+         "BUILD":0
+     },
+     "KSP_VERSION":{
+         "MAJOR":1,
+         "MINOR":0,
+         "PATCH":5
+     },
+     "KSP_VERSION_MIN":{
+         "MAJOR":1,
+         "MINOR":0,
+         "PATCH":5
+     },
+     "KSP_VERSION_MAX":{
+         "MAJOR":1,
+         "MINOR":0,
+         "PATCH":5
+     }
+}

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <bool name="DailyUpdateCheck">1</bool>
+    <string name="VersionCheckDate_Attempt">2015-12-28</string>
+    <string name="VersionCheckDate_Success">2015-12-28</string>
+    <string name="VersionWeb">3.0.6.0</string>
+    <bool name="WindowVisible">0</bool>
+    <bool name="WindowMinimized">0</bool>
+    <rect name="WindowPos">
+        <xmin>3</xmin>
+        <xmax>303</xmax>
+        <ymin>55</ymin>
+        <ymax>100</ymax>
+    </rect>
+    <bool name="WindowVisible_SpaceCenter">0</bool>
+    <bool name="WindowMinimized_SpaceCenter">0</bool>
+    <rect name="WindowPos_SpaceCenter">
+        <xmin>3</xmin>
+        <xmax>303</xmax>
+        <ymin>36</ymin>
+        <ymax>152</ymax>
+    </rect>
+    <bool name="WindowVisible_TrackingStation">0</bool>
+    <bool name="WindowMinimized_TrackingStation">0</bool>
+    <rect name="WindowPos_TrackingStation">
+        <xmin>202</xmin>
+        <xmax>502</xmax>
+        <ymin>45</ymin>
+        <ymax>161</ymax>
+    </rect>
+    <rect name="IconPos">
+        <xmin>152</xmin>
+        <xmax>184</xmax>
+        <ymin>0</ymin>
+        <ymax>32</ymax>
+    </rect>
+    <rect name="IconPos_SpaceCenter">
+        <xmin>3</xmin>
+        <xmax>35</xmax>
+        <ymin>3</ymin>
+        <ymax>35</ymax>
+    </rect>
+    <bool name="IconShow_SpaceCenter">1</bool>
+    <rect name="IconPos_TrackingStation">
+        <xmin>196</xmin>
+        <xmax>228</xmax>
+        <ymin>0</ymin>
+        <ymax>32</ymax>
+    </rect>
+    <bool name="IconShow_TrackingStation">1</bool>
+    <bool name="UseBlizzyToolbarIfAvailable">1</bool>
+    <int name="WindowMinimizedType">0</int>
+    <bool name="UIBlockersEnabled">1</bool>
+    <int name="BehaviourChecksPerSec">10</int>
+    <bool name="BackupSaves">1</bool>
+    <int name="BackupSavesToKeep">20</int>
+    <bool name="CancelFlightModeJumpOnBackupFailure">0</bool>
+    <bool name="AllowJumpFromViewOnly">1</bool>
+    <bool name="AllowJumpToAsteroid">0</bool>
+    <string name="AlarmListMaxAlarms">10</string>
+    <int name="AlarmPosition">1</int>
+    <int name="AlarmDefaultAction">1</int>
+    <double name="AlarmDefaultMargin">60</double>
+    <bool name="AlarmDeleteOnClose">0</bool>
+    <bool name="ShowTooltips">1</bool>
+    <bool name="ShowEarthTime">0</bool>
+    <bool name="HideOnPause">1</bool>
+    <string name="TimeFormat">KSPString</string>
+    <bool name="AlarmXferRecalc">1</bool>
+    <double name="AlarmXferRecalcThreshold">180</double>
+    <bool name="AlarmXferDisplayList">0</bool>
+    <bool name="XferUseModelData">0</bool>
+    <bool name="AlarmNodeRecalc">0</bool>
+    <double name="AlarmNodeRecalcThreshold">180</double>
+    <bool name="AlarmAddSOIAuto">0</bool>
+    <double name="AlarmAddSOIAutoThreshold">180</double>
+    <double name="AlarmAutoSOIMargin">900</double>
+    <bool name="AlarmAddSOIAuto_ExcludeEVA">1</bool>
+    <bool name="AlarmOnSOIChange">0</bool>
+    <int name="AlarmOnSOIChange_Action">1</int>
+    <bool name="AlarmSOIRecalc">0</bool>
+    <double name="AlarmSOIRecalcThreshold">180</double>
+    <bool name="AlarmAddManAuto">0</bool>
+    <bool name="AlarmAddManAuto_andRemove">0</bool>
+    <double name="AlarmAddManAutoThreshold">180</double>
+    <double name="AlarmAddManAutoMargin">180</double>
+    <string name="AddManAutoMargin">180</string>
+    <int name="AlarmAddManAuto_Action">1</int>
+    <bool name="AlarmCrewDefaultStoreNode">0</bool>
+    <string name="LoadManNode" />
+    <string name="LoadVesselTarget" />
+</config>

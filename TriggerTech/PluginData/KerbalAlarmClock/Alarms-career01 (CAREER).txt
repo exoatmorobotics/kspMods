@@ -1,0 +1,2 @@
+AlarmsFileVersion|3|<ENDLINE>
+VesselID|Name|Notes|AlarmTime.UT|AlarmMarginSecs|Type|Enabled|HaltWarp|PauseGame|ActionedAt|Manuever|Xfer|Target|Options|<ENDLINE>

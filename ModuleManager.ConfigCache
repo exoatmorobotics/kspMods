@@ -1,4 +1,4 @@
-patchedNodeCount = 1763
+patchedNodeCount = 1921
 catEatenCount = 0
 UrlConfig
 {
@@ -2444,6 +2444,74 @@ UrlConfig
 				type = folder
 				value = KIS
 			}
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS & KIS
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/Mod_KAS-KIS
+	url = 000_FilterExtensions Configs/Default/Mod_KAS-KIS/KAS & KIS
+	CATEGORY
+	{
+		name = KAS & KIS
+		icon = KAS
+		colour = #FFF0F0F0
+		all = true
+		FILTER
+		{
+			CHECK
+			{
+				type = folder
+				value = KAS, KIS
+			}
+		}
+		SUBCATEGORIES
+		{
+			list = 0,Pods
+			list = 1,Fuel Tanks
+			list = 2,Engines
+			list = 3,Command and Control
+			list = 4,Structural
+			list = 5,Aerodynamics
+			list = 6,Utility
+			list = 7,Science
+			list = 8,Undefined
+		}
+	}
+}
+UrlConfig
+{
+	name = Near Future Technologies
+	type = CATEGORY
+	parentUrl = 000_FilterExtensions Configs/Default/Mod_NearFutureTechnologies
+	url = 000_FilterExtensions Configs/Default/Mod_NearFutureTechnologies/Near Future Technologies
+	CATEGORY
+	{
+		name = Near Future Technologies
+		icon = NearFuturePropulsion
+		colour = #FFF0F0F0
+		all = true
+		FILTER
+		{
+			CHECK
+			{
+				type = folder
+				value = NearFuturePropulsion, NearFutureElectrical, NearFutureConstruction, NearFutureSolar, NearFutureSpacecraft, HeatControl, CryoEngines
+			}
+		}
+		SUBCATEGORIES
+		{
+			list = 0,Pods
+			list = 1,Fuel Tanks
+			list = 2,Engines
+			list = 3,Command and Control
+			list = 4,Structural
+			list = 5,Aerodynamics
+			list = 6,Utility
+			list = 7,Science
+			list = 8,Undefined
 		}
 	}
 }
@@ -23146,6 +23214,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.05,-0.13)
+			equipDir = (270,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -23239,6 +23319,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.1,-0.25)
+			equipDir = (90,0,180)
 		}
 		MODULE
 		{
@@ -23342,6 +23434,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.05,-0.08)
+			equipDir = (270,0,0)
 		}
 		MODULE
 		{
@@ -23502,6 +23606,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.2)
+			equipDir = (0,270,0)
+		}
+		MODULE
+		{
 			name = ModuleSCANresourceScanner
 			sensorType = 256
 			fov = 2
@@ -23613,6 +23729,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.16)
+			equipDir = (0,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -23706,6 +23834,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.05,-0.32)
+			equipDir = (90,270,90)
 		}
 		MODULE
 		{
@@ -23952,6 +24092,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.1,-0.18)
+			equipDir = (270,0,0)
 		}
 		MODULE
 		{
@@ -26792,6 +26944,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.1)
+			equipDir = (0,270,90)
+		}
+		MODULE
+		{
 			name = SCANsat
 			sensorType = 32
 			fov = 1
@@ -26903,6 +27067,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.2)
+			equipDir = (270,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -27003,6 +27179,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.1,-0.14)
+			equipDir = (270,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -27096,6 +27284,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.1)
+			equipDir = (270,0,0)
 		}
 		MODULE
 		{
@@ -27193,6 +27393,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0.1,0,-0.15)
+			equipDir = (270,0,0)
 		}
 		MODULE
 		{
@@ -27296,6 +27508,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.13)
+			equipDir = (0,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -27393,6 +27617,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.1)
+			equipDir = (0,270,90)
 		}
 		MODULE
 		{
@@ -27500,6 +27736,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = model
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.13)
+			equipDir = (0,270,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -27593,6 +27841,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = model
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,0.15)
+			equipDir = (0,0,0)
 		}
 		MODULE
 		{
@@ -27706,6 +27966,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItem
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.15)
+			equipDir = (0,0,0)
+		}
+		MODULE
+		{
 			name = TweakScale
 			type = DMagicOrbitalScienceScale
 		}
@@ -27804,6 +28076,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -27909,6 +28193,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
 			name = KOSNameTag
 		}
 	}
@@ -28010,6 +28306,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
 			name = KOSNameTag
 		}
 	}
@@ -28108,6 +28416,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -28219,6 +28539,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -28346,6 +28678,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
 			name = KOSNameTag
 		}
 	}
@@ -28441,6 +28785,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -28540,6 +28896,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -28648,6 +29016,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
 			name = KOSNameTag
 		}
 	}
@@ -28753,6 +29133,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -28909,6 +29301,18 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
 			name = KOSNameTag
 		}
 	}
@@ -29007,6 +29411,18 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
 		}
 		MODULE
 		{
@@ -29140,6 +29556,1775 @@ UrlConfig
 			usageReqMaskExternal = 8
 			sitMask = 63
 			bioMask = 3
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = WinchModule
+	type = WinchModule
+	parentUrl = KAS/settings
+	url = KAS/settings/WinchModule
+	WinchModule
+	{
+		grabConnectorKey = y
+		extendKey = [2]
+		retractKey = [5]
+		connectorLeftKey = [1]
+		connectorRightKey = [3]
+		hookKey = [0]
+		ejectKey = [8]
+		evaExtendKey = K
+		evaRetractKey = I
+	}
+}
+UrlConfig
+{
+	name = WinchGUI
+	type = WinchGUI
+	parentUrl = KAS/settings
+	url = KAS/settings/WinchGUI
+	WinchGUI
+	{
+		toogleKey = p
+		height = 500
+	}
+}
+UrlConfig
+{
+	name = Rotor
+	type = Rotor
+	parentUrl = KAS/settings
+	url = KAS/settings/Rotor
+	Rotor
+	{
+		rotorNegativeKey = [4]
+		rotorPositiveKey = [6]
+	}
+}
+UrlConfig
+{
+	name = TelescopicArm
+	type = TelescopicArm
+	parentUrl = KAS/settings
+	url = KAS/settings/TelescopicArm
+	TelescopicArm
+	{
+		extendKey = [9]
+		retractKey = [7]
+	}
+}
+UrlConfig
+{
+	name = KAS_CPort1
+	type = PART
+	parentUrl = KAS/Parts/cPort1/part
+	url = KAS/Parts/cPort1/part/KAS_CPort1
+	PART
+	{
+		name = KAS_CPort1
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.0362, 0.0, 0.0, 1.0, 0.0, 0
+		node_stack_bottom = 0.0, -0.0400, 0.0, 0.0, -1.0, 0.0, 0
+		node_attach = 0.0, -0.04, 0.0, 0.0, -1.0, 0.0
+		TechRequired = advFuelSystems
+		entryCost = 18000
+		cost = 750
+		category = Utility
+		subcategory = 0
+		title = CC-R2 Connector port
+		manufacturer = KAS
+		description = A multi-purpose port. Can be used to plug a winch connector or for building pipes. Useful for making ground bases and transferring resources.
+		attachRules = 1,1,1,0,1
+		mass = 0.08
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = KASModulePort
+			attachNode = top
+			nodeType = kasplug
+			breakForce = 30
+			nodeTransformName = plugNode
+		}
+		MODULE
+		{
+			name = KASModuleStrut
+			nodeTransform = plugNode
+			type = PipeSize1
+			maxLenght = 20
+			maxAngle = 100
+			breakForce = 600
+			allowDock = true
+			allowPumpFuel = true
+			hasCollider = false
+			tubeScale = 0.15
+			jointScale = 0.15
+			textureTiling = 1
+			tubeSrcType = Joined
+			tubeTgtType = Joined
+			evaStrutPos = (0.05, 0.059, -0.21)
+			evaStrutRot = (190.0, 0.0, 0.0)
+			tubeTexPath = KAS/Textures/pipe
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Hook_Anchor
+	type = PART
+	parentUrl = KAS/Parts/hook_anchor/part
+	url = KAS/Parts/hook_anchor/part/KAS_Hook_Anchor
+	PART
+	{
+		name = KAS_Hook_Anchor
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = -0.0, 0.05606, -0.0, 0.0, 1.0, 0.0, 0
+		TechRequired = specializedControl
+		entryCost = 3700
+		cost = 300
+		category = Utility
+		subcategory = 0
+		title = HA-01 Anchor
+		manufacturer = KAS
+		description = An anchor to be used for boat, airship or everything else. In addition to its weight, it also provide drag and friction when touching the ground.
+		attachRules = 1,0,1,0,1
+		mass = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 200
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = KASModuleAnchor
+			groundDrag = 500
+			bounciness = 0
+			dynamicFriction = 0.8
+			staticFriction = 0.8
+		}
+		MODULE
+		{
+			name = KASModulePort
+			attachNode = top
+			nodeType = kasplug
+			breakForce = 30
+			nodeTransformName = plugNode
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Hook_GrapplingHook
+	type = PART
+	parentUrl = KAS/Parts/hook_grapplingHook/part
+	url = KAS/Parts/hook_grapplingHook/part/KAS_Hook_GrapplingHook
+	PART
+	{
+		name = KAS_Hook_GrapplingHook
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = -0.0, 0.1112, -0.0, 0.0, 1.0, 0.0, 0
+		node_attach = 0.0, 0.0437, 0.0, 0.0, -1.0, 0.0
+		TechRequired = metaMaterials
+		entryCost = 8500
+		cost = 850
+		category = Utility
+		subcategory = 0
+		title = HG-02 Grappling hook
+		manufacturer = KAS
+		description = This hook will attach to everything it collide, as long as the impact is strong enough. Can be mounted on a winch. To be used with the winch eject function.
+		attachRules = 1,1,1,0,1
+		mass = 0.05
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 120
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = KASModuleHarpoon
+			partBreakForce = 8
+			staticBreakForce = 20
+			aboveDist = 0.05
+			forceNeeded = 5
+			attachToPart = true
+			rayDir = (0,-1,0)
+			rayLenght = 0.8
+		}
+		MODULE
+		{
+			name = KASModulePort
+			attachNode = top
+			nodeType = kasplug
+			breakForce = 30
+			nodeTransformName = plugNode
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			allowPartAttach = 0
+			allowStaticAttach = 1
+			staticAttachBreakForce = 10
+			useExternalStaticAttach = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Hook_Harpoon
+	type = PART
+	parentUrl = KAS/Parts/hook_harpoon/part
+	url = KAS/Parts/hook_harpoon/part/KAS_Hook_Harpoon
+	PART
+	{
+		name = KAS_Hook_Harpoon
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = -0.0, 0.0, -0.0, 0.0, 1.0, 0.0, 0
+		node_attach = 0.0, -0.157, 0.0, 0.0, -1.0, 0.0
+		TechRequired = composites
+		entryCost = 5200
+		cost = 550
+		category = Utility
+		subcategory = 0
+		title = HP-01 Harpoon
+		manufacturer = KAS
+		description = This hook will attach to everything it collide, as long as the impact is strong enough. Can be mounted on a winch. To be used with the winch eject function.
+		attachRules = 1,1,1,0,1
+		mass = 0.03
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 150
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = KASModuleHarpoon
+			partBreakForce = 5
+			staticBreakForce = 10
+			aboveDist = 0.05
+			forceNeeded = 3
+			attachToPart = true
+			rayDir = (0,-1,0)
+			rayLenght = 0.8
+		}
+		MODULE
+		{
+			name = KASModulePort
+			attachNode = top
+			nodeType = kasplug
+			breakForce = 30
+			nodeTransformName = plugNode
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			allowPartAttach = 0
+			allowStaticAttach = 1
+			staticAttachBreakForce = 10
+			useExternalStaticAttach = true
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Hook_Magnet
+	type = PART
+	parentUrl = KAS/Parts/hook_magnet/part
+	url = KAS/Parts/hook_magnet/part/KAS_Hook_Magnet
+	PART
+	{
+		name = KAS_Hook_Magnet
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = -0.0, 0.1005, -0.0, 0.0, 1.0, 0.0, 0
+		node_attach = 0.0, -0.0021, 0.0, 0.0, -1.0, 0.0
+		TechRequired = nanolathing
+		entryCost = 11000
+		cost = 1200
+		category = Utility
+		subcategory = 0
+		title = HE-03 Electro-Magnet
+		manufacturer = KAS
+		description = This electro-magnet is perfect for grabing heavy objects without a connector or a docking port. Can be mounted on a winch or on a hook support.
+		attachRules = 1,1,1,0,1
+		mass = 0.09
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 70
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = KASModuleMagnet
+			breakForce = 12
+			attachToEva = False
+			minFwdDot = 0.998
+			powerDrain = 4
+		}
+		MODULE
+		{
+			name = KASModulePort
+			attachNode = top
+			nodeType = kasplug
+			breakForce = 30
+			nodeTransformName = plugNode
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			allowPartAttach = 0
+			allowStaticAttach = 0
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 0.625
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Pylon1
+	type = PART
+	parentUrl = KAS/Parts/pylon1/part
+	url = KAS/Parts/pylon1/part/KAS_Pylon1
+	PART
+	{
+		name = KAS_Pylon1
+		module = Part
+		author = Winn75
+		mesh = pylon.mu
+		rescaleFactor = 0.8
+		node_stack_right = 0.0621535, 0, 0, -1, 0, 0, 1
+		node_stack_left = -0.06, 0, 0, 1, 0, 0, 1
+		node_stack_back = 0, 0, 0.0621535, 0, 0,-1, 1
+		node_stack_front = 0, 0,-0.0621535, 0, 0, 1, 1
+		node_stack_top = 0, 0.6639, 0, 0,1, 0, 1
+		node_stack_bottom = 0,-0.26207, 0, 0, -1, 0, 1
+		node_attach = 0,-0.26207, 0, 0, -1, 0, 1
+		TechRequired = specializedConstruction
+		entryCost = 3000
+		cost = 450
+		category = none
+		subcategory = 0
+		title = Ground pylon
+		manufacturer = KIS
+		description = A simple part that can be used as a support for attaching stuff (ports, pipes, etc...)
+		attachRules = 1,1,1,1,1
+		mass = 0.2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 30
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = ModuleKISItem
+			volumeOverride = 150
+			stackable = true
+			allowStaticAttach = 1
+			staticAttachBreakForce = 10
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Strut1
+	type = PART
+	parentUrl = KAS/Parts/strut1/part
+	url = KAS/Parts/strut1/part/KAS_Strut1
+	PART
+	{
+		name = KAS_Strut1
+		module = Part
+		author = zzz
+		mesh = strut1.mu
+		rescaleFactor = 1
+		node_attach = 0.0, -0.0315, 0.0, 0.0, -1.0, 0.0
+		TechRequired = specializedConstruction
+		entryCost = 5500
+		cost = 550
+		category = Utility
+		subcategory = 0
+		title = CS-R2 Strut
+		manufacturer = KAS
+		description = End point for building a strut from eva. Links are restricted to the same vessel. Useful for strengthen a vessel.
+		attachRules = 0,1,0,0,1
+		mass = 0.008
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = KASModuleStrut
+			nodeTransform = strutNode
+			type = "StrutSize1"
+			maxLenght = 8
+			maxAngle = 100
+			breakForce = 400
+			allowDock = false
+			hasCollider = false
+			tubeScale = 0.05
+			jointScale = 0.05
+			tubeSrcType = Rounded
+			tubeTgtType = Rounded
+			textureTiling = 4
+			evaStrutPos = (0.05, 0.059, -0.21)
+			evaStrutRot = (190.0, 0.0, 0.0)
+			tubeTexPath = KAS/Textures/strut
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = surface
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Winch1
+	type = PART
+	parentUrl = KAS/Parts/winch1/part
+	url = KAS/Parts/winch1/part/KAS_Winch1
+	PART
+	{
+		name = KAS_Winch1
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_front = -0.155, 0.00, -0.241805, 0.0, 0.0, -1.0, 0
+		node_stack_top = 0.0, 0.1, 0.0, 0.0, 1.0, 0.0, 0
+		node_stack_bottom = 0.0, -0.1, 0.0, 0.0, -1.0, 0.0, 0
+		TechRequired = advConstruction
+		entryCost = 5300
+		cost = 900
+		category = Utility
+		subcategory = 0
+		title = Winch IW-50
+		manufacturer = KAS
+		description = A winch used to extend and retract a cable. A hook or a connector port can be pre-attached if needed.
+		attachRules = 1,0,1,1,0
+		mass = 0.13
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1
+		MODULE
+		{
+			name = KASModuleWinch
+			maxLenght = 80
+			cableSpring = 1000
+			cableDamper = 0.1
+			cableWidth = 0.04
+			motorMaxSpeed = 1
+			motorAcceleration = 0.05
+			powerDrain = 0.3
+			headTransformName = head
+			headPortNodeName = portNode
+			connectedPortNodeName = front
+			anchorNodeName = anchorNode
+			evaGrabHeadPos = (0.05, 0.01, -0.11)
+			evaGrabHeadDir = (0,0,1)
+			evaDropHeadPos = (0.05, 0.01, -0.16)
+			evaDropHeadRot = (180.0, 0.0, 0.0)
+			lockMinDist = 0.12
+			lockMinFwdDot = 0.90
+		}
+		MODULE
+		{
+			name = ModuleKISPartMount
+			mountedPartNode = top
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = false
+			MOUNT
+			{
+				attachNode = front
+				allowedPartName = KAS_Hook_Anchor
+				allowedPartName = KAS_Hook_Magnet
+				allowedPartName = KAS_Hook_Harpoon
+				allowedPartName = KAS_Hook_GrapplingHook
+			}
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 0.625
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KAS_Winch2
+	type = PART
+	parentUrl = KAS/Parts/winch2/part
+	url = KAS/Parts/winch2/part/KAS_Winch2
+	PART
+	{
+		name = KAS_Winch2
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		rescaleFactor = 1
+		node_stack_top = 0.0, 0.197, 0.0, 0.0, 1.0, 0.0, 0
+		node_stack_bottom = 0.0, -0.2292, 0.0, 0.0, -1.0, 0.0, 0
+		node_stack_back = 0.0, 0.0, 0.174, 0.0, 0.0, 1.0, 0
+		node_attach = 0.0, 0.0, 0.174, 0.0, 0.0, -1.0, 0
+		TechRequired = advMetalworks
+		entryCost = 12200
+		cost = 1200
+		category = Utility
+		subcategory = 0
+		title = Winch RW-50
+		manufacturer = KAS
+		description = A winch used to extend and retract a cable. A hook or a connector port can be pre-attached if needed.
+		attachRules = 1,1,1,0,0
+		mass = 0.1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = KASModuleWinch
+			maxLenght = 50
+			cableSpring = 1000
+			cableDamper = 0.1
+			cableWidth = 0.04
+			motorMaxSpeed = 2
+			motorAcceleration = 0.05
+			powerDrain = 0.5
+			headTransformName = head
+			headPortNodeName = portNode
+			connectedPortNodeName = bottom
+			anchorNodeName = anchorNode
+			evaGrabHeadPos = (0.05, 0.01, -0.11)
+			evaGrabHeadDir = (0,0,1)
+			evaDropHeadPos = (0.05, 0.01, -0.16)
+			evaDropHeadRot = (180.0, 0.0, 0.0)
+			ejectEnabled = true
+			ejectForce = 20
+			lockMinDist = 0.12
+			lockMinFwdDot = 0.90
+		}
+		MODULE
+		{
+			name = ModuleKISPartMount
+			mountedPartNode = top
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = false
+			MOUNT
+			{
+				attachNode = bottom
+				allowedPartName = KAS_Hook_Anchor
+				allowedPartName = KAS_Hook_Magnet
+				allowedPartName = KAS_Hook_Harpoon
+				allowedPartName = KAS_Hook_GrapplingHook
+			}
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			defaultScale = 0.625
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KISConfig
+	type = KISConfig
+	parentUrl = KIS/settings
+	url = KIS/settings/KISConfig
+	KISConfig
+	{
+		name = KISConfig
+		Global
+		{
+			itemDebug = false
+			kerbalDefaultMass = 0.094
+			breathableAtmoPressure = 0.5
+		}
+		EvaInventory
+		{
+			inventoryKey = tab
+			rightHandKey = x
+			helmetKey = j
+			slotsX = 2
+			slotsY = 4
+			slotSize = 50
+			itemIconResolution = 128
+			selfIconResolution = 128
+			maxVolume = 300
+			openSndPath = KIS/Sounds/inventoryOpen
+			closeSndPath = KIS/Sounds/inventoryClose
+		}
+		EvaPickup
+		{
+			grabKey = g
+			attachKey = h
+			allowPartAttach = false
+			allowStaticAttach = false
+			allowSnapAttach = false
+			maxDistance = 3
+			grabMaxMass = 1
+			dropSndPath = KIS/Sounds/drop
+			attachPartSndPath = KIS/Sounds/attachPart
+			detachPartSndPath = KIS/Sounds/detachPart
+			attachStaticSndPath = KIS/Sounds/attachStatic
+			detachStaticSndPath = KIS/Sounds/detachStatic
+			draggedIconResolution = 64
+		}
+		StackableModule
+		{
+			moduleName = ModuleLight
+			moduleName = ModuleDockingNode
+			moduleName = ModuleAlternator
+			moduleName = ModuleTestSubject
+			moduleName = ModuleAerodynamicLift
+			moduleName = ModuleControlSurface
+			moduleName = ModuleDataTransmitter
+			moduleName = ModuleLiftingSurface
+			moduleName = ModuleSAS
+			moduleName = ModuleTripLogger
+			moduleName = ModuleRCS
+			moduleName = RetractableLadder
+			moduleName = ModuleDeployableSolarPanel
+			moduleName = ModuleDeployableRadiator
+			moduleName = ModuleActiveRadiator
+			moduleName = ModuleLandingLeg
+			moduleName = KASModuleStrut
+			moduleName = KASModulePort
+			moduleName = KASModuleMagnet
+			moduleName = KASModuleHarpoon
+			moduleName = KASModuleGrab
+			moduleName = KASModuleAnchor
+			moduleName = KASModuleContainer
+			moduleName = USI_ModuleRecycleablePart
+			moduleName = CollisionFX
+		}
+		StackableItemOverride
+		{
+			partName = addWhatYouWantHere1
+			partName = addWhatYouWantHere2
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_bomb1
+	type = PART
+	parentUrl = KIS/Parts/bomb1/part
+	url = KIS/Parts/bomb1/part/KIS_bomb1
+	PART
+	{
+		name = KIS_bomb1
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, -0.050327, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = precisionEngineering
+		entryCost = 7200
+		cost = 400
+		category = none
+		subcategory = 0
+		title = Explosives
+		manufacturer = KIS
+		description = Need to get rid of those annoying debris without de-orbiting? We got what you need. Remember, you can setup explosives by right clicking on the part.
+		attachRules = 0,1,0,0,0
+		mass = 0.004
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 800
+		PhysicsSignificance = 1
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = ModuleKISItemBomb
+			allowPartAttach = 1
+			shortcutKeyAction = equip
+			equipable = true
+			equipSlot = leftHand
+			stackable = true
+			equipMeshName = body01
+			equipBoneName = bn_l_mid_a01
+			equipPos = (0.06,0.07,0)
+			equipDir = (0,0,0)
+			delay = 10
+			maxRadius = 10
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = kis_concreteBase1
+	type = PART
+	parentUrl = KIS/Parts/concreteBase1/part
+	url = KIS/Parts/concreteBase1/part/kis_concreteBase1
+	PART
+	{
+		name = kis_concreteBase1
+		module = Part
+		author = Winn75
+		mesh = pylon.mu
+		rescaleFactor = 1
+		node_stack_top = 0, 0.284, 0, 0,1, 0, 1
+		node_stack_bottom = 0, -0.17, 0, 0,-1, 0, 1
+		TechRequired = advConstruction
+		entryCost = 2500
+		cost = 300
+		category = none
+		subcategory = 0
+		title = Ground base
+		manufacturer = KIS
+		description = A concrete base to attach parts on it. This part need to be attached on the ground with a wrench or a screwdriver.
+		attachRules = 1,0,1,1,1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 80
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = ModuleKISItem
+			volumeOverride = 100
+			stackable = true
+			allowPartAttach = 2
+			allowStaticAttach = 1
+			staticAttachBreakForce = 10
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_Container1
+	type = PART
+	parentUrl = KIS/Parts/container1/part
+	url = KIS/Parts/container1/part/KIS_Container1
+	PART
+	{
+		name = KIS_Container1
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_stack_bottom = 0.0, -0.2477, 0.0, 0.0, -1.0, 0.0, 0
+		TechRequired = generalConstruction
+		entryCost = 2700
+		cost = 420
+		category = Utility
+		subcategory = 0
+		title = SC-62 Container
+		manufacturer = KIS
+		description = A small container for storing smaller parts. Kerbal engineers realized that having a place to store spare parts is way better than have them floating around the command pods.
+		attachRules = 1,0,1,1,1
+		mass = 0.1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2000
+		breakingForce = 50
+		breakingTorque = 50
+		bulkheadProfiles = size1, srf
+		MODULE
+		{
+			name = ModuleKISInventory
+			maxVolume = 1000
+			externalAccess = true
+			internalAccess = false
+			slotsX = 4
+			slotsY = 4
+			slotSize = 50
+			itemIconResolution = 128
+			selfIconResolution = 128
+			openSndPath = KIS/Sounds/containerOpen
+			closeSndPath = KIS/Sounds/containerClose
+			defaultMoveSndPath = KIS/Sounds/itemMove
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			volumeOverride = 1100
+			editorItemsCategory = false
+			carriable = true
+			equipMode = part
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0.21,-0.3)
+			equipDir = (280,0,0)
+			runSpeed = 0.8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_Container2
+	type = PART
+	parentUrl = KIS/Parts/container2/part
+	url = KIS/Parts/container2/part/KIS_Container2
+	PART
+	{
+		name = KIS_Container2
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_stack_top = 0.0, 1.298, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -1.298, 0.0, 0.0, -1.0, 0.0, 2
+		TechRequired = largeVolumeContainment
+		entryCost = 18000
+		cost = 9000
+		category = Utility
+		subcategory = 0
+		title = ILC-18k Container
+		manufacturer = KIS
+		description = The ILC-18k is an in-line container designed to be accessible from the inside of a ship and remove the need to go EVA to access spare hardware. However as it is pressurized, the ILC-18k has an extra mass compared to other containers and doesn't have dedicated mount.
+		attachRules = 1,0,1,1,1
+		mass = 1.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2
+		MODULE
+		{
+			name = ModuleKISInventory
+			maxVolume = 18000
+			externalAccess = true
+			internalAccess = true
+			slotsX = 8
+			slotsY = 5
+			slotSize = 50
+			itemIconResolution = 128
+			selfIconResolution = 128
+			openSndPath = KIS/Sounds/containerOpen
+			closeSndPath = KIS/Sounds/containerClose
+			defaultMoveSndPath = KIS/Sounds/itemMove
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			volumeOverride = 19000
+			editorItemsCategory = false
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_Container3
+	type = PART
+	parentUrl = KIS/Parts/container3/part
+	url = KIS/Parts/container3/part/KIS_Container3
+	PART
+	{
+		name = KIS_Container3
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_stack_top = 0.0, 0.58, 0.0, 0.0, 1.0, 0.0, 2
+		node_stack_bottom = 0.0, -0.58, 0.0, 0.0, -1.0, 0.0, 2
+		TechRequired = specializedConstruction
+		entryCost = 6000
+		cost = 3000
+		category = Utility
+		subcategory = 0
+		title = ISC-6K Container
+		manufacturer = KIS
+		description = The ISC-6K is a small in-line container designed to be accessible from the inside of a ship and remove the need to go EVA to access spare hardware. However as it is pressurized, the IMC-250 has an extra mass compared to other containers and doesn't have dedicated mount.
+		attachRules = 1,0,1,1,1
+		mass = 0.5
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 2000
+		bulkheadProfiles = size2
+		MODULE
+		{
+			name = ModuleKISInventory
+			maxVolume = 6000
+			externalAccess = true
+			internalAccess = true
+			slotsX = 4
+			slotsY = 5
+			slotSize = 50
+			itemIconResolution = 128
+			selfIconResolution = 128
+			openSndPath = KIS/Sounds/containerOpen
+			closeSndPath = KIS/Sounds/containerClose
+			defaultMoveSndPath = KIS/Sounds/itemMove
+		}
+		MODULE
+		{
+			name = ModuleKISItem
+			volumeOverride = 7000
+			editorItemsCategory = false
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_ContainerMount1
+	type = PART
+	parentUrl = KIS/Parts/containerMount1/containerMount1
+	url = KIS/Parts/containerMount1/containerMount1/KIS_ContainerMount1
+	PART
+	{
+		name = KIS_ContainerMount1
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_stack_top = 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0
+		node_attach = 0.0, -0.041799, 0.0, 0.0, -1.0, 0.0, 0
+		TechRequired = generalConstruction
+		entryCost = 3200
+		cost = 450
+		category = Utility
+		subcategory = 0
+		title = SM-62 Container mount
+		manufacturer = KIS
+		description = A small mount to attach, detach and reattach SC-62 containers. The best solution over struts, decoupler or duct tape.
+		attachRules = 1,1,1,0,1
+		mass = 0.08
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 2000
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = ModuleKISPartMount
+			mountedPartNode = bottom
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = true
+			MOUNT
+			{
+				attachNode = top
+				allowedPartName = KIS_Container1
+				allowedPartName = KIS_Container2
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_electricScrewdriver
+	type = PART
+	parentUrl = KIS/Parts/electricScrewdriver/part
+	url = KIS/Parts/electricScrewdriver/part/KIS_electricScrewdriver
+	PART
+	{
+		name = KIS_electricScrewdriver
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_stack_bottom = 0, -0.094404, 0, 0.0, 1.0, 0.0, 0
+		node_attach = -0.021623, 0, 0.0, 0.0, 0.0, -1.0, 1
+		TechRequired = advElectrics
+		entryCost = 4700
+		cost = 650
+		category = none
+		subcategory = 0
+		title = E-SD80 Screwdriver
+		manufacturer = KIS
+		description = A tool to attach or detach parts to your vehicles. The E-SD80 as been designed to give more autonomy for our "out there" engineers.
+		attachRules = 0,0,0,0,0
+		mass = 0.004
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1200
+		PhysicsSignificance = 1
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = ModuleKISItemAttachTool
+			shortcutKeyAction = equip
+			equipable = true
+			equipSkill = RepairSkill
+			equipSlot = rightHand
+			equipMeshName = body01
+			equipBoneName = bn_r_mid_a01
+			equipPos = (0,0.05,0)
+			equipDir = (270,0,0)
+			toolPartAttach = true
+			toolStaticAttach = false
+			toolPartStack = true
+			attachPartSndPath = KIS/Sounds/attachScrewdriver
+			detachPartSndPath = KIS/Sounds/detachScrewdriver
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_evapropellant
+	type = PART
+	parentUrl = KIS/Parts/evapropellant1/part
+	url = KIS/Parts/evapropellant1/part/KIS_evapropellant
+	PART
+	{
+		name = KIS_evapropellant
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, 0, 0.0508, 0.0, 0.0, -1.0, 1
+		TechRequired = advExploration
+		entryCost = 2500
+		cost = 250
+		category = none
+		subcategory = 0
+		title = Eva Propellant
+		manufacturer = KIS
+		description = An usefull EVA propellant backup tank for long missions. Right-click on it from the inventory to use. Can be refueled from a pod inventory .
+		attachRules = 0,1,0,0,0
+		mass = 0.01
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 6
+		maxTemp = 2000
+		PhysicsSignificance = 1
+		bulkheadProfiles = srf
+		RESOURCE
+		{
+			name = EVA Propellant
+			amount = 10
+			maxAmount = 10
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaPropellant
+			shortcutKeyAction = equip
+			equipable = true
+			equipSlot = jetpack
+			equipMode = model
+			usableFromEva = true
+			usableFromContainer = false
+			usableFromPod = true
+			usableFromEditor = false
+			useName = Refuel
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0.06,0.04,-0.09)
+			equipDir = (10,0,0)
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_guide
+	type = PART
+	parentUrl = KIS/Parts/guide/part
+	url = KIS/Parts/guide/part/KIS_guide
+	PART
+	{
+		name = KIS_guide
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, -0.01988, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = engineering101
+		entryCost = 0
+		cost = 100
+		category = none
+		subcategory = 0
+		title = KIS user guide
+		manufacturer = KIS
+		description = Everything you need to know about Inventory system without complicated computer manoeuvre. (right click on it from inventory to read it)
+		attachRules = 0,0,0,0,0
+		mass = 0.001
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 12
+		maxTemp = 300
+		PhysicsSignificance = 1
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = ModuleKISItemBook
+			shortcutKeyAction = equip
+			usableFromEva = true
+			usableFromContainer = true
+			usableFromPod = true
+			usableFromEditor = true
+			equipSlot = leftHand
+			equipable = true
+			useName = Read
+			equipMeshName = body01
+			equipBoneName = bn_l_mid_a01
+			equipPos = (0.00,-0.02,0)
+			equipDir = (0,0,0)
+			pageWidth = 574
+			pageHeight = 800
+			page = KIS/Parts/guide/page01
+			page = KIS/Parts/guide/page02
+			page = KIS/Parts/guide/page03
+			page = KIS/Parts/guide/page04
+			page = KIS/Parts/guide/page05
+			page = KIS/Parts/guide/page06
+			page = KIS/Parts/guide/page07
+			page = KIS/Parts/guide/page08
+			page = KIS/Parts/guide/page09
+			page = KIS/Parts/guide/page10
+			page = KIS/Parts/guide/page11
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_wrench
+	type = PART
+	parentUrl = KIS/Parts/wrench/part
+	url = KIS/Parts/wrench/part/KIS_wrench
+	PART
+	{
+		name = KIS_wrench
+		module = Part
+		author = Winn75
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, -0.011116, 0.0, 0.0, 1.0, 0.0, 1
+		TechRequired = engineering101
+		entryCost = 900
+		cost = 100
+		category = none
+		subcategory = 0
+		title = Wrench
+		manufacturer = KIS
+		description = A tool to attach or detach smallest parts to your vehicles. Nothing complicated, just a simple wrench really.
+		attachRules = 0,0,0,0,0
+		mass = 0.002
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 12
+		maxTemp = 1200
+		PhysicsSignificance = 1
+		bulkheadProfiles = srf
+		MODULE
+		{
+			name = ModuleKISItemAttachTool
+			shortcutKeyAction = equip
+			equipable = true
+			equipSkill = RepairSkill
+			equipSlot = rightHand
+			equipMeshName = body01
+			equipBoneName = bn_r_mid_a01
+			equipPos = (0,0.03,0)
+			equipDir = (0,90,0)
+			toolPartAttach = true
+			toolStaticAttach = false
+			toolPartStack = false
+			attachPartSndPath = KIS/Sounds/attachWrench
+			detachPartSndPath = KIS/Sounds/detachWrench
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = Engineer7500
+	type = PART
+	parentUrl = KerbalEngineer/Parts/Engineer7500/part
+	url = KerbalEngineer/Parts/Engineer7500/part/Engineer7500
+	PART
+	{
+		name = Engineer7500
+		module = Part
+		author = CYBUTEK (Code) || Keptin (Part)
+		mesh = model.mu
+		rescaleFactor = 0.8
+		PhysicsSignificance = 1
+		TechRequired = start
+		entryCost = 0
+		cost = 500
+		category = Science
+		subcategory = 0
+		title = ER-7500 Computer Flight Unit
+		manufacturer = CYBUTEK Solutions Ltd.
+		description = The ER-7500 goes back to roots with the Kerbal Engineering System.  This unit has been proven to be at least 1x10^-5 times faster than a standard hard drive.
+		attachRules = 0,1,0,1,1
+		node_attach = 0.0, 0.0, 0.0, 1.0, 0.0, 0.0
+		mass = 0.005
+		dragModelType = override
+		maximum_drag = 0
+		minimum_drag = 0
+		angularDrag = 0
+		crashTolerance = 15
+		maxTemp = 3400
+		MODULE
+		{
+			name = FlightEngineerModule
+		}
+		MODULE
+		{
+			name = TapeDriveAnimator
+			UseBakedAnimation = false
+			MinReelSpeed = -30
+			MaxReelSpeed = 30
+			SpeedStopZone = 10
+			SpeedDeadZone = 2.5
+			SpeedChangeAmount = 30
+			MinRepeatTime = 1
+			MaxRepeatTime = 6
+			RepeatTimeDenominator = 8
+			Reel1 = geo_reel1
+			Reel2 = geo_reel2
+			Reel1SpeedRatio = 1
+			Reel2SpeedRatio = 0.75
+			Lights1 = geo_buttonSet1
+			Lights2 = geo_buttonSet2
+			Lights3 = geo_buttonSet3
+			Lights4 = geo_buttonSet4
+			Lights5 = geo_buttonSet5
+			Lights6 = geo_buttonSet6
+			Lights1Speed = 0
+			Lights2Speed = -2.5
+			Lights3Speed = 2.5
+			Lights4Speed = 10
+			Lights5Speed = -15
+			Lights6Speed = 17.5
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = EngineerChip
+	type = PART
+	parentUrl = KerbalEngineer/Parts/EngineerChip/part
+	url = KerbalEngineer/Parts/EngineerChip/part/EngineerChip
+	PART
+	{
+		name = EngineerChip
+		module = Part
+		author = CYBUTEK
+		mesh = EngineerChip.DAE
+		scale = 1.0
+		texture = EngineerChipHighRes.png
+		specPower = 0.5
+		rimFalloff = 3
+		alphaCutoff = 0
+		PhysicsSignificance = 1
+		node_attach = 0.0, -0.03, 0.0, 0.0, -1.0, 0.0
+		TechRequired = start
+		entryCost = 0
+		cost = 350
+		category = Science
+		subcategory = 0
+		title = Kerbal Engineering System
+		manufacturer = CYBUTEK Solutions Ltd.
+		description = The Kerbal Engineering System boasts an impressive 128bits of solid state storage and enough processing power to run at least 3 digital watches.
+		attachRules = 0,1,0,1,1
+		mass = 0.005
+		dragModelType = default
+		maximum_drag = 0
+		minimum_drag = 0
+		angularDrag = 0
+		crashTolerance = 15
+		maxTemp = 3600
+		MODULE
+		{
+			name = FlightEngineerModule
 		}
 		MODULE
 		{
@@ -31227,6 +33412,1302 @@ UrlConfig
 	DockingPortAlignment
 	{
 		forceStockAppLauncher = false
+	}
+}
+UrlConfig
+{
+	name = Filter by Function
+	type = CATEGORY
+	parentUrl = NearFutureSolar/Filters/NearFutureSolarFilters
+	url = NearFutureSolar/Filters/NearFutureSolarFilters/Filter by Function
+	CATEGORY
+	{
+		name = Filter by Function
+		type = stock
+		SUBCATEGORIES
+		{
+			list = 0, Solar Panels
+			list = 100,Adapter
+			list = 101,Multi-Coupler
+			list = 102,Decouplers
+			list = 103,Docking Ports
+			list = 104,Control Surface
+			list = 105,Air Intake
+			list = 106,Landing Gear
+			list = 107,Landing Legs
+			list = 108,Solar Panels
+			list = 109,Power Storage
+			list = 110,Data Transmitter
+			list = 0,Command and Crew
+			list = 1,Attitude Control
+			list = 2,Fuel Tanks
+			list = 3,Engines
+			list = 4,Structural
+			list = 5,General Aero
+			list = 6,Flight
+			list = 7,Misc
+			list = 8,Electrical
+			list = 9,Science
+		}
+	}
+}
+UrlConfig
+{
+	name = Solar Panels
+	type = SUBCATEGORY
+	parentUrl = NearFutureSolar/Filters/NearFutureSolarFilters
+	url = NearFutureSolar/Filters/NearFutureSolarFilters/Solar Panels
+	SUBCATEGORY
+	{
+		name = Solar Panels
+		icon = R&D_node_icon_ionpropulsion
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleDeployableSolarPanel
+			}
+		}
+		FILTER
+		{
+			CHECK
+			{
+				type = moduleName
+				value = ModuleCurvedSolarPanel
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-blanket-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-1/solarpanel-blanket-1
+	PART
+	{
+		name = solarpanel-blanket-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = experimentalElectrics
+		entryCost = 525000
+		node_attach = 0.2, 0.0, 0.0, 1.0, 0.0, 0.0
+		cost = 60000
+		category = Utility
+		subcategory = 0
+		title = OKEB-500 Blanket Photovoltaic Array
+		manufacturer = The Organization of Kerbal Electric Blanket Producers
+		description = OKEB offers a new take on solar arrays - really, really big. Their first entry into the market dwarfs every solar panel on the market. Due to its unique construction methods, the panel is relatively cheap and light, but can't match the smaller panels in power density. Cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 4.15
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1100
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = PanelsExtend
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			retractable = false
+			resourceName = ElectricCharge
+			trackingSpeed = 0.02
+			chargeRate = 500
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-blanket-2
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-2
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-2/solarpanel-blanket-2
+	PART
+	{
+		name = solarpanel-blanket-2
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = experimentalElectrics
+		entryCost = 95750
+		node_attach = -0.0, -0.0250, 0.0, 1.0, 0.0, 0.0
+		cost = 12500
+		category = Utility
+		subcategory = 0
+		title = OKEB-100 Blanket Photovoltaic Array
+		manufacturer = The Organization of Kerbal Electric Blanket Producers
+		description = OKEB's smaller blanket panel retains the lightness and low cost of their larger offering, but packages it into a more reasonable size. Cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 0.833
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1100
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-blanket/solarpanel-blanket-2
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = PanelExtend
+			sunTracking = true
+			raycastTransformName = Suncatacher
+			pivotName = pivot
+			isBreakable = true
+			retractable = false
+			resourceName = ElectricCharge
+			chargeRate = 100
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-curved-25-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-25-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-25-1/solarpanel-curved-25-1
+	PART
+	{
+		name = solarpanel-curved-25-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 34050
+		node_attach = 0.85, 0.00, -0.85, -0.5, 0.0, -0.5
+		cost = 4800
+		category = Utility
+		subcategory = 0
+		title = NIV-18 Curved Solar Array
+		manufacturer = Joint Extraplanetary Business Coalition
+		description = Someday, we hope to be able to spray-paint an entire rocket stage with solar panels. For now, this is the best we can do.
+		attachRules = 0,1,0,0,1
+		mass = 0.3
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-25-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleCurvedSolarPanel
+			PanelTransformName = sunCatcher
+			TotalEnergyRate = 30
+			ResourceName = ElectricCharge
+			powerCurve
+			{
+				key = 206000000000 0 0 0
+				key = 13599840256 1 0 0
+				key = 68773560320 0.5 0 0
+				key = 0 10 0 0
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-curved-375-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-375-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-375-1/solarpanel-curved-375-1
+	PART
+	{
+		name = solarpanel-curved-375-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1.0
+		TechRequired = specializedElectrics
+		entryCost = 16050
+		node_attach = 1.3125, 0.00, -1.3125, -0.5, 0.0, -0.5
+		cost = 1800
+		category = Utility
+		subcategory = 0
+		title = NIV-3 Curved Solar Array
+		manufacturer = Joint Extraplanetary Business Coalition
+		description = Building a curved solar panel wasn't easy, but the folks at the Coalition tell us that it works *almost* as well as a flat one.
+		attachRules = 0,1,0,0,1
+		mass = 0.0925
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-375-1
+			scale = 1.5,1.5,1.5
+		}
+		MODULE
+		{
+			name = ModuleCurvedSolarPanel
+			PanelTransformName = sunCatcher
+			TotalEnergyRate = 10
+			ResourceName = ElectricCharge
+			powerCurve
+			{
+				key = 206000000000 0 0 0
+				key = 13599840256 1 0 0
+				key = 68773560320 0.5 0 0
+				key = 0 10 0 0
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-curved-deploying-25-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-deploying-25-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-deploying-25-1/solarpanel-curved-deploying-25-1
+	PART
+	{
+		name = solarpanel-curved-deploying-25-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 41900
+		node_attach = -0.87, 0.00, -0.87, 0.5, 0.0, -0.5
+		cost = 5460
+		category = Utility
+		subcategory = 0
+		title = SOL-A Expanding Curved Solar Array
+		manufacturer = Joint Extraplanetary Business Coalition
+		description = Strong and compact when undeployed, the SOL-series solar arrays sure look cool and are quite strong, but suffer from a poor power to mass ratio.
+		attachRules = 0,1,0,0,1
+		mass = 0.33
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 12
+		maxTemp = 2000
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-curved/solarpanel-curved-deploying-25-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleCurvedSolarPanel
+			PanelTransformName = sunCatcher
+			TotalEnergyRate = 20
+			ResourceName = ElectricCharge
+			Deployable = true
+			DeployAnimation = PanelsExtend
+			powerCurve
+			{
+				key = 206000000000 0 0 0
+				key = 13599840256 1 0 0
+				key = 68773560320 0.5 0 0
+				key = 0 10 0 0
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-1x3-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x3-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x3-1/solarpanel-deploying-1x3-1
+	PART
+	{
+		name = solarpanel-deploying-1x3-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 12500
+		node_attach = 0.0, 0.0, 0.0, 1.0, 0.0, 0.0
+		cost = 1230
+		category = Utility
+		subcategory = 0
+		title = KRX 1x3 Concentrating Photovoltaic Panels
+		manufacturer = Kerb Kastra
+		description = As a follow up to the underwhelmingly popular 1x4 series, the KRX also includes concentrator lenses and sacrifices its ability to retract. The result is a panel that is quite light for its generation capabilities. Just don't sneeze on it.
+		attachRules = 0,1,0,0,1
+		mass = 0.0541
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 4
+		maxTemp = 1100
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x3-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = Panel003
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 5
+			retractable = false
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-1x4-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-1/solarpanel-deploying-1x4-1
+	PART
+	{
+		name = solarpanel-deploying-1x4-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 17000
+		node_attach = 0.0, 0.0, 0.0, 1.0, 0.0, 0.0
+		cost = 1845
+		category = Utility
+		subcategory = 0
+		title = KRK 1x4 Concentrating Photovoltaic Panels
+		manufacturer = Kerb Kastra
+		description = Kerb Kastra's solar panel offering includes special lenses that concentrate sunlight onto fewer, stronger solar cells. This increases power density by around 50%, but also increases panel mass.
+		attachRules = 0,1,0,0,1
+		mass = 0.1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = Panel03
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 7
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-1x4-2
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-2
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-2/solarpanel-deploying-1x4-2
+	PART
+	{
+		name = solarpanel-deploying-1x4-2
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 21750
+		node_attach = 0.15, 0.0, 0.0, 1.0, 0.0, 0.0
+		cost = 2500
+		category = Utility
+		subcategory = 0
+		title = KRQ 1x4 High-Efficiency Photovoltaic Panels
+		manufacturer = Kerb Kastra
+		description = The most advanced solar panel technology available to Kerbalkind! This panel improves on concentrator lenses by incorporating much more sensitive photodiodes. Do you really need to look at the price tag? Studies disagree. Cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 0.095
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1000
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x4-2
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = Panel02
+			pivotName = pivot
+			isBreakable = true
+			retractable = false
+			resourceName = ElectricCharge
+			chargeRate = 8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-1x5-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-1/solarpanel-deploying-1x5-1
+	PART
+	{
+		name = solarpanel-deploying-1x5-1
+		module = Part
+		author = ChrisAdderley
+		node_attach = 0.035, 0.0, 0.0, 1.0, 0.0, 0.0
+		TechRequired = experimentalElectrics
+		entryCost = 31000
+		cost = 3690
+		category = Utility
+		subcategory = 0
+		title = T65 1x5 Concentrating Photovoltaic Panels
+		manufacturer = Kerbal Electric Drive Yards
+		description = This versatile light panel provides a moderate amount of power without breaking the bank, or the back of the Kerbals assigned to carry it. It's a win-win for Finance and HR! Cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 0.1475
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 6
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-1
+			position = 0.0, 0.0, 0.0
+			scale = 1,1,1
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 14
+			retractable = false
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-1x5-2
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-2
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-2/solarpanel-deploying-1x5-2
+	PART
+	{
+		name = solarpanel-deploying-1x5-2
+		module = Part
+		author = ChrisAdderley
+		node_attach = 0.12, 0.0, 0.0, 1.0, 0.0, 0.0
+		TechRequired = experimentalElectrics
+		entryCost = 52000
+		cost = 6150
+		category = Utility
+		subcategory = 0
+		title = T225 1x5 Concentrating Photovoltaic Panels
+		manufacturer = Kerbal Electric Drive Yards
+		description = A bendier but larger version of the T65, the KEDY engineers have created this largish panel set for those power-hungry governments and spacecraft out there. Panel cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 0.22
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-1x5-2
+			position = 0.0, 0.0, 0.0
+			scale = 1,1,1
+			rotation = 0, 0, 0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			retractable = false
+			chargeRate = 22
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-2x1-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-1/solarpanel-deploying-2x1-1
+	PART
+	{
+		name = solarpanel-deploying-2x1-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		node_attach = 0.22, 0.0, 0.0, 1.0, 0.0, 0.0
+		TechRequired = experimentalElectrics
+		entryCost = 96000
+		cost = 14760
+		category = Utility
+		subcategory = 0
+		title = KR-XL Megalador Concentrating Solar Array
+		manufacturer = Kerb Kastra
+		description = Disputing the Gigantor-XL's claim of 'single largest solar array available*', the Megalador is large and unwieldy - but, if you can get past all that, is packed with loads of advanced solar cells. Cannot be retracted.
+		attachRules = 0,1,0,0,1
+		mass = 0.55
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = ExtendPanels
+			sunTracking = true
+			raycastTransformName = RightPanel
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 55
+			retractable = false
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-2x1-2
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-2
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-2/solarpanel-deploying-2x1-2
+	PART
+	{
+		name = solarpanel-deploying-2x1-2
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		node_attach = 0.14, 0.0, 0.0, 1.0, 0.0, 0.0
+		TechRequired = experimentalElectrics
+		entryCost = 65700
+		cost = 8200
+		category = Utility
+		subcategory = 0
+		title = KR-SL Solo Concentrating Solar Array
+		manufacturer = Kerb Kastra
+		description = A compact, pared down (with shears!) version of the Trio. Comes in a box advertising something about the odds, and how you shouldn't worry about them or even mention them.
+		attachRules = 0,1,0,0,1
+		mass = 0.3750
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 6
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x1-2
+			position = 0.0, 0.0, 0.0
+			scale = 1,1,1
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = PanelExtend
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 30
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-2x3-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x3-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x3-1/solarpanel-deploying-2x3-1
+	PART
+	{
+		name = solarpanel-deploying-2x3-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		node_attach = 0.6136484, 0.0, 0.0, 1.0, 0.0, 0.0
+		TechRequired = experimentalElectrics
+		entryCost = 102800
+		cost = 24600
+		category = Utility
+		subcategory = 0
+		title = KR-ML Trio Concentrating Solar Array
+		manufacturer = Kerb Kastra
+		description = A slightly larger alternative to the Megalador, the Trio mounts a trio of paired solar panels for efficient generation. Tradeoffs include a more fragile structure and a larger undeployed footprint.
+		attachRules = 0,1,0,0,1
+		mass = 1.2
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 5
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-2x3-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = PanelExtend
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 90
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-deploying-circular-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-circular-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-circular-1/solarpanel-deploying-circular-1
+	PART
+	{
+		name = solarpanel-deploying-circular-1
+		module = Part
+		author = ChrisAdderley
+		rescaleFactor = 1
+		TechRequired = specializedElectrics
+		entryCost = 21600
+		node_attach = -0.05, 0.0, 0.0, -1.0, 0.0, 0.0
+		cost = 2460
+		category = Utility
+		subcategory = 0
+		title = YF-1 Circular Concentrating Photovoltaic Array
+		manufacturer = Kerbal Techsystems
+		description = A new paradigm in solar array deployment with more than 66% additional bending capability, the compact initial size of this solar array could be very attractive in certain situations. This method also results in some weight savings.
+		attachRules = 0,1,0,0,1
+		mass = 0.0941
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 7
+		maxTemp = 1200
+		thermalMassModifier = 2.0
+		emissiveConstant = 0.95
+		heatConductivity = 0.04
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-deploying/solarpanel-deploying-circular-1
+			scale = 1.0,1.0,1.0
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			animationName = PanelsExtend
+			sunTracking = true
+			raycastTransformName = Suncatcher
+			pivotName = pivot
+			isBreakable = true
+			resourceName = ElectricCharge
+			chargeRate = 8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-static-truss-1
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-1
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-1/solarpanel-static-truss-1
+	PART
+	{
+		name = solarpanel-static-truss-1
+		module = Part
+		author = Chris Adderley
+		rescaleFactor = 1
+		node_attach = 0.0, 0.0, -0.16, 0.0, 0.0, 1.0
+		TechRequired = electrics
+		entryCost = 13500
+		cost = 1560
+		category = Utility
+		subcategory = 0
+		title = PX-STAT 1x4 Photovoltaic Truss
+		manufacturer = Probodobodyne Inc.
+		description = Two IX-STAT 1x2s, welded together? Madness!
+		attachRules = 0,1,0,0,1
+		mass = 0.1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 8
+		maxTemp = 1400
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-1
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			sunTracking = false
+			raycastTransformName = Suncatcher
+			pivotName = Suncatcher
+			isBreakable = false
+			resourceName = ElectricCharge
+			chargeRate = 8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = solarpanel-static-truss-2
+	type = PART
+	parentUrl = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-2
+	url = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-2/solarpanel-static-truss-2
+	PART
+	{
+		name = solarpanel-static-truss-2
+		module = Part
+		author = Chris Adderley
+		node_attach = 0.0, 0.0, 0.0, 0.0, 0.0,1.0
+		TechRequired = electrics
+		entryCost = 6500
+		cost = 780
+		category = Utility
+		subcategory = 0
+		title = PX-STAT 1x2 Photovoltaic Truss
+		manufacturer = Probodobodyne Inc.
+		description = As a follow-on to the well-regarded OX-STAT, the PX-STAT could allow Probodobodyne to regain the lead in static solar panel technology.
+		attachRules = 0,1,0,0,1
+		mass = 0.05
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		angularDrag = 1
+		crashTolerance = 12
+		maxTemp = 1400
+		MODEL
+		{
+			model = NearFutureSolar/Parts/SolarPanels/solarpanel-static/solarpanel-static-truss-2
+			scale = 0.65,0.65,0.65
+		}
+		MODULE
+		{
+			name = ModuleDeployableSolarPanel
+			sunTracking = false
+			raycastTransformName = Suncatcher
+			pivotName = Suncatcher
+			isBreakable = false
+			resourceName = ElectricCharge
+			chargeRate = 4
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = ACTIVE_TEXTURE_MANAGER_CONFIG
+	type = ACTIVE_TEXTURE_MANAGER_CONFIG
+	parentUrl = Nereid/FinalFrontier/TextureCompression
+	url = Nereid/FinalFrontier/TextureCompression/ACTIVE_TEXTURE_MANAGER_CONFIG
+	ACTIVE_TEXTURE_MANAGER_CONFIG
+	{
+		folder = Nereid/FinalFrontier
+		enabled = true
+		OVERRIDES
+		{
+			Nereid/FinalFrontier/.*
+			{
+				compress = false
+				mipmaps = false
+				scale = 1
+				max_size = 0
+			}
+		}
+	}
+}
+UrlConfig
+{
+	name = protractor_plain
+	type = PART
+	parentUrl = Protractor/Parts/protractor - plain/part
+	url = Protractor/Parts/protractor - plain/part/protractor_plain
+	PART
+	{
+		name = protractor_plain
+		module = Part
+		author = Enigma, model by Shanakin
+		mesh = calc.dae
+		texture = calc.png
+		scale = 1
+		node_attach = 0.0, 0.0, -0.01477, 0, 0.0, 0.0
+		TechRequired = flightControl
+		entryCost = 4400
+		cost = 400
+		category = Science
+		subcategory = 0
+		title = Protractor
+		manufacturer = Enigma
+		description = Tired of holding a protractor up to your screen? Use this instead!
+		attachRules = 0,1,0,0,1
+		mass = 0.00001
+		dragModelType = default
+		maximum_drag = 0.00001
+		minimum_drag = 0.00001
+		angularDrag = 0.00001
+		crashTolerance = 20
+		maxTemp = 3200
+		physicalSignificance = 0
+		MODULE
+		{
+			name = ProtractorModule
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = protractor_tape
+	type = PART
+	parentUrl = Protractor/Parts/protractor - tape/part
+	url = Protractor/Parts/protractor - tape/part/protractor_tape
+	PART
+	{
+		name = protractor_tape
+		module = Part
+		author = Enigma, model by Shanakin
+		mesh = calc.dae
+		texture = calc.png
+		scale = 1
+		node_attach = 0.0, 0.0, -0.01477, 0, 0.0, 0.0
+		TechRequired = flightControl
+		entryCost = 4400
+		cost = 400
+		category = Science
+		subcategory = 0
+		title = Protractor
+		manufacturer = Enigma
+		description = Tired of holding a protractor up to your screen? Use this instead! Now with tape to keep it from flying off!
+		attachRules = 0,1,0,0,1
+		mass = 0.00001
+		dragModelType = default
+		maximum_drag = 0.00001
+		minimum_drag = 0.00001
+		angularDrag = 0.00001
+		crashTolerance = 20
+		maxTemp = 3200
+		physicalSignificance = 0
+		MODULE
+		{
+			name = ProtractorModule
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
 	}
 }
 UrlConfig
@@ -40092,7 +43573,7 @@ UrlConfig
 		RangeMultiplier = 1
 		ActiveVesselGuid = 35b89a0d664c43c6bec8d0840afc97b2
 		SpeedOfLight = 3E+08
-		MapFilter = Omni, Dish, Path
+		MapFilter = Omni, Dish, Cone, Path
 		EnableSignalDelay = True
 		RangeModelType = Standard
 		MultipleAntennaMultiplier = 0
@@ -93576,6 +97057,31 @@ UrlConfig
 }
 UrlConfig
 {
+	name = Settings
+	type = Settings
+	parentUrl = TriggerTech/TransferWindowPlanner/settings
+	url = TriggerTech/TransferWindowPlanner/settings/Settings
+	Settings
+	{
+		SelectedSkin = Default
+		ButtonStyleChosen = Launcher
+		SelectedCalendar = KSPStock
+		EarthEpoch = 1951-01-01
+		ShowCalendarToggle = False
+		RSSShowCalendarToggled = False
+		KACAlarmAction = KillWarp
+		KACMargin = 24
+		ClickThroughProtect_KSC = True
+		ClickThroughProtect_Editor = True
+		ClickThroughProtect_Flight = True
+		DailyVersionCheck = True
+		VersionCheckDate_AttemptStored = 2015-12-28
+		VersionCheckDate_SuccessStored = 2015-12-28
+		VersionWeb = 1.4.0.0
+	}
+}
+UrlConfig
+{
 	name = AIES_Probe
 	type = SCALETYPE
 	parentUrl = TweakScale/AIES_TweakScale
@@ -97832,6 +101338,8 @@ UrlConfig
 		maxTemp = 3200
 		bulkheadProfiles = size1, srf
 		fuelCrossFeed = True
+		TechRequired = advConstruction
+		category = none
 		MODEL
 		{
 			model = UmbraSpaceIndustries/Kolonization/Assets/DockingPort

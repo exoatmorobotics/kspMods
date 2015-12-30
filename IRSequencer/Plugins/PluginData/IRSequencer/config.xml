@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
     <rect name="SequencerWindowPos">
-        <xmin>0</xmin>
-        <xmax>0</xmax>
-        <ymin>0</ymin>
-        <ymax>0</ymax>
+        <xmin>1404</xmin>
+        <xmax>1414</xmax>
+        <ymin>70</ymin>
+        <ymax>80</ymax>
     </rect>
     <rect name="SequencerEditorWindowPos">
-        <xmin>0</xmin>
-        <xmax>0</xmax>
-        <ymin>0</ymin>
-        <ymax>0</ymax>
+        <xmin>1404</xmin>
+        <xmax>1414</xmax>
+        <ymin>300</ymin>
+        <ymax>310</ymax>
     </rect>
 </config>
