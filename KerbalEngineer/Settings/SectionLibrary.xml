@@ -80,7 +80,7 @@
         <IsHud>false</IsHud>
         <IsHudBackground>true</IsHudBackground>
         <IsVisible>true</IsVisible>
-        <LineCount>11</LineCount>
+        <LineCount>13</LineCount>
         <Name>VESSEL</Name>
         <ReadoutModuleNames>
           <string>Vessel.DeltaVStaged</string>
@@ -143,7 +143,7 @@
         <IsHud>false</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>false</IsVisible>
-        <LineCount>0</LineCount>
+        <LineCount>13</LineCount>
         <Name>THERMAL</Name>
         <ReadoutModuleNames>
           <string>Thermal.InternalFlux</string>
@@ -173,7 +173,7 @@
         <IsHud>true</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>true</IsVisible>
-        <LineCount>9</LineCount>
+        <LineCount>10</LineCount>
         <Name>HUD 1</Name>
         <ReadoutModuleNames>
           <string>Orbital.ApoapsisHeight</string>

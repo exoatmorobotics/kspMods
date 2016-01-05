@@ -97075,8 +97075,8 @@ UrlConfig
 		ClickThroughProtect_Editor = True
 		ClickThroughProtect_Flight = True
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2015-12-28
-		VersionCheckDate_SuccessStored = 2015-12-28
+		VersionCheckDate_AttemptStored = 2016-01-04
+		VersionCheckDate_SuccessStored = 2016-01-04
 		VersionWeb = 1.4.0.0
 	}
 }
