@@ -1,4 +1,4 @@
-patchedNodeCount = 1921
+patchedNodeCount = 1939
 catEatenCount = 0
 UrlConfig
 {
@@ -6416,1870 +6416,1650 @@ UrlConfig
 }
 UrlConfig
 {
-	name = ScanKerbinLoRes
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/01-KerbinLoRes
-	url = ContractPacks/CC-CP-SCANSat/01-KerbinLoRes/ScanKerbinLoRes
-	CONTRACT_TYPE
-	{
-		name = ScanKerbinLoRes
-		group = SCANsat
-		title = Altimetry Scan of Kerbin
-		description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-		synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. \n\nThe key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
-		notes = Tip: There's probably some other science equipment you can take along for some extra science!
-		completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-		targetBody = Kerbin
-		agent = Research & Development Department
-		advanceFunds = 12000
-		rewardScience = 20
-		rewardReputation = 28
-		rewardFunds = 20000
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Maxwell1
-			type = VesselParameterGroup
-			define = Maxwell I
-			duration = 1d 30m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Kerbin
-			coverage = 50.0
-			scanType = AltimetryLoRes
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			title = (OPTIONAL)Achieve an orbit with the following parameters
-			optional = true
-			name = Orbit
-			type = Orbit
-			targetBody = Kerbin
-			minApA = 493234
-			maxApA = 499314
-			minPeA = 493101
-			maxPeA = 499106
-			maxEccentricity = 0.0021
-			minInclination = 79.3
-			maxInclination = 80.3
-			disableOnStateChange = false
-			rewardScience = 4
-			rewardReputation = 5
-			rewardFunds = 15000
-		}
-		REQUIREMENT
-		{
-			name = PartUnlocked1
-			type = PartUnlocked
-			part = SCANsat_Scanner
-		}
-		REQUIREMENT
-		{
-			name = SCANsatCoverage2
-			type = SCANsatCoverage
-			targetBody = Kerbin
-			maxCoverage = 49.9
-			minCoverage = 0.0
-			scanType = AltimetryLoRes
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanMunLoRes
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/02-MunLoRes
-	url = ContractPacks/CC-CP-SCANSat/02-MunLoRes/ScanMunLoRes
-	CONTRACT_TYPE
-	{
-		name = ScanMunLoRes
-		group = SCANsat
-		title = Altimetry Scan of Mun
-		description = With your recent success in getting us some preliminary altimetry data of Kerbin, our researchers have begged to see similar information for Mun. Get this right and we'll have some useful data for a Mun landing, not because it's easy, but because it is hard.
-		synopsis = Send an unkerbaled vessel into Munar orbit, reach a 405km orbit with an 85.2 degree inclination and scan Mun's surface with the SCAN Radar Altimetry Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.
-		completedMessage = Incredible, we have already analysed the early data and have found 73 different rock formations that resemble rocks! We'll be in touch.
-		targetBody = Mun
-		agent = Research & Development Department
-		advanceFunds = 11200
-		rewardScience = 14
-		rewardReputation = 20
-		rewardFunds = 25200
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Maxwell2
-			type = VesselParameterGroup
-			define = Maxwell II
-			duration = 1d 3h
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = Orbit
-				type = Orbit
-				targetBody = Mun
-				title = Achieve an orbit with the following parameters
-				minApA = 402311
-				maxApA = 408256
-				minPeA = 402102
-				maxPeA = 408114
-				maxEccentricity = 0.0021
-				minInclination = 84.7
-				maxInclination = 85.7
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Mun
-			coverage = 50.0
-			scanType = AltimetryLoRes
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Kerbin
-				maxCoverage = 100.0
-				minCoverage = 60.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Mun
-				ORBIT
-				{
-					SMA = 605132
-					ECC = 0.0001
-					INC = 85.2
-					LPE = 302
-					LAN = 112
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanMinmus
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/03-MinmusLoRes
-	url = ContractPacks/CC-CP-SCANSat/03-MinmusLoRes/ScanMinmus
-	CONTRACT_TYPE
-	{
-		name = ScanMinmus
-		group = SCANsat
-		title = Altimetry Scan of Minmus
-		description = Heads up, Director. There is more work to be done. With the Kerbin scans coming along nicely and Mun scans underway, the team feel it's time we got some data about Minmus. We think it's very flat in places, but we'll know more once you've got us this data.
-		synopsis = Send an unkerbaled vessel into a Minmus orbit, reach a 74km orbit with an 79.5 degree inclination and scan Minmus's surface with the SCAN Radar Altimetry Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.
-		completedMessage = Excellent work. As expected Kerbins second celestial satellite is very flat in places, with some bumpy bits. The guys are already preparing a party in the mess. Free Ice Cream!
-		targetBody = Minmus
-		agent = Research & Development Department
-		advanceFunds = 10240
-		rewardScience = 13
-		rewardReputation = 18
-		rewardFunds = 23040
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Maxwell3
-			type = VesselParameterGroup
-			define = Maxwell III
-			duration = 4h
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = Orbit
-				type = Orbit
-				targetBody = Minmus
-				title = Achieve an orbit with the following parameters
-				minApA = 71210
-				maxApA = 77305
-				minPeA = 71103
-				maxPeA = 77219
-				maxEccentricity = 0.003
-				minInclination = 79.0
-				maxInclination = 80
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Minmus
-			coverage = 50.0
-			scanType = AltimetryLoRes
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Kerbin
-				maxCoverage = 100.0
-				minCoverage = 65.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 15.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Minmus
-				ORBIT
-				{
-					SMA = 133986
-					ECC = 0.0001
-					INC = 79.5
-					LPE = 90
-					LAN = 203
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanEveLoRes
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/04-EveLoRes
-	url = ContractPacks/CC-CP-SCANSat/04-EveLoRes/ScanEveLoRes
-	CONTRACT_TYPE
-	{
-		name = ScanEveLoRes
-		group = SCANsat
-		title = Altimetry Scan of Eve
-		description = We've gathered some great data so far from Min and Minmus, but these were easy pickings compared to your next target. Get us something pretty to analyse from Eve. We don't currently know much more than "It's Purple".
-		synopsis = Send an unkerbaled vessel into Eve orbit, reach a 455km orbit with an 88 degree inclination and scan Eve's surface with the SCAN Radar Altimetry Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.\n\nTip: Take along some of your other science gear to earn more science!
-		notes = Tip: You'll need to complete your optional part before your main part, if you choose to take the challenge on!
-		completedMessage = Splendid! The boys and girls in R&D are very grateful for your work and look forward to sifting through all of the data over a bottle or three of Kerbins finest Kanar.
-		targetBody = Eve
-		agent = Research & Development Department
-		advanceFunds = 7200.0
-		rewardScience = 9.0
-		rewardReputation = 13.0
-		rewardFunds = 16200.0
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Maxwell4
-			type = VesselParameterGroup
-			define = Maxwell IV
-			duration = 5h 45m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Eve
-				minApA = 452145
-				maxApA = 458203
-				minPeA = 452003
-				maxPeA = 458197
-				minEccentricity = 0.0
-				maxEccentricity = 0.0021
-				minInclination = 87.5
-				maxInclination = 88.5
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Eve
-			coverage = 50.0
-			scanType = AltimetryLoRes
-		}
-		PARAMETER
-		{
-			name = Option
-			type = All
-			title = (Optional) Take an additional vessel and grab some data from Gilly
-			optional = True
-			rewardScience = 4
-			rewardReputation = 5
-			rewardFunds = 6400
-			PARAMETER
-			{
-				name = Hertz1
-				type = VesselParameterGroup
-				define = Hertz I
-				PARAMETER
-				{
-					title = Achieve an orbit around
-					name = Orbit
-					type = Orbit
-					targetBody = Gilly
-					minApA = 11141
-					maxApA = 12536
-					minPeA = 11106
-					maxPeA = 12525
-					maxEccentricity = 0.04
-					minInclination = 72.3
-					maxInclination = 72.7
-					disableOnStateChange = false
-				}
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Gilly
-				coverage = 25.0
-				scanType = AltimetryLoRes
-			}
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 75.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 75.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Eve
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Eve
-				ORBIT
-				{
-					SMA = 1154900
-					ECC = 0.0011
-					INC = 88
-					LPE = 270
-					LAN = 301
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Gilly
-				ORBIT
-				{
-					SMA = 24700
-					ECC = 0.0016
-					INC = 72.5
-					LPE = 212
-					LAN = 337
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanDunaLoRes
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/05-DunaLoRes
-	url = ContractPacks/CC-CP-SCANSat/05-DunaLoRes/ScanDunaLoRes
-	CONTRACT_TYPE
-	{
-		name = ScanDunaLoRes
-		group = SCANsat
-		title = Altimetry Scan of Duna
-		description = Now that we have most of the data from Mun and Minmus the guys feel ready to get another launch on the way, this time to Duna! We've got all these spare rocket parts laying around so it seems like a good idea.
-		synopsis = Send an unkerbaled vessel into Duna orbit, reach a 378km orbit with an 84.1 degree inclination and scan Duna's surface with the SCAN Radar Altimetry Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.\n\nTip: Take along some of your other science gear to earn more science!
-		notes = Tip: You'll need to complete your optional part before your main part, if you choose to take the challenge on!
-		completedMessage = Boy was that worth it! 17 different craters, 50 shades of orange and 4 dried up riverbeds. Astonishing!
-		targetBody = Duna
-		agent = Research & Development Department
-		advanceFunds = 8800.0
-		rewardScience = 11.0
-		rewardReputation = 15.0
-		rewardFunds = 19800.0
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Maxwell5
-			type = VesselParameterGroup
-			define = Maxwell V
-			duration = 1d 3h
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Duna
-				minApA = 375251
-				maxApA = 381314
-				minPeA = 375124
-				maxPeA = 381268
-				minEccentricity = 0.0
-				maxEccentricity = 0.0022
-				minInclination = 83.64
-				maxInclination = 84.64
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Duna
-			coverage = 50.0
-			scanType = AltimetryLoRes
-		}
-		PARAMETER
-		{
-			name = Option
-			type = All
-			title = (Optional) Take an additional vessel and grab some Altimetry data from Ike
-			optional = True
-			rewardScience = 4
-			rewardReputation = 5
-			rewardFunds = 6400
-			PARAMETER
-			{
-				name = Hertz2
-				type = VesselParameterGroup
-				define = Hertz II
-				PARAMETER
-				{
-					title = Achieve an orbit around
-					name = Orbit
-					type = Orbit
-					targetBody = Ike
-					minApA = 398325
-					maxApA = 403512
-					minPeA = 398214
-					maxPeA = 403135
-					maxEccentricity = 0.0022
-					minInclination = 73.67
-					maxInclination = 74.67
-					disableOnStateChange = false
-				}
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Ike
-				coverage = 25.0
-				scanType = AltimetryLoRes
-			}
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 90.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 90.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Duna
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Duna
-				ORBIT
-				{
-					SMA = 698000
-					ECC = 0.0011
-					INC = 84.14
-					LPE = 279
-					LAN = 37
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Ike
-				ORBIT
-				{
-					SMA = 531500
-					ECC = 0.00111
-					INC = 74.1
-					LPE = 27
-					LAN = 63
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanKerbinMultispectral
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/06-KerbinMultispectral
-	url = ContractPacks/CC-CP-SCANSat/06-KerbinMultispectral/ScanKerbinMultispectral
-	CONTRACT_TYPE
-	{
-		name = ScanKerbinMultispectral
-		group = SCANsat
-		title = Multispectral Scan of Kerbin
-		description = Thanks to your grand efforts in collecting science so far, the folk in R&D have managed to whip together a SCAN Multispectral Sensor from some old toilet rolls and some sticky backed plastic. Time to test it out and at the same time, retire the old Maxwell 1 Altimetry scanner we launched all those weeks/days/hours/minutes ago!
-		synopsis = Send an unkerbaled vessel into orbit, reach a 495.2km orbit with an 79.78 degree inclination and scan Kerbin's surface with the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below. \n\nAlso, deorbit Maxwell 1 and let it burn up in the atmosphere, if you can.
-		completedMessage = Stunning, through the advances with this scanner we have identified 9 different biomes for further study. I wonder if Mun has biomes?
-		targetBody = Kerbin
-		agent = Research & Development Department
-		advanceFunds = 20000
-		rewardScience = 25.0
-		rewardReputation = 35.0
-		rewardFunds = 45000.0
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = GeoEye1
-			type = VesselParameterGroup
-			define = GeoEye I
-			duration = 1d 2h 30m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Kerbin
-				minApA = 492204
-				maxApA = 498314
-				minPeA = 492101
-				maxPeA = 498106
-				maxEccentricity = 0.00214
-				minInclination = 79.28
-				maxInclination = 80.28
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Kerbin
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = OrbitEndGrp
-			type = All
-			title = (Optional 1) De-Orbit Maxwell I, our first SCANSat satellite
-			optional = True
-			rewardScience = 4.0
-			rewardReputation = 6.0
-			rewardFunds = 8000.0
-			PARAMETER
-			{
-				name = OrbitEnd
-				type = VesselParameterGroup
-				vessel = Maxwell I
-				PARAMETER
-				{
-					name = orbitend
-					type = ReachState
-					targetBody = Kerbin
-					situation = SUB_ORBITAL
-				}
-			}
-		}
-		REQUIREMENT
-		{
-			name = all
-			type = All
-			REQUIREMENT
-			{
-				name = PartUnlocked1
-				type = PartUnlocked
-				part = SCANsat_Scanner24
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Kerbin
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = Biome
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Kerbin
-				ORBIT
-				{
-					SMA = 1095200
-					ECC = 0.00016
-					INC = 79.78
-					LPE = 70
-					LAN = 15
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanMunMinmusMultispectral
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/07-MunMinmusMultispectral
-	url = ContractPacks/CC-CP-SCANSat/07-MunMinmusMultispectral/ScanMunMinmusMultispectral
-	CONTRACT_TYPE
-	{
-		name = ScanMunMinmusMultispectral
-		group = SCANsat
-		title = Multispectral Scan of Mun & Minmus
-		description = After all the work you've done discovering biomes here at home we're starting to wonder if there aren't also different biomes on our moons. Dispatch some ships to find out, and make it snappy.
-		synopsis = Send a pair of unkerbaled vessels into orbits around our moons. For Mun, reach a 234.1km orbit with an 87.1 degree inclination. For Minmus, reach a 273.9km orbit with a 44.4 degree inclination. Scan both surfaces with the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below. \n\nYou may also still have Maxwell II and Maxwell III in their respective orbits around the moons. If you can, bring them to an end and help keep space clean.
-		completedMessage = As we suspected both Mun and Minmus are littered with different biomes. There must be a wealth of science to collect from each one!
-		targetBody = Mun
-		agent = Research & Development Department
-		advanceFunds = 18000
-		rewardScience = 23
-		rewardReputation = 32
-		rewardFunds = 40500
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = GeoEye2
-			type = VesselParameterGroup
-			define = GeoEye II
-			duration = 1d 4h 20m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Mun
-				minApA = 232223
-				maxApA = 236341
-				minPeA = 232165
-				maxPeA = 236247
-				maxEccentricity = 0.00201
-				minInclination = 86.6
-				maxInclination = 87.6
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Mun
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = OrbitEndGrp
-			type = All
-			title = (Optional 1) De-Orbit Maxwell II, our previous SCANSat around Mun
-			optional = True
-			rewardScience = 2
-			rewardReputation = 3
-			rewardFunds = 4000
-			PARAMETER
-			{
-				name = OrbitEnd
-				type = VesselParameterGroup
-				vessel = Maxwell II
-				disableOnStateChange = false
-				PARAMETER
-				{
-					name = orbitend
-					type = ReachState
-					targetBody = Mun
-					situation = SUB_ORBITAL
-				}
-			}
-		}
-		PARAMETER
-		{
-			name = GeoEye3
-			type = VesselParameterGroup
-			define = GeoEye III
-			duration = 2d 3h 45m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation2
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Minmus
-				minApA = 248943
-				maxApA = 251114
-				minPeA = 248901
-				maxPeA = 251036
-				maxEccentricity = 0.00214
-				minInclination = 76.7
-				maxInclination = 77.3
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage2
-			type = SCANsatCoverage
-			targetBody = Minmus
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = OrbitEndGrp1
-			type = All
-			title = (Optional 2) De-Orbit Maxwell III, our previous SCANSat around Minmus
-			optional = True
-			rewardScience = 2
-			rewardReputation = 3
-			rewardFunds = 4000
-			PARAMETER
-			{
-				name = OrbitEnd
-				type = VesselParameterGroup
-				vessel = Maxwell III
-				PARAMETER
-				{
-					name = orbitend
-					type = ReachState
-					targetBody = Minmus
-					situation = SUB_ORBITAL
-				}
-			}
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Kerbin
-				maxCoverage = 100.0
-				minCoverage = 50.0
-				scanType = Biome
-				REQUIREMENT
-				{
-					name = SCANsatCoverage4
-					type = SCANsatCoverage
-					targetBody = Minmus
-					maxCoverage = 49.9
-					minCoverage = 0.0
-					scanType = Biome
-				}
-				REQUIREMENT
-				{
-					name = SCANsatCoverage5
-					type = SCANsatCoverage
-					targetBody = Mun
-					maxCoverage = 49.9
-					minCoverage = 0.0
-					scanType = Biome
-				}
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Mun
-				ORBIT
-				{
-					SMA = 434100
-					ECC = 0.00013
-					INC = 87.1
-					LPE = 25
-					LAN = 5
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Minmus
-				ORBIT
-				{
-					SMA = 310131
-					ECC = 0.000132
-					INC = 77
-					LPE = 134
-					LAN = 236
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanDresLoResBiome
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/08-DresLoResBiome
-	url = ContractPacks/CC-CP-SCANSat/08-DresLoResBiome/ScanDresLoResBiome
-	CONTRACT_TYPE
-	{
-		name = ScanDresLoResBiome
-		group = SCANsat
-		title = Altimetry & Biome Scan of Dres
-		description = Our knowledge of the solar system is growing mission by mission and we're starting to get a reputation! Our nearest neighbors are now all under heavy observation so now we must expidite a mission to Dres.\n\nTip: Take along some of your other science gear to earn more science!
-		synopsis = Send a single unkerbaled vessel to Dres. Reach a 255km orbit with a 79.5 degree inclination and scan Dres's surface with both the SCAN Radar Altimetry Sensor and the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit for each in the Tracking Station, but feel free to just hit the targets below.
-		completedMessage = Dres turned out to be barely a planet at all, more like a large asteroid. Good work regardless. Getting this information was still valuble.
-		targetBody = Dres
-		agent = Research & Development Department
-		advanceFunds = 8000.0
-		rewardScience = 10.0
-		rewardReputation = 14.0
-		rewardFunds = 19286
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Titius1
-			type = VesselParameterGroup
-			define = Titius I
-			duration = 12h 5m
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation2
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Dres
-				minApA = 252536
-				maxApA = 257963
-				minPeA = 252109
-				maxPeA = 257635
-				maxEccentricity = 0.002
-				minInclination = 71.9
-				maxInclination = 72.5
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			coverage = 50.0
-			scanType = AltimetryLoRes
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage2
-			type = SCANsatCoverage
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 50.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 50.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Dres
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Dres
-				ORBIT
-				{
-					SMA = 393000
-					ECC = 0.00181
-					INC = 79.5
-					LPE = 76
-					LAN = 39
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanMohoLoResBiome
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/09-MohoLoResBiome
-	url = ContractPacks/CC-CP-SCANSat/09-MohoLoResBiome/ScanMohoLoResBiome
-	CONTRACT_TYPE
-	{
-		name = ScanMohoLoResBiome
-		group = SCANsat
-		title = Altimetry & Biome Scan of Moho
-		description = Feeling a bit warm? You will be! It's time we started a mission to Moho to begin to learn about the makeup of the surface there. Its going to be a bit toasty that close to Kerbol and Bob already had his sun tan lotion ready to go. He was very upset when we told him no.\n\nTip: Take along some of your other science gear to earn more science!
-		synopsis = Send a single unkerbaled vessel to Moho. Reach a 495km orbit with an 85.2 degree inclination and scan the surface with the SCAN Radar Altimetry Sensor and the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.
-		notes = Note: Due to the tidally locked nature of Moho, scans take considerably longer there.
-		completedMessage = Brilliant! As we suspected Moho looks like it was subjected to extreme volcanic activity in millenia gone by. Herman has already opened a small shrine to Hephaistos, god of Fire.
-		targetBody = Moho
-		agent = Research & Development Department
-		advanceFunds = 8571
-		rewardScience = 11
-		rewardReputation = 15
-		rewardFunds = 19286
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Titius2
-			type = VesselParameterGroup
-			define = Titius II
-			duration = 72h
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation2
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Moho
-				minApA = 493247
-				maxApA = 497325
-				minPeA = 493167
-				maxPeA = 497255
-				minEccentricity = 0.0
-				maxEccentricity = 0.0022
-				minInclination = 84.9
-				maxInclination = 85.5
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			targetBody = Moho
-			coverage = 50.0
-			scanType = AltimetryLoRes
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage2
-			type = SCANsatCoverage
-			targetBody = Moho
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		REQUIREMENT
-		{
-			name = Requirements
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 65.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 65.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Moho
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Moho
-				ORBIT
-				{
-					SMA = 745000
-					ECC = 0.001
-					INC = 85.2
-					LPE = 201
-					LAN = 27
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanJovianMoons
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/10-JoolLoResBiome
-	url = ContractPacks/CC-CP-SCANSat/10-JoolLoResBiome/ScanJovianMoons
-	CONTRACT_TYPE
-	{
-		name = ScanJovianMoons
-		group = SCANsat
-		title = Jovian Altimetry and Biome Scans
-		description = We're 17% certain that Jool is a gas giant and as such we're not going to be able to get any Altimetry or Biome data from it. Despite that, however, Jool is blessed with 5 moons which all appear fairly solid. Send a small fleet there to discover the secrets of Jovian space.\n\nTip 1: You don't NEED to scan Bop and Pol to complete this mission, but there are extra rewards if you do choose to take 2 extra ships to get that data! \nTip 2: If choosing to take on the optional parts of the mission, complete them first! As soon as your main objectives are completed, the mission will end!\nTip 3: Take along some of your other science gear to earn more science!
-		synopsis = Send 3 unkerbaled vessels into the vicinity of Jool and dispatch one to each of the moons Laythe, Vall & Tylo. Perform surface scans with both the SCAN Radar Altimetry Sensor and the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.
-		completedMessage = The probes have completed a great deal of their work and our people will be analysing this data for at least 8 minutes. Congratulate your team, great work.
-		targetBody = Jool
-		agent = Research & Development Department
-		advanceFunds = 53333
-		rewardScience = 67
-		rewardReputation = 93
-		rewardFunds = 120000
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = Galileo1
-			type = VesselParameterGroup
-			define = Galileo 1
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation2
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Laythe
-				minApA = 411625
-				maxApA = 414547
-				minPeA = 411502
-				maxPeA = 414436
-				maxEccentricity = 0.0022
-				minInclination = 87.3
-				maxInclination = 87.7
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = Galileo2
-			type = VesselParameterGroup
-			define = Galileo 2
-			PARAMETER
-			{
-				name = HasCrew2
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation3
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation4
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Vall
-				minApA = 454621
-				maxApA = 458735
-				minPeA = 454609
-				maxPeA = 458704
-				maxEccentricity = 0.0022
-				minInclination = 83.3
-				maxInclination = 83.7
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = Galileo3
-			type = VesselParameterGroup
-			define = Galileo 3
-			PARAMETER
-			{
-				name = HasCrew3
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation5
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation6
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Tylo
-				minApA = 492641
-				maxApA = 496543
-				minPeA = 492596
-				maxPeA = 496536
-				maxEccentricity = 0.0022
-				minInclination = 84.5
-				maxInclination = 84.9
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = AllScans
-			type = All
-			PARAMETER
-			{
-				name = SCANsatCoverage1
-				type = SCANsatCoverage
-				targetBody = Laythe
-				coverage = 50.0
-				scanType = AltimetryLoRes
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage2
-				type = SCANsatCoverage
-				targetBody = Vall
-				coverage = 50.0
-				scanType = AltimetryLoRes
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Tylo
-				coverage = 50.0
-				scanType = AltimetryLoRes
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage1a
-				type = SCANsatCoverage
-				targetBody = Laythe
-				coverage = 50.0
-				scanType = Biome
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage2a
-				type = SCANsatCoverage
-				targetBody = Vall
-				coverage = 50.0
-				scanType = Biome
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage3a
-				type = SCANsatCoverage
-				targetBody = Tylo
-				coverage = 50.0
-				scanType = Biome
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = Bop1
-			type = All
-			title = (Optional 1) Send another vessel to Bop
-			optional = True
-			rewardScience = 4.0
-			rewardReputation = 6.0
-			rewardFunds = 8000.0
-			PARAMETER
-			{
-				name = Galileo4
-				type = VesselParameterGroup
-				define = Galileo 4
-				PARAMETER
-				{
-					name = HasCrew4
-					type = HasCrew
-					maxCrew = 0
-					minCrew = 0
-				}
-				PARAMETER
-				{
-					name = PartValidation7
-					type = PartValidation
-					part = SCANsat_Scanner
-				}
-				PARAMETER
-				{
-					name = PartValidation8
-					type = PartValidation
-					part = SCANsat_Scanner24
-				}
-				PARAMETER
-				{
-					title = Achieve an orbit with the following parameters
-					name = Orbit
-					type = Orbit
-					targetBody = Bop
-					minApA = 247469
-					maxApA = 251358
-					minPeA = 247403
-					maxPeA = 251340
-					maxEccentricity = 0.002
-					minInclination = 76.3
-					maxInclination = 76.5
-					disableOnStateChange = false
-				}
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Bop
-				coverage = 50.0
-				scanType = AltimetryLoRes
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage4a
-				type = SCANsatCoverage
-				targetBody = Bop
-				coverage = 50.0
-				scanType = Biome
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = Pol1
-			type = All
-			title = (Optional 2) Send another vessel to Pol
-			optional = True
-			rewardScience = 4.0
-			rewardReputation = 6.0
-			rewardFunds = 8000.0
-			PARAMETER
-			{
-				name = Galileo5
-				type = VesselParameterGroup
-				define = Galileo 5
-				PARAMETER
-				{
-					name = HasCrew5
-					type = HasCrew
-					maxCrew = 0
-					minCrew = 0
-				}
-				PARAMETER
-				{
-					name = PartValidation9
-					type = PartValidation
-					part = SCANsat_Scanner
-				}
-				PARAMETER
-				{
-					name = PartValidation10
-					type = PartValidation
-					part = SCANsat_Scanner24
-				}
-				PARAMETER
-				{
-					title = Achieve an orbit with the following parameters
-					name = Orbit
-					type = Orbit
-					targetBody = Pol
-					minApA = 335810
-					maxApA = 339847
-					minPeA = 335759
-					maxPeA = 339758
-					maxEccentricity = 0.002
-					minInclination = 74.4
-					maxInclination = 74.8
-					disableOnStateChange = false
-				}
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Pol
-				coverage = 50.0
-				scanType = AltimetryLoRes
-				disableOnStateChange = false
-			}
-			PARAMETER
-			{
-				name = SCANsatCoverage5a
-				type = SCANsatCoverage
-				targetBody = Pol
-				coverage = 50.0
-				scanType = Biome
-				disableOnStateChange = false
-			}
-		}
-		REQUIREMENT
-		{
-			name = All1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage6
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 90.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage7
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 90.0
-				scanType = AltimetryLoRes
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage8
-				type = SCANsatCoverage
-				targetBody = Laythe
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Laythe
-				ORBIT
-				{
-					SMA = 913000
-					ECC = 0.0011
-					INC = 87.5
-					LPE = 23
-					LAN = 309
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Vall
-				ORBIT
-				{
-					SMA = 756800
-					ECC = 0.0011
-					INC = 83.52
-					LPE = 26
-					LAN = 236
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Tylo
-				ORBIT
-				{
-					SMA = 1094600
-					ECC = 0.0011
-					INC = 84.76
-					LPE = 196
-					LAN = 37
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Bop
-				ORBIT
-				{
-					SMA = 314400
-					ECC = 0.0011
-					INC = 76.5
-					LPE = 19
-					LAN = 300
-					REF = 1
-				}
-			}
-			FIXED_ORBIT
-			{
-				targetBody = Pol
-				ORBIT
-				{
-					SMA = 381900
-					ECC = 0.0011
-					INC = 74.6
-					LPE = 97
-					LAN = 42
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = ScanEelooLoResBiome
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/CC-CP-SCANSat/11-EelooLoResBiome
-	url = ContractPacks/CC-CP-SCANSat/11-EelooLoResBiome/ScanEelooLoResBiome
-	CONTRACT_TYPE
-	{
-		name = ScanEelooLoResBiome
-		group = SCANsat
-		title = Altimetry and Biome Scan of Eeloo
-		description = Somewhere out there is Eeloo and we want you to find it before someone changes its designation to "Rock" from the already embarrasing "Dwarf Planet". The journey will be long and arduous, but the data we can retrieve would be invaluable to us all.
-		synopsis = Send a single unkerbaled vessel into Eeloo orbit. Reach a 335km orbit with an 83 degree inclination and scan Eeloo's surface with both the SCAN Radar Altimetry Sensor and the SCAN Multispectral Sensor. \n\nYou'll see a suggested orbit in the Tracking Station, but feel free to just hit the targets below.\n\nTip: Take along some of your other science gear to earn more science!\nTip: Eeloo is a long way from the sun, so you'll need more solar power to survive.
-		completedMessage = Such a tiny planet. So far away. So cold. Excellent work, It's been so long since we embarked on this mission some of the engineers that launched it have had grand children!
-		targetBody = Eeloo
-		agent = Research & Development Department
-		advanceFunds = 16000
-		rewardScience = 20
-		rewardReputation = 28
-		rewardFunds = 36000
-		maxCompletions = 1
-		maxSimultaneous = 1
-		prestige = Significant
-		PARAMETER
-		{
-			name = NewHorizons
-			type = VesselParameterGroup
-			define = New Horizons
-			duration = 12h
-			PARAMETER
-			{
-				name = HasCrew1
-				type = HasCrew
-				maxCrew = 0
-				minCrew = 0
-			}
-			PARAMETER
-			{
-				name = PartValidation
-				type = PartValidation
-				part = SCANsat_Scanner
-			}
-			PARAMETER
-			{
-				name = PartValidation2
-				type = PartValidation
-				part = SCANsat_Scanner24
-			}
-			PARAMETER
-			{
-				title = Achieve an orbit with the following parameters
-				name = Orbit
-				type = Orbit
-				targetBody = Eeloo
-				minApA = 333563
-				maxApA = 336584
-				minPeA = 333521
-				maxPeA = 336577
-				maxEccentricity = 0.0022
-				minInclination = 82.7
-				maxInclination = 83.3
-				disableOnStateChange = false
-			}
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage1
-			type = SCANsatCoverage
-			coverage = 50.0
-			scanType = AltimetryLoRes
-			disableOnStateChange = false
-		}
-		PARAMETER
-		{
-			name = SCANsatCoverage2
-			type = SCANsatCoverage
-			coverage = 50.0
-			scanType = Biome
-			disableOnStateChange = false
-		}
-		REQUIREMENT
-		{
-			name = all1
-			type = All
-			REQUIREMENT
-			{
-				name = SCANsatCoverage3
-				type = SCANsatCoverage
-				targetBody = Mun
-				maxCoverage = 100.0
-				minCoverage = 95.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage4
-				type = SCANsatCoverage
-				targetBody = Minmus
-				maxCoverage = 100.0
-				minCoverage = 95.0
-				scanType = Biome
-			}
-			REQUIREMENT
-			{
-				name = SCANsatCoverage5
-				type = SCANsatCoverage
-				targetBody = Eeloo
-				maxCoverage = 49.9
-				minCoverage = 0.0
-				scanType = AltimetryLoRes
-			}
-		}
-		BEHAVIOUR
-		{
-			name = OrbitGenerator1
-			type = OrbitGenerator
-			FIXED_ORBIT
-			{
-				targetBody = Eeloo
-				ORBIT
-				{
-					SMA = 545000
-					ECC = 0.0011
-					INC = 83
-					LPE = 209
-					LAN = 83
-					REF = 1
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = SCANsat
+	name = AnomalySurveyor
 	type = CONTRACT_GROUP
-	parentUrl = ContractPacks/CC-CP-SCANSat/CC-CP-SCANSat
-	url = ContractPacks/CC-CP-SCANSat/CC-CP-SCANSat/SCANsat
+	parentUrl = ContractPacks/AnomalySurveyor/AnomalySurveyor
+	url = ContractPacks/AnomalySurveyor/AnomalySurveyor/AnomalySurveyor
 	CONTRACT_GROUP
 	{
-		name = SCANsat
-		minVersion = 0.7.1
-		maxSimultaneous = 3
+		name = AnomalySurveyor
+		displayName = Anomaly Surveyor
+		minVersion = 1.7.3
+		maxSimultaneous = 5
+	}
+}
+UrlConfig
+{
+	name = AS_Bop_DeadKraken
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Bop_DeadKraken
+	url = ContractPacks/AnomalySurveyor/Bop_DeadKraken/AS_Bop_DeadKraken
+	CONTRACT_TYPE
+	{
+		name = AS_Bop_DeadKraken
+		group = AnomalySurveyor
+		title = Investigate something odd on Bop.
+		description = Something in one of the craters on Bop caught our attention.  Go check it out.
+		synopsis = Investigate the crater on Bop.
+		completedMessage = Hmm....  any chance you're willing to get a sample?
+		tag = SCANsat
+		prestige = Exceptional
+		targetBody = Bop
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 110500
+		rewardScience = 10.0
+		rewardReputation = 3.3
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Investigate the Bop anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 25
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Anomaly in a Crater
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = 68.4278362774429
+				longitude = -242.991724273924
+				altitude = 1.37536410811299
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Dead Kraken
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				KERBAL
+				{
+				}
+				TEXT
+				{
+					text = It looks like some sort of deep space kraken.  I'm glad it's dead, since we left the Krakensbane back at mission control.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			latitude = 68.4278362774429
+			longitude = -242.991724273924
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Duna_Face
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Duna_Face
+	url = ContractPacks/AnomalySurveyor/Duna_Face/AS_Duna_Face
+	CONTRACT_TYPE
+	{
+		name = AS_Duna_Face
+		group = AnomalySurveyor
+		title = Visit Cydunia
+		description = The blurry photographs we took from Duna's orbit found a hill that really, really looks like a Kerbal face.  Check it out and see what it looks like.
+		synopsis = Check out Cydunia
+		completedMessage = Another anomaly checked off the list!
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Duna
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 65000
+		rewardReputation = 8.8
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit the Face on Duna
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 50
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Face on Duna
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = 17.0571
+				longitude = -85.4587
+				altitude = 23.3517243184033
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Cydunia
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				KERBAL
+				{
+				}
+				TEXT
+				{
+					text = I don't think it looks like a Kerbal at all.
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Cydunia
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Strategy_ScienceGuy
+					animation = false_disagreeC
+				}
+				TEXT
+				{
+					text = That totally looks like a Kerbal!
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Any
+			type = Any
+			REQUIREMENT
+			{
+				name = Orbit
+				type = Orbit
+			}
+			REQUIREMENT
+			{
+				name = All
+				type = All
+				REQUIREMENT
+				{
+					name = Landing
+					type = Landing
+					targetBody = Mun
+				}
+				REQUIREMENT
+				{
+					name = Landing
+					type = Landing
+					targetBody = Minmus
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = 17.0571
+			longitude = -85.4587
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Duna_MSL
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Duna_MSL
+	url = ContractPacks/AnomalySurveyor/Duna_MSL/AS_Duna_MSL
+	CONTRACT_TYPE
+	{
+		name = AS_Duna_MSL
+		group = AnomalySurveyor
+		title = Investigate something shiny on Duna.
+		description = Our scans found what looks like a very small metal object on the surface of Duna, go check it out!
+		synopsis = Find something shiny.
+		completedMessage = Great, lets got those pictures home now!
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Duna
+		agent = Anomaly Surveyor Group
+		notes = [Make sure to turn the detail settings to High for this one, or you won't see anything.]
+		maxCompletions = 1
+		rewardFunds = 71500
+		rewardReputation = 6.6
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit the requested location
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 15
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = MSL
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = -30.3419
+				longitude = -28.8103
+				altitude = 1.58722772350302
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = MSL
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Wernher
+					animation = true_nodB
+				}
+				TEXT
+				{
+					text = What a curiosity this thing is!  Looks like it was made on Kerbin to me.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = -30.3419
+			longitude = -28.8103
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Jool_Monolith
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Jool_Monolith
+	url = ContractPacks/AnomalySurveyor/Jool_Monolith/AS_Jool_Monolith
+	CONTRACT_TYPE
+	{
+		name = AS_Jool_Monolith
+		group = AnomalySurveyor
+		title = Investigate the monolith signal.
+		description = The monoliths within the Kerbin system have all started sending a signal towards Jool.  We don't know what we'll find out there, but we need to go take a look.
+		synopsis = Find out what's in the Jool system.
+		completedMessage = Well, that was certainly interesting...
+		prestige = Exceptional
+		targetBody = Jool
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 200000.0
+		rewardScience = 40.0
+		rewardReputation = 8.6
+		weight = 2.5
+		PARAMETER
+		{
+			name = Sequence
+			type = Sequence
+			title = Investigate the situation
+			hiddenParameter = Monolith
+			PARAMETER
+			{
+				name = VesselParameterGroup
+				type = VesselParameterGroup
+				define = Discovery One
+				PARAMETER
+				{
+					name = HasCrew
+					type = HasCrew
+					minCrew = 1
+					trait = Pilot
+				}
+				PARAMETER
+				{
+					name = HasCrew
+					type = HasCrew
+					minCrew = 1
+					trait = Scientist
+				}
+				PARAMETER
+				{
+					name = ReachState
+					type = ReachState
+					situation = ORBITING
+				}
+			}
+			PARAMETER
+			{
+				name = Rendezvous
+				type = Rendezvous
+				title = Approach within 20km of the unknown object
+				distance = 20000
+				vessel = Discovery One
+				vessel = Monolith
+			}
+			PARAMETER
+			{
+				name = Monolith
+				type = Monolith
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = The Star Jeb is Born
+				condition = PARAMETER_COMPLETED
+				parameter = Monolith
+				position = CENTER
+				width = 0.2
+				IMAGE
+				{
+					url = ContractPacks/AnomalySurveyor/Images/starjeb.dds.noload
+				}
+				BREAK
+				{
+				}
+				TEXT
+				{
+					text = And so it was that $starJebName became an immortal being known as "The Star Jeb".  After the Star Jeb's transcendence, the Jool monolith disappeared - no one knows if it will ever reappear.\n\nAs for the Star Jeb, they have the ability to advance Kerbal science and the Kerbal Space Program to great new heights, and yet they've done absolutely nothing.\n\nIn fact, rumor has it that they haven't even called their mother.
+					fontSize = 16
+				}
+			}
+			DIALOG_BOX
+			{
+				condition = PARAMETER_COMPLETED
+				parameter = Monolith
+				KERBAL
+				{
+				}
+				TEXT
+				{
+					text = $starJebName.FirstWord() is coming back...\n\nRight?
+				}
+			}
+		}
+		BEHAVIOUR
+		{
+			name = SpawnVessel
+			type = SpawnVessel
+			deferVesselCreation = true
+			VESSEL
+			{
+				name = Monolith
+				craftURL = ContractPacks/AnomalySurveyor/Monolith/Monolith.craft
+				vesselType = Unknown
+				owned = False
+				ORBIT
+				{
+					SMA = 8001000.30496466
+					ECC = 7.42530592330278E-06
+					INC = 0
+					LPE = 90.5321508078686
+					LAN = 102.402138847893
+					MNA = 1.56146499268263
+					EPH = 446551.435125314
+					REF = 8
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = CompleteContract
+			type = CompleteContract
+			contractType = AS_Mun_Monolith
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Kerbin_IslandAirfield
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Kerbin_IslandAirfield
+	url = ContractPacks/AnomalySurveyor/Kerbin_IslandAirfield/AS_Kerbin_IslandAirfield
+	CONTRACT_TYPE
+	{
+		name = AS_Kerbin_IslandAirfield
+		group = AnomalySurveyor
+		title = Investigate the Island Airfield.
+		description = There's an old airfield on an island across from the KSC.  Why don't you go check it out between launches?
+		synopsis = Visit the island airfield.
+		completedMessage = Hope you had fun, time to get back to work!
+		prestige = Trivial
+		targetBody = Kerbin
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 25000.0
+		rewardReputation = 2.0
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Climb to the top of the control tower
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 5
+			}
+		}
+		PARAMETER
+		{
+			name = WP1
+			type = All
+			title = Look for the burnt out pod in the hangar
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 1
+				distance = 25
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			PQS_CITY
+			{
+				name = Control Tower
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				pqsCity = IslandAirfield
+				pqsOffset = -25.5440407030383, -180.724966497429, 59.493380329812
+				altitude = 59.493380329812
+			}
+			PQS_CITY
+			{
+				name = Pod in Hangar
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				pqsCity = IslandAirfield
+				pqsOffset = -102.891933658238, -107.91985303655, 18.1263730936462
+				altitude = 18.1263730936462
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Control Tower
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = true_smileA
+				}
+				TEXT
+				{
+					text = Great view, maybe we should start launching from here!
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Kerpollo 1
+				condition = PARAMETER_COMPLETED
+				parameter = WP1
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = false_sadA
+				}
+				TEXT
+				{
+					text = Never forget those that gave their lives to get us where we are.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = FirstLaunch
+			type = FirstLaunch
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Kerbin_Monolith
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Kerbin_Monolith
+	url = ContractPacks/AnomalySurveyor/Kerbin_Monolith/AS_Kerbin_Monolith
+	CONTRACT_TYPE
+	{
+		name = AS_Kerbin_Monolith
+		group = AnomalySurveyor
+		title = Investigate magnetic anomaly on Kerbin.
+		description = Our scans have detected some interesting magnetic signals all over the planet.  Head on over and see if you can find anything.
+		synopsis = Visit the location of four magnetic anomalies on foot.
+		completedMessage = It seems as if some of these monoliths were deliberately buried.
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Kerbin
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 260000
+		rewardScience = 40.0
+		rewardReputation = 22
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit the first magnetic anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 15
+			}
+		}
+		PARAMETER
+		{
+			name = WP1
+			type = All
+			title = Visit the second magnetic anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 1
+				distance = 50
+			}
+		}
+		PARAMETER
+		{
+			name = WP3
+			type = All
+			title = Visit the third magnetic anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 2
+				distance = 15
+			}
+		}
+		PARAMETER
+		{
+			name = WP4
+			type = All
+			title = Visit the fourth magnetic anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 3
+				distance = 35
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = TMA-0
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				latitude = 0.102331064775746
+				longitude = 285.431593173861
+				altitude = 0.0
+			}
+			PQS_CITY
+			{
+				name = TMA-1
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				pqsCity = Monolith01
+			}
+			WAYPOINT
+			{
+				name = TMA-2
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				latitude = 20.6708959294282
+				longitude = 213.503158424511
+				altitude = -1.32574519433547
+			}
+			PQS_CITY
+			{
+				name = TMA-3
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				pqsCity = Monolith02
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = First Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = idle_wonder
+				}
+				TEXT
+				{
+					text = Imagine, right in our backyard and we never saw it.  Maybe if we had some windows in the administration building.
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Second Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP1
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = false_disagreeA
+				}
+				TEXT
+				{
+					text = This is the spot...  but no monolith.  Maybe someone buried it?  Hopefully we'll have more luck at the other locations.
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Third Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP2
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = idle_lookAround
+				}
+				TEXT
+				{
+					text = I wonder who put that dish there...  let's get out of here and head to the last monolith.
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Fourth Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP3
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = idle_wonder
+				}
+				TEXT
+				{
+					text = Wow, is it really...  floating?!?  Wernher would love to take a look inside that thing.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = JetEngine
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = 0.102331064775746
+			longitude = 285.431593173861
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			pqsCity = Monolith01
+		}
+		REQUIREMENT
+		{
+			name = WP3
+			type = SCANsatLocationCoverage
+			latitude = 20.6709
+			longitude = -146.4968
+		}
+		REQUIREMENT
+		{
+			name = WP4
+			type = SCANsatLocationCoverage
+			pqsCity = Monolith02
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Kerbin_Pyramids
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Kerbin_Pyramids
+	url = ContractPacks/AnomalySurveyor/Kerbin_Pyramids/AS_Kerbin_Pyramids
+	CONTRACT_TYPE
+	{
+		name = AS_Kerbin_Pyramids
+		group = AnomalySurveyor
+		title = Investigate the Pyramids.
+		description = They say the ancient Mun worshippers of the western deserts were the first to launch a rocket into orbit.  Make a pilgrimage out to the ancient pyramids.
+		synopsis = Visit the pyramids.
+		completedMessage = Hope you had fun, time to get back to work!
+		prestige = Trivial
+		targetBody = Kerbin
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 35000.0
+		rewardReputation = 5.0
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Check out the pyramids
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 150
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			PQS_CITY
+			{
+				name = Pyramids
+				icon = ContractPacks/AnomalySurveyor/Icons/pyramids
+				pqsCity = Pyramids
+				pqsOffset = 0.0594870703295953, 0.426517593654211, -30.48978089377
+				altitude = 64.4701229560901
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Great Sphinx
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				KERBAL
+				{
+				}
+				TEXT
+				{
+					text = There's an inscription on the statue: "Which creature has one voice and yet becomes four-footed and two-footed and three-footed?"
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Great Sphinx
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Strategy_MechanicGuy
+					animation = true_thumbsUp
+				}
+				TEXT
+				{
+					text = A Kerbal!
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Great Sphinx
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				KERBAL
+				{
+				}
+				TEXT
+				{
+					text = ... I knew that one.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Kerbin_UFO
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Kerbin_UFO
+	url = ContractPacks/AnomalySurveyor/Kerbin_UFO/AS_Kerbin_UFO
+	CONTRACT_TYPE
+	{
+		name = AS_Kerbin_UFO
+		group = AnomalySurveyor
+		title = Investigate an arctic crash site.
+		description = Our scans picked up what looks like a crashed vessel over the arctic ice.  It's not one of ours, but maybe we should check it out anyway?
+		synopsis = Investigate a crashed vessel.
+		completedMessage = We are not alone.
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Kerbin
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 97500
+		rewardScience = 20.0
+		rewardReputation = 8.8
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Investigate the crashed vessel
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 15
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Crashed vessel
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = 81.9551567431472
+				longitude = 231.482239565662
+				altitude = 5.34037477325178
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = UFO
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Wernher
+					animation = false_disagreeC
+				}
+				TEXT
+				{
+					text = That thing doesn't look like it came from Kerbin...
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Any
+			type = Any
+			REQUIREMENT
+			{
+				name = Orbit
+				type = Orbit
+				targetBody = Mun
+			}
+			REQUIREMENT
+			{
+				name = Orbit
+				type = Orbit
+				targetBody = Minmus
+			}
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = 81.9551567431472
+			longitude = 231.482239565662
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Mun_Memorial
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Mun_Memorial
+	url = ContractPacks/AnomalySurveyor/Mun_Memorial/AS_Mun_Memorial
+	CONTRACT_TYPE
+	{
+		name = AS_Mun_Memorial
+		group = AnomalySurveyor
+		title = Visit a structure on the Mun.
+		description = Something in the northwest crater on the Mun caught our attention.  Go check it out.
+		synopsis = Investigate a structure on the Mun.
+		completedMessage = Great job, let's get you home now.
+		tag = SCANsat
+		prestige = Trivial
+		targetBody = Mun
+		agent = Anomaly Surveyor Group
+		notes = [Make sure to turn the detail settings to High for this one, or you won't see anything.]
+		maxCompletions = 1
+		rewardFunds = 130000
+		rewardReputation = 5.5
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Investigate the Mun anomaly
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 35
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Memorial
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = 0.702755930739038
+				longitude = -337.253233355146
+				altitude = 14.2626853691763
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Memorial
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+				}
+				TEXT
+				{
+					text = That's one small step for a Kerbal... wait, how does it go?
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			latitude = 0.702755930739038
+			longitude = -337.253233355146
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Mun_Monolith
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Mun_Monolith
+	url = ContractPacks/AnomalySurveyor/Mun_Monolith/AS_Mun_Monolith
+	CONTRACT_TYPE
+	{
+		name = AS_Mun_Monolith
+		group = AnomalySurveyor
+		title = Investigate monoliths on the Mun.
+		description = After investigating the monoliths on Kerbin, we realized that there are similar signals on the Mun.  Head on over and see if you can find anything.
+		synopsis = Visit the location of two possible monoliths while on EVA.
+		completedMessage = There seems to be a signal coming from the monoliths...  aimed towards Jool?
+		tag = SCANsat
+		prestige = Exceptional
+		targetBody = Mun
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 195000
+		rewardScience = 50.0
+		rewardReputation = 22
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit the northern monolith
+			notes = TMA-4: This is the easier of the two monoliths.
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 25
+			}
+		}
+		PARAMETER
+		{
+			name = WP1
+			type = All
+			title = Visit the southern monolith
+			notes = TMA-5: This is the more difficult monolith.
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 1
+				distance = 25
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			PQS_CITY
+			{
+				name = TMA-4
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				pqsCity = Monolith01
+				altitude = 0.20538711422705
+			}
+			WAYPOINT
+			{
+				name = TMA-5
+				icon = ContractPacks/AnomalySurveyor/Icons/monolith
+				latitude = -82.206266198768
+				longitude = 102.928400491749
+				altitude = -181.768236982782
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = First Mun Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Strategy_ScienceGuy
+					animation = true_thumbUp
+				}
+				TEXT
+				{
+					text = Imagine what this means!  Somewhere out there, there's a spacefaring race that evolved from apes.  Some sort of... space ape?  Spapes?
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Second Mun Monolith
+				condition = PARAMETER_COMPLETED
+				parameter = WP1
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = true_thumbUp
+				}
+				TEXT
+				{
+					text = Wow...  this is a VERY deep hole.  You can climb back out, right?
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = CompleteContract
+			type = CompleteContract
+			contractType = AS_Kerbin_Monolith
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			pqsCity = Monolith01
+		}
+		REQUIREMENT
+		{
+			name = WP2
+			type = SCANsatLocationCoverage
+			pqsCity = Monolith02
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Mun_RockArch
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Mun_RockArch
+	url = ContractPacks/AnomalySurveyor/Mun_RockArch/AS_Mun_RockArch
+	CONTRACT_TYPE
+	{
+		name = AS_Mun_RockArch
+		group = AnomalySurveyor
+		title = Investigate rock arches on the Mun.
+		description = Our scans found some cool looking arches!  Surely they're good for something, let's go see!
+		synopsis = Visit the location of three rock arches on EVA.
+		completedMessage = Maybe next we should fly a rocket through the arches?
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Mun
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 390000
+		rewardReputation = 5.5
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit the first arch
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 25
+			}
+		}
+		PARAMETER
+		{
+			name = WP1
+			type = All
+			title = Visit the second arch
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 1
+				distance = 25
+			}
+		}
+		PARAMETER
+		{
+			name = WP2
+			type = All
+			title = Visit the third arch
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 2
+				distance = 25
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			PQS_CITY
+			{
+				name = Rock Arch #1
+				icon = ContractPacks/AnomalySurveyor/Icons/arch
+				pqsCity = RockArch00
+			}
+			WAYPOINT
+			{
+				name = Rock Arch #2
+				icon = ContractPacks/AnomalySurveyor/Icons/arch
+				latitude = -12.4651384728768
+				longitude = -140.954333098427
+				altitude = 0.0
+			}
+			PQS_CITY
+			{
+				name = Rock Arch #3
+				icon = ContractPacks/AnomalySurveyor/Icons/arch
+				pqsCity = RockArch02
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = First Arch
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = idle_wonder
+				}
+				TEXT
+				{
+					text = That's quite the arch!  Do you think we could move the Mun if we had a really big hook?
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Second Arch
+				condition = PARAMETER_COMPLETED
+				parameter = WP1
+				INSTRUCTOR
+				{
+					name = Instructor_Gene
+					animation = true_thumbUp
+				}
+				TEXT
+				{
+					text = Hmmm, this would make for some pretty good goal posts.  Maybe we should set up a sporting event.  Munball, anyone?
+				}
+			}
+			DIALOG_BOX
+			{
+				title = Third Arch
+				condition = PARAMETER_COMPLETED
+				parameter = WP2
+				INSTRUCTOR
+				{
+					name = Strategy_PRGuy
+					animation = true_nodA
+				}
+				TEXT
+				{
+					text = Maybe we should hang some decorations from the arch.  To spruce up the place a bit.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			pqsCity = RockArch00
+		}
+		REQUIREMENT
+		{
+			name = WP1
+			type = SCANsatLocationCoverage
+			latitude = -12.4651384728768
+			longitude = -140.954333098427
+		}
+		REQUIREMENT
+		{
+			name = WP2
+			type = SCANsatLocationCoverage
+			pqsCity = RockArch02
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Mun_UFO
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Mun_UFO
+	url = ContractPacks/AnomalySurveyor/Mun_UFO/AS_Mun_UFO
+	CONTRACT_TYPE
+	{
+		name = AS_Mun_UFO
+		group = AnomalySurveyor
+		title = Investigate a Munar crash site.
+		description = We've detected a signal similar to the arctic UFO you discovered, but this time on the Mun.  We'd like to find out what's out there.
+		synopsis = Investigate a crashed vessel.
+		completedMessage = The truth is out there.
+		tag = SCANsat
+		prestige = Significant
+		targetBody = Mun
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 39000
+		rewardScience = 25.0
+		rewardReputation = 11
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Investigate the crashed vessel
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 15
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Crashed vessel
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = -70.9548952013954
+				longitude = -68.1361276486039
+				altitude = 10.0812438008998
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = UFO
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Wernher
+					animation = idle_wonder
+				}
+				TEXT
+				{
+					text = Identical to the one on Kerbin.  Perhaps it belonged to the monolith builders?
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = CompleteContract
+			type = CompleteContract
+			contractType = AS_Kerbin_UFO
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = -70.9548952013954
+			longitude = -68.1361276486039
+		}
+	}
+}
+UrlConfig
+{
+	name = AS_Vall_Icehenge
+	type = CONTRACT_TYPE
+	parentUrl = ContractPacks/AnomalySurveyor/Vall_Icehenge
+	url = ContractPacks/AnomalySurveyor/Vall_Icehenge/AS_Vall_Icehenge
+	CONTRACT_TYPE
+	{
+		name = AS_Vall_Icehenge
+		group = AnomalySurveyor
+		title = Visit strange structures on Vall
+		description = Our scans picked up a rather unusual structure on Vall.  Go check it out.
+		synopsis = Visit the strange structures on Vall.
+		completedMessage = All done in the Jool system?  Let's get you back home now...
+		tag = SCANsat
+		prestige = Exceptional
+		targetBody = Vall
+		agent = Anomaly Surveyor Group
+		maxCompletions = 1
+		rewardFunds = 84500
+		rewardReputation = 4.4
+		PARAMETER
+		{
+			name = WP0
+			type = All
+			title = Visit Icehenge
+			PARAMETER
+			{
+				name = VesselIsType
+				type = VesselIsType
+				vesselType = EVA
+			}
+			PARAMETER
+			{
+				name = VisitWaypoint
+				type = VisitWaypoint
+				index = 0
+				distance = 50
+			}
+		}
+		BEHAVIOUR
+		{
+			name = WaypointGenerator
+			type = WaypointGenerator
+			WAYPOINT
+			{
+				name = Icehenge
+				icon = ContractPacks/AnomalySurveyor/Icons/unknown
+				latitude = -60.0900852353683
+				longitude = 83.7790303011986
+				altitude = 0.0741341842804104
+			}
+		}
+		BEHAVIOUR
+		{
+			type = DialogBox
+			DIALOG_BOX
+			{
+				title = Icehenge
+				condition = PARAMETER_COMPLETED
+				parameter = WP0
+				INSTRUCTOR
+				{
+					name = Instructor_Wernher
+					animation = idle_wonder
+				}
+				TEXT
+				{
+					text = Could there have been an ancient civilization on Laythe that made it all the way to Vall?  Eh... probably not.
+				}
+			}
+		}
+		REQUIREMENT
+		{
+			name = FlyBy
+			type = FlyBy
+		}
+		REQUIREMENT
+		{
+			name = WP0
+			type = SCANsatLocationCoverage
+			latitude = -60.0900852353683
+			longitude = 83.7790303011986
+		}
+	}
+}
+UrlConfig
+{
+	name = Anomaly Surveyor Group
+	type = AGENT
+	parentUrl = ContractPacks/AnomalySurveyor/Agencies/Agents
+	url = ContractPacks/AnomalySurveyor/Agencies/Agents/Anomaly Surveyor Group
+	AGENT
+	{
+		name = Anomaly Surveyor Group
+		description = TODO
+		logoURL = ContractPacks/AnomalySurveyor/Agencies/AnomalySurveyor
+		logoScaledURL = ContractPacks/AnomalySurveyor/Agencies/AnomalySurveyor_scaled
+		mentality = NoRandomContractMentality
+	}
+}
+UrlConfig
+{
+	name = mega_monolith
+	type = PART
+	parentUrl = ContractPacks/AnomalySurveyor/Monolith/part
+	url = ContractPacks/AnomalySurveyor/Monolith/part/mega_monolith
+	PART
+	{
+		name = mega_monolith
+		module = Part
+		author = Nicholander
+		mesh = model.mu
+		rescaleFactor = 222.333333
+		CrewCapacity = 0
+		TechRequired = Unresearcheable
+		entryCost = 99999
+		cost = 2001
+		category = none
+		subcategory = 0
+		title = Monolith
+		manufacturer = The Sentient
+		description = This was found buried at Kycho Crater, and its seems to have been there for four million years. We know it's called the Monolith 9000 because Jeb found that on a recipt taped to it.
+		attachRules = 1,1,1,1,1
+		mass = 200100000000
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 750
+		breakingForce = 200
+		breakingTorque = 200
+		maxTemp = 10000
+		vesselType = SpaceObject
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
 	}
 }
 UrlConfig
@@ -97075,8 +96855,8 @@ UrlConfig
 		ClickThroughProtect_Editor = True
 		ClickThroughProtect_Flight = True
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2016-01-04
-		VersionCheckDate_SuccessStored = 2016-01-04
+		VersionCheckDate_AttemptStored = 2016-01-05
+		VersionCheckDate_SuccessStored = 2016-01-05
 		VersionWeb = 1.4.0.0
 	}
 }

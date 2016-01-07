@@ -1,72 +1,70 @@
 Executing: KerbalEngineer - 1.0.18.0
 Assembly: /mnt/data-linux/klaami/documents/programs/ksp/GameData/KerbalEngineer/KerbalEngineer.dll
 
-[Log 21:26:58.9364270]: BuildToolbar->Awake
-[Log 21:26:59.5024630]: BuildToolbar->OnGuiAppLauncherReady
-[Log 21:27:40.3953540]: BuildToolbar->OnDestroy
-[Log 21:27:42.6827240]: ActionMenu was created.
-[Log 21:27:42.6831630]: ActionMenu->Awake
-[Log 21:27:42.7067610]: FlightEngineerCore->Awake
-[Log 21:27:48.5052940]: ActionMenuGui was created.
-[Log 21:27:48.5086300]: ActionMenu->Start
-[Log 21:27:48.6002160]: FlightEngineerCore->Start
-[Exception 21:43:59.8711840]: SimManager.StartSimulation() // 
+[Log 07:38:18.5843760]: BuildToolbar->Awake
+[Log 07:38:19.1262470]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:22:56.1231060]: BuildToolbar->OnDestroy
+[Log 08:23:09.8242570]: BuildToolbar->Awake
+[Log 08:23:11.4515880]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:36:37.0201330]: BuildToolbar->OnDestroy
+[Log 08:36:40.1359680]: ActionMenu was created.
+[Log 08:36:40.1364300]: ActionMenu->Awake
+[Log 08:36:40.1382410]: FlightEngineerCore->Awake
+[Log 08:36:44.4090880]: ActionMenuGui was created.
+[Log 08:36:44.4103140]: ActionMenu->Start
+[Log 08:36:44.4440960]: FlightEngineerCore->Start
+[Exception 08:37:13.9705140]: SimManager.StartSimulation() // 
 []:   at (wrapper managed-to-native) UnityEngine.Component:InternalGetTransform ()
   at UnityEngine.Component.get_transform () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.PartSim.New (.Part thePart, Int32 id, Double atmosphere, KerbalEngineer.LogMsg log) [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.Simulation.PrepareSimulation (System.Collections.Generic.List`1 parts, Double theGravity, Double theAtmosphere, Double theMach, Boolean dumpTree, Boolean vectoredThrust, Boolean fullThrust) [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.SimManager.StartSimulation () [0x00000] in <filename unknown>:0 
 
-[Exception 21:43:59.8729840]: Object reference not set to an instance of an object
+[Exception 08:37:13.9712720]: Object reference not set to an instance of an object
 []:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
 
-[Log 21:44:01.9382550]: FlightEngineerCore->OnDestroy
-[Log 21:44:02.0152430]: ActionMenu was destroyed.
-[Log 21:44:02.0712730]: ActionMenu->OnDestroy
-[Log 21:44:03.2100650]: BuildToolbar->Awake
-[Log 21:44:06.0268930]: BuildToolbar->OnGuiAppLauncherReady
-[Log 21:44:06.9803140]: ActionMenuGui was destroyed.
-[Log 21:44:48.7670860]: BuildToolbar->OnDestroy
-[Log 21:44:51.0364300]: ActionMenu was created.
-[Log 21:44:51.0365570]: ActionMenu->Awake
-[Log 21:44:51.0366230]: FlightEngineerCore->Awake
-[Log 21:44:57.1848090]: ActionMenuGui was created.
-[Log 21:44:57.1857700]: ActionMenu->Start
-[Log 21:44:57.2014850]: FlightEngineerCore->Start
-[Exception 21:44:57.7490570]: Array index is out of range.
-[]:   at MapSO.GetPixelColor (Int32 x, Int32 y) [0x00000] in <filename unknown>:0 
-  at MapSO.GetPixelColor (Single x, Single y) [0x00000] in <filename unknown>:0 
-  at CBAttributeMapSO.GetAtt (Double lat, Double lon) [0x00000] in <filename unknown>:0 
-  at ScienceUtil.GetExperimentBiome (.CelestialBody body, Double lat, Double lon) [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.Readouts.Surface.ImpactProcessor.Update () [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
-
-[Exception 21:47:01.0337660]: SimManager.StartSimulation() // 
+[Log 08:37:15.1767470]: FlightEngineerCore->OnDestroy
+[Log 08:37:15.1875810]: ActionMenu->OnDestroy
+[Log 08:37:15.2073770]: ActionMenu was destroyed.
+[Log 08:37:16.0941800]: BuildToolbar->Awake
+[Log 08:37:17.8661500]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:37:18.2992240]: ActionMenuGui was destroyed.
+[Log 08:37:41.8056780]: BuildToolbar->OnDestroy
+[Log 08:38:00.9192080]: BuildToolbar->Awake
+[Log 08:38:02.2500920]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:38:08.8771160]: BuildToolbar->OnDestroy
+[Log 08:38:11.4743100]: ActionMenu was created.
+[Log 08:38:11.4744090]: ActionMenu->Awake
+[Log 08:38:11.4744920]: FlightEngineerCore->Awake
+[Log 08:38:17.4013950]: ActionMenuGui was created.
+[Log 08:38:17.4023270]: ActionMenu->Start
+[Log 08:38:17.4180820]: FlightEngineerCore->Start
+[Exception 08:40:05.4703970]: SimManager.StartSimulation() // 
 []:   at (wrapper managed-to-native) UnityEngine.Component:InternalGetTransform ()
   at UnityEngine.Component.get_transform () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.PartSim.New (.Part thePart, Int32 id, Double atmosphere, KerbalEngineer.LogMsg log) [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.Simulation.PrepareSimulation (System.Collections.Generic.List`1 parts, Double theGravity, Double theAtmosphere, Double theMach, Boolean dumpTree, Boolean vectoredThrust, Boolean fullThrust) [0x00000] in <filename unknown>:0 
   at KerbalEngineer.VesselSimulator.SimManager.StartSimulation () [0x00000] in <filename unknown>:0 
 
-[Exception 21:47:01.0341670]: Object reference not set to an instance of an object
+[Exception 08:40:05.4708040]: Object reference not set to an instance of an object
 []:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
 
-[Log 21:47:01.9727180]: ActionMenu was destroyed.
-[Log 21:47:02.0000200]: ActionMenu->OnDestroy
-[Log 21:47:02.0045520]: FlightEngineerCore->OnDestroy
-[Log 21:47:02.5358090]: BuildToolbar->Awake
-[Log 21:47:04.1362460]: BuildToolbar->OnGuiAppLauncherReady
-[Log 21:47:04.6369970]: ActionMenuGui was destroyed.
-[Log 21:47:08.4948310]: BuildToolbar->OnDestroy
-[Log 21:47:10.7473420]: ActionMenu was created.
-[Log 21:47:10.7474270]: ActionMenu->Awake
-[Log 21:47:10.7475150]: FlightEngineerCore->Awake
-[Log 21:47:18.2109170]: ActionMenuGui was created.
-[Log 21:47:18.2118950]: ActionMenu->Start
-[Log 21:47:18.2275480]: FlightEngineerCore->Start
-[Exception 21:47:18.5008130]: Array index is out of range.
+[Log 08:40:06.3501450]: ActionMenu was destroyed.
+[Log 08:40:06.3682620]: ActionMenu->OnDestroy
+[Log 08:40:06.4106100]: FlightEngineerCore->OnDestroy
+[Log 08:40:07.0529020]: BuildToolbar->Awake
+[Log 08:40:08.8110480]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:40:09.3246230]: ActionMenuGui was destroyed.
+[Log 08:42:10.7892680]: BuildToolbar->OnDestroy
+[Log 08:42:13.4620790]: ActionMenu was created.
+[Log 08:42:13.4621840]: ActionMenu->Awake
+[Log 08:42:13.4622540]: FlightEngineerCore->Awake
+[Log 08:42:23.8284340]: ActionMenuGui was created.
+[Log 08:42:23.8294160]: ActionMenu->Start
+[Log 08:42:23.8451080]: FlightEngineerCore->Start
+[Exception 08:42:24.2526780]: Array index is out of range.
 []:   at MapSO.GetPixelColor (Int32 x, Int32 y) [0x00000] in <filename unknown>:0 
   at MapSO.GetPixelColor (Single x, Single y) [0x00000] in <filename unknown>:0 
   at CBAttributeMapSO.GetAtt (Double lat, Double lon) [0x00000] in <filename unknown>:0 
@@ -74,7 +72,7 @@ Assembly: /mnt/data-linux/klaami/documents/programs/ksp/GameData/KerbalEngineer/
   at KerbalEngineer.Flight.Readouts.Surface.ImpactProcessor.Update () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
 
-[Exception 21:47:18.5497970]: Array index is out of range.
+[Exception 08:42:24.4838770]: Array index is out of range.
 []:   at MapSO.GetPixelColor (Int32 x, Int32 y) [0x00000] in <filename unknown>:0 
   at MapSO.GetPixelColor (Single x, Single y) [0x00000] in <filename unknown>:0 
   at CBAttributeMapSO.GetAtt (Double lat, Double lon) [0x00000] in <filename unknown>:0 
@@ -82,59 +80,14 @@ Assembly: /mnt/data-linux/klaami/documents/programs/ksp/GameData/KerbalEngineer/
   at KerbalEngineer.Flight.Readouts.Surface.ImpactProcessor.Update () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
 
-[Exception 21:48:01.7314460]: Object reference not set to an instance of an object
+[Exception 08:44:06.6419680]: Object reference not set to an instance of an object
 []:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
   at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
 
-[Log 21:48:02.4788990]: ActionMenu->OnDestroy
-[Log 21:48:02.4809560]: FlightEngineerCore->OnDestroy
-[Log 21:48:02.4940030]: ActionMenu was destroyed.
-[Log 21:48:03.0792480]: BuildToolbar->Awake
-[Log 21:48:04.6295760]: BuildToolbar->OnGuiAppLauncherReady
-[Log 21:48:05.1175600]: ActionMenuGui was destroyed.
-[Log 21:48:22.3271790]: BuildToolbar->OnDestroy
-[Log 21:48:27.2491300]: ActionMenu was created.
-[Log 21:48:27.2492310]: ActionMenu->Awake
-[Log 21:48:27.2493120]: FlightEngineerCore->Awake
-[Log 21:48:33.5552490]: ActionMenuGui was created.
-[Log 21:48:33.5562330]: ActionMenu->Start
-[Log 21:48:33.5722990]: FlightEngineerCore->Start
-[Exception 21:48:52.1316090]: Object reference not set to an instance of an object
-[]:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
-
-[Log 21:48:52.8658140]: FlightEngineerCore->OnDestroy
-[Log 21:48:52.8668090]: ActionMenu->OnDestroy
-[Log 21:48:52.8804070]: ActionMenu was destroyed.
-[Log 21:48:53.6133260]: ActionMenu was created.
-[Log 21:48:53.6134280]: ActionMenu->Awake
-[Log 21:48:53.6135210]: FlightEngineerCore->Awake
-[Log 21:48:57.5410210]: ActionMenuGui was created.
-[Log 21:48:57.5414090]: ActionMenu->Start
-[Log 21:48:57.5473030]: FlightEngineerCore->Start
-[Log 21:48:57.7044920]: ActionMenuGui was destroyed.
-[Exception 21:48:57.7580250]: Array index is out of range.
-[]:   at MapSO.GetPixelColor (Int32 x, Int32 y) [0x00000] in <filename unknown>:0 
-  at MapSO.GetPixelColor (Single x, Single y) [0x00000] in <filename unknown>:0 
-  at CBAttributeMapSO.GetAtt (Double lat, Double lon) [0x00000] in <filename unknown>:0 
-  at ScienceUtil.GetExperimentBiome (.CelestialBody body, Double lat, Double lon) [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.Readouts.Surface.ImpactProcessor.Update () [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
-
-[Exception 22:15:03.8721280]: Object reference not set to an instance of an object
-[]:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
-  at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
-
-[Log 22:15:04.6009910]: ActionMenu->OnDestroy
-[Log 22:15:04.6025820]: FlightEngineerCore->OnDestroy
-[Log 22:15:04.6503540]: ActionMenu was destroyed.
-[Log 22:15:05.4911260]: ActionMenuGui was destroyed.
-[Log 22:15:54.3201680]: BuildToolbar->Awake
-[Log 22:15:55.5152560]: BuildToolbar->OnGuiAppLauncherReady
-[Log 22:16:06.7134670]: BuildToolbar->OnDestroy
-[Log 22:21:48.0231080]: BuildToolbar->Awake
-[Log 22:21:48.8700620]: BuildToolbar->OnGuiAppLauncherReady
-[Log 22:26:00.2350420]: BuildToolbar->OnDestroy
-[Log 22:26:14.5484780]: BuildToolbar->Awake
-[Log 22:26:15.1197360]: BuildToolbar->OnGuiAppLauncherReady
-[Log 22:26:51.0281440]: BuildToolbar->OnDestroy
+[Log 08:44:07.3356470]: FlightEngineerCore->OnDestroy
+[Log 08:44:07.3393690]: ActionMenu->OnDestroy
+[Log 08:44:07.4039700]: ActionMenu was destroyed.
+[Log 08:44:08.1213100]: BuildToolbar->Awake
+[Log 08:44:09.9793690]: BuildToolbar->OnGuiAppLauncherReady
+[Log 08:44:10.4932520]: ActionMenuGui was destroyed.
+[Log 08:48:12.0355730]: BuildToolbar->OnDestroy

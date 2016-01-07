@@ -13,10 +13,10 @@
     <string name="pageConics">KeypadEnter</string>
     <string name="hideWindow">P</string>
     <string name="addWidget">O</string>
-    <int name="mainWindowX">191</int>
-    <int name="mainWindowY">20</int>
-    <int name="optWindowX">638</int>
-    <int name="optWindowY">20</int>
+    <int name="mainWindowX">33</int>
+    <int name="mainWindowY">395</int>
+    <int name="optWindowX">590</int>
+    <int name="optWindowY">485</int>
     <int name="keyWindowX">382</int>
     <int name="keyWindowY">20</int>
     <int name="clockWindowX">638</int>
@@ -27,7 +27,7 @@
     <int name="tripWindowY">201</int>
     <bool name="showClock">0</bool>
     <bool name="showEAngle">1</bool>
-    <bool name="showConics">1</bool>
+    <bool name="showConics">0</bool>
     <bool name="showConicsAlways">0</bool>
     <bool name="showOrbitInfo">0</bool>
     <bool name="showUTControls">0</bool>

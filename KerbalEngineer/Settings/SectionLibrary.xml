@@ -14,7 +14,7 @@
         <IsFloating>false</IsFloating>
         <IsHud>false</IsHud>
         <IsHudBackground>false</IsHudBackground>
-        <IsVisible>true</IsVisible>
+        <IsVisible>false</IsVisible>
         <LineCount>9</LineCount>
         <Name>ORBITAL</Name>
         <ReadoutModuleNames>
@@ -79,8 +79,8 @@
         <IsFloating>false</IsFloating>
         <IsHud>false</IsHud>
         <IsHudBackground>true</IsHudBackground>
-        <IsVisible>true</IsVisible>
-        <LineCount>13</LineCount>
+        <IsVisible>false</IsVisible>
+        <LineCount>15</LineCount>
         <Name>VESSEL</Name>
         <ReadoutModuleNames>
           <string>Vessel.DeltaVStaged</string>
