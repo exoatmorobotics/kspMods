@@ -1,4 +1,4 @@
-patchedNodeCount = 1939
+patchedNodeCount = 2030
 catEatenCount = 0
 UrlConfig
 {
@@ -27782,10 +27782,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = actuators
 		entryCost = 20000
 		cost = 6750
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - ASERT
 		manufacturer = DMagic
@@ -27859,6 +27859,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -27889,10 +27894,10 @@ UrlConfig
 		rescaleFactor = 1.0
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = basicRocketry
 		entryCost = 3000
 		cost = 1400
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Mystery Goo Containment
 		manufacturer = DMagic
@@ -27973,6 +27978,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28003,10 +28013,10 @@ UrlConfig
 		rescaleFactor = 1.0
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = stability
 		entryCost = 4500
 		cost = 6500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - SC-9001 Science Jr.
 		manufacturer = DMagic
@@ -28086,6 +28096,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28117,10 +28132,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = precisionEngineering
 		entryCost = 13000
 		cost = 4500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - GORESat
 		manufacturer = DMagic
@@ -28199,6 +28214,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28230,14 +28250,14 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = advExploration
 		entryCost = 18000
 		cost = 7500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Multi-Spectral Imaging Platform
 		manufacturer = DMagic
-		description = This multi-spectral imaging platform is used to study the surface and composition of planets. Use only in orbit.
+		description = This multi-spectral imaging platform is used to study the surface and composition of planets. Use only in orbit. Can also interface with SCANsat equipment to function as a biome scanner and as a minerals detector.
 		mass = 0.05
 		bulkheadProfiles = wedge
 		crashTolerance = 10
@@ -28322,6 +28342,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28331,6 +28356,42 @@ UrlConfig
 			equipPos = (0,-0.05,-0.3)
 			equipDir = (0,270,0)
 			runSpeed = 1
+		}
+		MODULE
+		{
+			name = SCANsat
+			sensorType = 24
+			fov = 4
+			min_alt = 5000
+			max_alt = 500000
+			best_alt = 250000
+			power = 1.5
+			scanName = Multi-Spectral scan
+		}
+		MODULE
+		{
+			name = ModuleResourceScanner
+			MaxAbundanceAltitude = 300000
+			RequiresUnlock = true
+			ScannerType = 0
+			ResourceName = Minerals
+		}
+		MODULE
+		{
+			name = ModuleSCANresourceScanner
+			sensorType = 32768
+			fov = 2
+			min_alt = 50000
+			max_alt = 300000
+			best_alt = 200000
+			power = 1.0
+			scanName = Minerals scan
+		}
+		MODULE
+		{
+			name = SCANresourceDisplay
+			sensorType = 32768
+			ResourceName = Minerals
 		}
 		MODULE
 		{
@@ -28359,14 +28420,14 @@ UrlConfig
 		rescaleFactor = 1.0
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = miniaturization
 		entryCost = 6500
 		cost = 2200
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Magnetometer Boom
 		manufacturer = DMagic
-		description = The magnetometer instruments are used to determine the magnitude and direction of planetary magnetic fields. The long boom separates these instruments from any interference caused by magnetic elements in the probe. Use in low to high orbit or on the surface. Not for use during atmospheric flight. Use with New Horizon's Universal Storage system.
+		description = The magnetometer instruments are used to determine the magnitude and direction of planetary magnetic fields. The long boom separates these instruments from any interference caused by magnetic elements in the probe. Use in low to high orbit or on the surface. Not for use during atmospheric flight. Use with New Horizon's Universal Storage system. Can also interface with SCANsat equipment to function as an ore scanner.
 		mass = 0.05
 		bulkheadProfiles = wedge
 		crashTolerance = 10
@@ -28458,6 +28519,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28467,6 +28533,23 @@ UrlConfig
 			equipPos = (0,-0.05,-0.3)
 			equipDir = (0,270,0)
 			runSpeed = 1
+		}
+		MODULE
+		{
+			name = ModuleSCANresourceScanner
+			sensorType = 256
+			fov = 2
+			min_alt = 30000
+			max_alt = 60000
+			best_alt = 50000
+			power = 0.75
+			scanName = Ore scan
+		}
+		MODULE
+		{
+			name = SCANresourceDisplay
+			sensorType = 256
+			ResourceName = Ore
 		}
 		MODULE
 		{
@@ -28488,10 +28571,10 @@ UrlConfig
 		rescaleFactor = 1.0
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = electronics
 		entryCost = 19000
 		cost = 12000
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - RPWS Antenna
 		manufacturer = DMagic
@@ -28568,6 +28651,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28599,10 +28687,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = basicScience
 		entryCost = 11000
 		cost = 7000
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Orbital Telescope
 		manufacturer = DMagic
@@ -28679,6 +28767,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28710,14 +28803,14 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = largeElectrics
 		entryCost = 16000
 		cost = 5500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Soil Moisture Sensor
 		manufacturer = DMagic
-		description = This orbital sensor deploys a large L-band microwave detector comprised of 82 individual antenna elements. It can be used to study the water content of the upper soil layers and the salinity levels of large water features. Can only be used in low orbit.
+		description = This orbital sensor deploys a large L-band microwave detector comprised of 82 individual antenna elements. It can be used to study the water content of the upper soil layers and the salinity levels of large water features. Can only be used in low orbit. Can also interface with SCANsat equipment to function as a water scanner.
 		mass = 0.05
 		bulkheadProfiles = wedge
 		crashTolerance = 10
@@ -28796,6 +28889,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28805,6 +28903,47 @@ UrlConfig
 			equipPos = (0,-0.05,-0.3)
 			equipDir = (0,270,0)
 			runSpeed = 1
+		}
+		MODULE
+		{
+			name = ModuleResourceScanner
+			MaxAbundanceAltitude = 500000
+			RequiresUnlock = true
+			ScannerType = 0
+			ResourceName = Water
+		}
+		MODULE
+		{
+			name = ModuleResourceScanner
+			MaxAbundanceAltitude = 500000
+			RequiresUnlock = true
+			ScannerType = 1
+			ResourceName = Water
+		}
+		MODULE
+		{
+			name = ModuleResourceScanner
+			MaxAbundanceAltitude = 500000
+			RequiresUnlock = true
+			ScannerType = 2
+			ResourceName = Water
+		}
+		MODULE
+		{
+			name = ModuleSCANresourceScanner
+			sensorType = 8192
+			fov = 3
+			min_alt = 50000
+			max_alt = 500000
+			best_alt = 250000
+			power = 1.5
+			scanName = Water scan
+		}
+		MODULE
+		{
+			name = SCANresourceDisplay
+			sensorType = 8192
+			ResourceName = Water
 		}
 		MODULE
 		{
@@ -28827,10 +28966,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = advConstruction
 		entryCost = 16500
 		cost = 8500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Solar Particle Collector
 		manufacturer = DMagic
@@ -28916,6 +29055,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -28946,10 +29090,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = advScienceTech
 		entryCost = 19000
 		cost = 11000
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Accelerometer / Gravmax
 		manufacturer = DMagic
@@ -29081,6 +29225,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -29111,10 +29260,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = fieldScience
 		entryCost = 12000
 		cost = 4500
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - Atmospheric Sensor
 		manufacturer = DMagic
@@ -29194,6 +29343,11 @@ UrlConfig
 		}
 		MODULE
 		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
 			name = ModuleKISItemEvaTweaker
 			editorItemsCategory = false
 			carriable = true
@@ -29224,10 +29378,10 @@ UrlConfig
 		rescaleFactor = 1
 		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
 		attachRules = 1,0,1,1,0
-		TechRequired = Unresearcheable
+		TechRequired = spaceExploration
 		entryCost = 8000
 		cost = 4000
-		category = none
+		category = Science
 		subcategory = 0
 		title = Univ. Storage - PresMat / 2Hot
 		manufacturer = DMagic
@@ -29350,6 +29504,11 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
 		}
 		MODULE
 		{
@@ -43343,50 +43502,6 @@ UrlConfig
 }
 UrlConfig
 {
-	name = RemoteTechSettings
-	type = RemoteTechSettings
-	parentUrl = RemoteTech/RemoteTech_Settings
-	url = RemoteTech/RemoteTech_Settings/RemoteTechSettings
-	RemoteTechSettings
-	{
-		ConsumptionMultiplier = 1
-		RangeMultiplier = 1
-		ActiveVesselGuid = 35b89a0d664c43c6bec8d0840afc97b2
-		SpeedOfLight = 3E+08
-		MapFilter = Omni, Dish, Cone, Path
-		EnableSignalDelay = True
-		RangeModelType = Standard
-		MultipleAntennaMultiplier = 0
-		ThrottleTimeWarp = True
-		ThrottleZeroOnNoConnection = True
-		HideGroundStationsBehindBody = False
-		DishConnectionColor = 0.9960784,0.7019608,0.03137255,1
-		OmniConnectionColor = 0.5529412,0.5176471,0.4078431,1
-		ActiveConnectionColor = 0.6588235,1,0.01568628,1
-		GroundStations
-		{
-			STATION
-			{
-				Guid = 5105f5a9-d628-41c6-ad4b-21154e8fc488
-				Name = Mission Control
-				Latitude = -0.131331503391266
-				Longitude = -74.594841003418
-				Height = 75
-				Body = 1
-				MarkColor = 0.996078,0,0,1
-				Antennas
-				{
-					ANTENNA
-					{
-						Omni = 7.5E+07
-					}
-				}
-			}
-		}
-	}
-}
-UrlConfig
-{
 	name = RTPassiveAntennaTech
 	type = PART
 	parentUrl = RemoteTech/RemoteTech_Tech_Node
@@ -47802,6 +47917,7 @@ UrlConfig
 				Part = GooExperiment
 				MinimumScience = 7
 				Part = dmRoverGoo
+				Part = dmUSGoo
 				Trivial
 				{
 					Weight = 5
@@ -47832,6 +47948,7 @@ UrlConfig
 				Keyword = Scientific
 				Part = sensorThermometer
 				MinimumScience = 7
+				Part = dmUSPresTemp
 				Trivial
 				{
 					Weight = 5
@@ -47862,6 +47979,7 @@ UrlConfig
 				Keyword = Scientific
 				Part = sensorGravimeter
 				MinimumScience = 7
+				Part = dmUSAccGrav
 				Trivial
 				{
 					Weight = 5
@@ -47893,6 +48011,7 @@ UrlConfig
 				Part = science_module
 				MinimumScience = 7
 				Part = dmRoverMat
+				Part = dmUSMat
 				Trivial
 				{
 					Weight = 5
@@ -47923,6 +48042,7 @@ UrlConfig
 				Keyword = Scientific
 				Part = sensorAccelerometer
 				MinimumScience = 7
+				Part = dmUSAccGrav
 				Trivial
 				{
 					Weight = 5
@@ -96855,8 +96975,8 @@ UrlConfig
 		ClickThroughProtect_Editor = True
 		ClickThroughProtect_Flight = True
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2016-01-05
-		VersionCheckDate_SuccessStored = 2016-01-05
+		VersionCheckDate_AttemptStored = 2016-01-10
+		VersionCheckDate_SuccessStored = 2016-01-10
 		VersionWeb = 1.4.0.0
 	}
 }
@@ -109930,6 +110050,2160 @@ UrlConfig
 			Menu = Salvage Part
 			ResourceName = SpecializedParts
 			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = UniversalStorage
+	type = SCALETYPE
+	parentUrl = UniversalStorage/Compatability/US Tweakscale
+	url = UniversalStorage/Compatability/US Tweakscale/UniversalStorage
+	SCALETYPE
+	{
+		name = UniversalStorage
+		freeScale = false
+		scaleFactors = 1.0, 1.33, 1.5, 2.0
+		scaleNames = 100%, 133%, 150%, 200%
+		defaultScale = 1.0
+	}
+}
+UrlConfig
+{
+	name = US_1C10_Wedge_Quadcore
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1C10_Wedge_Quadcore/US_1C10_Wedge_Quadcore
+	url = UniversalStorage/Parts/US_1C10_Wedge_Quadcore/US_1C10_Wedge_Quadcore/US_1C10_Wedge_Quadcore
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1C10_Wedge_Quadcore
+		rescaleFactor = 1
+		attachRules = 1,0,1,0,0
+		node_stack_back = 0, 0, 0.175, 0, 0, 1, 0
+		node_stack_bottom = 0, -0.204, 0, 0, -1, 0, 1
+		node_stack_front = 0, 0, -0.175, 0, 0, -1, 0
+		node_stack_left = 0.175, 0, 0, 1, 0, 0, 0
+		node_stack_right = -0.175, 0, 0, -1, 0, 0, 0
+		node_stack_top = 0, 0.203, 0, 0, 1, 0, 1
+		category = Utility
+		description = A central core that allows the attachment of four Universal Storage segments.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: QuadCore
+		cost = 250
+		entryCost = 1250
+		TechRequired = basicRocketry
+		bulkheadProfiles = size1
+		crashTolerance = 15
+		fuelCrossFeed = True
+		mass = 0.05
+		maxTemp = 1200
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Wedge Locks Off
+			guiDisableName = Wedge Locks On
+			animationSpeed = 100000
+			oneShot = true
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = fairing_nodeNX
+			bottomNodeName = left
+			isFairing = True
+			jettisonedObjectMass = 0.0
+			jettisonForce = 0
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = fairing_nodeZ
+			bottomNodeName = back
+			isFairing = True
+			jettisonedObjectMass = 0.0
+			jettisonForce = 0
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = fairing_nodeX
+			bottomNodeName = right
+			isFairing = True
+			jettisonedObjectMass = 0.0
+			jettisonForce = 0
+			jettisonDirection = 0 0
+		}
+		MODULE
+		{
+			name = ModuleJettison
+			jettisonName = fairing_node_NZ
+			bottomNodeName = front
+			isFairing = True
+			jettisonedObjectMass = 0.0
+			jettisonForce = 0
+			jettisonDirection = 0 0 1
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			scaleFactors = 1, 2, 3
+			scaleNames = 1.25m, 2.5m, 3.75m
+		}
+		MODULE
+		{
+			name = ModuleKISPartMount
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = true
+			MOUNT
+			{
+				attachNode = left
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = right
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = front
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = back
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1C15_Wedge_Hexacore
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1C15_Wedge_Hexacore/US_1C15_Wedge_Hexacore
+	url = UniversalStorage/Parts/US_1C15_Wedge_Hexacore/US_1C15_Wedge_Hexacore/US_1C15_Wedge_Hexacore
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1C15_Wedge_Hexacore
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.500, 0, 0., 1, 0, 0, 0
+		node_stack_backleft = 0.250, 0, -0.430, 1, 0, -1.75, 0
+		node_stack_backright = 0.250, 0, 0.430, 1, 0, 1.75, 0
+		node_stack_bottom = 0, -0.204, 0, 0, -1, 0, 1
+		node_stack_front = -0.500, 0, 0, -1, 0, 0, 0
+		node_stack_frontleft = -0.250, 0, -0.430, -1, 0, -1.75, 0
+		node_stack_frontright = -0.250, 0, 0.430, -1, 0, 1.75, 0
+		node_stack_top = 0, 0.203, 0, 0, 1, 0, 1
+		category = Utility
+		description = With thin walls and a tiny service passage, the Hexacore is often touted as the central truss of an accident waiting to happen. Often purchased by desperate space agencies strapped for cash and common sense, this core represents a balancing act of price and functionality. Holds six wedges (reasonably well).
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Hexacore
+		cost = 350
+		entryCost = 1750
+		TechRequired = generalConstruction
+		bulkheadProfiles = size1p5
+		crashTolerance = 15
+		fuelCrossFeed = True
+		mass = 0.15
+		maxTemp = 1200
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Wedge Locks Off
+			guiDisableName = Wedge Locks On
+			animationSpeed = 100000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleConnectedLivingSpace
+			passable = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			scaleFactors = 1.33, 1.66, 2.66
+			scaleNames = 1.875m, 2.5m, 3.75m
+		}
+		MODULE
+		{
+			name = ModuleKISPartMount
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = true
+			MOUNT
+			{
+				attachNode = backleft
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = backright
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = frontleft
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = frontright
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = back
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = front
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1C20_Wedge_Octocore
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1C20_Wedge_Octocore/US_1C20_Wedge_Octocore
+	url = UniversalStorage/Parts/US_1C20_Wedge_Octocore/US_1C20_Wedge_Octocore/US_1C20_Wedge_Octocore
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1C20_Wedge_Octocore
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = -0, 0, 0.793, 0, 0, 1, 0
+		node_stack_backleft = 0.5607, 0, 0.5607, 1, 0, 1, 0
+		node_stack_backright = -0.5607, 0, 0.5607, -1, 0, 1, 0
+		node_stack_bottom = 0, -0.204, 0, 0, -1, 0, 2
+		node_stack_front = 0, 0, -0.793, 0, 0, -1, 0
+		node_stack_frontleft = -0.5607, 0, -0.5607, -1, 0, -1, 0
+		node_stack_frontright = 0.5607, 0, -0.5607, 1, 0, -1, 0
+		node_stack_left = 0.793, 0, 0., 1, 0, 0, 0
+		node_stack_right = -0.793, 0, 0, -1, 0, 0, 0
+		node_stack_top = 0, 0.203, 0, 0, 1, 0, 2
+		category = Utility
+		description = A central core that allows the attachment of eight Universal Storage wedges.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Octocore
+		cost = 500
+		entryCost = 2500
+		TechRequired = advConstruction
+		bulkheadProfiles = size2
+		crashTolerance = 15
+		fuelCrossFeed = True
+		mass = 0.5
+		maxTemp = 1200
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Wedge Locks Off
+			guiDisableName = Wedge Locks On
+			animationSpeed = 100000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleConnectedLivingSpace
+			passable = true
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = stack
+			scaleFactors = 1, 1.5, 2
+			scaleNames = 2.5m, 3.75m, 5m
+		}
+		MODULE
+		{
+			name = ModuleKISPartMount
+			sndStorePath = KIS/Sounds/containerMount
+			allowRelease = true
+			MOUNT
+			{
+				attachNode = backleft
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = backright
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = frontleft
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = frontright
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = left
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = right
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = back
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+			MOUNT
+			{
+				attachNode = front
+				allowedPartName = US_1M110_Wedge_ScienceBay
+				allowedPartName = US_1P110_Wedge_Fuelcell
+				allowedPartName = US_1P120_Wedge_Elektron
+				allowedPartName = US_1P130_Wedge_Sabatier
+				allowedPartName = US_1P140_Wedge_WRS
+				allowedPartName = US_1R110_Wedge_KISContainer
+				allowedPartName = US_1R210_Wedge_Liquidfuel
+				allowedPartName = US_1R220_Wedge_Monoprop
+				allowedPartName = US_1R310_Wedge_CarbonDioxide
+				allowedPartName = US_1R320_Wedge_Food
+				allowedPartName = US_1R330_Wedge_Hydrogen
+				allowedPartName = US_1R340_Wedge_Oxygen
+				allowedPartName = US_1R350_Wedge_Waste
+				allowedPartName = US_1R360_Wedge_Water
+				allowedPartName = US_1R370_Wedge_WasteWater
+				allowedPartName = dmUSAsert
+				allowedPartName = dmUSGoo
+				allowedPartName = dmUSMat
+				allowedPartName = dmUSGoreSat
+				allowedPartName = dmUSImagingPlatform
+				allowedPartName = USRPWS
+				allowedPartName = dmUSMagBoom
+				allowedPartName = dmUSScope
+				allowedPartName = dmUSSoilMoisture
+				allowedPartName = dmUSSolarParticles
+				allowedPartName = dmUSPresTemp
+				allowedPartName = dmUSAccGrav
+				allowedPartName = dmUSAtmosSense
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1M110_Wedge_ScienceBay
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1M110_Wedge_ScienceBay/US_1M110_Wedge_ScienceBay
+	url = UniversalStorage/Parts/US_1M110_Wedge_ScienceBay/US_1M110_Wedge_ScienceBay/US_1M110_Wedge_ScienceBay
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1M110_Wedge_ScienceBay
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = Featuring revolutionary hinge technology gleaned from the cupboards under the sink; the Science Bay provides stowage for equipment deemed too sensitive to glue onto the outside of a spacecraft. With adequately filed edges and punchy caution stickers, EVA data retrieval has never been safer!
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Science Bay
+		cost = 200
+		entryCost = 1000
+		TechRequired = basicScience
+		bulkheadProfiles = wedge
+		crashTolerance = 10
+		mass = 0.040
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Bay Doors
+			guiDisableName = Close Bay Doors
+			actionEnableName = Open Bay Doors
+			actionDisableName = Close Bay Doors
+			actionToggleName = Toggle Bay Doors
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleCargoBay
+			DeployModuleIndex = 0
+			closedPosition = 0
+			lookupRadius = 0.9
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1P110_Wedge_Fuelcell
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1P110_Wedge_Fuelcell/US_1P110_Wedge_Fuelcell
+	url = UniversalStorage/Parts/US_1P110_Wedge_Fuelcell/US_1P110_Wedge_Fuelcell/US_1P110_Wedge_Fuelcell
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1P110_Wedge_Fuelcell
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = This small fuel cell consumes hydrogen and oxygen to produce potable water, heat, and a moderate electrical output. Although much safer for Kerbals than RTGs, please don't tease the stirring fans.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Alkaline Fuel Cell
+		cost = 500
+		entryCost = 2500
+		TechRequired = electrics
+		bulkheadProfiles = wedge
+		crashTolerance = 5
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = ModuleResourceConverter
+			ConverterName = Fuel Cell
+			StartActionName = Start Fuel Cell
+			StopActionName = Stop Fuel Cell
+			FillAmount = 0.95
+			AutoShutdown = true
+			GeneratesHeat = true
+			TemperatureModifier = 10
+			UseSpecializationBonus = false
+			DefaultShutoffTemp = 0.5
+			INPUT_RESOURCE
+			{
+				ResourceName = Hydrogen
+				Ratio = 0.064736
+				FlowMode = STAGE_PRIORITY_FLOW
+			}
+			INPUT_RESOURCE
+			{
+				ResourceName = Oxygen
+				Ratio = 0.032368
+				FlowMode = STAGE_PRIORITY_FLOW
+			}
+			OUTPUT_RESOURCE
+			{
+				ResourceName = ElectricCharge
+				Ratio = 16
+				DumpExcess = true
+			}
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Water
+				Ratio = 0.0000520721
+				DumpExcess = true
+			}
+		}
+		RESOURCE
+		{
+			name = Hydrogen
+			amount = 1400
+			maxAmount = 1400
+		}
+		RESOURCE
+		{
+			name = Oxygen
+			amount = 700
+			maxAmount = 700
+		}
+		RESOURCE
+		{
+			name = Water
+			amount = 0
+			maxAmount = 2
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1P120_Wedge_Elektron
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1P120_Wedge_Elektron/US_1P120_Wedge_Elektron
+	url = UniversalStorage/Parts/US_1P120_Wedge_Elektron/US_1P120_Wedge_Elektron/US_1P120_Wedge_Elektron
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1P120_Wedge_Elektron
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = A complex electrolyzer, the Elektron converts water into oxygen and hydrogen at the expense of large amounts of electricity. With a chassis originally built for high pressure fumigation equipment, the Elektron has proven itself apt at both sustaining and destroying little green crawling things. Outputs 800 litres of oxygen per litre of input water.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Elektron
+		cost = 1000
+		entryCost = 5000
+		TechRequired = largeElectrics
+		bulkheadProfiles = wedge
+		crashTolerance = 5
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = ModuleResourceConverter
+			ConverterName = Water Electrolizer
+			StartActionName = Start Water Electrolizer
+			StopActionName = Stop Water Electrolizer
+			FillAmount = 0.95
+			AutoShutdown = true
+			GeneratesHeat = true
+			TemperatureModifier = 20
+			UseSpecializationBonus = false
+			DefaultShutoffTemp = 0.5
+			INPUT_RESOURCE
+			{
+				ResourceName = ElectricCharge
+				Ratio = 14
+				FlowMode = STAGE_PRIORITY_FLOW
+			}
+			INPUT_RESOURCE
+			{
+				ResourceName = Water
+				Ratio = 0.0000176697
+				FlowMode = STAGE_PRIORITY_FLOW
+			}
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Hydrogen
+				Ratio = 0.0219907427
+				DumpExcess = true
+			}
+			OUTPUT_RESOURCE
+			{
+				ResourceName = Oxygen
+				Ratio = 0.0109953713
+				DumpExcess = False
+			}
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R110_Wedge_KISContainer
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R110_Wedge_KISContainer/US_1R110_Wedge_KISContainer
+	url = UniversalStorage/Parts/US_1R110_Wedge_KISContainer/US_1R110_Wedge_KISContainer/US_1R110_Wedge_KISContainer
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R110_Wedge_KISContainer
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = This KIS container will allow your Kerbals to carry spare parts, tools and Ikea furniture into space!  Remember to read the assembly instructions first. Box cutter not included.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: KIS Container
+		cost = 250
+		entryCost = 1250
+		TechRequired = advConstruction
+		bulkheadProfiles = wedge
+		crashTolerance = 10
+		mass = 0.020
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISInventory
+			maxVolume = 210
+			externalAccess = true
+			internalAccess = false
+			slotsX = 2
+			slotsY = 4
+			slotSize = 50
+			itemIconResolution = 128
+			selfIconResolution = 128
+			openSndPath = KIS/Sounds/containerOpen
+			closeSndPath = KIS/Sounds/containerClose
+			defaultMoveSndPath = KIS/Sounds/itemMove
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R210_Wedge_Liquidfuel
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R210_Wedge_Liquidfuel/US_1R210_Wedge_Liquidfuel
+	url = UniversalStorage/Parts/US_1R210_Wedge_Liquidfuel/US_1R210_Wedge_Liquidfuel/US_1R210_Wedge_Liquidfuel
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R210_Wedge_Liquidfuel
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = Crafted from the finest crude oil barrels available to science - the LF10 Fuel Tank provides just enough fuel to be useful on lander ascent stages, or spacecraft yearning to be free of the Oscar-B's tyranny.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: LF10 Fuel Tank
+		cost = 350
+		entryCost = 1750
+		TechRequired = fuelSystems
+		bulkheadProfiles = wedge
+		crashTolerance = 7
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,0)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 6.55
+			maxAmount = 6.55
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 8
+			maxAmount = 8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R220_Wedge_Monoprop
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R220_Wedge_Monoprop/US_1R220_Wedge_Monoprop
+	url = UniversalStorage/Parts/US_1R220_Wedge_Monoprop/US_1R220_Wedge_Monoprop/US_1R220_Wedge_Monoprop
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R220_Wedge_Monoprop
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = A small, low pressure tank designed for use with Reaction Control systems, the M30 comes adorned with a semi-new paint job and a variety of high tech "speed holes". According to our marketing team, they make your ship go faster.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: M30 Monoprop Tank
+		cost = 400
+		entryCost = 2000
+		TechRequired = fuelSystems
+		bulkheadProfiles = wedge
+		crashTolerance = 7
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = MonoPropellant
+			amount = 20
+			maxAmount = 20
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R330_Wedge_Hydrogen
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R330_Wedge_Hydrogen/US_1R330_Wedge_Hydrogen
+	url = UniversalStorage/Parts/US_1R330_Wedge_Hydrogen/US_1R330_Wedge_Hydrogen/US_1R330_Wedge_Hydrogen
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R330_Wedge_Hydrogen
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = Contains a large spherical canister of cryogenically stabilized liquid Hydrogen. Often used to power fuel cells, or inflate balloon animals. Please keep away from birthday candles or Jeb's ego.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Hydrogen Tank
+		cost = 350
+		entryCost = 1750
+		TechRequired = electrics
+		bulkheadProfiles = wedge
+		crashTolerance = 7
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = Hydrogen
+			amount = 28517
+			maxAmount = 28517
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R340_Wedge_Oxygen
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R340_Wedge_Oxygen/US_1R340_Wedge_Oxygen
+	url = UniversalStorage/Parts/US_1R340_Wedge_Oxygen/US_1R340_Wedge_Oxygen/US_1R340_Wedge_Oxygen
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R340_Wedge_Oxygen
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = Contains four individual oxygen canisters under extreme cryogenic pressure. Separated to ensure redundancy in the unlikely event of explosion from external forces. Licking the boil-off valve is discouraged.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Oxygen Tank
+		cost = 350
+		entryCost = 1750
+		TechRequired = spaceExploration
+		bulkheadProfiles = wedge
+		crashTolerance = 7
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = Oxygen
+			amount = 21672
+			maxAmount = 21672
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_1R360_Wedge_Water
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_1R360_Wedge_Water/US_1R360_Wedge_Water
+	url = UniversalStorage/Parts/US_1R360_Wedge_Water/US_1R360_Wedge_Water/US_1R360_Wedge_Water
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_1R360_Wedge_Water
+		rescaleFactor = 1
+		attachRules = 1,0,1,1,0
+		node_stack_back = 0.187, 0.0, 0.0, 1.0, 0.0, 0.0, 0
+		category = Utility
+		description = A revolution in microgravity plumbing technology, the 'US-W120 Water Storage Apparatus' enables spacecraft to carry up to 120 liters of filtered drinking water into space. Although accused of profiteering and price gouging in a fledgling civilian market; the fine engineers at Nox Industrial assure us the US-W120 is at least 74% non-perishable metal and not at all a spraypainted fishtank.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Water Tank
+		cost = 250
+		entryCost = 1450
+		TechRequired = spaceExploration
+		bulkheadProfiles = wedge
+		crashTolerance = 7
+		mass = 0.155
+		maxTemp = 1200
+		emissiveConstant = 0.95
+		thermalMassModifier = 4.0
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 001
+			guiEnableName = Open Hatch
+			guiDisableName = Close Hatch
+			actionEnableName = Open Hatch
+			actionDisableName = Close Hatch
+			animationSpeed = 0.5
+			oneShot = false
+			activeEditor = true
+			activeFlight = true
+			activeUnfocused = true
+			unfocusedRange = 2
+		}
+		MODULE
+		{
+			name = ModuleAnimator
+			animationName = Take 002
+			guiEnableName = Structure Off
+			guiDisableName = Structure On
+			animationSpeed = 1000
+			oneShot = false
+			activeEditor = true
+			activeFlight = false
+			activeUnfocused = false
+			unfocusedRange = 5
+		}
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,-0.05,-0.3)
+			equipDir = (0,270,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = Water
+			amount = 75
+			maxAmount = 75
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = TweakScale
+			type = UniversalStorage
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_2R340_Radial_Oxygen
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_2R340_Radial_Oxygen/US_2R340_Radial_Oxygen
+	url = UniversalStorage/Parts/US_2R340_Radial_Oxygen/US_2R340_Radial_Oxygen/US_2R340_Radial_Oxygen
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_2R340_Radial_Oxygen
+		mesh = model.mu
+		rescaleFactor = 1
+		attachRules = 0,1,0,0,0
+		node_attach = 0.0, 0.0, 0.12, 0.0, 0.0, -1.0
+		category = Utility
+		description = One external oxygen canister with its contents under low pressure. Although holding much less gas than its cryogenic counterparts, the lower density helps minimize weight on landers, and helps to keep the workplace occupational hazard department off our backs.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Radial Oxygen Tank
+		cost = 100
+		entryCost = 500
+		TechRequired = survivability
+		bulkheadProfiles = srf
+		crashTolerance = 7
+		mass = 0.026
+		maxTemp = 1200
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.15)
+			equipDir = (0,0,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = Oxygen
+			amount = 961
+			maxAmount = 961
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_Radial_R30_Water
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_2R360_Radial_Water/US_2R360_Radial_Water
+	url = UniversalStorage/Parts/US_2R360_Radial_Water/US_2R360_Radial_Water/US_Radial_R30_Water
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_Radial_R30_Water
+		rescaleFactor = 1
+		attachRules = 0,1,0,0,0
+		node_attach = 0.0, 0.0, 0.12, 0.0, 0.0, -1.0
+		category = Utility
+		description = A small and cheap water canister, the expendible nature of this tank often leads to its abuse at the hands of reckless LEM designers. Please refrain from using these tanks as landing gear. Drink responsibly.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: Radial Water Tank
+		cost = 100
+		entryCost = 500
+		TechRequired = survivability
+		bulkheadProfiles = srf
+		crashTolerance = 7
+		mass = 0.026
+		maxTemp = 1200
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.15)
+			equipDir = (0,0,0)
+			runSpeed = 1
+		}
+		RESOURCE
+		{
+			name = Water
+			amount = 10
+			maxAmount = 10
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = US_3R310_EVA_EVAX
+	type = PART
+	parentUrl = UniversalStorage/Parts/US_3R310_EVA_EVAX/US_3R310_EVA_EVAX
+	url = UniversalStorage/Parts/US_3R310_EVA_EVAX/US_3R310_EVA_EVAX/US_3R310_EVA_EVAX
+	PART
+	{
+		author = Paul Kingtiger & Daishi
+		mesh = model.mu
+		module = Part
+		name = US_3R310_EVA_EVAX
+		rescaleFactor = 1
+		attachRules = 0,1,0,0,1
+		node_attach = 0.0, 0.0, 0.0, 0.0, 0.0, -1.0
+		category = Utility
+		description = Originally featured at the International Trade Fair as a snack hamper with buckles and a shoulder strap - the EVA-X now finds itself supplying Kerbalnauts with extra resources for longer space-walks. Although rated for 15 hours of activity, please refrain from running, jumping, yoga, or other fabric-tearing activities with the pack attached. We had to cut costs somewhere.
+		manufacturer = New Horizons & Nox Industrial
+		subcategory = 0
+		title = Universal Storage: EVA-X
+		cost = 500
+		entryCost = 2500
+		TechRequired = advExploration
+		bulkheadProfiles = srf
+		crashTolerance = 5
+		mass = 0.05
+		maxTemp = 1200
+		angularDrag = 1
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.2
+		MODULE
+		{
+			name = ModuleKISItemEvaTweaker
+			editorItemsCategory = false
+			carriable = true
+			equipSlot = jetpack
+			equipMode = part
+			equipMeshName = jetpack_base01
+			equipBoneName = bn_jetpack01
+			equipPos = (0,0,-0.06)
+			equipDir = (0,0,0)
+			runSpeed = 1
+		}
+		MODULE
+		{
+			name = FlagDecal
+			textureQuadName = flagTransform
+		}
+		RESOURCE
+		{
+			name = EVA Propellant
+			amount = 5
+			maxAmount = 5
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		RESOURCE
+		{
+			name = LifeSupport
+			amount = 1
+			maxAmount = 1
 		}
 		MODULE
 		{
