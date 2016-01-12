@@ -211,7 +211,7 @@
         <IsHud>true</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>true</IsVisible>
-        <LineCount>6</LineCount>
+        <LineCount>9</LineCount>
         <Name>HUD 2</Name>
         <ReadoutModuleNames>
           <string>Surface.AltitudeTerrain</string>
