@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using KSP.IO;
+using System.IO;
 using System.Collections.Generic;
 
 
@@ -11,6 +11,9 @@ namespace Nereid
 
       class RibbonPool : Pool<Ribbon>
       {
+         private const int CUSTOM_RIBBON_BASE = 1000;
+         private const String FILENAME_RIBBONPACK = "FinalFrontierCustomRibbons.cfg";
+
          public delegate void Callback();
 
          public List<Callback> OnRibbonPoolReady {  get; private set; }
@@ -37,9 +40,8 @@ namespace Nereid
          private readonly List<Ribbon> customRibbons = new List<Ribbon>();
          private readonly Dictionary<int, Ribbon> customMap = new Dictionary<int,Ribbon>();
 
-         // contract ribbons
-         private readonly List<Ribbon> contractRibbons = new List<Ribbon>();
-         //private readonly Dictionary<int, Ribbon> contractMap = new Dictionary<int, Ribbon>();
+         // external ribbons
+         private readonly List<Ribbon> externalRibbons = new List<Ribbon>();
 
 
          // -- special ribbons --
@@ -109,7 +111,6 @@ namespace Nereid
          private void CreateRibbons()
          {
             Log.Info("creating ribbons in pool");
-            Clear();
             //
 
             // mapping for celestial bodies
@@ -197,18 +198,21 @@ namespace Nereid
                   {
                      Log.Detail(bodyName+" is sun");
                      CelestialBody innermost = body.Innermost();
-                     closerSolarOrbitRibbon = new Ribbon(BODY_RIBBON_PATH + prefix + "CloserSolarOrbit", new CloserSolarOrbitAchievement(body, 50500, innermost, first), first ? closerSolarOrbitRibbon : soiRibbon);
-                     AddRibbon(closerSolarOrbitRibbon);
+                     if(innermost != null)
+                     {
+                        Log.Detail("innermost planet of "+bodyName+" is "+innermost.name);
+                        closerSolarOrbitRibbon = new Ribbon(BODY_RIBBON_PATH + prefix + "CloserSolarOrbit", new CloserSolarOrbitAchievement(body, 50500 + i, innermost, first), first ? closerSolarOrbitRibbon : soiRibbon);
+                        AddRibbon(closerSolarOrbitRibbon);
+                     }
                   }
                }
             }
             // 
             // Deep Space
-            // BROKEN
-            //Ribbon deepSpace = new Ribbon(_RP+"DeepSpace", new DeepSpaceAchievement(48000, false));
-            //Ribbon firstDeepSpace = new Ribbon(_RP+"FirstDeepSpace", new DeepSpaceAchievement(48001, true), deepSpace);
-            //Add(deepSpace);
-            //Add(firstDeepSpace);
+            Ribbon deepSpace = new Ribbon(_RP+"DeepSpace", new DeepSpaceAchievement(48000, false));
+            Ribbon firstDeepSpace = new Ribbon(_RP+"FirstDeepSpace", new DeepSpaceAchievement(48001, true), deepSpace);
+            Add(deepSpace);
+            Add(firstDeepSpace);
 
             // Ribbons without a celestial body
             //
@@ -291,10 +295,10 @@ namespace Nereid
             AddRibbon(ribbonEndurance2000days);
             //
             // Splashdown
-            AddRibbon(new Ribbon(_RP + "Splashdown", new SplashdownAchievement(81)));
+            AddRibbon(new Ribbon(_RP + "Splashdown", new SplashdownAchievement(80)));
             //
             // EVA over water
-            AddRibbon(new Ribbon(_RP + "EvaInWater", new EvaInHomeWatersAchievement(80)));
+            AddRibbon(new Ribbon(_RP + "EvaInWater", new EvaInHomeWatersAchievement(81)));
             //
             // Collision
             AddRibbon(new Ribbon(_RP + "Collision", new CollisionAchievement(0)));
@@ -371,6 +375,36 @@ namespace Nereid
             AddRibbon(heavyVehicleLaunch6);
             AddRibbon(heavyVehicleLaunch7);
             //
+            // Mountain Ribbons
+            Ribbon mountain1 = new Ribbon(_RP + "Mountain01", new MountainLandingAchievement(1500, 431));
+            Ribbon mountain2 = new Ribbon(_RP + "Mountain02", new MountainLandingAchievement(2000, 432), mountain1);
+            Ribbon mountain3 = new Ribbon(_RP + "Mountain03", new MountainLandingAchievement(2500, 433), mountain2);
+            Ribbon mountain4 = new Ribbon(_RP + "Mountain04", new MountainLandingAchievement(3000, 434), mountain3);
+            Ribbon mountain5 = new Ribbon(_RP + "Mountain05", new MountainLandingAchievement(3500, 435), mountain4);
+            Ribbon mountain6 = new Ribbon(_RP + "Mountain06", new MountainLandingAchievement(4000, 436), mountain4);
+            AddRibbon(mountain1);
+            AddRibbon(mountain2);
+            AddRibbon(mountain3);
+            AddRibbon(mountain4);
+            AddRibbon(mountain5);
+            AddRibbon(mountain6);
+            //
+            // Fuel Left on Landing ribbons
+            Ribbon nofuel1 = new Ribbon(_RP + "NoFuel01", new NoFuelLandingAchievement(5, 441));
+            Ribbon nofuel2 = new Ribbon(_RP + "NoFuel02", new NoFuelLandingAchievement(1, 442), nofuel1);
+            AddRibbon(nofuel1);
+            AddRibbon(nofuel2);
+            //
+            // Polar ribbons
+            Ribbon northPolar = new Ribbon(_RP + "NorthPolar", new PolarLandingAchievement("North", 491, false));
+            Ribbon northPolar1st = new Ribbon(_RP + "FirstNorthPolar", new PolarLandingAchievement("North", 492, true), northPolar);
+            Ribbon southPolar = new Ribbon(_RP + "SouthPolar", new PolarLandingAchievement("South", 493, false));
+            Ribbon southPolar1st = new Ribbon(_RP + "FirstSouthPolar", new PolarLandingAchievement("South", 494, true), southPolar);
+            AddRibbon(northPolar);
+            AddRibbon(northPolar1st);
+            AddRibbon(southPolar);
+            AddRibbon(southPolar1st);
+            //
             // Eva Time
             Ribbon evaTime1 = new Ribbon(_RP+"TotalEva1", new EvaTotalTimeAchievement(Utils.ConvertHoursToSeconds(1),   471));
             Ribbon evaTime2 = new Ribbon(_RP+"TotalEva2", new EvaTotalTimeAchievement(Utils.ConvertHoursToSeconds(2),   472), evaTime1);
@@ -441,16 +475,27 @@ namespace Nereid
             AddRibbon(contracts4);
             AddRibbon(contracts5);
             //
+            // Contract Prestige
+            Ribbon significantContract = new Ribbon(_RP+"SignificantContract", new ContractPrestigeAchievement(Contracts.Contract.ContractPrestige.Significant, 68));
+            Ribbon exceptionalContract = new Ribbon(_RP + "ExceptionalContract", new ContractPrestigeAchievement(Contracts.Contract.ContractPrestige.Exceptional, 69), significantContract);
+            AddRibbon(significantContract);
+            AddRibbon(exceptionalContract);
+            //
+            // Lost And Found
+            // (not working)
+            //AddRibbon(new Ribbon(_RP + "LostAndFound", new LostAndFoundAchievement(99)));
+            //
             // Research/Science
-            Ribbon research1 = new Ribbon(_RP+"Research1", new ResearchAchievement(1,10, 71));
-            Ribbon research2 = new Ribbon(_RP+"Research2", new ResearchAchievement(2,50, 72), research1);
-            Ribbon research3 = new Ribbon(_RP+"Research3", new ResearchAchievement(3,100, 73), research2);
-            Ribbon research4 = new Ribbon(_RP+"Research4", new ResearchAchievement(4,150, 74), research3);
-            Ribbon research5 = new Ribbon(_RP+"Research5", new ResearchAchievement(5,200, 75), research4);
-            Ribbon research6 = new Ribbon(_RP+"Research6", new ResearchAchievement(6,400, 76), research5);
-            Ribbon research7 = new Ribbon(_RP+"Research7", new ResearchAchievement(7,600, 77), research6);
-            Ribbon research8 = new Ribbon(_RP+"Research8", new ResearchAchievement(8,1000, 78), research7);
-            Ribbon research9 = new Ribbon(_RP+"Research9", new ResearchAchievement(8, 2000, 78), research7);
+            Ribbon research1 = new Ribbon(_RP + "Research1", new ResearchAchievement(1, 10, 201));
+            Ribbon research2 = new Ribbon(_RP + "Research2", new ResearchAchievement(2, 50, 202), research1);
+            Ribbon research3 = new Ribbon(_RP + "Research3", new ResearchAchievement(3, 100, 203), research2);
+            Ribbon research4 = new Ribbon(_RP + "Research4", new ResearchAchievement(4, 150, 204), research3);
+            Ribbon research5 = new Ribbon(_RP + "Research5", new ResearchAchievement(5, 200, 205), research4);
+            Ribbon research6 = new Ribbon(_RP + "Research6", new ResearchAchievement(6, 400, 206), research5);
+            Ribbon research7 = new Ribbon(_RP + "Research7", new ResearchAchievement(7, 600, 207), research6);
+            Ribbon research8 = new Ribbon(_RP + "Research8", new ResearchAchievement(8, 1000, 208), research7);
+            Ribbon research9 = new Ribbon(_RP + "Research9", new ResearchAchievement(9, 1500, 209), research8);
+            Ribbon research10 = new Ribbon(_RP + "Research10", new ResearchAchievement(10, 2000, 210), research9);
             AddRibbon(research1);
             AddRibbon(research2);
             AddRibbon(research3);
@@ -459,17 +504,38 @@ namespace Nereid
             AddRibbon(research6);
             AddRibbon(research7);
             AddRibbon(research8);
+            AddRibbon(research9);
+            AddRibbon(research10);
             //
             // Specialists
             AddRibbon(this.ServiceOperations = new Ribbon(_RP+"ServiceOperations", new PilotServiceAchievement(12)));
             AddRibbon(this.ServiceEngineer   = new Ribbon(_RP+"ServiceEngineer", new EngineerServiceAchievement(11)));
             AddRibbon(this.ServiceScientist  = new Ribbon(_RP+"ServiceScientist", new ScientistServiceAchievement(10)));
             //
+            // Passenger Transport
+            Ribbon transport1 = new Ribbon(_RP + "PassengerTransport1", new PassengerTransportAchievement(1, 110));
+            Ribbon transport2 = new Ribbon(_RP + "PassengerTransport2", new PassengerTransportAchievement(2, 111), transport1);
+            Ribbon transport3 = new Ribbon(_RP + "PassengerTransport3", new PassengerTransportAchievement(3, 112), transport2);
+            Ribbon transport4 = new Ribbon(_RP + "PassengerTransport4", new PassengerTransportAchievement(4, 113), transport3);
+            Ribbon transport5 = new Ribbon(_RP + "PassengerTransport5", new PassengerTransportAchievement(5, 114), transport4);
+            AddRibbon(transport1);
+            AddRibbon(transport2);
+            AddRibbon(transport3);
+            AddRibbon(transport4);
+            AddRibbon(transport5);
+            //
+            //
+            // Records
+            AddRibbon(new Ribbon(_RP + "DistanceRecord", new DistanceRecordAchievement(551)));
+            AddRibbon(new Ribbon(_RP + "SpeedRecord", new SpeedRecordAchievement(552)));
+            AddRibbon(new Ribbon(_RP + "DepthRecord", new DepthRecordAchievement(553)));
+            AddRibbon(new Ribbon(_RP + "AltitudeRecord", new AltitudeRecordAchievement(554)));
+            //
             // easter eggs
             AddRibbon(new Ribbon(_RP+"XM2014A", new XMas2014Achievement(2)));
             AddRibbon(new Ribbon(_RP + "XM", new DateofYearAchievement(24,12,26,12,"X-mas","Awarded for any kind of duty on xmas",1)));
             AddRibbon(new Ribbon(_RP + "July4", new DateofYearAchievement(4,7,4,7,"4th July","Awarded for any kind of duty on 4th of July",3)));
-            AddRibbon(new Ribbon(_RP + "Anniversary", new DateofYearAchievement(27, 4, 27, 4, "Anniversary", "Awarded for any kind of duty on any anniversary of the kerbal space program", 3)));
+            AddRibbon(new Ribbon(_RP + "Anniversary", new DateofYearAchievement(27, 4, 27, 4, "Anniversary", "Awarded for any kind of duty on any anniversary of the kerbal space program", 4)));
             //
             // dont know how to detect yet
             // Achievement missionAbort = new MissionAbortedAchievement(55);
@@ -492,6 +558,7 @@ namespace Nereid
 
             Sort();
 
+            // just for debugging
             //Persistence.WriteSupersedeChain(this);
 
             Log.Info("ribbon pool created");
@@ -585,15 +652,20 @@ namespace Nereid
             int CUSTOM_BASE_INDEX = 100;
             for (int i = 0; i < 20; i++)
             {
-               CustomAchievement achievement = new CustomAchievement(CUSTOM_BASE_INDEX + i, -1000 + i);
+               CustomAchievement achievement = new CustomAchievement(CUSTOM_BASE_INDEX + i, -2000 + i);
                int nr = i + 1;
                String ss = nr.ToString("00");
                achievement.SetName(ss + " Custom");
-               achievement.SetText(ss + " Custom");
-               Ribbon ribbon = new Ribbon(_RP+"Custom"+ss,achievement);
+               achievement.SetDescription(ss + " Custom");
+               Ribbon ribbon = new Ribbon(_RP + "Custom" + ss, achievement);
                AddCustomRibbon(CUSTOM_BASE_INDEX + i,ribbon);
             }
-            Log.Info("custom ribbons created ("+customRibbons.Count+" custom ribbons)");
+
+            // custom ribbon packs
+            Log.Info("scanning for ribbon packs...");
+            ScanForRibbonPacks(Constants.GAMEDATA_PATH);
+
+            Log.Info("custom ribbons created (" + customRibbons.Count + " custom ribbons)");
          }
 
          public Ribbon CreateCustomRibbon(int index, String filename, String name, String text, Ribbon supersede = null)
@@ -602,7 +674,7 @@ namespace Nereid
             CustomAchievement achievement = new CustomAchievement(index, -1000 + index);
             Ribbon ribbon = new Ribbon(_RP+filename, achievement, supersede);
             achievement.SetName(name);
-            achievement.SetText(text);
+            achievement.SetDescription(text);
             AddCustomRibbon(index, ribbon);
             return ribbon;
          }
@@ -623,7 +695,7 @@ namespace Nereid
             }
             Ribbon ribbon = new Ribbon(_RP+filename, achievement, supersede);
             achievement.SetName(name);
-            achievement.SetText(text);
+            achievement.SetDescription(text);
             AddCustomRibbon(index, ribbon);
             return ribbon;
          }
@@ -631,6 +703,36 @@ namespace Nereid
          public List<Ribbon> GetCustomRibbons()
          {
             return customRibbons;
+         }
+
+         public void ScanForRibbonPacks(String basefolder)
+         {
+            if (Log.IsLogable(Log.LEVEL.TRACE)) Log.Trace("scanning folder " + basefolder + " for ribbon packs");
+            try
+            {
+               foreach (String folder in Directory.GetDirectories(basefolder))
+               {
+                  String filename = folder + "/"+FILENAME_RIBBONPACK;
+                  if (File.Exists(filename))
+                  {
+                     Log.Info("custom ribbon pack found in " + folder);
+                     RibbonPack pack = new RibbonPack(filename);
+                     // adding ribbons of Ribbon Pack
+                     foreach (Ribbon ribbon in pack)
+                     {
+                        // cast is safe
+                        CustomAchievement achievement = (CustomAchievement)ribbon.GetAchievement();
+                        int index = achievement.GetIndex();
+                        AddCustomRibbon(index, ribbon);
+                     }
+                  }
+                  ScanForRibbonPacks(folder);
+               }
+            }
+            catch (System.Exception e)
+            {
+               Log.Error("failed to scan for custom ribbon packs ("+e.GetType()+":"+e.Message+")");
+            }
          }
 
          private void OnGameStateCreated(Game game)
@@ -648,6 +750,47 @@ namespace Nereid
             }
             // and guard this
             ribbonsCreated = true;
+
+            // and log all ribbons
+            dumpToLog();
+         }
+
+         private void dumpToLog()
+         {
+            List<Ribbon> all = new List<Ribbon>(this);
+
+            all.Sort(
+               delegate(Ribbon left, Ribbon right)
+               {
+                  if (left.GetAchievement().prestige < right.GetAchievement().prestige) return -1;
+                  if (left.GetAchievement().prestige > right.GetAchievement().prestige) return 1;
+                  return 0; 
+               });
+
+            if (Log.IsLogable(Log.LEVEL.DETAIL))
+            {
+               int lastPrestige = int.MinValue;
+               Log.Detail("list of all ribbons:");
+               foreach(Ribbon ribbon in all)
+               {
+                  int prestige = ribbon.GetAchievement().prestige;
+                  //
+                  // check for multiple prestiges
+                  string warn;
+                  if(prestige==lastPrestige)
+                  {
+                     warn = " [WARNING: prestige used multiple times]";
+                  }
+                  else
+                  {
+                     warn = "";
+                  }
+                  lastPrestige = prestige;
+                  //
+                  // and log it
+                  Log.Detail(prestige + " ribbon "+ribbon.GetName()+" (code "+ribbon.GetCode()+") "+warn);
+               }
+            }
          }
 
          public bool IsReady()
@@ -655,19 +798,31 @@ namespace Nereid
             return ribbonsCreated;
          }
 
-         public void AddContractRibbon(Ribbon ribbon)
+         public Ribbon RegisterExternalRibbon(String code, String pathToRibbonTexture, String name, String description, bool first = false, int prestige = 0)
          {
-            Log.Detail("adding contract ribbon "+ribbon);
-            contractRibbons.Add(ribbon);
+            Log.Info("adding external ribbon " + name + " (code "+code+") ");
+            Achievement achievement = new ExternalAchievement(code, name, prestige, first, description);
+            Ribbon ribbon = new Ribbon(pathToRibbonTexture, achievement);
+            externalRibbons.Add(ribbon);
             Add(ribbon);
+            return ribbon;
          }
 
-         public void AddContractRibbon(Achievement achievement, String textureName, Ribbon supersedeRibbon = null)
+         public Ribbon RegisterCustomRibbon(int id, String pathToRibbonTexture, String name, String description, int prestige = 0)
          {
-            Ribbon ribbon = new Ribbon(textureName, achievement, supersedeRibbon);
-            AddContractRibbon(ribbon);
+            Log.Info("adding external custom ribbon " + name + " (id " + id + ") ");
+            if(id<=CUSTOM_RIBBON_BASE)
+            {
+               Log.Error("illegal custom ribbon id (has to be greater than "+CUSTOM_RIBBON_BASE+")");
+               return null;
+            }
+            CustomAchievement achievement = new CustomAchievement(id, prestige);
+            Ribbon ribbon = new Ribbon(pathToRibbonTexture, achievement);
+            achievement.SetName(name);
+            achievement.SetDescription(description);
+            AddCustomRibbon(id, ribbon); 
+            return ribbon;
          }
-
       }
    }
 }

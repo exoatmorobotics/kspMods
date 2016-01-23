@@ -26,3 +26,6 @@
 0.3.10	updated weighting
 0.3.11	Fixed missing part for Minmus contracts
 0.3.12	Added missing VisitWaypoint parameter for the landing and impact contracts
+0.3.16	Updated deadlines to be more realistic
+0.3.17	Updated version file, bumped version
+0.3.18	Added dummy dll so that ModuleManager can know it's installed

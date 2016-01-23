@@ -1,11 +1,12 @@
-KerbalAlarmClock - 2.7.9.0
+KerbalAlarmClock - 3.5.0.0
 --------------------------
 How to stop Jeb from flying past his destination at Warp speed.
 
 By Trigger Au
 
 Forum Thread for latest: http://forum.kerbalspaceprogram.com/showthread.php/24786-Kerbal-Alarm-Clock
-Documentation Site: https://sites.google.com/site/kerbalalarmclock
+Documentation Site: http://triggerau.github.io/KerbalAlarmClock/
+Install Instructions: http://triggerau.github.io/KerbalAlarmClock/install.html
 
 INSTALLATION
 ******************* NOTE  ******************* NOTE ******************* NOTE *******************
@@ -14,7 +15,7 @@ IF YOU WANT TO MAINTAIN YOUR SETTINGS DO NOT COPY THE CONFIG.XML FILE OVER
 
 Installing the plugin involves copying the plugin files into the correct location in the KSP aplication folder
 1. Extract the Zip file you have downloaded to a temporary Location
-2. Open the Extracted folder structure and open the KerbalAlarmClock_v2.7.9.0 Folder
+2. Open the Extracted folder structure and open the KerbalAlarmClock_v3.5.0.0 Folder
 3. Inside this you will find a GameData folder which contains all the content you will need
 4. Open another window to your KSP application folder - We'll call this <KSP_OS>
 5. Copy the Contents of the extracted GameData folder to the <KSP_OS>\GameData Folder
@@ -22,12 +23,172 @@ Installing the plugin involves copying the plugin files into the correct locatio
 
 TROUBLESHOOTING
 The plugin records troubleshooting data in the "<KSP_OS>\KSP_Data\output_log.txt".
-If there are errors in loading the config you can delete the "<KSP_OS>\GameData\TriggerTech\PluginData\KerbalAlarmClock\config.xml" and restart the game
+If there are errors in loading the config you can delete the "<KSP_OS>\GameData\TriggerTech\KerbalAlarmClock\settings.cfg" and restart the game
 
 LICENSE
 This work is licensed under an MIT license as outlined at the OSI site. Visit the documentation site for more details and Attribution
 
+ATTRIBUTION-SOUNDS
+Included Sounds are from freesfx.co.uk (http://www.freesfx.co.uk). EULA can be found here: http://www.freesfx.co.uk/info/eula/
+
 VERSION HISTORY
+Version 3.5.0.0		-	KSP Version: 1.0.5
+- Fixed issue with dropdown pages and alignment
+- Fixed issue with settings bleed (Issue #152)
+- Solved limit on Target Distance Alamrs - for solar orbits (Issue #151)
+- Updated KERWrapper to better handle the KER window not being open (Issue #150)
+- Added AngleRenderer for ejection angle displays of TWP Alarms
+
+Version 3.4.0.0		-	KSP Version: 1.0.4
+- Added Audio to Alarms - ie play a sound when an alarm fires (Issue #4)
+- Added repeat option to Ap/PE alarms (Issue #128)
+- Added an action for only showing a message if the associated vessel is not the active one (Issue #125)
+- Added "Create All Transfers" option for transfer alarms so you can create all windows from a planet (Issue #123)
+- Added "Select Vessel" option for TS so you can highlight the vessel when an alarm fires (Issue #100)
+- Added VOID wrapper to do burntime from it as well (Issue #138)
+- Redesigned the Alarm Actions to allow many more combinations of actions (Issue #146)
+- Change WarpTo Display so buttons hidden if any Manuever Gizmo is active (Issue #148)
+- Fixed Issue with incorrect time formatting on Model Transfers (Issue #149)
+- Fixed issue where autoManNode Alarms weren't calculating/updating burntime (Issue #139)
+- Extra checking to SetCurrentFlightStates to prevent NRE (Issue #147)
+- Extra checking to isEditorVAB to prevent NRE (Issue #142)
+- Reworked selection code in TS
+
+Version 3.3.2.1		-	KSP Version: 1.0.2
+- Added KER Wrapper/Integration to provide BurnTime based margins (Issue #14)
+- Fixed issue with editing Automatic ManNode Margins (Issue #135)
+- Merged Fix re GUISkin and other plugins from mjn33 (Issue #133)
+- Merged typo fix from Dennovin (Issue #119)
+- (.1 because ) Missed an if statement
+
+Version 3.3.1.1		-	KSP Version: 1.0.2
+- Change to version file for CKAN and patch levels
+
+Version 3.3.1.0		-	KSP Version: 1.0
+- Changed .version values to cater to CKAN and patch releases (Issue #129)
+- Updated some code around visibility of windows to fix scene changes (Issue #130)
+- Added separate values for VAB,SPH for visibility
+
+Version 3.3.0.1		-	KSP Version: 1.0
+- KerbalStuff Release Issue - no code changes
+
+Version 3.3.0.0		-	KSP Version: 1.0
+- Recompiled for 1.0
+- Code changes for launcher and Armosphere changes
+- Updated KAC Wrapper
+- Fixed Date of Event displaying Date of Alarm (Fixes #126)
+
+Version 3.2.4.0		-	KSP Version: 0.90
+- Fixed duplicate alarms with Auto and WarpTo (Issue #124)
+- Fixed log message with missing image (Issue #121)
+- Enabled KAC in Editor Scenes (Issue #120)
+- Fixed issue woth Alarm clock opening on every scene (Issue #118)
+- Added option to limit Warp rate for WarpTo Alarms (Issue #117)
+- Fixed placement issue with Minimized mode (Issue #116)
+- Fixed missing confirmation on delete on minimized window (Issue #115)
+
+
+Version 3.2.3.0		-	KSP Version: 0.90
+- Changed WarpTo buttons to only respond to left-click (Issue #112)
+- Added Confirmation option to WarpTo Buttons (Issue #111)
+- Fixed bug in Launch Rendezvous code for non Equatorial landing positions (Issue #110)
+- Added Filter to this Vessel option for alarms list (Issue #108)
+- Added Date of Alarm to editing window (Issue #107)
+- Added option to display child windows below main window, not just to the side (Issue #106)
+
+Version 3.2.2.0		-	KSP Version: 0.90
+- Changed fix for Contracts going missing to use a gameevent (Issue #92 again)
+- Changed orbit render stuff in TS so it is more specific (Issue #104)
+- Added Margin options for WarpTo Alarms (Issue #105)
+
+Version 3.2.1.0		-	KSP Version: 0.90
+- Added check to not display WarpTo when vessel is landed
+
+Version 3.2.0.0		-	KSP Version: 0.90
+- Added Window Width Resizing via Mouse (Issue #102)
+- Added WarpToNode Feature for MapView (Issue #98)
+- Made Warp Kill via X the default behaviour (Issue #101)
+- Added some code to fix Control Layout Errors (Issue #99)
+
+Version 3.1.2.0		-	KSP Version: 0.90
+- Updated default button state for app button (Issue #97)
+- Fixed issue with "date" alarms not using epoch (Issue #96)
+- Added feature to detect Ap/Pe when choosing Apsis alarms (Issue #95)
+- Fixed Toolbar code to use relative paths (Issue #94)
+
+Version 3.1.1.0		-	KSP Version: 0.90
+- Fixed issue with Contract alarms disappearing on scene change (Issue #92)
+- Added feature to swap the child windows to the left side if the KAC is near the right screen edge (Issue #94)
+
+Version 3.1.0.0		-	KSP Version: 0.90
+- Added option so when you hit the throttle cutoff ("X" by default) it will also kill warp (Issue #85)
+- Added "No Action" Action options (Issue #80)
+- Added functionality to change calendar to RSS cal (Issue #53)
+- Added extra message for career mode when AP/PE points are not targettable (Issue #83)
+- Added warning to Transfer values for RSS loaded games (Issue #18)
+- Closed bug with Asteroid Closest Distance crash (Issue #54)
+- Confirmed code requirement for closest Distance and landed craft (Issue #73)
+- Closed request re "Focus"ing vessels in TS - no API exists (Issue #32)
+- Replaced all the Time objects with new KSPDateTime and KSPTimeSpan classes (Issue #74)
+- Added AVC .version file (Issue #88)
+- Restructured Zip to better suit CKAN (Issue #87)
+- Updated Toolbar wrapper
+- Updated manual pages
+
+Version 3.0.6.0		-	KSP Version: 0.90
+- Recompiled for 0.90
+- Couple of code changes for 0.90 changes
+- Added Delete Confirmation optional Dialog (Issue #82)
+- Adjusted Top Clamp value to be off screen slightly (Issue #79)
+- Changed KACBackup savenames to start with z so they go to the bottom of the list
+
+Version 3.0.5.0		-	KSP Version: 0.25.0
+- Added extra warp rate calcs for non standard values (Issue #71)
+- Added slider to configure weighting of transition periods
+- Added some instant transition fallbacks if alarm is too close to the game UT (Issue #72)
+- Fixed issue with Contract alarms in sandbox mode (Issue #78)
+- Fixed issue with warp fighting when GUI not displayed (Issue #76)
+- Double checked all input lock code
+
+Version 3.0.4.0		-	KSP Version: 0.25.0
+- Fixed tooltip typos (Issue #68)
+- Fixed error on load of empty alarm block
+- Fixed issues with jumping from paused alarms at SC
+- Fixed versioncheck file
+
+Version 3.0.2.0		-	KSP Version: 0.25.0
+- Fixed issue where Alarm list was persisting between saves (Issue #67)
+- Added extra logging and null checks re AppLauncher
+- Updated KACWrapper to handle Alarmtime properly and add repeat properties
+
+Version 3.0.1.0		-	KSP Version: 0.25.0
+- Rework of majority of code base
+- Ability to choose from 3 visual Skins
+- Added Contract Alarms for Expiry and Deadlines
+- Added Alarm Repeats for Raw, Crew and Model Transfer alarms
+- QuickAdd option for contextual Alarms
+- QuickAdd and Warp option
+- Added Kill Warp with No Message action and restructured buttons/code behind
+- Alarm Saving - now in the games save file - only saves and loads on game/save and load
+- Adjusted settings tabs to better layout options
+- API for Alarm Creation/Modification and events
+- App Launcher integration - this is now the default
+- Has input locking options for when mouse is over the panels - this prevents action groups from occuring when mouse is over windows
+- Changed default Warp affecting to cater to non-instant transitions
+- New Common Toolbar Wrapper - official one
+- Removed periodic save of alarms file now that alarms are in the save files
+- Screen clamping on main window
+- Sorted the multiline alarm display stuff
+- Window Resizing for better display
+- Font changes to make more readable
+- F11 keystroke disabled - can be reenabled via settings value
+- Restructure settings
+- Restructure plugin folders
+- Added Alarm Import Tool for v2 Alarms
+- Added Flags
+- New documentation site - http://triggerau.github.io/KerbalAlarmClock/
+- New versioncheck location on Github
+
 Version 2.7.9.0		-	KSP Version: 0.25.0
 - Recompiled for 0.25
 - Image size optimisation thanks to dak180

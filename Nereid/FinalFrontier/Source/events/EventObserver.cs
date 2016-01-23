@@ -69,6 +69,7 @@ namespace Nereid
             GameEvents.VesselSituation.onFlyBy.Add(this.OnFlyBy);
             GameEvents.VesselSituation.onReachSpace.Add(this.OnReachSpace);
             GameEvents.Contract.onCompleted.Add(this.OnContractCompleted);
+            GameEvents.Contract.onFailed.Add(this.OnContractFailed);
             GameEvents.VesselSituation.onOrbit.Add(this.OnOrbit);
             GameEvents.OnScienceRecieved.Add(this.OnScienceReceived);
             GameEvents.onFlightReady.Add(this.OnFlightReady);
@@ -76,11 +77,17 @@ namespace Nereid
             GameEvents.onKerbalAdded.Add(this.OnKerbalAdded);
             GameEvents.onKerbalRemoved.Add(this.OnKerbalRemoved);
             GameEvents.onKerbalStatusChange.Add(this.OnKerbalStatusChange);
+            //
+            // Other
+            GameEvents.OnProgressAchieved.Add(this.OnProgressAchieved);
+            //
          }
+
 
          private void OnFlyBy(Vessel vessel,CelestialBody body)
          {
             // for later usage
+            //Log.Test("OnFlyBy "+vessel.name+" on "+body.name);
          }
 
          private void OnFlightReady()
@@ -142,6 +149,11 @@ namespace Nereid
             }
          }
 
+         private void OnContractFailed(Contract contract)
+         {
+            //Log.Test("contract failed " + contract.Title);
+         }
+
          private void OnContractCompleted(Contract contract)
          {
             Vessel vessel = FlightGlobals.ActiveVessel;
@@ -153,9 +165,13 @@ namespace Nereid
             {
                foreach(ProtoCrewMember kerbal in vessel.GetVesselCrew() )
                {
-                  halloffame.RecordContract(kerbal);
-                  CheckAchievementsForCrew(kerbal,false);
-                  CheckAchievementsForContracts(kerbal, contract);
+                  // we want to check crew member only
+                  if(kerbal.IsCrew())
+                  {
+                     halloffame.RecordContract(kerbal);
+                     CheckAchievementsForCrew(kerbal, false);
+                     CheckAchievementsForContracts(kerbal, contract);
+                  }
                }
             }
             finally
@@ -176,18 +192,28 @@ namespace Nereid
          private void OnKerbalRemoved(ProtoCrewMember kerbal)
          {
             Log.Info("kerbal removed: "+kerbal.name);
-            HallOfFame.Instance().Refresh();
+            HallOfFame.Instance().Remove(kerbal);
          }
 
          private void OnKerbalStatusChange(ProtoCrewMember kerbal, ProtoCrewMember.RosterStatus oldState, ProtoCrewMember.RosterStatus newState)
          {
-            Log.Info("kerbal status change: " + kerbal.name + " from "+oldState+" to "+ newState);
+            if (kerbal == null) return;
+            Log.Info("kerbal status change: " + kerbal.name + " from " + oldState + " to " + newState+" at time "+Planetarium.GetUniversalTime());
             HallOfFame.Instance().Refresh();
+            //
+            // check for achievements caused by status changes
+            // (crew member only)
+            /* not working because of the way KSP handles cre respawning
+            if (kerbal.IsCrew())
+            {
+               Log.Detail("kerbal with status change is crew member");
+               CheckAchievementsForRosterStatus(kerbal, oldState, newState);
+            }*/
          }
 
          private void OnProgressAchieved(ProgressNode node)
          {
-            //Log.Test("EventObserver::OnProgressAchieved");
+            CheckAchievementsForProgress(node);
          }
 
          private void OnVesselWasModified(Vessel vessel)
@@ -327,7 +353,7 @@ namespace Nereid
             String nameOfKerbalOnEva = eva.vesselName;
             // find kerbal that return from eva in new crew
             ProtoCrewMember member = vessel.GetCrewMember(nameOfKerbalOnEva);
-            if (member!=null)
+            if (member!=null && member.IsCrew())
             {
                Log.Detail(member.name + " returns from EVA to " + vessel.name);
                recorder.RecordBoarding(member);
@@ -349,7 +375,11 @@ namespace Nereid
             // record EVA
             foreach(ProtoCrewMember member in crew.GetVesselCrew())
             {
-               recorder.RecordEva(member, vessel);
+               // record crew member only
+               if (member.IsCrew())
+               {
+                  recorder.RecordEva(member, vessel);
+               }
             }
             // the previous vessel shoud be previous
             this.previousVesselState = new VesselState(vessel);
@@ -361,11 +391,11 @@ namespace Nereid
          {
             Log.Detail("OnGameStateCreated ");
             // do not load a game while in MAIN-MENU or SETTINGS
+            // TODO: check if STILL NECESSARY????
             if (HighLogic.LoadedScene == GameScenes.MAINMENU || HighLogic.LoadedScene==GameScenes.SETTINGS)
             {
                // clear the hall of fame to avoid new games with ribbons from previos loads...
                HallOfFame.Instance().Clear();
-               Log.Detail("ignoring load because of game scene " + HighLogic.LoadedScene);
                return;
             }
 
@@ -376,12 +406,12 @@ namespace Nereid
                return;
             }
 
+            Log.Info("EventObserver:: OnGameStateCreated " + game.UniversalTime + ", game status: " + game.Status + ", scene " + HighLogic.LoadedScene);
+
             // we have to detect a closed orbit again...
             this.orbitClosed = false;
 
             ResetInspectors();
-
-            Log.Info("EventObserver:: OnGameStateCreated " + game.UniversalTime+", game status: "+game.Status+", scene "+HighLogic.LoadedScene);
 
             vesselObserver.Revert(game.UniversalTime);
          }
@@ -470,7 +500,6 @@ namespace Nereid
                Log.Warning("vessel situation change without a valid vessel detected");
                return;
             }
-            Log.Info("vessel situation change for " + vessel.name+", situation changed from "+e.from+" to "+e.to);
             //
             // check for a (first) launch
             CheckForLaunch(vessel,e.from,e.to);
@@ -479,7 +508,7 @@ namespace Nereid
             {
                if (vessel.situation != Vessel.Situations.LANDED) ResetLandedVesselHasMovedFlag();
                //
-               Log.Info("situation change for active vessel");
+               Log.Info("situation change for active vessel from " + e.from + " to " + e.to);
                CheckAchievementsForVessel(vessel);
             }
             else
@@ -648,6 +677,68 @@ namespace Nereid
                   }
                }
             }
+         }
+
+         private void CheckAchievementsForRosterStatus(ProtoCrewMember kerbal , ProtoCrewMember.RosterStatus oldState, ProtoCrewMember.RosterStatus newState)
+         {
+            Log.Detail("EventObserver:: checkArchivements for roster status");
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            CheckAchievementsForRosterStatus(kerbal, oldState, newState, true);
+            CheckAchievementsForRosterStatus(kerbal, oldState, newState, false);
+
+            Log.Detail("EventObserver:: checkArchivements done in " + sw.ElapsedMilliseconds + " ms");
+         }
+
+         private void CheckAchievementsForRosterStatus(ProtoCrewMember kerbal , ProtoCrewMember.RosterStatus oldState, ProtoCrewMember.RosterStatus newState, bool hasToBeFirst)
+         {
+            foreach (Ribbon ribbon in RibbonPool.Instance())
+            {
+               Achievement achievement = ribbon.GetAchievement();
+               if (achievement.Check(kerbal,oldState,newState))
+               {
+                  // record crew member only
+                  if (kerbal.IsCrew())
+                  {
+                     recorder.Record(ribbon, kerbal);
+                  }
+               }
+            }
+         }
+
+
+         private void CheckAchievementsForProgress(ProgressNode node)
+         {
+            Vessel vessel = FlightGlobals.ActiveVessel;
+            HallOfFame halloffame = HallOfFame.Instance();
+            if(vessel != null)
+            {
+               foreach (Ribbon ribbon in RibbonPool.Instance())
+               {
+                  Achievement achievement = ribbon.GetAchievement();
+                  if(achievement.Check(node))
+                  {
+                     halloffame.BeginArwardOfRibbons();
+                     try
+                     {
+                        foreach(ProtoCrewMember member in vessel.GetVesselCrew())
+                        {
+                           // record crew member only
+                           if (member.IsCrew())
+                           {
+                              recorder.Record(ribbon, member);
+                           }
+                        }
+                     }
+                     finally
+                     {
+                        halloffame.EndArwardOfRibbons();
+                     }
+                  }
+               }
+            }
+
          }
 
          private void CheckAchievementsForCrew(ProtoCrewMember kerbal)

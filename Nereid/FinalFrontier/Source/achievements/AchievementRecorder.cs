@@ -59,15 +59,19 @@ namespace Nereid
                List<ProtoCrewMember> crew = vessel.GetVesselCrew();
                foreach (ProtoCrewMember member in crew)
                {
-                  Log.Info("kerbal " + member.name + " docked");
-                  hallOfFame.RecordDocking(member);
+                  // record crew member only
+                  if (member.IsCrew())
+                  {
+                     Log.Info("kerbal " + member.name + " docked");
+                     hallOfFame.RecordDocking(member);
+                  }
                }
             }
 
             public void Record(Ribbon ribbon, ProtoCrewMember kerbal)
             {
-                Achievement achievement = ribbon.GetAchievement();
-                hallOfFame.Record(kerbal, ribbon);
+               Achievement achievement = ribbon.GetAchievement();
+               hallOfFame.Record(kerbal, ribbon);
             }
 
 

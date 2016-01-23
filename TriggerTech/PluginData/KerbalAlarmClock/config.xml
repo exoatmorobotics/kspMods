@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
     <bool name="DailyUpdateCheck">1</bool>
-    <string name="VersionCheckDate_Attempt">2016-01-11</string>
-    <string name="VersionCheckDate_Success">2016-01-11</string>
+    <string name="VersionCheckDate_Attempt">2016-01-23</string>
+    <string name="VersionCheckDate_Success">2016-01-23</string>
     <string name="VersionWeb">3.0.6.0</string>
     <bool name="WindowVisible">0</bool>
     <bool name="WindowMinimized">0</bool>
     <rect name="WindowPos">
-        <xmin>3</xmin>
-        <xmax>303</xmax>
-        <ymin>55</ymin>
-        <ymax>100</ymax>
+        <xmin>5</xmin>
+        <xmax>305</xmax>
+        <ymin>53</ymin>
+        <ymax>169</ymax>
     </rect>
-    <bool name="WindowVisible_SpaceCenter">0</bool>
+    <bool name="WindowVisible_SpaceCenter">1</bool>
     <bool name="WindowMinimized_SpaceCenter">0</bool>
     <rect name="WindowPos_SpaceCenter">
         <xmin>3</xmin>
@@ -68,7 +68,7 @@
     <string name="TimeFormat">KSPString</string>
     <bool name="AlarmXferRecalc">1</bool>
     <double name="AlarmXferRecalcThreshold">180</double>
-    <bool name="AlarmXferDisplayList">0</bool>
+    <bool name="AlarmXferDisplayList">1</bool>
     <bool name="XferUseModelData">0</bool>
     <bool name="AlarmNodeRecalc">0</bool>
     <double name="AlarmNodeRecalcThreshold">180</double>
