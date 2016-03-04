@@ -1,0 +1,229 @@
+Debug information for CONTRACT_TYPE 'EquatorialGillyOrbitalSat':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = EquatorialGillyOrbitalSat
+	group = SpaceTuxGroup
+	title = Orbit the first artificial satellite in an equatorial orbit around Gilly.
+	topic = satellites
+	subject = Gilly
+	motivation = test
+	notes = Complete the following:
+	synopsis = Put a satellite in orbit around Gilly.
+	completedMessage = You did it! We've placed a satellite in orbit around Gilly! This will be a day long remembered.
+	agent = Space Penguins, Inc
+	cancellable = true
+	declinable = true
+	prestige = Significant
+	targetBody = Kerbin
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 15.0
+	rewardFunds = Random(28000.0, 32000.0)
+	advanceFunds = Random(9000.0, 11000.0)
+	REQUIREMENT
+	{
+		name = ReachSpace5744
+		type = ReachSpace
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked
+		type = PartUnlocked
+		part = commDish
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = VPG5744
+		type = VesselParameterGroup
+		define = Satellite
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = HasCrew5744
+			type = HasCrew
+			maxCrew = 0
+			minCrew = 0
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = EquatorialOrbit5744
+			type = ReachSpecificOrbit
+			index = 0
+			deviationWindow = 3
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = EquatorialOrbitGenerator
+		type = OrbitGenerator
+		RANDOM_ORBIT
+		{
+			targetBody = Gilly
+			type = EQUATORIAL
+		}
+	}
+}
+
+Data Nodes:
+EquatorialGillyOrbitalSat
+    SpaceTuxGroup:name = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:displayName = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:minVersion = 0.7.0, deterministic = True
+    SpaceTuxGroup:maxCompletions = 0, deterministic = True
+    SpaceTuxGroup:maxSimultaneous = 4, deterministic = True
+    SpaceTuxGroup:disabledContractType = [], deterministic = True
+    name = EquatorialGillyOrbitalSat, deterministic = True
+    trace = False, deterministic = True
+    title = Orbit the first artificial satellite in an equatorial orbit around Gilly., deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = satellites, deterministic = True
+    subject = Gilly, deterministic = True
+    motivation = test, deterministic = True
+    notes = Complete the following:, deterministic = True
+    synopsis = Put a satellite in orbit around Gilly., deterministic = True
+    completedMessage = You did it! We've placed a satellite in orbit around Gilly! This will be a day long remembered., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 1, deterministic = True
+    rewardFunds = 31654.15, deterministic = False
+    rewardReputation = 15, deterministic = True
+    rewardScience = 25, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 9488.557, deterministic = False
+    weight = 1, deterministic = True
+
+	VPG5744
+	    type = VesselParameterGroup, deterministic = True
+	    name = VPG5744, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = Satellite, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		HasCrew5744
+		    type = HasCrew, deterministic = True
+		    name = HasCrew5744, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    trait = null, deterministic = True
+		    minExperience = 0, deterministic = True
+		    maxExperience = 5, deterministic = True
+		    minCrew = 0, deterministic = True
+		    maxCrew = 0, deterministic = True
+		    kerbal = [], deterministic = True
+		
+		EquatorialOrbit5744
+		    type = ReachSpecificOrbit, deterministic = True
+		    name = EquatorialOrbit5744, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    deviationWindow = 3, deterministic = True
+		
+	EquatorialOrbitGenerator
+	    type = OrbitGenerator, deterministic = True
+	    name = EquatorialOrbitGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		ORBIT_0
+		    type = EQUATORIAL, deterministic = True
+		    count = 1, deterministic = True
+		    altitudeFactor = 0.8, deterministic = True
+		    inclinationFactor = 0.8, deterministic = True
+		    eccentricity = 0, deterministic = True
+		    deviationWindow = 10, deterministic = True
+		    targetBody = Gilly (CelestialBody), deterministic = True
+		
+	ReachSpace5744
+	    type = ReachSpace, deterministic = True
+	    name = ReachSpace5744, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+	PartUnlocked
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ commDish ], deterministic = False
+	
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'EquatorialGillyOrbitalSat'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'EquatorialGillyOrbitalSat'

@@ -1,3 +1,25 @@
-Executing: KerbalEngineer - 1.0.18.0
+Executing: KerbalEngineer - 1.0.19.3
 Assembly: /mnt/data-linux/klaami/documents/programs/ksp/GameData/KerbalEngineer/KerbalEngineer.dll
 
+[Log 09:25:32.0187280]: BuildToolbar->Awake
+[Log 09:25:34.2348090]: BuildToolbar->OnGuiAppLauncherReady
+[Log 09:26:07.9230530]: BuildAdvanced->OnDestroy
+[Log 09:26:07.9252480]: BuildToolbar->OnDestroy
+[Log 09:27:26.7604240]: ActionMenu was created.
+[Log 09:27:26.7608890]: ActionMenu->Awake
+[Log 09:27:26.7803700]: FlightEngineerCore->Awake
+[Log 09:27:30.8241010]: ActionMenuGui was created.
+[Log 09:27:30.8256570]: ActionMenu->Start
+[Log 09:27:30.8824480]: FlightEngineerCore->Start
+[Exception 09:28:24.4600010]: Object reference not set to an instance of an object
+[]:   at KerbalEngineer.Flight.Readouts.Vessel.SuicideBurnProcessor.Update () [0x00000] in <filename unknown>:0 
+  at KerbalEngineer.Flight.FlightEngineerCore.UpdateModules () [0x00000] in <filename unknown>:0 
+
+[Log 09:28:25.1172580]: FlightEngineerCore->OnDestroy
+[Log 09:28:25.1873670]: ActionMenu->OnDestroy
+[Log 09:28:25.2085800]: ActionMenu was destroyed.
+[Log 09:28:26.4358100]: ActionMenuGui was destroyed.
+[Log 09:28:54.3987560]: BuildToolbar->Awake
+[Log 09:28:56.7410940]: BuildToolbar->OnGuiAppLauncherReady
+[Log 10:01:20.0379240]: BuildToolbar->OnDestroy
+[Log 10:01:20.2643260]: BuildAdvanced->OnDestroy

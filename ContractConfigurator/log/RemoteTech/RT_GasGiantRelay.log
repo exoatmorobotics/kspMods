@@ -1,0 +1,463 @@
+Debug information for CONTRACT_TYPE 'RT_GasGiantRelay':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = RT_GasGiantRelay
+	title = RemoteTech: Create a network for @targetBody.
+	description = There's so much science to be done in the @targetBody system!  We need to set up a communication network that can cover every moon in the system.
+	synopsis = Build a communication network that provides coverage of all of @targetBody's moons with a link back to mission control.
+	completedMessage = The network is up and transmitting, and our shake-out testing is complete!
+	group = RemoteTech
+	prestige = Exceptional
+	targetBody = @targetPlanet
+	agent = Communication Satellite Group
+	rewardReputation = 2.0
+	rewardFunds = @advanceFunds * 3.0
+	advanceFunds = 25000.0 + @targetMoons.Count()
+	weight = 2.0
+	DATA
+	{
+		type = CelestialBody
+		uniqueValue = true
+		targetPlanet = AllBodies().Where(cb => cb.IsPlanet() && cb.Children().Count() >= 3 && cb.RemoteTechCoverage() < 0.7).Random()
+	}
+	DATA
+	{
+		type = List<CelestialBody>
+		targetMoons = @targetPlanet.Children()
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(0)
+		coverage = 0.95
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(1)
+		coverage = 0.95
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(2)
+		coverage = 0.95
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(3)
+		coverage = 0.95
+		REQUIREMENT
+		{
+			type = Expression
+			expression = @/targetMoons.Count() > 3
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(4)
+		coverage = 0.95
+		REQUIREMENT
+		{
+			type = Expression
+			expression = @/targetMoons.Count() > 4
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(5)
+		coverage = 0.95
+		REQUIREMENT
+		{
+			type = Expression
+			expression = @/targetMoons.Count() > 5
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(6)
+		coverage = 0.95
+		REQUIREMENT
+		{
+			type = Expression
+			expression = @/targetMoons.Count() > 6
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		targetBody = @/targetMoons.ElementAt(7)
+		coverage = 0.95
+		REQUIREMENT
+		{
+			type = Expression
+			expression = @/targetMoons.Count() > 7
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = Duration
+		type = Duration
+		duration = 7d
+		preWaitText = Testing time after network up
+		waitingText = Performing shake-out testing
+		completionText = Shake-out testing completed
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CelestialBodyCoverage
+		type = CelestialBodyCoverage
+		targetBody = HomeWorld()
+		minCoverage = 0.7
+		maxCoverage = 1.0
+	}
+	REQUIREMENT
+	{
+		name = AnyGigaDish
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = PartUnlocked1
+			type = PartUnlocked
+			part = RTGigaDish1
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked2
+			type = PartUnlocked
+			part = RTGigaDish2
+			targetBody = @/targetBody
+		}
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+RT_GasGiantRelay
+    RemoteTech:name = RemoteTech, deterministic = True
+    RemoteTech:displayName = RemoteTech, deterministic = True
+    RemoteTech:minVersion = 1.5.2, deterministic = True
+    RemoteTech:maxCompletions = 0, deterministic = True
+    RemoteTech:maxSimultaneous = 3, deterministic = True
+    RemoteTech:disabledContractType = [], deterministic = True
+    name = RT_GasGiantRelay, deterministic = True
+    trace = False, deterministic = True
+    title = RemoteTech: Create a network for Jool., deterministic = False
+    tag = , deterministic = True
+    description = There's so much science to be done in the Jool system!  We need to set up a communication network that can cover every moon in the system., deterministic = False
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Build a communication network that provides coverage of all of Jool's moons with a link back to mission control., deterministic = False
+    completedMessage = The network is up and transmitting, and our shake-out testing is complete!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Exceptional ], deterministic = True
+    targetBody = Jool (CelestialBody), deterministic = False
+    maxCompletions = 0, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 75015, deterministic = False
+    rewardReputation = 2, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 25005, deterministic = False
+    weight = 2, deterministic = True
+    targetPlanet = Jool (CelestialBody), deterministic = False
+    targetMoons = [ Laythe (CelestialBody), Vall (CelestialBody), Tylo (CelestialBody), Bop (CelestialBody), Pol (CelestialBody) ], deterministic = False
+
+	MoonCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+	MoonCoverage_1
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Vall (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+	MoonCoverage_2
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+	MoonCoverage_3
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Bop (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+		Expression
+		    type = Expression, deterministic = True
+		    name = Expression, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    expression = True, deterministic = False
+		
+	MoonCoverage_4
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Pol (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+		Expression
+		    type = Expression, deterministic = True
+		    name = Expression, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    expression = True, deterministic = False
+		
+	MoonCoverage_5
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = null, deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+		Expression
+		    type = Expression, deterministic = True
+		    name = Expression, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    expression = False, deterministic = False
+		
+	MoonCoverage_6
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = null, deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+		Expression
+		    type = Expression, deterministic = True
+		    name = Expression, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    expression = False, deterministic = False
+		
+	MoonCoverage_7
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = null, deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+		Expression
+		    type = Expression, deterministic = True
+		    name = Expression, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    expression = False, deterministic = False
+		
+	Duration
+	    type = Duration, deterministic = True
+	    name = Duration, deterministic = True
+	    targetBody = Jool (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 7 days, deterministic = True
+	    preWaitText = Testing time after network up, deterministic = True
+	    waitingText = Performing shake-out testing, deterministic = True
+	    completionText = Shake-out testing completed, deterministic = True
+	    startCriteria = CONTRACT_ACCEPTANCE, deterministic = True
+	    parameter = [], deterministic = True
+	
+	CelestialBodyCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = CelestialBodyCoverage, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    minCoverage = 0.7, deterministic = True
+	    maxCoverage = 1, deterministic = True
+	
+	AnyGigaDish
+	    type = Any, deterministic = True
+	    name = AnyGigaDish, deterministic = True
+	    targetBody = Jool (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		PartUnlocked1
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked1, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish1 ], deterministic = False
+		
+		PartUnlocked2
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked2, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish2 ], deterministic = False
+		
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Jool (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'RT_GasGiantRelay'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'RT_GasGiantRelay'

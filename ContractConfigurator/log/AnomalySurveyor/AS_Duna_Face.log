@@ -1,0 +1,342 @@
+Debug information for CONTRACT_TYPE 'AS_Duna_Face':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Duna_Face
+	group = AnomalySurveyor
+	title = Visit Cydunia
+	description = The blurry photographs we took from Duna's orbit found a hill that really, really looks like a Kerbal face.  Check it out and see what it looks like.
+	synopsis = Check out Cydunia
+	completedMessage = Another anomaly checked off the list!
+	tag = SCANsat
+	prestige = Significant
+	targetBody = Duna
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 65000
+	rewardReputation = 8.8
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Visit the Face on Duna
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 50
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		WAYPOINT
+		{
+			name = Face on Duna
+			icon = ContractPacks/AnomalySurveyor/Icons/unknown
+			latitude = 17.0571
+			longitude = -85.4587
+			altitude = 23.3517243184033
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = Cydunia
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			KERBAL
+			{
+			}
+			TEXT
+			{
+				text = I don't think it looks like a Kerbal at all.
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Cydunia
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Strategy_ScienceGuy
+				animation = false_disagreeC
+			}
+			TEXT
+			{
+				text = That totally looks like a Kerbal!
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Any
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = All
+			type = All
+			targetBody = @/targetBody
+			REQUIREMENT
+			{
+				name = Landing
+				type = Landing
+				targetBody = Mun
+			}
+			REQUIREMENT
+			{
+				name = Landing
+				type = Landing
+				targetBody = Minmus
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = WP0
+		type = SCANsatLocationCoverage
+		latitude = 17.0571
+		longitude = -85.4587
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Duna_Face
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Duna_Face, deterministic = True
+    trace = False, deterministic = True
+    title = Visit Cydunia, deterministic = True
+    tag = SCANsat, deterministic = True
+    description = The blurry photographs we took from Duna's orbit found a hill that really, really looks like a Kerbal face.  Check it out and see what it looks like., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Check out Cydunia, deterministic = True
+    completedMessage = Another anomaly checked off the list!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Duna (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 65000, deterministic = True
+    rewardReputation = 8.8, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Duna (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the Face on Duna, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Duna (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Duna (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 50, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Duna (CelestialBody), deterministic = True
+		    name = [ Face on Duna ], deterministic = True
+		    altitude = 23.3517243184033, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/unknown, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = 17.0571, deterministic = True
+		    longitude = -85.4587, deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Cydunia, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    gender = Male, deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    crewIndex = 0, deterministic = True
+			    excludeName = [], deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = I don't think it looks like a Kerbal at all., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Cydunia, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Strategy_ScienceGuy, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = false_disagreeC, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = That totally looks like a Kerbal!, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Any
+	    type = Any, deterministic = True
+	    name = Any, deterministic = True
+	    targetBody = Duna (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Duna (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    checkType = null, deterministic = True
+		
+		All
+		    type = All, deterministic = True
+		    name = All, deterministic = True
+		    targetBody = Duna (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		
+			Landing
+			    type = Landing, deterministic = True
+			    name = Landing, deterministic = True
+			    targetBody = Mun (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    checkType = null, deterministic = True
+			
+			Landing_1
+			    type = Landing, deterministic = True
+			    name = Landing, deterministic = True
+			    targetBody = Minmus (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    checkType = null, deterministic = True
+			
+	WP0_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Duna (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 17.0571, deterministic = True
+	    longitude = -85.4587, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Duna_Face'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Duna_Face'

@@ -1,0 +1,374 @@
+Debug information for CONTRACT_TYPE 'TargetedLaytheImpact':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = TargetedLaytheImpact
+	group = SpaceTuxGroup
+	title = Crash a probe on Laythe on a target!
+	topic = crash
+	subject = Laythe
+	motivation = moar pictures
+	notes = Complete the following:
+	synopsis = Launch an unmanned probe and have it crash onto the Laythe at a specific location
+	completedMessage = Future generations will remember this day.
+	agent = Space Penguins, Inc
+	minExpiry = 50.0
+	maxExpiry = 100.0
+	deadline = 100
+	cancellable = true
+	declinable = true
+	prestige = Significant
+	targetBody = Laythe
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 15.0
+	rewardFunds = Random(28000.0, 32000.0)
+	advanceFunds = Random(9000.0, 11000.0)
+	REQUIREMENT
+	{
+		name = ReachSpace5793
+		type = ReachSpace
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = Nolanding5793
+		type = Landing
+		targetBody = Laythe
+		invertRequirement = true
+	}
+	REQUIREMENT
+	{
+		name = CompleteContract5793
+		type = CompleteContract
+		contractType = FirstLaytheImpact
+		minCount = 1
+		cooldownDuration = 10d
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = AnyGigaDish
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = RTGigaDish1
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = RTGigaDish2
+			targetBody = @/targetBody
+		}
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = VPG5793
+		type = VesselParameterGroup
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = HasCrew5793
+			type = HasCrew
+			maxCrew = 0
+			minCrew = 0
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = ReachState5793
+			type = ReachState
+			minAltitude = 0
+			maxAltitude = 75000
+			minSpeed = 500
+			maxSpeed = 5000
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint5793
+			type = VisitWaypoint
+			index = 0
+			distance = 10000
+			hideOnCompletion = true
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VesselDestroyed5793
+			type = VesselDestroyed
+			mustImpactTerrain = true
+			completeInSequence = true
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator5793
+		type = WaypointGenerator
+		RANDOM_WAYPOINT
+		{
+			count = 1
+			icon = thermometer
+			altitude = 0.0
+			waterAllowed = true
+			forceEquatorial = false
+			targetBody = @/targetBody
+		}
+	}
+}
+
+Data Nodes:
+TargetedLaytheImpact
+    SpaceTuxGroup:name = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:displayName = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:minVersion = 0.7.0, deterministic = True
+    SpaceTuxGroup:maxCompletions = 0, deterministic = True
+    SpaceTuxGroup:maxSimultaneous = 4, deterministic = True
+    SpaceTuxGroup:disabledContractType = [], deterministic = True
+    name = TargetedLaytheImpact, deterministic = True
+    trace = False, deterministic = True
+    title = Crash a probe on Laythe on a target!, deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = crash, deterministic = True
+    subject = Laythe, deterministic = True
+    motivation = moar pictures, deterministic = True
+    notes = Complete the following:, deterministic = True
+    synopsis = Launch an unmanned probe and have it crash onto the Laythe at a specific location, deterministic = True
+    completedMessage = Future generations will remember this day., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 50, deterministic = True
+    maxExpiry = 100, deterministic = True
+    deadline = 100, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Laythe (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 1, deterministic = True
+    rewardFunds = 31489.29, deterministic = False
+    rewardReputation = 15, deterministic = True
+    rewardScience = 25, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 9576.5, deterministic = False
+    weight = 1, deterministic = True
+
+	VPG5793
+	    type = VesselParameterGroup, deterministic = True
+	    name = VPG5793, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = null, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		HasCrew5793
+		    type = HasCrew, deterministic = True
+		    name = HasCrew5793, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    trait = null, deterministic = True
+		    minExperience = 0, deterministic = True
+		    maxExperience = 5, deterministic = True
+		    minCrew = 0, deterministic = True
+		    maxCrew = 0, deterministic = True
+		    kerbal = [], deterministic = True
+		
+		ReachState5793
+		    type = ReachState, deterministic = True
+		    name = ReachState5793, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    failWhenUnmet = False, deterministic = True
+		    biome = null, deterministic = True
+		    situation = [], deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 75000, deterministic = True
+		    minTerrainAltitude = 0, deterministic = True
+		    maxTerrainAltitude = 3.402823E+38, deterministic = True
+		    minSpeed = 500, deterministic = True
+		    maxSpeed = 5000, deterministic = True
+		    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+		    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+		    minAcceleration = 0, deterministic = True
+		    maxAcceleration = 3.402823E+38, deterministic = True
+		
+		VisitWaypoint5793
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint5793, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 10000, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+		VesselDestroyed5793
+		    type = VesselDestroyed, deterministic = True
+		    name = VesselDestroyed5793, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = True, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    mustImpactTerrain = True, deterministic = True
+		
+	WaypointGenerator5793
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator5793, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = RANDOM_WAYPOINT, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    name = [], deterministic = True
+		    altitude = 0, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = thermometer, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    waterAllowed = True, deterministic = True
+		    forceEquatorial = False, deterministic = True
+		    count = 1, deterministic = True
+		
+	ReachSpace5793
+	    type = ReachSpace, deterministic = True
+	    name = ReachSpace5793, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+	Nolanding5793
+	    type = Landing, deterministic = True
+	    name = Nolanding5793, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = True, deterministic = True
+	    checkType = null, deterministic = True
+	
+	CompleteContract5793
+	    type = CompleteContract, deterministic = True
+	    name = CompleteContract5793, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    contractType = FirstLaytheImpact, deterministic = True
+	    minCount = 1, deterministic = True
+	    maxCount = 4294967295, deterministic = True
+	    cooldownDuration = 10 days, deterministic = True
+	
+	AnyGigaDish
+	    type = Any, deterministic = True
+	    name = AnyGigaDish, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		PartUnlocked
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish1 ], deterministic = False
+		
+		PartUnlocked_1
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Laythe (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish2 ], deterministic = False
+		
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Laythe (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'TargetedLaytheImpact'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'TargetedLaytheImpact'

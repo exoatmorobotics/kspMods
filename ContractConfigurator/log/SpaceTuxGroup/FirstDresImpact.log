@@ -1,0 +1,262 @@
+Debug information for CONTRACT_TYPE 'FirstDresImpact':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = FirstDresImpact
+	group = SpaceTuxGroup
+	title = Crash a probe on Dres!
+	topic = crash
+	subject = Dres
+	motivation = moar pictures
+	notes = Complete the following:
+	synopsis = Launch an unmanned probe and have it crash onto the Dres
+	completedMessage = Future generations will remember this day.
+	agent = Space Penguins, Inc
+	minExpiry = 50.0
+	maxExpiry = 100.0
+	deadline = 1300
+	cancellable = true
+	declinable = true
+	prestige = Significant
+	targetBody = Dres
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 10.0
+	rewardFunds = Random(18000.0, 22000.0)
+	advanceFunds = Random(9000.0, 11000.0)
+	REQUIREMENT
+	{
+		name = ReachSpace5772
+		type = ReachSpace
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = Nolanding5772
+		type = Landing
+		targetBody = Dres
+		invertRequirement = true
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked
+		type = PartUnlocked
+		part = RTLongDish2
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = VPG5772
+		type = VesselParameterGroup
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = HasCrew5772
+			type = HasCrew
+			maxCrew = 0
+			minCrew = 0
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = ReachState5772
+			type = ReachState
+			minAltitude = 0
+			maxAltitude = 75000
+			minSpeed = 500
+			maxSpeed = 5000
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VesselDestroyed5771
+			type = VesselDestroyed
+			mustImpactTerrain = true
+			completeInSequence = true
+			targetBody = @/targetBody
+		}
+	}
+}
+
+Data Nodes:
+FirstDresImpact
+    SpaceTuxGroup:name = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:displayName = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:minVersion = 0.7.0, deterministic = True
+    SpaceTuxGroup:maxCompletions = 0, deterministic = True
+    SpaceTuxGroup:maxSimultaneous = 4, deterministic = True
+    SpaceTuxGroup:disabledContractType = [], deterministic = True
+    name = FirstDresImpact, deterministic = True
+    trace = False, deterministic = True
+    title = Crash a probe on Dres!, deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = crash, deterministic = True
+    subject = Dres, deterministic = True
+    motivation = moar pictures, deterministic = True
+    notes = Complete the following:, deterministic = True
+    synopsis = Launch an unmanned probe and have it crash onto the Dres, deterministic = True
+    completedMessage = Future generations will remember this day., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 50, deterministic = True
+    maxExpiry = 100, deterministic = True
+    deadline = 1300, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Dres (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 1, deterministic = True
+    rewardFunds = 20689.85, deterministic = False
+    rewardReputation = 10, deterministic = True
+    rewardScience = 25, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 9366.799, deterministic = False
+    weight = 1, deterministic = True
+
+	VPG5772
+	    type = VesselParameterGroup, deterministic = True
+	    name = VPG5772, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = null, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		HasCrew5772
+		    type = HasCrew, deterministic = True
+		    name = HasCrew5772, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    trait = null, deterministic = True
+		    minExperience = 0, deterministic = True
+		    maxExperience = 5, deterministic = True
+		    minCrew = 0, deterministic = True
+		    maxCrew = 0, deterministic = True
+		    kerbal = [], deterministic = True
+		
+		ReachState5772
+		    type = ReachState, deterministic = True
+		    name = ReachState5772, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    failWhenUnmet = False, deterministic = True
+		    biome = null, deterministic = True
+		    situation = [], deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 75000, deterministic = True
+		    minTerrainAltitude = 0, deterministic = True
+		    maxTerrainAltitude = 3.402823E+38, deterministic = True
+		    minSpeed = 500, deterministic = True
+		    maxSpeed = 5000, deterministic = True
+		    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+		    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+		    minAcceleration = 0, deterministic = True
+		    maxAcceleration = 3.402823E+38, deterministic = True
+		
+		VesselDestroyed5771
+		    type = VesselDestroyed, deterministic = True
+		    name = VesselDestroyed5771, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = True, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    mustImpactTerrain = True, deterministic = True
+		
+	ReachSpace5772
+	    type = ReachSpace, deterministic = True
+	    name = ReachSpace5772, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+	Nolanding5772
+	    type = Landing, deterministic = True
+	    name = Nolanding5772, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = True, deterministic = True
+	    checkType = null, deterministic = True
+	
+	PartUnlocked
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ RTLongDish2 ], deterministic = False
+	
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'FirstDresImpact'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'FirstDresImpact'

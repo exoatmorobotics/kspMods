@@ -1,0 +1,171 @@
+Debug information for CONTRACT_TYPE 'SCAN_M700':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = SCAN_M700
+	title = Scan @/targetBody4 for resources
+	group = ScanSatOfficial
+	topic = Science
+	subject = Kerbal
+	motivation = Scanning
+	agent = SCAN: Scientific Committee on Advanced Navigation
+	notes = Scanning can take place while the vessel is not loaded.
+	synopsis = Scan @/targetBody4 with the M700 Scanner
+	completedMessage = Look at all those lovely resources. We'll have to get a survey team together!
+	minExpiry = 1
+	maxExpiry = 7
+	deadline = Random(300, 500) * @/targetBody4.Multiplier()
+	cancellable = true
+	declinable = true
+	autoAccept = false
+	targetBody = @/targetBody4
+	rewardScience = 0
+	rewardReputation = 1
+	rewardFunds = Random(45000, 70000.0)
+	failureReputation = 1
+	failureFunds = Random(1000, 10000.0)
+	advanceFunds = Random(2000, 10000.0)
+	prestige = Trivial
+	prestige = Significant
+	DATA
+	{
+		type = CelestialBody
+		requiredValue = true
+		uniquenessCheck = CONTRACT_ALL
+		targetBody4 = Prestige() == Trivial ? @ScanSatOfficial:p1Bodies.Random() : @ScanSatOfficial:p2Bodies.Random()
+	}
+	DATA
+	{
+		type = double
+		diffModifier4 = Prestige() == Trivial ? 0 : 10
+		scanRequired4 = 75 + @diffModifier4
+		minScan4 = 70 + @diffModifier4
+	}
+	PARAMETER
+	{
+		name = SCANsatCoverage
+		type = SCANsatCoverage
+		targetBody = @/targetBody4
+		coverage = @/scanRequired4
+		scanType = FuzzyResources
+	}
+	REQUIREMENT
+	{
+		name = SCANsatCoverage
+		type = SCANsatCoverage
+		targetBody = @/targetBody4
+		minCoverage = 0.0
+		maxCoverage = @/minScan4
+		scanType = FuzzyResources
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = HomeWorld()
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked
+		type = PartUnlocked
+		part = SurveyScanner
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+SCAN_M700
+    ScanSatOfficial:name = ScanSatOfficial, deterministic = True
+    ScanSatOfficial:displayName = ScanSatOfficial, deterministic = True
+    ScanSatOfficial:minVersion = 1.9.1, deterministic = True
+    ScanSatOfficial:maxCompletions = 0, deterministic = True
+    ScanSatOfficial:maxSimultaneous = 3, deterministic = True
+    ScanSatOfficial:disabledContractType = [], deterministic = True
+    ScanSatOfficial:p1Bodies = [ Kerbin (CelestialBody), Mun (CelestialBody), Minmus (CelestialBody) ], deterministic = True
+    ScanSatOfficial:p2Bodies = [], deterministic = False
+    ScanSatOfficial:p3Bodies = [], deterministic = False
+    name = SCAN_M700, deterministic = True
+    trace = False, deterministic = True
+    title = Scan the Mun for resources, deterministic = False
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = Science, deterministic = True
+    subject = Kerbal, deterministic = True
+    motivation = Scanning, deterministic = True
+    notes = Scanning can take place while the vessel is not loaded., deterministic = True
+    synopsis = Scan the Mun with the M700 Scanner, deterministic = False
+    completedMessage = Look at all those lovely resources. We'll have to get a survey team together!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 975.3305, deterministic = False
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Trivial, Significant ], deterministic = True
+    targetBody = Mun (CelestialBody), deterministic = False
+    maxCompletions = 0, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 47320.93, deterministic = False
+    rewardReputation = 1, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 5544.823, deterministic = False
+    failureReputation = 1, deterministic = True
+    advanceFunds = 4976.864, deterministic = False
+    weight = 1, deterministic = True
+    targetBody4 = Mun (CelestialBody), deterministic = False
+    diffModifier4 = 0, deterministic = False
+    scanRequired4 = 75, deterministic = False
+    minScan4 = 70, deterministic = False
+
+	SCANsatCoverage
+	    type = SCANsatCoverage, deterministic = True
+	    name = SCANsatCoverage, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 75, deterministic = False
+	    scanType = FuzzyResources, deterministic = True
+	
+	SCANsatCoverage_1
+	    type = SCANsatCoverage, deterministic = True
+	    name = SCANsatCoverage, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    minCoverage = 0, deterministic = True
+	    maxCoverage = 70, deterministic = False
+	    scanType = FuzzyResources, deterministic = True
+	
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	PartUnlocked
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ SurveyScanner ], deterministic = False
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'SCAN_M700'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'SCAN_M700'

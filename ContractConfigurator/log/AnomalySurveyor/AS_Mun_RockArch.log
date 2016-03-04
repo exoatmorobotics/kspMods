@@ -1,0 +1,563 @@
+Debug information for CONTRACT_TYPE 'AS_Mun_RockArch':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Mun_RockArch
+	group = AnomalySurveyor
+	title = Investigate rock arches on the Mun.
+	description = Our scans found some cool looking arches!  Surely they're good for something, let's go see!
+	synopsis = Visit the location of three rock arches on EVA.
+	completedMessage = Maybe next we should fly a rocket through the arches?
+	tag = SCANsat
+	prestige = Significant
+	targetBody = Mun
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 390000
+	rewardReputation = 5.5
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Visit the first arch
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP1
+		type = All
+		title = Visit the second arch
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 1
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP2
+		type = All
+		title = Visit the third arch
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 2
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		PQS_CITY
+		{
+			name = Rock Arch #1
+			icon = ContractPacks/AnomalySurveyor/Icons/arch
+			pqsCity = RockArch00
+			targetBody = @/targetBody
+		}
+		WAYPOINT
+		{
+			name = Rock Arch #2
+			icon = ContractPacks/AnomalySurveyor/Icons/arch
+			latitude = -12.4651384728768
+			longitude = -140.954333098427
+			altitude = 0.0
+			targetBody = @/targetBody
+		}
+		PQS_CITY
+		{
+			name = Rock Arch #3
+			icon = ContractPacks/AnomalySurveyor/Icons/arch
+			pqsCity = RockArch02
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = First Arch
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = idle_wonder
+			}
+			TEXT
+			{
+				text = That's quite the arch!  Do you think we could move the Mun if we had a really big hook?
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Second Arch
+			condition = PARAMETER_COMPLETED
+			parameter = WP1
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = true_thumbUp
+			}
+			TEXT
+			{
+				text = Hmmm, this would make for some pretty good goal posts.  Maybe we should set up a sporting event.  Munball, anyone?
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Third Arch
+			condition = PARAMETER_COMPLETED
+			parameter = WP2
+			INSTRUCTOR
+			{
+				name = Strategy_PRGuy
+				animation = true_nodA
+			}
+			TEXT
+			{
+				text = Maybe we should hang some decorations from the arch.  To spruce up the place a bit.
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP1
+		type = SCANsatLocationCoverage
+		pqsCity = RockArch00
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP1
+		type = SCANsatLocationCoverage
+		latitude = -12.4651384728768
+		longitude = -140.954333098427
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP2
+		type = SCANsatLocationCoverage
+		pqsCity = RockArch02
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Mun_RockArch
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Mun_RockArch, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate rock arches on the Mun., deterministic = True
+    tag = SCANsat, deterministic = True
+    description = Our scans found some cool looking arches!  Surely they're good for something, let's go see!, deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Visit the location of three rock arches on EVA., deterministic = True
+    completedMessage = Maybe next we should fly a rocket through the arches?, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Mun (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 390000, deterministic = True
+    rewardReputation = 5.5, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the first arch, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP1
+	    type = All, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the second arch, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 1, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP2
+	    type = All, deterministic = True
+	    name = WP2, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the third arch, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 2, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    name = [ Rock Arch #1 ], deterministic = True
+		    altitude = null, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/arch, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = RockArch00, deterministic = True
+		    pqsOffset = [0, 0, 0], deterministic = True
+		
+		WAYPOINT_1
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    name = [ Rock Arch #2 ], deterministic = True
+		    altitude = 0, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/arch, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = -12.4651384728768, deterministic = True
+		    longitude = -140.954333098427, deterministic = True
+		
+		WAYPOINT_2
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    name = [ Rock Arch #3 ], deterministic = True
+		    altitude = null, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/arch, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = RockArch02, deterministic = True
+		    pqsOffset = [0, 0, 0], deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = First Arch, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = idle_wonder, deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = That's quite the arch!  Do you think we could move the Mun if we had a really big hook?, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Second Arch, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP1, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_thumbUp, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = Hmmm, this would make for some pretty good goal posts.  Maybe we should set up a sporting event.  Munball, anyone?, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_2
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Third Arch, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP2, deterministic = True
+		
+			DIALOG_BOX_2_0
+			    name = Strategy_PRGuy, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_nodA, deterministic = True
+			
+			DIALOG_BOX_2_1
+			    text = Maybe we should hang some decorations from the arch.  To spruce up the place a bit., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	WP1_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = RockArch00, deterministic = True
+	
+	WP1_2
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = -12.4651384728768, deterministic = True
+	    longitude = -140.954333098427, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+	WP2_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP2, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = RockArch02, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Mun_RockArch'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Mun_RockArch'

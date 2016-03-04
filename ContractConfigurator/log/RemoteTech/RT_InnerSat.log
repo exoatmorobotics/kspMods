@@ -1,0 +1,704 @@
+Debug information for CONTRACT_TYPE 'RT_InnerSat':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = RT_InnerSat
+	title = RemoteTech: Launch a satellite that can reach the inner planets.
+	description = We'd like to know what's out there, and the first step is setting up a satellite or two with one of the new larger dishes.
+	synopsis = Launch a satellite with enough range for the inner planets and point it towards one of them.  Make sure it has connectivity back to mission control.
+	completedMessage = The satellite is up and transmitting, and our shake-out testing is complete!
+	group = RemoteTech
+	prestige = Trivial
+	targetBody = HomeWorld()
+	agent = Communication Satellite Group
+	maxCompletions = 1
+	rewardReputation = 10.0
+	rewardFunds = @advanceFunds * 3.0
+	advanceFunds = 40000.0 + 5000.0 * @targetBodies.Count()
+	weight = 2.5
+	DATA
+	{
+		type = double
+		sma = @targetBody.SemiMajorAxis()
+		targetSMA = @sma * 1.55
+	}
+	DATA
+	{
+		type = List<CelestialBody>
+		targetBodies = AllBodies().Where(cb => cb.SemiMajorAxis() < @targetSMA && cb.IsPlanet() && cb != HomeWorld())
+	}
+	PARAMETER
+	{
+		name = InnerSatI
+		type = VesselParameterGroup
+		define = Large CommSat I
+		disableOnStateChange = false
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = KSCConnectivity
+			type = KSCConnectivity
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = ReachState
+			type = ReachState
+			situation = ORBITING
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = InnerTarget
+			type = Any
+			title = Point a dish at ONE of the inner planets
+			disableOnStateChange = false
+			targetBody = @/targetBody
+			PARAMETER
+			{
+				name = HasAntenna
+				type = HasAntenna
+				antennaType = Dish
+				targetBody = @/targetBodies.ElementAt(0)
+			}
+			PARAMETER
+			{
+				name = HasAntenna
+				type = HasAntenna
+				antennaType = Dish
+				targetBody = @/targetBodies.ElementAt(1)
+				REQUIREMENT
+				{
+					type = Expression
+					expression = @/targetBodies.Count() > 1
+					targetBody = @/targetBody
+				}
+			}
+			PARAMETER
+			{
+				name = HasAntenna
+				type = HasAntenna
+				antennaType = Dish
+				targetBody = @/targetBodies.ElementAt(2)
+				REQUIREMENT
+				{
+					type = Expression
+					expression = @/targetBodies.Count() > 2
+					targetBody = @/targetBody
+				}
+			}
+			PARAMETER
+			{
+				name = HasAntenna
+				type = HasAntenna
+				antennaType = Dish
+				targetBody = @/targetBodies.ElementAt(3)
+				REQUIREMENT
+				{
+					type = Expression
+					expression = @/targetBodies.Count() > 3
+					targetBody = @/targetBody
+				}
+			}
+			PARAMETER
+			{
+				name = HasAntenna
+				type = HasAntenna
+				antennaType = Dish
+				targetBody = @/targetBodies.ElementAt(4)
+				REQUIREMENT
+				{
+					type = Expression
+					expression = @/targetBodies.Count() > 4
+					targetBody = @/targetBody
+				}
+			}
+		}
+	}
+	PARAMETER
+	{
+		name = Duration
+		type = Duration
+		duration = 4d
+		preWaitText = Testing time after network up
+		waitingText = Performing shake-out testing
+		completionText = Shake-out testing completed
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = Coverage
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = CelestialBodyCoverage
+			type = CelestialBodyCoverage
+			targetBody = @/targetBodies.ElementAt(0)
+			minCoverage = 0.0
+			maxCoverage = 0.2
+		}
+		REQUIREMENT
+		{
+			type = All
+			targetBody = @/targetBody
+			REQUIREMENT
+			{
+				name = CelestialBodyCoverage
+				type = CelestialBodyCoverage
+				targetBody = @/targetBodies.ElementAt(1)
+				minCoverage = 0.0
+				maxCoverage = 0.2
+			}
+			REQUIREMENT
+			{
+				type = Expression
+				expression = @/targetBodies.Count() > 1
+				targetBody = @/targetBody
+			}
+		}
+		REQUIREMENT
+		{
+			type = All
+			targetBody = @/targetBody
+			REQUIREMENT
+			{
+				name = CelestialBodyCoverage
+				type = CelestialBodyCoverage
+				targetBody = @/targetBodies.ElementAt(2)
+				minCoverage = 0.0
+				maxCoverage = 0.2
+			}
+			REQUIREMENT
+			{
+				type = Expression
+				expression = @/targetBodies.Count() > 2
+				targetBody = @/targetBody
+			}
+		}
+		REQUIREMENT
+		{
+			type = All
+			targetBody = @/targetBody
+			REQUIREMENT
+			{
+				name = CelestialBodyCoverage
+				type = CelestialBodyCoverage
+				targetBody = @/targetBodies.ElementAt(3)
+				minCoverage = 0.0
+				maxCoverage = 0.2
+			}
+			REQUIREMENT
+			{
+				type = Expression
+				expression = @/targetBodies.Count() > 3
+				targetBody = @/targetBody
+			}
+		}
+		REQUIREMENT
+		{
+			type = All
+			targetBody = @/targetBody
+			REQUIREMENT
+			{
+				name = CelestialBodyCoverage
+				type = CelestialBodyCoverage
+				targetBody = @/targetBodies.ElementAt(4)
+				minCoverage = 0.0
+				maxCoverage = 0.2
+			}
+			REQUIREMENT
+			{
+				type = Expression
+				expression = @/targetBodies.Count() > 4
+				targetBody = @/targetBody
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = CommDish
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = commDish
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = RTLongDish2
+			targetBody = @/targetBody
+		}
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+RT_InnerSat
+    RemoteTech:name = RemoteTech, deterministic = True
+    RemoteTech:displayName = RemoteTech, deterministic = True
+    RemoteTech:minVersion = 1.5.2, deterministic = True
+    RemoteTech:maxCompletions = 0, deterministic = True
+    RemoteTech:maxSimultaneous = 3, deterministic = True
+    RemoteTech:disabledContractType = [], deterministic = True
+    name = RT_InnerSat, deterministic = True
+    trace = False, deterministic = True
+    title = RemoteTech: Launch a satellite that can reach the inner planets., deterministic = True
+    tag = , deterministic = True
+    description = We'd like to know what's out there, and the first step is setting up a satellite or two with one of the new larger dishes., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Launch a satellite with enough range for the inner planets and point it towards one of them.  Make sure it has connectivity back to mission control., deterministic = True
+    completedMessage = The satellite is up and transmitting, and our shake-out testing is complete!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Trivial ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 165000, deterministic = True
+    rewardReputation = 10, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 55000, deterministic = True
+    weight = 2.5, deterministic = True
+    sma = 13599840256, deterministic = True
+    targetSMA = 21079752396.8, deterministic = True
+    targetBodies = [ Moho (CelestialBody), Eve (CelestialBody), Duna (CelestialBody) ], deterministic = True
+
+	InnerSatI
+	    type = VesselParameterGroup, deterministic = True
+	    name = InnerSatI, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = False, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = Large CommSat I, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		KSCConnectivity
+		    type = KSCConnectivity, deterministic = True
+		    name = KSCConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		
+		ReachState
+		    type = ReachState, deterministic = True
+		    name = ReachState, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    failWhenUnmet = False, deterministic = True
+		    biome = null, deterministic = True
+		    situation = [ ORBITING ], deterministic = True
+		    minAltitude = -3.402823E+38, deterministic = True
+		    maxAltitude = 3.402823E+38, deterministic = True
+		    minTerrainAltitude = 0, deterministic = True
+		    maxTerrainAltitude = 3.402823E+38, deterministic = True
+		    minSpeed = 0, deterministic = True
+		    maxSpeed = 1.79769313486232E+308, deterministic = True
+		    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+		    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+		    minAcceleration = 0, deterministic = True
+		    maxAcceleration = 3.402823E+38, deterministic = True
+		
+		InnerTarget
+		    type = Any, deterministic = True
+		    name = InnerTarget, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = False, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = Point a dish at ONE of the inner planets, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		
+			HasAntenna
+			    type = HasAntenna, deterministic = True
+			    name = HasAntenna, deterministic = True
+			    targetBody = Moho (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    minCount = 1, deterministic = True
+			    maxCount = 2147483647, deterministic = True
+			    activeVessel = False, deterministic = True
+			    minRange = 0, deterministic = True
+			    maxRange = 1.79769313486232E+308, deterministic = True
+			    antennaType = Dish, deterministic = True
+			
+			HasAntenna_1
+			    type = HasAntenna, deterministic = True
+			    name = HasAntenna, deterministic = True
+			    targetBody = Eve (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    minCount = 1, deterministic = True
+			    maxCount = 2147483647, deterministic = True
+			    activeVessel = False, deterministic = True
+			    minRange = 0, deterministic = True
+			    maxRange = 1.79769313486232E+308, deterministic = True
+			    antennaType = Dish, deterministic = True
+			
+				Expression
+				    type = Expression, deterministic = True
+				    name = Expression, deterministic = True
+				    targetBody = Kerbin (CelestialBody), deterministic = True
+				    checkOnActiveContract = False, deterministic = True
+				    invertRequirement = False, deterministic = True
+				    expression = True, deterministic = True
+				
+			HasAntenna_2
+			    type = HasAntenna, deterministic = True
+			    name = HasAntenna, deterministic = True
+			    targetBody = Duna (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    minCount = 1, deterministic = True
+			    maxCount = 2147483647, deterministic = True
+			    activeVessel = False, deterministic = True
+			    minRange = 0, deterministic = True
+			    maxRange = 1.79769313486232E+308, deterministic = True
+			    antennaType = Dish, deterministic = True
+			
+				Expression
+				    type = Expression, deterministic = True
+				    name = Expression, deterministic = True
+				    targetBody = Kerbin (CelestialBody), deterministic = True
+				    checkOnActiveContract = False, deterministic = True
+				    invertRequirement = False, deterministic = True
+				    expression = True, deterministic = True
+				
+			HasAntenna_3
+			    type = HasAntenna, deterministic = True
+			    name = HasAntenna, deterministic = True
+			    targetBody = null, deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    minCount = 1, deterministic = True
+			    maxCount = 2147483647, deterministic = True
+			    activeVessel = False, deterministic = True
+			    minRange = 0, deterministic = True
+			    maxRange = 1.79769313486232E+308, deterministic = True
+			    antennaType = Dish, deterministic = True
+			
+				Expression
+				    type = Expression, deterministic = True
+				    name = Expression, deterministic = True
+				    targetBody = Kerbin (CelestialBody), deterministic = True
+				    checkOnActiveContract = False, deterministic = True
+				    invertRequirement = False, deterministic = True
+				    expression = False, deterministic = True
+				
+			HasAntenna_4
+			    type = HasAntenna, deterministic = True
+			    name = HasAntenna, deterministic = True
+			    targetBody = null, deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    minCount = 1, deterministic = True
+			    maxCount = 2147483647, deterministic = True
+			    activeVessel = False, deterministic = True
+			    minRange = 0, deterministic = True
+			    maxRange = 1.79769313486232E+308, deterministic = True
+			    antennaType = Dish, deterministic = True
+			
+				Expression
+				    type = Expression, deterministic = True
+				    name = Expression, deterministic = True
+				    targetBody = Kerbin (CelestialBody), deterministic = True
+				    checkOnActiveContract = False, deterministic = True
+				    invertRequirement = False, deterministic = True
+				    expression = False, deterministic = True
+				
+	Duration
+	    type = Duration, deterministic = True
+	    name = Duration, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 4 days, deterministic = True
+	    preWaitText = Testing time after network up, deterministic = True
+	    waitingText = Performing shake-out testing, deterministic = True
+	    completionText = Shake-out testing completed, deterministic = True
+	    startCriteria = CONTRACT_ACCEPTANCE, deterministic = True
+	    parameter = [], deterministic = True
+	
+	Coverage
+	    type = Any, deterministic = True
+	    name = Coverage, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		CelestialBodyCoverage
+		    type = CelestialBodyCoverage, deterministic = True
+		    name = CelestialBodyCoverage, deterministic = True
+		    targetBody = Moho (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    minCoverage = 0, deterministic = True
+		    maxCoverage = 0.2, deterministic = True
+		
+		All
+		    type = All, deterministic = True
+		    name = All, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		
+			CelestialBodyCoverage
+			    type = CelestialBodyCoverage, deterministic = True
+			    name = CelestialBodyCoverage, deterministic = True
+			    targetBody = Eve (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    minCoverage = 0, deterministic = True
+			    maxCoverage = 0.2, deterministic = True
+			
+			Expression
+			    type = Expression, deterministic = True
+			    name = Expression, deterministic = True
+			    targetBody = Kerbin (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    expression = True, deterministic = True
+			
+		All_1
+		    type = All, deterministic = True
+		    name = All, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		
+			CelestialBodyCoverage
+			    type = CelestialBodyCoverage, deterministic = True
+			    name = CelestialBodyCoverage, deterministic = True
+			    targetBody = Duna (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    minCoverage = 0, deterministic = True
+			    maxCoverage = 0.2, deterministic = True
+			
+			Expression
+			    type = Expression, deterministic = True
+			    name = Expression, deterministic = True
+			    targetBody = Kerbin (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    expression = True, deterministic = True
+			
+		All_2
+		    type = All, deterministic = True
+		    name = All, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		
+			CelestialBodyCoverage
+			    type = CelestialBodyCoverage, deterministic = True
+			    name = CelestialBodyCoverage, deterministic = True
+			    targetBody = null, deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    minCoverage = 0, deterministic = True
+			    maxCoverage = 0.2, deterministic = True
+			
+			Expression
+			    type = Expression, deterministic = True
+			    name = Expression, deterministic = True
+			    targetBody = Kerbin (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    expression = False, deterministic = True
+			
+		All_3
+		    type = All, deterministic = True
+		    name = All, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		
+			CelestialBodyCoverage
+			    type = CelestialBodyCoverage, deterministic = True
+			    name = CelestialBodyCoverage, deterministic = True
+			    targetBody = null, deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    minCoverage = 0, deterministic = True
+			    maxCoverage = 0.2, deterministic = True
+			
+			Expression
+			    type = Expression, deterministic = True
+			    name = Expression, deterministic = True
+			    targetBody = Kerbin (CelestialBody), deterministic = True
+			    checkOnActiveContract = False, deterministic = True
+			    invertRequirement = False, deterministic = True
+			    expression = False, deterministic = True
+			
+	CommDish
+	    type = Any, deterministic = True
+	    name = CommDish, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		PartUnlocked
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ commDish ], deterministic = False
+		
+		PartUnlocked_1
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTLongDish2 ], deterministic = False
+		
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'RT_InnerSat'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'RT_InnerSat'

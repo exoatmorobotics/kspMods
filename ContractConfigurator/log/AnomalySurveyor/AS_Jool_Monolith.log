@@ -1,0 +1,440 @@
+Debug information for CONTRACT_TYPE 'AS_Jool_Monolith':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Jool_Monolith
+	group = AnomalySurveyor
+	title = Investigate the monolith signal.
+	description = The monoliths within the Kerbin system have all started sending a signal towards Jool.  We don't know what we'll find out there, but we need to go take a look.
+	synopsis = Find out what's in the Jool system.
+	completedMessage = Well, that was certainly interesting...
+	prestige = Exceptional
+	targetBody = Jool
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 200000.0
+	rewardScience = 40.0
+	rewardReputation = 8.6
+	weight = 2.5
+	PARAMETER
+	{
+		name = Sequence
+		type = Sequence
+		title = Investigate the situation
+		hiddenParameter = Monolith
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselParameterGroup
+			type = VesselParameterGroup
+			define = Discovery One
+			targetBody = @/targetBody
+			PARAMETER
+			{
+				name = HasCrew
+				type = HasCrew
+				minCrew = 1
+				trait = Pilot
+				targetBody = @/targetBody
+			}
+			PARAMETER
+			{
+				name = HasCrew
+				type = HasCrew
+				minCrew = 1
+				trait = Scientist
+				targetBody = @/targetBody
+			}
+			PARAMETER
+			{
+				name = ReachState
+				type = ReachState
+				situation = ORBITING
+				targetBody = @/targetBody
+			}
+		}
+		PARAMETER
+		{
+			name = Rendezvous
+			type = Rendezvous
+			title = Approach within 20km of the unknown object
+			distance = 20000
+			vessel = Discovery One
+			vessel = Monolith
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = Monolith
+			type = Monolith
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = The Star Jeb is Born
+			condition = PARAMETER_COMPLETED
+			parameter = Monolith
+			position = CENTER
+			width = 0.2
+			IMAGE
+			{
+				url = ContractPacks/AnomalySurveyor/Images/starjeb.dds.noload
+			}
+			BREAK
+			{
+			}
+			TEXT
+			{
+				text = And so it was that $starJebName became an immortal being known as "The Star Jeb".  After the Star Jeb's transcendence, the Jool monolith disappeared - no one knows if it will ever reappear.\n\nAs for the Star Jeb, they have the ability to advance Kerbal science and the Kerbal Space Program to great new heights, and yet they've done absolutely nothing.\n\nIn fact, rumor has it that they haven't even called their mother.
+				fontSize = 16
+			}
+		}
+		DIALOG_BOX
+		{
+			condition = PARAMETER_COMPLETED
+			parameter = Monolith
+			KERBAL
+			{
+			}
+			TEXT
+			{
+				text = $starJebName.FirstWord() is coming back...\n\nRight?
+			}
+		}
+	}
+	BEHAVIOUR
+	{
+		name = SpawnVessel
+		type = SpawnVessel
+		deferVesselCreation = true
+		VESSEL
+		{
+			name = Monolith
+			craftURL = ContractPacks/AnomalySurveyor/Monolith/Monolith.craft
+			vesselType = Unknown
+			owned = False
+			targetBody = @/targetBody
+			ORBIT
+			{
+				SMA = 8001000.30496466
+				ECC = 7.42530592330278E-06
+				INC = 0
+				LPE = 90.5321508078686
+				LAN = 102.402138847893
+				MNA = 1.56146499268263
+				EPH = 446551.435125314
+				REF = 8
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = CompleteContract
+		type = CompleteContract
+		contractType = AS_Mun_Monolith
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Jool_Monolith
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Jool_Monolith, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate the monolith signal., deterministic = True
+    tag = , deterministic = True
+    description = The monoliths within the Kerbin system have all started sending a signal towards Jool.  We don't know what we'll find out there, but we need to go take a look., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Find out what's in the Jool system., deterministic = True
+    completedMessage = Well, that was certainly interesting..., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Exceptional ], deterministic = True
+    targetBody = Jool (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 200000, deterministic = True
+    rewardReputation = 8.6, deterministic = True
+    rewardScience = 40, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 2.5, deterministic = True
+
+	Sequence
+	    type = Sequence, deterministic = True
+	    name = Sequence, deterministic = True
+	    targetBody = Jool (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Investigate the situation, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    hiddenParameter = [ Monolith ], deterministic = True
+	    failWhenCompleteOutOfOrder = False, deterministic = True
+	
+		VesselParameterGroup
+		    type = VesselParameterGroup, deterministic = True
+		    name = VesselParameterGroup, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    duration = 00:00:00, deterministic = True
+		    define = Discovery One, deterministic = True
+		    defineList = null, deterministic = True
+		    vessel = [], deterministic = True
+		    dissassociateVesselsOnContractFailure = True, deterministic = True
+		    dissassociateVesselsOnContractCompletion = False, deterministic = True
+		    hideVesselName = False, deterministic = True
+		
+			HasCrew
+			    type = HasCrew, deterministic = True
+			    name = HasCrew, deterministic = True
+			    targetBody = Jool (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    trait = Pilot, deterministic = True
+			    minExperience = 0, deterministic = True
+			    maxExperience = 5, deterministic = True
+			    minCrew = 1, deterministic = True
+			    maxCrew = 2147483647, deterministic = True
+			    kerbal = [], deterministic = True
+			
+			HasCrew_1
+			    type = HasCrew, deterministic = True
+			    name = HasCrew, deterministic = True
+			    targetBody = Jool (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    trait = Scientist, deterministic = True
+			    minExperience = 0, deterministic = True
+			    maxExperience = 5, deterministic = True
+			    minCrew = 1, deterministic = True
+			    maxCrew = 2147483647, deterministic = True
+			    kerbal = [], deterministic = True
+			
+			ReachState
+			    type = ReachState, deterministic = True
+			    name = ReachState, deterministic = True
+			    targetBody = Jool (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    failWhenUnmet = False, deterministic = True
+			    biome = null, deterministic = True
+			    situation = [ ORBITING ], deterministic = True
+			    minAltitude = -3.402823E+38, deterministic = True
+			    maxAltitude = 3.402823E+38, deterministic = True
+			    minTerrainAltitude = 0, deterministic = True
+			    maxTerrainAltitude = 3.402823E+38, deterministic = True
+			    minSpeed = 0, deterministic = True
+			    maxSpeed = 1.79769313486232E+308, deterministic = True
+			    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+			    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+			    minAcceleration = 0, deterministic = True
+			    maxAcceleration = 3.402823E+38, deterministic = True
+			
+		Rendezvous
+		    type = Rendezvous, deterministic = True
+		    name = Rendezvous, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = Approach within 20km of the unknown object, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = [ Discovery One, Monolith ], deterministic = True
+		    distance = 20000, deterministic = True
+		
+		Monolith
+		    type = Monolith, deterministic = True
+		    name = Monolith, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = CENTER, deterministic = True
+		    width = 0.2, deterministic = True
+		    height = 0, deterministic = True
+		    title = The Star Jeb is Born, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = Monolith, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    url = ContractPacks/AnomalySurveyor/Images/starjeb.dds.noload, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			
+			DIALOG_BOX_0_1
+			
+			DIALOG_BOX_0_2
+			    text = And so it was that  became an immortal being known as "The Star Jeb".  After the Star Jeb's transcendence, the Jool monolith disappeared - no one knows if it will ever reappear.
+			
+			As for the Star Jeb, they have the ability to advance Kerbal science and the Kerbal Space Program to great new heights, and yet they've done absolutely nothing.
+			
+			In fact, rumor has it that they haven't even called their mother., deterministic = False
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 16, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = , deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = Monolith, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    gender = Male, deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    crewIndex = 0, deterministic = True
+			    excludeName = [], deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text =  is coming back...
+			
+			Right?, deterministic = False
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	SpawnVessel
+	    type = SpawnVessel, deterministic = True
+	    name = SpawnVessel, deterministic = True
+	    targetBody = null, deterministic = True
+	    deferVesselCreation = True, deterministic = True
+	
+		VESSEL_0
+		    name = Monolith, deterministic = True
+		    craftURL = ContractPacks/AnomalySurveyor/Monolith/Monolith.craft, deterministic = True
+		    flagURL = null, deterministic = True
+		    vesselType = Unknown, deterministic = True
+		    targetBody = Jool (CelestialBody), deterministic = True
+		    ORBIT = Orbit, deterministic = True
+		    heading = 0, deterministic = True
+		    pitch = 0, deterministic = True
+		    roll = 0, deterministic = True
+		    owned = False, deterministic = True
+		
+			ORBIT
+			    SMA = 8001000.30496466, deterministic = True
+			    ECC = 7.42530592330278E-06, deterministic = True
+			    INC = 0, deterministic = True
+			    LPE = 90.5321508078686, deterministic = True
+			    LAN = 102.402138847893, deterministic = True
+			    MNA = 1.56146499268263, deterministic = True
+			    EPH = 446551.435125314, deterministic = True
+			    REF = 8, deterministic = True
+			
+	CompleteContract
+	    type = CompleteContract, deterministic = True
+	    name = CompleteContract, deterministic = True
+	    targetBody = Jool (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    contractType = AS_Mun_Monolith, deterministic = True
+	    minCount = 1, deterministic = True
+	    maxCount = 4294967295, deterministic = True
+	    cooldownDuration = 00:00:00, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Jool_Monolith'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Jool_Monolith'

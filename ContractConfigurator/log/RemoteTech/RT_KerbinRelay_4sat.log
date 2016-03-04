@@ -1,0 +1,878 @@
+Debug information for CONTRACT_TYPE 'RT_KerbinRelay_4sat':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = RT_KerbinRelay_4sat
+	title = RemoteTech: Create a communication network for @targetBody (4 satellites).
+	description = Mission control is tired of losing vessels and probes over the horizon, since they are rarely heard from again.  We need to find a way to stay in constant communication if we have any hope of truly exploring @targetBody.Children().First() and beyond.
+	synopsis = Build a communication network with four commsats that has continuous connectivity to mission control.\n\nAlso, make sure to only accept either the three or four satellite version of this contract (it's impossible to complete both).
+	completedMessage = The network is up and transmitting, and our shake-out testing is complete!
+	notes = A four satellite network must have a minimum periapsis of @/CommSat1/Orbit/minPeA.Print() m.  Note that this is the bare minimum numbers to have visibility, it is recommended to use higher orbits to give a larger margin of error.
+	group = RemoteTech
+	prestige = Significant
+	targetBody = HomeWorld()
+	agent = Communication Satellite Group
+	maxCompletions = 1
+	rewardReputation = 13.0
+	rewardFunds = @advanceFunds * 3.0
+	advanceFunds = 80000.0
+	weight = 5.0
+	PARAMETER
+	{
+		name = CommSat1
+		type = VesselParameterGroup
+		define = CommSat I
+		disableOnStateChange = false
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = KSCConnectivity
+			type = KSCConnectivity
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat II
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat III
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat IV
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = Orbit
+			type = Orbit
+			minPeA = @/targetBody.Radius() * 0.4142135623730950488016887242097
+			maxEccentricity = 0.004
+			maxInclination = 1
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = CommSat2
+		type = VesselParameterGroup
+		define = CommSat II
+		disableOnStateChange = false
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselConnectivity
+			type = VesselConnectivity
+			vessel = CommSat I
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat III
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat IV
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = KSCConnectivity
+			type = KSCConnectivity
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = Orbit
+			type = Orbit
+			minPeA = @/targetBody.Radius() * 0.4142135623730950488016887242097
+			maxEccentricity = 0.004
+			maxInclination = 1
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = CommSat3
+		type = VesselParameterGroup
+		define = CommSat III
+		disableOnStateChange = false
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat I
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VesselConnectivity
+			type = VesselConnectivity
+			vessel = CommSat II
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat IV
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = KSCConnectivity
+			type = KSCConnectivity
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = Orbit
+			type = Orbit
+			minPeA = @/targetBody.Radius() * 0.4142135623730950488016887242097
+			maxEccentricity = 0.004
+			maxInclination = 1
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = CommSat4
+		type = VesselParameterGroup
+		define = CommSat IV
+		disableOnStateChange = false
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselConnectivity
+			type = VesselConnectivity
+			vessel = CommSat I
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = IsNotVessel
+			type = IsNotVessel
+			vessel = CommSat II
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VesselConnectivity
+			type = VesselConnectivity
+			vessel = CommSat III
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = KSCConnectivity
+			type = KSCConnectivity
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = Orbit
+			type = Orbit
+			minPeA = @/targetBody.Radius() * 0.4142135623730950488016887242097
+			maxEccentricity = 0.004
+			maxInclination = 1
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = Duration
+		type = Duration
+		duration = 2d
+		preWaitText = Testing time after network up
+		waitingText = Performing shake-out testing
+		completionText = Shake-out testing completed
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CelestialBodyCoverage
+		type = CelestialBodyCoverage
+		minCoverage = 0.0
+		maxCoverage = 0.6
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = AcceptContract
+		type = AcceptContract
+		invertRequirement = true
+		contractType = RT_KerbinRelay
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CompleteContract
+		type = CompleteContract
+		invertRequirement = true
+		contractType = RT_KerbinRelay
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+RT_KerbinRelay_4sat
+    RemoteTech:name = RemoteTech, deterministic = True
+    RemoteTech:displayName = RemoteTech, deterministic = True
+    RemoteTech:minVersion = 1.5.2, deterministic = True
+    RemoteTech:maxCompletions = 0, deterministic = True
+    RemoteTech:maxSimultaneous = 3, deterministic = True
+    RemoteTech:disabledContractType = [], deterministic = True
+    name = RT_KerbinRelay_4sat, deterministic = True
+    trace = False, deterministic = True
+    title = RemoteTech: Create a communication network for Kerbin (4 satellites)., deterministic = True
+    tag = , deterministic = True
+    description = Mission control is tired of losing vessels and probes over the horizon, since they are rarely heard from again.  We need to find a way to stay in constant communication if we have any hope of truly exploring the Mun and beyond., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = A four satellite network must have a minimum periapsis of 248,528.14 m.  Note that this is the bare minimum numbers to have visibility, it is recommended to use higher orbits to give a larger margin of error., deterministic = True
+    synopsis = Build a communication network with four commsats that has continuous connectivity to mission control.
+
+Also, make sure to only accept either the three or four satellite version of this contract (it's impossible to complete both)., deterministic = True
+    completedMessage = The network is up and transmitting, and our shake-out testing is complete!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 240000, deterministic = True
+    rewardReputation = 13, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 80000, deterministic = True
+    weight = 5, deterministic = True
+
+	CommSat1
+	    type = VesselParameterGroup, deterministic = True
+	    name = CommSat1, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = False, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = CommSat I, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		KSCConnectivity
+		    type = KSCConnectivity, deterministic = True
+		    name = KSCConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		
+		IsNotVessel
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat II, deterministic = True
+		
+		IsNotVessel_1
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat III, deterministic = True
+		
+		IsNotVessel_2
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat IV, deterministic = True
+		
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    situation = ORBITING, deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 1.79769313486232E+308, deterministic = True
+		    minApA = 0, deterministic = True
+		    maxApA = 1.79769313486232E+308, deterministic = True
+		    minPeA = 248528.137423857, deterministic = True
+		    maxPeA = 1.79769313486232E+308, deterministic = True
+		    minEccentricity = 0, deterministic = True
+		    maxEccentricity = 0.004, deterministic = True
+		    minInclination = 0, deterministic = True
+		    maxInclination = 1, deterministic = True
+		    minPeriod = 00:00:00, deterministic = True
+		    maxPeriod = 00:00:00, deterministic = True
+		
+	CommSat2
+	    type = VesselParameterGroup, deterministic = True
+	    name = CommSat2, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = False, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = CommSat II, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		VesselConnectivity
+		    type = VesselConnectivity, deterministic = True
+		    name = VesselConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		    vessel = CommSat I, deterministic = True
+		
+		IsNotVessel
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat III, deterministic = True
+		
+		IsNotVessel_1
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat IV, deterministic = True
+		
+		KSCConnectivity
+		    type = KSCConnectivity, deterministic = True
+		    name = KSCConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    situation = ORBITING, deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 1.79769313486232E+308, deterministic = True
+		    minApA = 0, deterministic = True
+		    maxApA = 1.79769313486232E+308, deterministic = True
+		    minPeA = 248528.137423857, deterministic = True
+		    maxPeA = 1.79769313486232E+308, deterministic = True
+		    minEccentricity = 0, deterministic = True
+		    maxEccentricity = 0.004, deterministic = True
+		    minInclination = 0, deterministic = True
+		    maxInclination = 1, deterministic = True
+		    minPeriod = 00:00:00, deterministic = True
+		    maxPeriod = 00:00:00, deterministic = True
+		
+	CommSat3
+	    type = VesselParameterGroup, deterministic = True
+	    name = CommSat3, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = False, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = CommSat III, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		IsNotVessel
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat I, deterministic = True
+		
+		VesselConnectivity
+		    type = VesselConnectivity, deterministic = True
+		    name = VesselConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		    vessel = CommSat II, deterministic = True
+		
+		IsNotVessel_1
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat IV, deterministic = True
+		
+		KSCConnectivity
+		    type = KSCConnectivity, deterministic = True
+		    name = KSCConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    situation = ORBITING, deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 1.79769313486232E+308, deterministic = True
+		    minApA = 0, deterministic = True
+		    maxApA = 1.79769313486232E+308, deterministic = True
+		    minPeA = 248528.137423857, deterministic = True
+		    maxPeA = 1.79769313486232E+308, deterministic = True
+		    minEccentricity = 0, deterministic = True
+		    maxEccentricity = 0.004, deterministic = True
+		    minInclination = 0, deterministic = True
+		    maxInclination = 1, deterministic = True
+		    minPeriod = 00:00:00, deterministic = True
+		    maxPeriod = 00:00:00, deterministic = True
+		
+	CommSat4
+	    type = VesselParameterGroup, deterministic = True
+	    name = CommSat4, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = False, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = CommSat IV, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		VesselConnectivity
+		    type = VesselConnectivity, deterministic = True
+		    name = VesselConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		    vessel = CommSat I, deterministic = True
+		
+		IsNotVessel
+		    type = IsNotVessel, deterministic = True
+		    name = IsNotVessel, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vessel = CommSat II, deterministic = True
+		
+		VesselConnectivity_1
+		    type = VesselConnectivity, deterministic = True
+		    name = VesselConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		    vessel = CommSat III, deterministic = True
+		
+		KSCConnectivity
+		    type = KSCConnectivity, deterministic = True
+		    name = KSCConnectivity, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    hasConnectivity = True, deterministic = True
+		
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    situation = ORBITING, deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 1.79769313486232E+308, deterministic = True
+		    minApA = 0, deterministic = True
+		    maxApA = 1.79769313486232E+308, deterministic = True
+		    minPeA = 248528.137423857, deterministic = True
+		    maxPeA = 1.79769313486232E+308, deterministic = True
+		    minEccentricity = 0, deterministic = True
+		    maxEccentricity = 0.004, deterministic = True
+		    minInclination = 0, deterministic = True
+		    maxInclination = 1, deterministic = True
+		    minPeriod = 00:00:00, deterministic = True
+		    maxPeriod = 00:00:00, deterministic = True
+		
+	Duration
+	    type = Duration, deterministic = True
+	    name = Duration, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 2 days, deterministic = True
+	    preWaitText = Testing time after network up, deterministic = True
+	    waitingText = Performing shake-out testing, deterministic = True
+	    completionText = Shake-out testing completed, deterministic = True
+	    startCriteria = CONTRACT_ACCEPTANCE, deterministic = True
+	    parameter = [], deterministic = True
+	
+	CelestialBodyCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = CelestialBodyCoverage, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    minCoverage = 0, deterministic = True
+	    maxCoverage = 0.6, deterministic = True
+	
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+	AcceptContract
+	    type = AcceptContract, deterministic = True
+	    name = AcceptContract, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = True, deterministic = True
+	    contractType = RT_KerbinRelay, deterministic = True
+	    minCount = 1, deterministic = True
+	    maxCount = 4294967295, deterministic = True
+	
+	CompleteContract
+	    type = CompleteContract, deterministic = True
+	    name = CompleteContract, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = True, deterministic = True
+	    contractType = RT_KerbinRelay, deterministic = True
+	    minCount = 1, deterministic = True
+	    maxCount = 4294967295, deterministic = True
+	    cooldownDuration = 00:00:00, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'RT_KerbinRelay_4sat'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'RT_KerbinRelay_4sat'

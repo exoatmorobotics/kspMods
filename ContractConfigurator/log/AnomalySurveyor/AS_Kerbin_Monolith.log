@@ -1,0 +1,737 @@
+Debug information for CONTRACT_TYPE 'AS_Kerbin_Monolith':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Kerbin_Monolith
+	group = AnomalySurveyor
+	title = Investigate magnetic anomaly on Kerbin.
+	description = Our scans have detected some interesting magnetic signals all over the planet.  Head on over and see if you can find anything.
+	synopsis = Visit the location of four magnetic anomalies on foot.
+	completedMessage = It seems as if some of these monoliths were deliberately buried.
+	tag = SCANsat
+	prestige = Significant
+	targetBody = Kerbin
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 260000
+	rewardScience = 40.0
+	rewardReputation = 22
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Visit the first magnetic anomaly
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 15
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP1
+		type = All
+		title = Visit the second magnetic anomaly
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 1
+			distance = 50
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP3
+		type = All
+		title = Visit the third magnetic anomaly
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 2
+			distance = 15
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP4
+		type = All
+		title = Visit the fourth magnetic anomaly
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 3
+			distance = 35
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		WAYPOINT
+		{
+			name = TMA-0
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			latitude = 0.102331064775746
+			longitude = 285.431593173861
+			altitude = 0.0
+			targetBody = @/targetBody
+		}
+		PQS_CITY
+		{
+			name = TMA-1
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			pqsCity = Monolith01
+			targetBody = @/targetBody
+		}
+		WAYPOINT
+		{
+			name = TMA-2
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			latitude = 20.6708959294282
+			longitude = 213.503158424511
+			altitude = -1.32574519433547
+			targetBody = @/targetBody
+		}
+		PQS_CITY
+		{
+			name = TMA-3
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			pqsCity = Monolith02
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = First Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = idle_wonder
+			}
+			TEXT
+			{
+				text = Imagine, right in our backyard and we never saw it.  Maybe if we had some windows in the administration building.
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Second Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP1
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = false_disagreeA
+			}
+			TEXT
+			{
+				text = This is the spot...  but no monolith.  Maybe someone buried it?  Hopefully we'll have more luck at the other locations.
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Third Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP2
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = idle_lookAround
+			}
+			TEXT
+			{
+				text = I wonder who put that dish there...  let's get out of here and head to the last monolith.
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Fourth Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP3
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = idle_wonder
+			}
+			TEXT
+			{
+				text = Wow, is it really...  floating?!?  Wernher would love to take a look inside that thing.
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked
+		type = PartUnlocked
+		part = JetEngine
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP0
+		type = SCANsatLocationCoverage
+		latitude = 0.102331064775746
+		longitude = 285.431593173861
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP1
+		type = SCANsatLocationCoverage
+		pqsCity = Monolith01
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP3
+		type = SCANsatLocationCoverage
+		latitude = 20.6709
+		longitude = -146.4968
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP4
+		type = SCANsatLocationCoverage
+		pqsCity = Monolith02
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Kerbin_Monolith
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Kerbin_Monolith, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate magnetic anomaly on Kerbin., deterministic = True
+    tag = SCANsat, deterministic = True
+    description = Our scans have detected some interesting magnetic signals all over the planet.  Head on over and see if you can find anything., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Visit the location of four magnetic anomalies on foot., deterministic = True
+    completedMessage = It seems as if some of these monoliths were deliberately buried., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 260000, deterministic = True
+    rewardReputation = 22, deterministic = True
+    rewardScience = 40, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the first magnetic anomaly, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 15, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP1
+	    type = All, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the second magnetic anomaly, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 1, deterministic = True
+		    distance = 50, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP3
+	    type = All, deterministic = True
+	    name = WP3, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the third magnetic anomaly, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 2, deterministic = True
+		    distance = 15, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP4
+	    type = All, deterministic = True
+	    name = WP4, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the fourth magnetic anomaly, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 3, deterministic = True
+		    distance = 35, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ TMA-0 ], deterministic = True
+		    altitude = 0, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = 0.102331064775746, deterministic = True
+		    longitude = 285.431593173861, deterministic = True
+		
+		WAYPOINT_1
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ TMA-1 ], deterministic = True
+		    altitude = null, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = Monolith01, deterministic = True
+		    pqsOffset = [0, 0, 0], deterministic = True
+		
+		WAYPOINT_2
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ TMA-2 ], deterministic = True
+		    altitude = -1.32574519433547, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = 20.6708959294282, deterministic = True
+		    longitude = 213.503158424511, deterministic = True
+		
+		WAYPOINT_3
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ TMA-3 ], deterministic = True
+		    altitude = null, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = Monolith02, deterministic = True
+		    pqsOffset = [0, 0, 0], deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = First Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = idle_wonder, deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = Imagine, right in our backyard and we never saw it.  Maybe if we had some windows in the administration building., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Second Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP1, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = false_disagreeA, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = This is the spot...  but no monolith.  Maybe someone buried it?  Hopefully we'll have more luck at the other locations., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_2
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Third Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP2, deterministic = True
+		
+			DIALOG_BOX_2_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = idle_lookAround, deterministic = True
+			
+			DIALOG_BOX_2_1
+			    text = I wonder who put that dish there...  let's get out of here and head to the last monolith., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_3
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Fourth Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP3, deterministic = True
+		
+			DIALOG_BOX_3_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = idle_wonder, deterministic = True
+			
+			DIALOG_BOX_3_1
+			    text = Wow, is it really...  floating?!?  Wernher would love to take a look inside that thing., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	PartUnlocked
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ JetEngine ], deterministic = False
+	
+	WP0_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0.102331064775746, deterministic = True
+	    longitude = 285.431593173861, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+	WP1_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = Monolith01, deterministic = True
+	
+	WP3_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP3, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 20.6709, deterministic = True
+	    longitude = -146.4968, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+	WP4_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP4, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = Monolith02, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Kerbin_Monolith'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Kerbin_Monolith'

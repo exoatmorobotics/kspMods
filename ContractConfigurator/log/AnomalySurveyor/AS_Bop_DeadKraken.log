@@ -1,0 +1,253 @@
+Debug information for CONTRACT_TYPE 'AS_Bop_DeadKraken':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Bop_DeadKraken
+	group = AnomalySurveyor
+	title = Investigate something odd on Bop.
+	description = Something in one of the craters on Bop caught our attention.  Go check it out.
+	synopsis = Investigate the crater on Bop.
+	completedMessage = Hmm....  any chance you're willing to get a sample?
+	tag = SCANsat
+	prestige = Exceptional
+	targetBody = Bop
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 110500
+	rewardScience = 10.0
+	rewardReputation = 3.3
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Investigate the Bop anomaly
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		WAYPOINT
+		{
+			name = Anomaly in a Crater
+			icon = ContractPacks/AnomalySurveyor/Icons/unknown
+			latitude = 68.4278362774429
+			longitude = -242.991724273924
+			altitude = 1.37536410811299
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = Dead Kraken
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			KERBAL
+			{
+			}
+			TEXT
+			{
+				text = It looks like some sort of deep space kraken.  I'm glad it's dead, since we left the Krakensbane back at mission control.
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP1
+		type = SCANsatLocationCoverage
+		latitude = 68.4278362774429
+		longitude = -242.991724273924
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Bop_DeadKraken
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Bop_DeadKraken, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate something odd on Bop., deterministic = True
+    tag = SCANsat, deterministic = True
+    description = Something in one of the craters on Bop caught our attention.  Go check it out., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Investigate the crater on Bop., deterministic = True
+    completedMessage = Hmm....  any chance you're willing to get a sample?, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Exceptional ], deterministic = True
+    targetBody = Bop (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 110500, deterministic = True
+    rewardReputation = 3.3, deterministic = True
+    rewardScience = 10, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Bop (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Investigate the Bop anomaly, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Bop (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Bop (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Bop (CelestialBody), deterministic = True
+		    name = [ Anomaly in a Crater ], deterministic = True
+		    altitude = 1.37536410811299, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/unknown, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = 68.4278362774429, deterministic = True
+		    longitude = -242.991724273924, deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Dead Kraken, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    gender = Male, deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    crewIndex = 0, deterministic = True
+			    excludeName = [], deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = It looks like some sort of deep space kraken.  I'm glad it's dead, since we left the Krakensbane back at mission control., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Bop (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	WP1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Bop (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 68.4278362774429, deterministic = True
+	    longitude = -242.991724273924, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Bop_DeadKraken'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Bop_DeadKraken'

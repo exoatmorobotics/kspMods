@@ -1,0 +1,281 @@
+Debug information for CONTRACT_TYPE 'AS_Kerbin_UFO':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Kerbin_UFO
+	group = AnomalySurveyor
+	title = Investigate an arctic crash site.
+	description = Our scans picked up what looks like a crashed vessel over the arctic ice.  It's not one of ours, but maybe we should check it out anyway?
+	synopsis = Investigate a crashed vessel.
+	completedMessage = We are not alone.
+	tag = SCANsat
+	prestige = Significant
+	targetBody = Kerbin
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 97500
+	rewardScience = 20.0
+	rewardReputation = 8.8
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Investigate the crashed vessel
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 15
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		WAYPOINT
+		{
+			name = Crashed vessel
+			icon = ContractPacks/AnomalySurveyor/Icons/unknown
+			latitude = 81.9551567431472
+			longitude = 231.482239565662
+			altitude = 5.34037477325178
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = UFO
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Instructor_Wernher
+				animation = false_disagreeC
+			}
+			TEXT
+			{
+				text = That thing doesn't look like it came from Kerbin...
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Any
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+			targetBody = Mun
+		}
+		REQUIREMENT
+		{
+			name = Orbit
+			type = Orbit
+			targetBody = Minmus
+		}
+	}
+	REQUIREMENT
+	{
+		name = WP0
+		type = SCANsatLocationCoverage
+		latitude = 81.9551567431472
+		longitude = 231.482239565662
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Kerbin_UFO
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Kerbin_UFO, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate an arctic crash site., deterministic = True
+    tag = SCANsat, deterministic = True
+    description = Our scans picked up what looks like a crashed vessel over the arctic ice.  It's not one of ours, but maybe we should check it out anyway?, deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Investigate a crashed vessel., deterministic = True
+    completedMessage = We are not alone., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 97500, deterministic = True
+    rewardReputation = 8.8, deterministic = True
+    rewardScience = 20, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Investigate the crashed vessel, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 15, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ Crashed vessel ], deterministic = True
+		    altitude = 5.34037477325178, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/unknown, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = 81.9551567431472, deterministic = True
+		    longitude = 231.482239565662, deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = UFO, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    name = Instructor_Wernher, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = false_disagreeC, deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = That thing doesn't look like it came from Kerbin..., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Any
+	    type = Any, deterministic = True
+	    name = Any, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		Orbit
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    checkType = null, deterministic = True
+		
+		Orbit_1
+		    type = Orbit, deterministic = True
+		    name = Orbit, deterministic = True
+		    targetBody = Minmus (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    checkType = null, deterministic = True
+		
+	WP0_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 81.9551567431472, deterministic = True
+	    longitude = 231.482239565662, deterministic = True
+	    pqsCity = null, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Kerbin_UFO'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Kerbin_UFO'

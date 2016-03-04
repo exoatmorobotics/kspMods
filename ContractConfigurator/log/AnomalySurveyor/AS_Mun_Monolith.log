@@ -1,0 +1,429 @@
+Debug information for CONTRACT_TYPE 'AS_Mun_Monolith':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Mun_Monolith
+	group = AnomalySurveyor
+	title = Investigate monoliths on the Mun.
+	description = After investigating the monoliths on Kerbin, we realized that there are similar signals on the Mun.  Head on over and see if you can find anything.
+	synopsis = Visit the location of two possible monoliths while on EVA.
+	completedMessage = There seems to be a signal coming from the monoliths...  aimed towards Jool?
+	tag = SCANsat
+	prestige = Exceptional
+	targetBody = Mun
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 195000
+	rewardScience = 50.0
+	rewardReputation = 22
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Visit the northern monolith
+		notes = TMA-4: This is the easier of the two monoliths.
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP1
+		type = All
+		title = Visit the southern monolith
+		notes = TMA-5: This is the more difficult monolith.
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 1
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		PQS_CITY
+		{
+			name = TMA-4
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			pqsCity = Monolith01
+			altitude = 0.20538711422705
+			targetBody = @/targetBody
+		}
+		WAYPOINT
+		{
+			name = TMA-5
+			icon = ContractPacks/AnomalySurveyor/Icons/monolith
+			latitude = -82.206266198768
+			longitude = 102.928400491749
+			altitude = -181.768236982782
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = First Mun Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Strategy_ScienceGuy
+				animation = true_thumbUp
+			}
+			TEXT
+			{
+				text = Imagine what this means!  Somewhere out there, there's a spacefaring race that evolved from apes.  Some sort of... space ape?  Spapes?
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Second Mun Monolith
+			condition = PARAMETER_COMPLETED
+			parameter = WP1
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = true_thumbUp
+			}
+			TEXT
+			{
+				text = Wow...  this is a VERY deep hole.  You can climb back out, right?
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CompleteContract
+		type = CompleteContract
+		contractType = AS_Kerbin_Monolith
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP1
+		type = SCANsatLocationCoverage
+		pqsCity = Monolith01
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = WP2
+		type = SCANsatLocationCoverage
+		pqsCity = Monolith02
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Mun_Monolith
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Mun_Monolith, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate monoliths on the Mun., deterministic = True
+    tag = SCANsat, deterministic = True
+    description = After investigating the monoliths on Kerbin, we realized that there are similar signals on the Mun.  Head on over and see if you can find anything., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Visit the location of two possible monoliths while on EVA., deterministic = True
+    completedMessage = There seems to be a signal coming from the monoliths...  aimed towards Jool?, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Exceptional ], deterministic = True
+    targetBody = Mun (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 195000, deterministic = True
+    rewardReputation = 22, deterministic = True
+    rewardScience = 50, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the northern monolith, deterministic = True
+	    notes = TMA-4: This is the easier of the two monoliths., deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP1
+	    type = All, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Visit the southern monolith, deterministic = True
+	    notes = TMA-5: This is the more difficult monolith., deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 1, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    name = [ TMA-4 ], deterministic = True
+		    altitude = 0.20538711422705, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = Monolith01, deterministic = True
+		    pqsOffset = [0, 0, 0], deterministic = True
+		
+		WAYPOINT_1
+		    type = WAYPOINT, deterministic = True
+		    targetBody = Mun (CelestialBody), deterministic = True
+		    name = [ TMA-5 ], deterministic = True
+		    altitude = -181.768236982782, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/monolith, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    latitude = -82.206266198768, deterministic = True
+		    longitude = 102.928400491749, deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = First Mun Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    name = Strategy_ScienceGuy, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_thumbUp, deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = Imagine what this means!  Somewhere out there, there's a spacefaring race that evolved from apes.  Some sort of... space ape?  Spapes?, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Second Mun Monolith, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP1, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_thumbUp, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = Wow...  this is a VERY deep hole.  You can climb back out, right?, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	CompleteContract
+	    type = CompleteContract, deterministic = True
+	    name = CompleteContract, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    contractType = AS_Kerbin_Monolith, deterministic = True
+	    minCount = 1, deterministic = True
+	    maxCount = 4294967295, deterministic = True
+	    cooldownDuration = 00:00:00, deterministic = True
+	
+	WP1_1
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = Monolith01, deterministic = True
+	
+	WP2
+	    type = SCANsatLocationCoverage, deterministic = True
+	    name = WP2, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    scanType = Anomaly, deterministic = True
+	    latitude = 0, deterministic = True
+	    longitude = 0, deterministic = True
+	    pqsCity = Monolith02, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Mun_Monolith'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Mun_Monolith'

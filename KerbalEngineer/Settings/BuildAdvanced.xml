@@ -6,11 +6,11 @@
   </SettingItem>
   <SettingItem>
     <Name>windowPositionX</Name>
-    <Value xsi:type="float">512</Value>
+    <Value xsi:type="float">550</Value>
   </SettingItem>
   <SettingItem>
     <Name>windowPositionY</Name>
-    <Value xsi:type="float">50</Value>
+    <Value xsi:type="float">55</Value>
   </SettingItem>
   <SettingItem>
     <Name>compactMode</Name>
@@ -26,7 +26,7 @@
   </SettingItem>
   <SettingItem>
     <Name>showAtmosphericDetails</Name>
-    <Value xsi:type="boolean">false</Value>
+    <Value xsi:type="boolean">true</Value>
   </SettingItem>
   <SettingItem>
     <Name>showSettings</Name>
@@ -34,6 +34,6 @@
   </SettingItem>
   <SettingItem>
     <Name>selectedBodyName</Name>
-    <Value xsi:type="string">Kerbin</Value>
+    <Value xsi:type="string">Minmus</Value>
   </SettingItem>
 </ArrayOfSettingItem>

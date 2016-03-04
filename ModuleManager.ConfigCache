@@ -1,273 +1,5 @@
-patchedNodeCount = 0
+patchedNodeCount = 2070
 catEatenCount = 0
-UrlConfig
-{
-	name = PHYSICSGLOBALS
-	type = PHYSICSGLOBALS
-	parentUrl = /Physics
-	url = /Physics/PHYSICSGLOBALS
-	PHYSICSGLOBALS
-	{
-		aeroFXStartThermalFX = 2.5
-		aeroFXFullThermalFX = 3.75
-		aeroFXVelocityExponent = 3.5
-		aeroFXDensityScalar1 = 0.0091
-		aeroFXDensityExponent1 = 0.5
-		aeroFXDensityScalar2 = 0.09
-		aeroFXDensityExponent2 = 2
-		aeroFXMachFXFadeStart = 0.25
-		aeroFXMachFXFadeEnd = 0.0875
-		aeroFXDensityFadeStart = 0.0015
-		blackBodyRadiationMin = 798
-		blackBodyRadiationMax = 7000
-		temperatureGaugeThreshold = 0.625
-		temperatureGaugeHighlightThreshold = 0.75
-		thermalIntegrationStep = 0.02
-		thermalIntegrationAlwaysStep = False
-		thermalIntegrationHighMaxPasses = 10
-		thermalIntegrationHighMinPasses = 2
-		thermalConvergenceFactor = 0.63
-		standardSpecificHeatCapacity = 800
-		internalHeatProductionFactor = 0.025
-		spaceTemperature = 4
-		solarLuminosityAtHome = 1360
-		solarInsolationAtHome = 0.15
-		radiationFactor = 1
-		convectionFactorSplashed = 5000
-		fullConvectionAreaMin = 0.2
-		fullToCrossSectionLerpStart = 0.8
-		fullToCrossSectionLerpEnd = 1.5
-		newtonianTemperatureFactor = 1
-		newtonianConvectionFactorBase = 8.14
-		newtonianConvectionFactorTotal = 4
-		newtonianDensityExponent = 0.5
-		newtonianVelocityExponent = 1
-		newtonianMachTempLerpStartMach = 2
-		newtonianMachTempLerpEndMach = 5
-		newtonianMachTempLerpExponent = 3
-		machConvectionFactor = 7
-		machConvectionDensityExponent = 0.5
-		machConvectionVelocityExponent = 3
-		machTemperatureScalar = 21
-		machTemperatureVelocityExponent = 0.75
-		turbulentConvectionStart = 100
-		turbulentConvectionEnd = 200
-		turbulentConvectionMult = 50
-		conductionFactor = 120
-		skinSkinConductionFactor = 0.003
-		skinInternalConductionFactor = 0.009
-		shieldedConductionFactor = 0.01
-		thermalMaxIntegrationWarp = 100
-		analyticLerpRateSkin = 0.003
-		analyticLerpRateInternal = 0.001
-		analyticConvectionSensitivityBase = 0.01
-		analyticConvectionSensitivityFinal = 20
-		buoyancyScalar = 1.2
-		buoyancyUseCoBOffset = True
-		buoyancyApplyForceOnDie = False
-		buoyancyForceOffsetLerp = 0.5
-		buoyancyWaterDragScalar = 4.5
-		buoyancyWaterDragScalarEnd = 0.15
-		buoyancyWaterDragScalarLerp = 0.25
-		buoyancyWaterDragScalarLerpDotMultBase = 2
-		buoyancyWaterDragScalarLerpDotMult = 1.25
-		buoyancyWaterLiftScalarEnd = 0.025
-		buoyancyWaterDragMinVel = 0.4
-		buoyancyWaterDragMinVelMult = 4
-		buoyancyWaterDragMinVelMultCOBOff = 0
-		buoyancyWaterDragPartVelGreaterVesselMult = 1.5
-		buoyancyWaterDragTimer = 3
-		buoyancyWaterDragMultMinForMinDot = 0.05
-		buoyancyWaterAngularDragScalar = 0.001
-		buoyancyAngularDragMinControlSqrMag = 0.03125
-		buoyancyWaterAngularDragSlow = 4
-		buoyancyWaterDragSlow = 2
-		buoyancyWaterDragExtraRBDragAboveDot = 0.5
-		buoyancyScaleAboveDepth = 0.2
-		buoyancyDefaultVolume = 1
-		buoyancyMinCrashMult = 0.1
-		buoyancyCrashToleranceMult = 1.2
-		buoyancyRange = 1000
-		buoyancyKerbals = 0.25
-		buoyancyKerbalsRagdoll = 3
-		cameraDepthToUnlock = 0
-		stack_PriUsesSurf = False
-		dragMultiplier = 8
-		dragCubeMultiplier = 0.1
-		angularDragMultiplier = 2
-		kerbalEVADragCubeString = Default, 0.663,0.7,0.4, 0.663,0.7,0.4, 0.5,0.6,0.4, 0.5,0.7,0.7, 0.7,0.85,0.4, 0.7,0.85,0.4, 0,0,0 0.8,1.1,0.8
-		liftMultiplier = 0.036
-		liftDragMultiplier = 0.015
-		bodyLiftMultiplier = 18
-		DRAG_TIP
-		{
-			key = 0 1 0 0
-			key = 25 1 0 0
-		}
-		DRAG_SURFACE
-		{
-			key = 0 0.02 0 0
-			key = 0.85 0.02 0 0
-			key = 0.9 0.0152439 -0.07942077 -0.07942077
-			key = 1.1 0.0025 -0.005279571 -0.001936768
-			key = 2 0.002083333 -2.314833E-05 -2.314833E-05
-			key = 5 0.003333333 -0.000180556 -0.000180556
-			key = 25 0.001428571 -7.14286E-05 0
-		}
-		DRAG_TAIL
-		{
-			key = 0 1 0 0
-			key = 0.85 1 0 0
-			key = 1.1 0.25 -0.02215106 -0.02487721
-			key = 1.4 0.22 -0.03391732 -0.03391732
-			key = 5 0.15 -0.001198566 -0.001198566
-			key = 25 0.14 0 0
-		}
-		DRAG_MULTIPLIER
-		{
-			key = 0 0.5 0 0
-			key = 0.85 0.5 0 0
-			key = 1.1 1.3 0 -0.008100224
-			key = 2 0.7 -0.1104858 -0.1104858
-			key = 5 0.6 0 0
-			key = 10 0.85 0.02198264 0.02198264
-			key = 14 0.9 0.007694946 0.007694946
-			key = 25 0.95 0 0
-		}
-		DRAG_CD
-		{
-			key = 0.05 0.0025 0.15 0.15
-			key = 0.15 0.0225 0.3 0.3
-			key = 0.25 0.0625 0.5 0.5
-			key = 0.35 0.1225 0.7 0.7
-			key = 0.45 0.2025 0.9 0.9
-			key = 0.55 0.3025 1.1 1.1
-			key = 0.65 0.4225 1.3 1.3
-			key = 0.75 0.5625 1.5 1.5
-			key = 0.8 0.66 2.3775 2.3775
-			key = 0.85 0.8 2.733777 2.733777
-			key = 0.9 0.89 1.1 1.1
-			key = 1 1 1 1
-		}
-		DRAG_PSEUDOREYNOLDS
-		{
-			key = 0 4 0 -2975.412
-			key = 0.0001 3 -251.1479 -251.1479
-			key = 0.01 2 -19.63584 -19.63584
-			key = 0.1 1.2 -0.7846036 -0.7846036
-			key = 1 1 0 0
-			key = 100 1 0 0
-			key = 200 0.82 0 0
-			key = 500 0.86 0.0001932119 0.0001932119
-			key = 1000 0.9 1.54299E-05 1.54299E-05
-			key = 10000 0.95 0 0
-		}
-		LIFTING_SURFACE_CURVES
-		{
-			LIFTING_SURFACE
-			{
-				name = Default
-				lift
-				{
-					key = 0 0 0 1.965926
-					key = 0.258819 0.5114774 1.990092 1.905806
-					key = 0.5 0.9026583 0.7074468 -0.7074468
-					key = 0.7071068 0.5926583 -2.087948 -1.990095
-					key = 1 0 -2.014386 -2.014386
-				}
-				liftMach
-				{
-					key = 0 1 0 0
-					key = 0.3 0.5 -1.671345 -0.8273422
-					key = 1 0.125 -0.0005291355 -0.02625772
-					key = 5 0.0625 0 0
-					key = 25 0.05 0 0
-				}
-				drag
-				{
-					key = 0 0.01 0 0
-					key = 0.3420201 0.06 0.1750731 0.1750731
-					key = 0.5 0.24 2.60928 2.60928
-					key = 0.7071068 1.7 3.349777 3.349777
-					key = 1 2.4 1.387938 0
-				}
-				dragMach
-				{
-					key = 0 0.35 0 -0.8463008
-					key = 0.15 0.125 0 0
-					key = 0.9 0.275 0.541598 0.541598
-					key = 1.1 0.75 0 0
-					key = 1.4 0.4 -0.3626955 -0.3626955
-					key = 1.6 0.35 -0.1545923 -0.1545923
-					key = 2 0.3 -0.09013031 -0.09013031
-					key = 5 0.22 0 0
-					key = 25 0.3 0.0006807274 0
-				}
-			}
-			LIFTING_SURFACE
-			{
-				name = BodyLift
-				lift
-				{
-					key = 0 0 0 1.975376
-					key = 0.309017 0.5877852 1.565065 1.565065
-					key = 0.5877852 0.9510565 0.735902 0.735902
-					key = 0.7071068 1 0 0
-					key = 0.8910065 0.809017 -2.70827 -2.70827
-					key = 1 0 -11.06124 0
-				}
-				liftMach
-				{
-					key = 0.3 0.167 0 0
-					key = 0.8 0.167 0 -0.3904104
-					key = 1 0.125 -0.0005291355 -0.02625772
-					key = 5 0.0625 0 0
-					key = 25 0.05 0 0
-				}
-				drag
-				{
-					key = 0 0 0 0
-				}
-				dragMach
-				{
-					key = 0 0 0 0
-				}
-			}
-			LIFTING_SURFACE
-			{
-				name = SpeedBrake
-				lift
-				{
-					key = 0 0 0 0
-				}
-				liftMach
-				{
-					key = 0 0 0 0
-				}
-				drag
-				{
-					key = 0 0.01 0 0
-					key = 0.3420201 0.06 0.1750731 0.1750731
-					key = 0.5 0.24 2.60928 2.60928
-					key = 0.7071068 1.7 3.349777 3.349777
-					key = 1 2.4 1.387938 0
-				}
-				dragMach
-				{
-					key = 0 0.35 0 -0.8463008
-					key = 0.15 0.125 0 0
-					key = 0.9 0.275 0.541598 0.541598
-					key = 1.1 0.75 0 0
-					key = 1.4 0.4 -0.3626955 -0.3626955
-					key = 1.6 0.35 -0.1545923 -0.1545923
-					key = 2 0.3 -0.09013031 -0.09013031
-					key = 5 0.22 0 0
-					key = 25 0.3 0.0006807274 0
-				}
-			}
-		}
-	}
-}
 UrlConfig
 {
 	name = PHYSICSGLOBALS
@@ -6498,49 +6230,42 @@ UrlConfig
 			name = plantGrowth
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = progradeKuarqs
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = retrogradeKuarqs
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = eccentricKuarqs
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = bioproducts
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = kuarqsBioproducts
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		EXPERIMENT
 		{
 			name = zoologyBay
 			disallowHomeSurface = true
 			disallowHomeFlying = true
-			ignored = true
 		}
 		MODULE
 		{
@@ -8328,732 +8053,6 @@ UrlConfig
 		{
 			name = KOSNameTag
 		}
-	}
-}
-UrlConfig
-{
-	name = FS_BiomeStudy
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/BiomeStudy
-	url = ContractPacks/FieldResearch/BiomeStudy/FS_BiomeStudy
-	CONTRACT_TYPE
-	{
-		name = FS_BiomeStudy
-		group = FieldResearch
-		title = Field Research: Biome study of @biome
-		description = It's a commonly known fact that @biome is one of the most interesting places around!  We'd like to know more about it, let's do a study!
-		synopsis = Perform the requested experiments at @biome.
-		completedMessage = One of the most important things we've learned about @biome is that it's not as interesting as we first thought.
-		maxSimultaneous = 2
-		agent = Field Research Team
-		targetBody = Prestige() == Trivial ? HomeWorld() : Prestige() == Significant ? @FieldResearch:l2Bodies.Random() : @FieldResearch:l3Bodies.Random()
-		rewardFunds = Random(12500.0, 15000.0)
-		rewardReputation = Random(2.0, 5.0)
-		DATA
-		{
-			type = Biome
-			biome = @targetBody.Biomes().Where(b => b.RemainingScience() > 50.0).Random()
-		}
-		DATA
-		{
-			type = string
-			uniquenessCheck = CONTRACT_ACTIVE
-			biomeUniqueCheck = @biome
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjects = AllScienceSubjectsByBiome([@biome]).Where(s => s.CollectedScience() == 0.0).Random(8)
-		}
-		DATA
-		{
-			type = ScienceRecoveryMethod
-			recoveryMethod = @targetBody.IsHomeWorld() || @targetBody.Parent().IsHomeWorld() ? Ideal : RecoverOrTransmit
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = @/scienceSubjects.Count() >= 5
-		}
-		PARAMETER
-		{
-			type = CollectScience
-			subject = @/scienceSubjects.Where(s => s.Situation() == @experimentSituation)
-			recoveryMethod = @/recoveryMethod
-			rewardFunds = 10000.0 + Random(4950.0, 5050.0) * @subject.Count()
-			ITERATOR
-			{
-				type = ExperimentSituations
-				experimentSituation = [ SrfLanded, SrfSplashed, FlyingLow, FlyingHigh, InSpaceLow, InSpaceHigh ]
-			}
-			REQUIREMENT
-			{
-				type = Expression
-				expression = @../subject.Count() > 0
-			}
-		}
-		REQUIREMENT
-		{
-			type = Orbit
-			targetBody = HomeWorld()
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_ClimateStudy
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/ClimateStudy
-	url = ContractPacks/FieldResearch/ClimateStudy/FS_ClimateStudy
-	CONTRACT_TYPE
-	{
-		name = FS_ClimateStudy
-		group = FieldResearch
-		title = Field Research: Climate study of @targetBody
-		description = @targetBody.IsHomeWorld() ? @homeDesc : @isNotWater ? @eveDesc : @otherDesc
-		synopsis = Perform a study of @targetBody's climate.
-		completedMessage = Great work, I'm sure we'll be able to make this data fit our narrative!
-		maxSimultaneous = 2
-		agent = Field Research Team
-		targetBody = Prestige() == Trivial ? HomeWorld() : Prestige() == Significant ? @FieldResearch:l2Bodies.Where(cb => cb.HasAtmosphere() && cb.HasSurface()).Random() : @FieldResearch:l3Bodies.Where(cb => cb.HasAtmosphere() && cb.HasSurface()).Random()
-		rewardFunds = Random(25000.0, 30000.0)
-		rewardReputation = Random(2.0, 5.0)
-		DATA
-		{
-			type = CelestialBody
-			uniquenessCheck = CONTRACT_ACTIVE
-			bodyUniqueCheck = @targetBody
-		}
-		DATA
-		{
-			type = string
-			homeDesc = Due to the number of Kerbals that believe the crazy notion that rocketry has an adverse effect on @targetBody's climate, we've been asked by the government to perform a climate study.  Let's prove once and for all that rocketry is completely safe (ecologically speaking, that is).
-			otherDesc = There are a remarkable number of similarities between HomeWorld() and @targetBody, so much so that scientists say that HomeWorld() may have once looked like @targetBody.  Or maybe they said that HomeWorld() will look like @targetBody in a few hundred years, I can't remember.  We've been asked by the government to perform a climate study.  Make sure that the experiments don't imply that pollutants affect the climate on HomeWorld().
-		}
-		DATA
-		{
-			type = string
-			eveDesc = Scientists on Kerbin say that Eve once looked like Kerbin until the runaway purplehouse effect turned it into what it is today.  We've been asked by the government to perform a climate study.  Let's prove that Eve has always been a hot, purple wasteland.
-		}
-		DATA
-		{
-			type = bool
-			isNotWater = @targetBody == Eve
-		}
-		DATA
-		{
-			type = List<ScienceExperiment>
-			experiments = [surfaceSample, temperatureScan, barometerScan, atmosphereAnalysis]
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = AllScienceSubjectsByBodyExperiment([@targetBody], @experiments)
-			scienceSubjectsTemp2 = @scienceSubjectsTemp1.Where(s => s.CollectedScience() == 0.0)
-			scienceSubjectsTemp3 = @scienceSubjectsTemp2.Where(s => !s.Biome().IsKSC()).Random(5)
-			scienceSubjects = @scienceSubjectsTemp3.Random(5)
-		}
-		DATA
-		{
-			type = ScienceRecoveryMethod
-			recoveryMethod = @targetBody.IsHomeWorld() || @targetBody.Parent().IsHomeWorld() ? Ideal : RecoverOrTransmit
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = @/scienceSubjects.Count() == 5
-		}
-		PARAMETER
-		{
-			type = CollectScience
-			biome = @scienceSubject.Biome()
-			situation = @scienceSubject.Situation()
-			experiment = @scienceSubject.Experiment()
-			recoveryMethod = @/recoveryMethod
-			rewardFunds = Random(15000.0, 16000.0)
-			ITERATOR
-			{
-				type = ScienceSubject
-				scienceSubject = @/scienceSubjects
-			}
-		}
-		REQUIREMENT
-		{
-			type = Any
-			REQUIREMENT
-			{
-				type = TechResearched
-				part = sensorAtmosphere
-				part = sensorThermometer
-			}
-			REQUIREMENT
-			{
-				type = TechResearched
-				part = sensorBarometer
-				part = sensorThermometer
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_Experiment
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/Experiment
-	url = ContractPacks/FieldResearch/Experiment/FS_Experiment
-	CONTRACT_TYPE
-	{
-		name = FS_Experiment
-		group = FieldResearch
-		title = Field Research: @experiment.Name().ToLower().FirstCap() experiments on @targetBody
-		description = Wernher is especially excited to try some @experiment.Name().ToLower() experiments at various locations on @targetBody.  We doubt the results will be much different from the last study Wernher commissioned...  but he's the boss!
-		synopsis = Run the @experiment.Name().ToLower() experiments on @targetBody.
-		completedMessage = Yup, that's definitely a lot of @experiment.Name().ToLower() results.  Just put the data in a spreadsheet and we'll look at it later.
-		maxSimultaneous = 2
-		prestige = OrbitedBodies().Contains(Sun) ? [ Significant, Exceptional ] : [ Trivial, Significant, Exceptional ]
-		agent = Field Research Team
-		targetBody = Prestige() == Trivial ? HomeWorld() : Prestige() == Significant ? @FieldResearch:l2Bodies.Where(cb => cb.HasSurface()).Random() : @FieldResearch:l3Bodies.Where(cb => cb.HasSurface()).Random()
-		rewardFunds = Random(20000.0, 30000.0)
-		rewardReputation = Random(2.0, 5.0)
-		weight = 5.0
-		DATA
-		{
-			type = string
-			uniquenessCheck = CONTRACT_ACTIVE
-			uniqueCheck = "@targetBody @experiment"
-		}
-		DATA
-		{
-			type = List<ScienceExperiment>
-			experiments = AvailableExperiments(@targetBody).ExcludeAll([ evaReport, crewReport, asteroidSample, surfaceSample ])
-		}
-		DATA
-		{
-			type = ScienceExperiment
-			experiment = @experiments.Random()
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = AllScienceSubjectsByBodyExperiment([@targetBody], [@experiment])
-			scienceSubjectsTemp2 = @scienceSubjectsTemp1.Where(s => s.CollectedScience() == 0.0)
-			scienceSubjectsTemp3 = @scienceSubjectsTemp2.Where(s => !s.Biome().IsKSC())
-			scienceSubjects = @scienceSubjectsTemp3.Random(3)
-		}
-		DATA
-		{
-			type = ScienceRecoveryMethod
-			recoveryMethod = @targetBody.IsHomeWorld() || @targetBody.Parent().IsHomeWorld() ? Ideal : RecoverOrTransmit
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = @/scienceSubjects.Count() == 3
-		}
-		PARAMETER
-		{
-			type = CollectScience
-			biome = @scienceSubject.Biome()
-			situation = @scienceSubject.Situation()
-			experiment = @scienceSubject.Experiment()
-			recoveryMethod = @/recoveryMethod
-			rewardFunds = Random(10000.0, 15000.0)
-			ITERATOR
-			{
-				type = ScienceSubject
-				scienceSubject = @/scienceSubjects
-			}
-		}
-		REQUIREMENT
-		{
-			type = FirstLaunch
-		}
-	}
-}
-UrlConfig
-{
-	name = FieldResearch
-	type = CONTRACT_GROUP
-	parentUrl = ContractPacks/FieldResearch/FieldResearch
-	url = ContractPacks/FieldResearch/FieldResearch/FieldResearch
-	CONTRACT_GROUP
-	{
-		name = FieldResearch
-		displayName = Field Research
-		minVersion = 1.9.1
-		maxSimultaneous = 5
-		disabledContractType = CollectScience
-		DATA
-		{
-			type = bool
-			homeIsMoon = HomeWorld().IsMoon()
-		}
-		DATA
-		{
-			type = List<CelestialBody>
-			validBodies = OrbitedBodies().Where(cb => (cb.IsPlanet() || cb.IsMoon()) && cb != HomeWorld() && cb.SCANsatCoverage("Biome") > 80)
-			l2Bodies = @validBodies.Where(cb => cb.Parent() == (@homeIsMoon ? HomeWorld().Parent() : HomeWorld()) || cb == HomeWorld().Parent())
-			l3Bodies = @validBodies.ExcludeAll(@l2Bodies)
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_GeologicalStudy
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/GeologicalStudy
-	url = ContractPacks/FieldResearch/GeologicalStudy/FS_GeologicalStudy
-	CONTRACT_TYPE
-	{
-		name = FS_GeologicalStudy
-		group = FieldResearch
-		title = Field Research: Geological study of @targetBody
-		description = Geologically speaking, we know very little about @targetBody.  That's why we've applied for a research grant to do a geological study of @targetBody.  We haven't actually received the grant, but I'm sure things will work out fine.
-		synopsis = Perform a study of @targetBody's geology.
-		completedMessage = Great work, I hope Linus remembered to submit the grant paperwork!
-		maxSimultaneous = 2
-		agent = Field Research Team
-		targetBody = Prestige() == Trivial ? HomeWorld() : Prestige() == Significant ? @FieldResearch:l2Bodies.Where(cb => cb.HasSurface()).Random() : @FieldResearch:l3Bodies.Where(cb => cb.HasSurface()).Random()
-		rewardFunds = Random(25000.0, 30000.0)
-		rewardReputation = Random(2.0, 5.0)
-		DATA
-		{
-			type = CelestialBody
-			uniquenessCheck = CONTRACT_ACTIVE
-			bodyUniqueCheck = @targetBody
-		}
-		DATA
-		{
-			type = List<ScienceExperiment>
-			experiments = [surfaceSample, seismicScan, gravityScan]
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = AllScienceSubjectsByBodyExperiment([@targetBody], @experiments)
-			scienceSubjectsTemp2 = @scienceSubjectsTemp1.Where(s => s.CollectedScience() == 0.0)
-			scienceSubjectsTemp3 = @scienceSubjectsTemp2.Where(s => !s.Biome().IsKSC())
-			scienceSubjectsTemp4 = @scienceSubjectsTemp3.Where(s => s.Situation() != SrfSplashed)
-			scienceSubjects = @scienceSubjectsTemp4.Random(5)
-		}
-		DATA
-		{
-			type = ScienceRecoveryMethod
-			recoveryMethod = @targetBody.IsHomeWorld() || @targetBody.Parent().IsHomeWorld() ? Ideal : RecoverOrTransmit
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = @/scienceSubjects.Count() == 5
-		}
-		PARAMETER
-		{
-			type = CollectScience
-			biome = @scienceSubject.Biome()
-			situation = @scienceSubject.Situation()
-			experiment = @scienceSubject.Experiment()
-			recoveryMethod = @/recoveryMethod
-			rewardFunds = Random(15000.0, 16000.0)
-			ITERATOR
-			{
-				type = ScienceSubject
-				scienceSubject = @/scienceSubjects
-			}
-		}
-		REQUIREMENT
-		{
-			type = Any
-			REQUIREMENT
-			{
-				type = TechResearched
-				part = sensorGravimeter
-			}
-			REQUIREMENT
-			{
-				type = TechResearched
-				part = sensorAccelerometer
-			}
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_HardScience
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/HardScience
-	url = ContractPacks/FieldResearch/HardScience/FS_HardScience
-	CONTRACT_TYPE
-	{
-		name = FS_HardScience
-		group = FieldResearch
-		title = Field Research: Gather rare science results from @biome
-		description = @isLanded ? @landStr : @waterStr
-		synopsis = Run the requested experiments in while @situation.ToString().ToLower() at @biome.
-		completedMessage = This is some great data that we've accumulated!
-		maxSimultaneous = 1
-		prestige = Significant
-		prestige = Exceptional
-		agent = Field Research Team
-		targetBody = @/ss0.CelestialBody()
-		rewardFunds = Random(35000.0, 40000.0)
-		rewardReputation = Random(7.5, 15.0)
-		DATA
-		{
-			type = string
-			water = @isNotWater ? "whatever passes for water on @targetBody" : "water"
-			waterStr = They say that it's difficult to find @water at @biome.  We've mapped out a few locations where there might be some.  Find a suitable spot and run some experiments.
-			landStr = They say there isn't much land at @biome.  We've mapped out a few locations where there might be some.  Find a suitable spot and run some experiments.
-			sitStr = @isLanded ? "Landing" : "Splashdown"
-		}
-		DATA
-		{
-			type = Biome
-			biome = @ss0.Biome()
-		}
-		DATA
-		{
-			type = ExperimentSituations
-			situation = @ss0.Situation()
-		}
-		DATA
-		{
-			type = bool
-			isLanded = @situation == SrfLanded
-		}
-		DATA
-		{
-			type = bool
-			isNotWater = @targetBody == Eve
-		}
-		DATA
-		{
-			type = List<CelestialBody>
-			validBodies = Prestige() == Significant ? [ HomeWorld() ] : OrbitedBodies().Exclude(HomeWorld())
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			ssTemp1 = DifficultScienceSubjectsByBody(@validBodies)
-			ssTemp2 = @ssTemp1.Where(s => s.RemainingScience() > 0.0 && s.Experiment() != asteroidSample)
-		}
-		DATA
-		{
-			type = ScienceSubject
-			ss0 = @ssTemp2.Random()
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = DifficultScienceSubjects().Where(s => s.Biome() == @biome)
-			scienceSubjectsTemp2 = @scienceSubjectsTemp1.Where(s => s.Situation() == @situation)
-			scienceSubjects = @scienceSubjectsTemp2.Where(s => s.CollectedScience() == 0.0 && s.Experiment() != asteroidSample).Random(3)
-		}
-		DATA
-		{
-			type = List<Location>
-			locations = @biome.DifficultLocations()
-		}
-		DATA
-		{
-			type = Location
-			requiredValue = false
-			loc0 = @locations.ElementAt(0)
-			loc1 = @locations.ElementAt(1)
-			loc2 = @locations.ElementAt(2)
-		}
-		DATA
-		{
-			type = ScienceRecoveryMethod
-			recoveryMethod = @targetBody.IsHomeWorld() || @targetBody.Parent().IsHomeWorld() ? Ideal : RecoverOrTransmit
-		}
-		PARAMETER
-		{
-			name = CollectScience
-			type = CollectScience
-			subject = @/scienceSubjects
-		}
-		BEHAVIOUR
-		{
-			name = WaypointGenerator
-			type = WaypointGenerator
-			WAYPOINT
-			{
-				name = "Suggested @/biome.Name() @/sitStr"
-				icon = ContractPacks/FieldResearch/Icons/research
-				latitude = @/loc0.Latitude()
-				longitude = @/loc0.Longitude()
-				altitude = 0.0
-			}
-			WAYPOINT
-			{
-				name = "Suggested @/biome.Name() @/sitStr"
-				icon = ContractPacks/FieldResearch/Icons/research
-				hidden = @/locations.Count() < 2
-				latitude = @/loc1.Latitude()
-				longitude = @/loc1.Longitude()
-				altitude = 0.0
-			}
-			WAYPOINT
-			{
-				name = "Suggested @/biome.Name() @/sitStr"
-				icon = ContractPacks/FieldResearch/Icons/research
-				hidden = @/locations.Count() < 3
-				latitude = @/loc2.Latitude()
-				longitude = @/loc2.Longitude()
-				altitude = 0.0
-			}
-		}
-		REQUIREMENT
-		{
-			type = ReachSpace
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_KSC
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/KSC
-	url = ContractPacks/FieldResearch/KSC/FS_KSC
-	CONTRACT_TYPE
-	{
-		name = FS_KSC
-		group = FieldResearch
-		title = Field Research: Perform experiments around KSC
-		description = There are lots of opportunities to do science around the Kerbal Space Center.  Wernher needs us to run a few tests at different locations as a control test of our experiments.
-		synopsis = Run the required tests around the Kerbal Space Center and recover the data.
-		completedMessage = Everything is looking good with these experiments, time to get them into space!
-		maxSimultaneous = 1
-		prestige = Trivial
-		agent = Field Research Team
-		targetBody = HomeWorld()
-		rewardFunds = 30000.0
-		rewardReputation = 2.0
-		weight = 0.5
-		DATA
-		{
-			type = List<Biome>
-			biomes = MainKSCBiomes()
-		}
-		DATA
-		{
-			type = List<ScienceExperiment>
-			experiments = AvailableExperiments(@targetBody).ExcludeAll([ evaReport, crewReport ])
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = AllScienceSubjectsByBiomeExperiment(@biomes, @experiments)
-			scienceSubjects = @scienceSubjectsTemp1.Where(s => s.CollectedScience() == 0.0).Random(4)
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = @/scienceSubjects.Count() == 4
-		}
-		PARAMETER
-		{
-			type = CollectScience
-			biome = @scienceSubject.Biome()
-			situation = @scienceSubject.Situation()
-			experiment = @scienceSubject.Experiment()
-			recoveryMethod = Ideal
-			rewardFunds = Random(5000.0, 8000.0)
-			ITERATOR
-			{
-				type = ScienceSubject
-				scienceSubject = @/scienceSubjects
-			}
-		}
-		REQUIREMENT
-		{
-			type = Orbit
-			invertRequirement = true
-			targetBody = Sun
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_Scientist
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/Scientist
-	url = ContractPacks/FieldResearch/Scientist/FS_Scientist
-	CONTRACT_TYPE
-	{
-		name = FS_Scientist
-		group = FieldResearch
-		title = Field Research: Help a scientist perform experiments at @/biome.
-		description = Renowned scientist @scientist would like to perform some experiments near a specific location at @/biome.  Wernher has strongly suggested that this scientist should be treated with the utmost respect, as they are a prominent member of the Society of Rocketologists.
-		synopsis = Bring @scientist to perform experiments near @/waypoint.Name() at @/biome.
-		completedMessage = Wernher is very pleased, he wouldn't have been able to attend the Rocketologist's gala if something had gone wrong!
-		maxSimultaneous = 1
-		prestige = Significant
-		prestige = Exceptional
-		agent = Field Research Team
-		targetBody = @validBodies.Random()
-		rewardFunds = Random(65000.0, 90000.0)
-		rewardReputation = Random(10.0, 15.0)
-		weight = 2.0
-		DATA
-		{
-			type = List<CelestialBody>
-			validBodies = Prestige() == Significant ? [ HomeWorld() ] : @FieldResearch:l2Bodies
-		}
-		DATA
-		{
-			type = Biome
-			biome = @/WaypointGenerator.Waypoints().First().Location().Biome()
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			scienceSubjectsTemp1 = AllScienceSubjectsByBiome([@biome])
-			scienceSubjectsTemp2 = @scienceSubjectsTemp1.Where(s => s.Situation() == SrfLanded)
-			scienceSubjectsTemp3 = @scienceSubjectsTemp2.Where(s => s.NextScienceReportValue() > 1.0)
-			scienceSubjects = @scienceSubjectsTemp3.Where(s => !s.Biome().IsKSC()).Random(3)
-		}
-		DATA
-		{
-			type = Waypoint
-			waypoint = @WaypointGenerator.Waypoints().First()
-		}
-		DATA
-		{
-			type = Kerbal
-			scientist = NewKerbalWithTrait("Scientist")
-		}
-		PARAMETER
-		{
-			name = VPG
-			type = VesselParameterGroup
-			title = Bring @/scientist to the waypoint
-			PARAMETER
-			{
-				name = HasCrew
-				type = HasCrew
-				trait = Pilot
-			}
-			PARAMETER
-			{
-				name = HasPassengers
-				type = HasPassengers
-			}
-			PARAMETER
-			{
-				name = VisitWaypoint
-				type = VisitWaypoint
-				hideOnCompletion = false
-				showMessages = true
-			}
-			PARAMETER
-			{
-				name = CollectScience
-				type = CollectScience
-				title = Perform the experiments at the waypoint
-				subject = @/scienceSubjects
-				recoveryMethod = Ideal
-				completeInSequence = true
-			}
-		}
-		PARAMETER
-		{
-			name = RecoverKerbal
-			type = RecoverKerbal
-			disableOnStateChange = false
-		}
-		BEHAVIOUR
-		{
-			name = WaypointGenerator
-			type = WaypointGenerator
-			RANDOM_WAYPOINT
-			{
-				icon = ContractPacks/FieldResearch/Icons/research
-				altitude = 0.0
-				waterAllowed = false
-			}
-		}
-		BEHAVIOUR
-		{
-			name = SpawnPassengers
-			type = SpawnPassengers
-			kerbal = @/scientist
-			kerbalType = Crew
-		}
-		REQUIREMENT
-		{
-			type = Expression
-			expression = AllBodies().Where(cb => cb.Parent() == (@FieldResearch:homeIsMoon ? HomeWorld().Parent() : HomeWorld()) && cb.HaveReached()).Count() > 0
-		}
-	}
-}
-UrlConfig
-{
-	name = FS_Scraps
-	type = CONTRACT_TYPE
-	parentUrl = ContractPacks/FieldResearch/Scraps
-	url = ContractPacks/FieldResearch/Scraps/FS_Scraps
-	CONTRACT_TYPE
-	{
-		name = FS_Scraps
-		group = FieldResearch
-		title = Field Research: Perform another @scienceSubject
-		description = We've got some good @scienceSubject.Experiment().Name().ToLower() data @scienceSubject.SituationString(), but Wernher believes that we can learn more.  Re-run the experiment and get the data back home.
-		synopsis = Collect science about @scienceSubject.
-		completedMessage = Great, let's hope that completes our knowledge of the topic.
-		maxSimultaneous = 2
-		prestige = OrbitedBodies().Contains(Sun) ? [ Significant, Exceptional ] : [ Trivial, Significant, Exceptional ]
-		agent = Field Research Team
-		targetBody = @scienceSubject.CelestialBody()
-		rewardFunds = Random(12000.0, 14000.0)
-		weight = 0.5
-		DATA
-		{
-			type = List<CelestialBody>
-			validBodies = Prestige() == Trivial ? [ HomeWorld() ] : Prestige() == Significant ? @FieldResearch:l2Bodies : @FieldResearch:l3Bodies
-		}
-		DATA
-		{
-			type = List<ScienceSubject>
-			possibleSubjectsTemp1 = AllScienceSubjectsByBody(@validBodies)
-			possibleSubjectsTemp2 = @possibleSubjectsTemp1.Where(s => s.CollectedScience() > s.RemainingScience())
-			possibleSubjectsTemp3 = @possibleSubjectsTemp2.Where(s => s.NextScienceReportValue() > 1.0)
-			possibleSubjects = @possibleSubjectsTemp3.Where(s => !s.Biome().IsKSC())
-		}
-		DATA
-		{
-			type = ScienceSubject
-			scienceSubject = @possibleSubjects.Random()
-			activeUniqueValue = true
-		}
-		PARAMETER
-		{
-			name = CollectScience
-			type = CollectScience
-			biome = @/scienceSubject.Biome()
-			situation = @/scienceSubject.Situation()
-			experiment = @/scienceSubject.Experiment()
-			recoveryMethod = Ideal
-		}
-		REQUIREMENT
-		{
-			type = FirstLaunch
-		}
-	}
-}
-UrlConfig
-{
-	name = Field Research Team
-	type = AGENT
-	parentUrl = ContractPacks/FieldResearch/Agencies/Agents
-	url = ContractPacks/FieldResearch/Agencies/Agents/Field Research Team
-	AGENT
-	{
-		name = Field Research Team
-		description = The field research team are a part of the research and development department, and thus report up to Wernher von Kerman.
-		logoURL = ContractPacks/FieldResearch/Agencies/FieldResearch
-		logoScaledURL = ContractPacks/FieldResearch/Agencies/FieldResearch_scaled
-		mentality = NoRandomContractMentality
 	}
 }
 UrlConfig
@@ -43624,7 +42623,7 @@ UrlConfig
 		RangeMultiplier = 1
 		ActiveVesselGuid = 35b89a0d664c43c6bec8d0840afc97b2
 		SpeedOfLight = 3E+08
-		MapFilter = Omni, Path
+		MapFilter = Path
 		EnableSignalDelay = True
 		RangeModelType = Standard
 		MultipleAntennaMultiplier = 0
@@ -97362,6 +96361,342 @@ UrlConfig
 {
 	name = Settings
 	type = Settings
+	parentUrl = TriggerTech/KerbalAlarmClock/settings
+	url = TriggerTech/KerbalAlarmClock/settings/Settings
+	Settings
+	{
+		WindowVisible = False
+		WindowMinimized = False
+		WindowVisible_SpaceCenter = False
+		WindowMinimized_SpaceCenter = False
+		WindowVisible_TrackingStation = True
+		WindowMinimized_TrackingStation = False
+		WindowVisible_EditorVAB = False
+		WindowMinimized_EditorVAB = False
+		WindowVisible_EditorSPH = False
+		WindowMinimized_EditorSPH = False
+		WindowChildPosBelow = False
+		IconShow_SpaceCenter = True
+		IconShow_TrackingStation = True
+		IconShow_EditorVAB = True
+		IconShow_EditorSPH = True
+		WindowMinimizedType = NextAlarm
+		F11KeystrokeDisabled = True
+		KillWarpOnThrottleCutOffKeystroke = True
+		AlarmsVolumeFromUI = True
+		AlarmsVolume = 0.25
+		SelectedSkin = Default
+		BehaviourChecksPerSec = 10
+		BehaviourChecksPerSec_Custom = 40
+		WarpTransitions_Instant = False
+		WarpTransitions_UpdateSecs = 5
+		WarpTransitions_UTToRateTimesOneTenths = 15
+		WarpTransitions_ShowIndicatorSecs = 4
+		WarpToEnabled = True
+		WarpToHideWhenManGizmoShown = True
+		WarpToTipsHidden = False
+		WarpToTSIconDelayMSecs = 200
+		WarpToDupeProximitySecs = 60
+		WarpToRequiresConfirm = False
+		WarpToAddMarginAp = False
+		WarpToAddMarginPe = False
+		WarpToAddMarginAN = False
+		WarpToAddMarginDN = False
+		WarpToAddMarginSOI = True
+		WarpToAddMarginManNode = True
+		WarpToLimitMaxWarp = False
+		WarpToMaxWarp = 10000
+		AllowJumpFromViewOnly = True
+		AllowJumpToAsteroid = True
+		BackupSaves = True
+		CancelFlightModeJumpOnBackupFailure = False
+		BackupSavesToKeep = 20
+		AlarmListMaxAlarms = 10
+		ConfirmAlarmDeletes = False
+		AlarmDefaultMargin = 60
+		AlarmPosition = 1
+		HideOnPause = True
+		TimeFormat = KSPString
+		DateTimeFormat = KSPFormatWithSecs
+		TimeFormatConverted = True
+		ShowTooltips = True
+		ShowEarthTime = False
+		AlarmXferRecalc = True
+		AlarmXferRecalcThreshold = 180
+		AlarmXferDisplayList = False
+		XferModelLoadData = True
+		XferModelDataLoaded = True
+		XferUseModelData = False
+		AlarmNodeRecalc = False
+		AlarmNodeRecalcThreshold = 180
+		AlarmAddSOIAuto = False
+		AlarmAddSOIAutoThreshold = 180
+		AlarmAutoSOIMargin = 900
+		AlarmAddSOIAuto_ExcludeEVA = True
+		AlarmAddSOIAuto_ExcludeDebris = True
+		AlarmSOIRecalc = False
+		AlarmSOIRecalcThreshold = 180
+		AlarmAddManAuto = False
+		AlarmAddManAuto_andRemove = False
+		AlarmAddManAutoMargin = 180
+		AlarmAddManAutoThreshold = 180
+		DefaultKERMargin = Half
+		AlarmAddManQuickMargin = 180
+		AlarmAddSOIQuickMargin = 180
+		AlarmAddNodeQuickMargin = 30
+		AlarmOnContractExpireMargin = 3600
+		AlarmOnContractDeadlineMargin = 86400
+		AlarmAddContractAutoOffered = None
+		AlarmAddContractAutoActive = None
+		ContractDeadlineDelete = True
+		ContractExpireDelete = True
+		ContractDeadlineDontCreateInsideMargin = True
+		ContractExpireDontCreateInsideMargin = True
+		AlarmCrewDefaultStoreNode = False
+		LoadManNode = 
+		LoadVesselTarget = 
+		ButtonStyleChosen = Launcher
+		ClickThroughProtect_KSC = True
+		ClickThroughProtect_Tracking = True
+		ClickThroughProtect_Editor = True
+		ClickThroughProtect_Flight = True
+		SelectedCalendar = KSPStock
+		EarthEpoch = 1951-01-01
+		ShowCalendarToggle = False
+		RSSShowCalendarToggled = False
+		AppLauncherSetTrueTimeOut = 6
+		DailyVersionCheck = True
+		VersionCheckDate_AttemptStored = 2016-02-29
+		VersionCheckDate_SuccessStored = 2016-02-29
+		VersionWeb = 3.5.0.0
+		WindowPositionStored
+		{
+			x = 345
+			y = 624
+			width = 340
+			height = 111
+		}
+		WindowPos_SpaceCenterStored
+		{
+			x = 3
+			y = 36
+			width = 340
+			height = 111
+		}
+		WindowPos_TrackingStationStored
+		{
+			x = 196
+			y = 45
+			width = 340
+			height = 137
+		}
+		WindowPos_EditorVABStored
+		{
+			x = 270
+			y = 45
+			width = 340
+			height = 137
+		}
+		WindowPos_EditorSPHStored
+		{
+			x = 270
+			y = 45
+			width = 340
+			height = 45
+		}
+		AlarmSounds
+		{
+			Item
+			{
+				Name = Raw
+				Enabled = False
+				RepeatCount = 3
+				SoundName = Alarm1
+				Types
+				{
+					Item = Raw
+				}
+			}
+			Item
+			{
+				Name = Manuever
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Maneuver
+					Item = ManeuverAuto
+				}
+			}
+			Item
+			{
+				Name = AP/Pe
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Apoapsis
+					Item = Periapsis
+				}
+			}
+			Item
+			{
+				Name = AN/DN
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = AscendingNode
+					Item = DescendingNode
+				}
+			}
+			Item
+			{
+				Name = Distance
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Closest
+					Item = Distance
+				}
+			}
+			Item
+			{
+				Name = Rendezvous
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = LaunchRendevous
+				}
+			}
+			Item
+			{
+				Name = SOI
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = SOIChange
+					Item = SOIChangeAuto
+				}
+			}
+			Item
+			{
+				Name = Transfer
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Transfer
+					Item = TransferModelled
+				}
+			}
+			Item
+			{
+				Name = Contract
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Contract
+					Item = ContractAuto
+				}
+			}
+			Item
+			{
+				Name = Crew
+				Enabled = False
+				RepeatCount = 3
+				SoundName = 
+				Types
+				{
+					Item = Crew
+				}
+			}
+			Item
+			{
+				Name = Earth
+				Enabled = True
+				RepeatCount = 2
+				SoundName = Rooster
+				Types
+				{
+					Item = EarthTime
+				}
+			}
+		}
+		AlarmDefaultAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddManAuto_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddManQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddSOIQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmAddNodeQuickAction
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnContractExpire_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnContractDeadline_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+		AlarmOnSOIChange_Action
+		{
+			Warp = KillWarp
+			Message = Yes
+			DeleteWhenDone = False
+			PlaySound = False
+		}
+	}
+}
+UrlConfig
+{
+	name = Settings
+	type = Settings
 	parentUrl = TriggerTech/TransferWindowPlanner/settings
 	url = TriggerTech/TransferWindowPlanner/settings/Settings
 	Settings
@@ -97378,8 +96713,8 @@ UrlConfig
 		ClickThroughProtect_Editor = True
 		ClickThroughProtect_Flight = True
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2016-01-23
-		VersionCheckDate_SuccessStored = 2016-01-23
+		VersionCheckDate_AttemptStored = 2016-02-29
+		VersionCheckDate_SuccessStored = 2016-02-29
 		VersionWeb = 1.4.0.0
 	}
 }

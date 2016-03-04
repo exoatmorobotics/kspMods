@@ -1,0 +1,241 @@
+Debug information for CONTRACT_TYPE 'FirstUnmannedDresFlyby':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = FirstUnmannedDresFlyby
+	group = SpaceTuxGroup
+	title = Perform an  unmanned Dres flyby mission.
+	topic = flyby
+	subject = Dres
+	motivation = future landing
+	notes = Complete the following:
+	synopsis = Send a probe to space within the SOI of Dres
+	completedMessage = You did it! We've send a probe on a Dres flyby
+	agent = Space Penguins, Inc
+	cancellable = false
+	declinable = false
+	prestige = Significant
+	targetBody = Dres
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 5.0
+	rewardFunds = Random(18000.0, 22000.0)
+	advanceFunds = Random(9000.0, 11000.0)
+	REQUIREMENT
+	{
+		name = ReachSpace5771
+		type = ReachSpace
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked
+		type = PartUnlocked
+		part = RTLongDish2
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = Sequence5771
+		type = Sequence
+		title = Dres Flyby
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselParameterGroup5771
+			type = VesselParameterGroup
+			define = Dres Flyby
+			targetBody = @/targetBody
+			PARAMETER
+			{
+				name = HasCrew5771
+				type = HasCrew
+				maxCrew = 0
+				minCrew = 0
+				targetBody = @/targetBody
+			}
+			PARAMETER
+			{
+				name = ReachState5771
+				type = ReachState
+				targetBody = Dres
+			}
+		}
+	}
+}
+
+Data Nodes:
+FirstUnmannedDresFlyby
+    SpaceTuxGroup:name = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:displayName = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:minVersion = 0.7.0, deterministic = True
+    SpaceTuxGroup:maxCompletions = 0, deterministic = True
+    SpaceTuxGroup:maxSimultaneous = 4, deterministic = True
+    SpaceTuxGroup:disabledContractType = [], deterministic = True
+    name = FirstUnmannedDresFlyby, deterministic = True
+    trace = False, deterministic = True
+    title = Perform an  unmanned Dres flyby mission., deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = flyby, deterministic = True
+    subject = Dres, deterministic = True
+    motivation = future landing, deterministic = True
+    notes = Complete the following:, deterministic = True
+    synopsis = Send a probe to space within the SOI of Dres, deterministic = True
+    completedMessage = You did it! We've send a probe on a Dres flyby, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = False, deterministic = True
+    declinable = False, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Dres (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 1, deterministic = True
+    rewardFunds = 20333.52, deterministic = False
+    rewardReputation = 5, deterministic = True
+    rewardScience = 25, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 9274.075, deterministic = False
+    weight = 1, deterministic = True
+
+	Sequence5771
+	    type = Sequence, deterministic = True
+	    name = Sequence5771, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Dres Flyby, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    hiddenParameter = [], deterministic = True
+	    failWhenCompleteOutOfOrder = False, deterministic = True
+	
+		VesselParameterGroup5771
+		    type = VesselParameterGroup, deterministic = True
+		    name = VesselParameterGroup5771, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    duration = 00:00:00, deterministic = True
+		    define = Dres Flyby, deterministic = True
+		    defineList = null, deterministic = True
+		    vessel = [], deterministic = True
+		    dissassociateVesselsOnContractFailure = True, deterministic = True
+		    dissassociateVesselsOnContractCompletion = False, deterministic = True
+		    hideVesselName = False, deterministic = True
+		
+			HasCrew5771
+			    type = HasCrew, deterministic = True
+			    name = HasCrew5771, deterministic = True
+			    targetBody = Dres (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    trait = null, deterministic = True
+			    minExperience = 0, deterministic = True
+			    maxExperience = 5, deterministic = True
+			    minCrew = 0, deterministic = True
+			    maxCrew = 0, deterministic = True
+			    kerbal = [], deterministic = True
+			
+			ReachState5771
+			    type = ReachState, deterministic = True
+			    name = ReachState5771, deterministic = True
+			    targetBody = Dres (CelestialBody), deterministic = True
+			    rewardFunds = 0, deterministic = True
+			    rewardReputation = 0, deterministic = True
+			    rewardScience = 0, deterministic = True
+			    failureFunds = 0, deterministic = True
+			    failureReputation = 0, deterministic = True
+			    optional = False, deterministic = True
+			    disableOnStateChange = null, deterministic = True
+			    completeInSequence = False, deterministic = True
+			    hidden = False, deterministic = True
+			    hideChildren = False, deterministic = True
+			    title = null, deterministic = True
+			    notes = null, deterministic = True
+			    completedMessage = null, deterministic = True
+			    failWhenUnmet = False, deterministic = True
+			    biome = null, deterministic = True
+			    situation = [], deterministic = True
+			    minAltitude = -3.402823E+38, deterministic = True
+			    maxAltitude = 3.402823E+38, deterministic = True
+			    minTerrainAltitude = 0, deterministic = True
+			    maxTerrainAltitude = 3.402823E+38, deterministic = True
+			    minSpeed = 0, deterministic = True
+			    maxSpeed = 1.79769313486232E+308, deterministic = True
+			    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+			    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+			    minAcceleration = 0, deterministic = True
+			    maxAcceleration = 3.402823E+38, deterministic = True
+			
+	ReachSpace5771
+	    type = ReachSpace, deterministic = True
+	    name = ReachSpace5771, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+	PartUnlocked
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ RTLongDish2 ], deterministic = False
+	
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'FirstUnmannedDresFlyby'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'FirstUnmannedDresFlyby'

@@ -1,0 +1,238 @@
+Debug information for CONTRACT_TYPE 'RT_OuterPlanetRelay':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = RT_OuterPlanetRelay
+	title = RemoteTech: Create a network for @targetBody.
+	description = @isDres ? @descDres : @isEeloo ? @descEeloo : @isNeptune ? @descNeptune : @isUranus ? @descUranus : @descDefault
+	synopsis = Build a communication network that provides coverage of @targetBody with a link back to mission control.
+	completedMessage = The network is up and transmitting, and our shake-out testing is complete!
+	group = RemoteTech
+	prestige = Significant
+	targetBody = @targetPlanet
+	agent = Communication Satellite Group
+	rewardReputation = 1.0
+	rewardFunds = @advanceFunds * 3.0
+	advanceFunds = 70000.0
+	DATA
+	{
+		type = double
+		sma = HomeWorld().SemiMajorAxis()
+		targetSMA = @sma * 1.55
+	}
+	DATA
+	{
+		type = string
+		descDefault = We'd like to know more about @targetBody.  Set up a communication network for us.
+		descDres = We're not sure if there's actually anything worth seeing on Dres.  Let's check it out anyway.  Set up a communication network for us.
+		descEeloo = Is Eeloo reflective enough to bounce a signal off of?  Only one way to find out.  Set up a communication network for us.
+		descNeptune = Neptune should would be an interesting place to visit.  Set up a communication network for us.
+		descUranus = There's aren't many places colder than Uranus, we should check it out.  Set up a communication network for us.
+	}
+	DATA
+	{
+		type = CelestialBody
+		uniqueValue = true
+		targetPlanet = AllBodies().Where(cb => cb.SemiMajorAxis() >= @targetSMA && cb.IsPlanet() && cb.Children().Count() < 3 && cb.RemoteTechCoverage() <= 0.7 && cb != HomeWorld()).Random()
+	}
+	DATA
+	{
+		type = bool
+		isDres = @targetPlanet.Name() == "Dres"
+		isEeloo = @targetPlanet.Name() == "Eeloo"
+		isNeptune = @targetPlanet.Name() == "Neptune"
+		isUranus = @targetPlanet.Name() == "Uranus"
+	}
+	PARAMETER
+	{
+		name = CoverageParameter
+		type = CelestialBodyCoverage
+		targetBody = @/targetPlanet
+		coverage = 0.95
+	}
+	PARAMETER
+	{
+		name = Duration
+		type = Duration
+		duration = 7d
+		preWaitText = Testing time after network up
+		waitingText = Performing shake-out testing
+		completionText = Shake-out testing completed
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CelestialBodyCoverage
+		type = CelestialBodyCoverage
+		targetBody = HomeWorld()
+		minCoverage = 0.7
+		maxCoverage = 1.0
+	}
+	REQUIREMENT
+	{
+		name = AnyGigaDish
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = PartUnlocked1
+			type = PartUnlocked
+			part = RTGigaDish1
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked2
+			type = PartUnlocked
+			part = RTGigaDish2
+			targetBody = @/targetBody
+		}
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+RT_OuterPlanetRelay
+    RemoteTech:name = RemoteTech, deterministic = True
+    RemoteTech:displayName = RemoteTech, deterministic = True
+    RemoteTech:minVersion = 1.5.2, deterministic = True
+    RemoteTech:maxCompletions = 0, deterministic = True
+    RemoteTech:maxSimultaneous = 3, deterministic = True
+    RemoteTech:disabledContractType = [], deterministic = True
+    name = RT_OuterPlanetRelay, deterministic = True
+    trace = False, deterministic = True
+    title = RemoteTech: Create a network for Dres., deterministic = False
+    tag = , deterministic = True
+    description = We're not sure if there's actually anything worth seeing on Dres.  Let's check it out anyway.  Set up a communication network for us., deterministic = False
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Build a communication network that provides coverage of Dres with a link back to mission control., deterministic = False
+    completedMessage = The network is up and transmitting, and our shake-out testing is complete!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Dres (CelestialBody), deterministic = False
+    maxCompletions = 0, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 210000, deterministic = True
+    rewardReputation = 1, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 70000, deterministic = True
+    weight = 1, deterministic = True
+    sma = 13599840256, deterministic = True
+    targetSMA = 21079752396.8, deterministic = True
+    descDefault = We'd like to know more about Dres.  Set up a communication network for us., deterministic = False
+    descDres = We're not sure if there's actually anything worth seeing on Dres.  Let's check it out anyway.  Set up a communication network for us., deterministic = True
+    descEeloo = Is Eeloo reflective enough to bounce a signal off of?  Only one way to find out.  Set up a communication network for us., deterministic = True
+    descNeptune = Neptune should would be an interesting place to visit.  Set up a communication network for us., deterministic = True
+    descUranus = There's aren't many places colder than Uranus, we should check it out.  Set up a communication network for us., deterministic = True
+    targetPlanet = Dres (CelestialBody), deterministic = False
+    isDres = True, deterministic = False
+    isEeloo = False, deterministic = False
+    isNeptune = False, deterministic = False
+    isUranus = False, deterministic = False
+
+	CoverageParameter
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = CoverageParameter, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+	Duration
+	    type = Duration, deterministic = True
+	    name = Duration, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 7 days, deterministic = True
+	    preWaitText = Testing time after network up, deterministic = True
+	    waitingText = Performing shake-out testing, deterministic = True
+	    completionText = Shake-out testing completed, deterministic = True
+	    startCriteria = CONTRACT_ACCEPTANCE, deterministic = True
+	    parameter = [], deterministic = True
+	
+	CelestialBodyCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = CelestialBodyCoverage, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    minCoverage = 0.7, deterministic = True
+	    maxCoverage = 1, deterministic = True
+	
+	AnyGigaDish
+	    type = Any, deterministic = True
+	    name = AnyGigaDish, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		PartUnlocked1
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked1, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish1 ], deterministic = False
+		
+		PartUnlocked2
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked2, deterministic = True
+		    targetBody = Dres (CelestialBody), deterministic = False
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish2 ], deterministic = False
+		
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Dres (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'RT_OuterPlanetRelay'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'RT_OuterPlanetRelay'

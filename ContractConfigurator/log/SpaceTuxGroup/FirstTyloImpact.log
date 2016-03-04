@@ -1,0 +1,290 @@
+Debug information for CONTRACT_TYPE 'FirstTyloImpact':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = FirstTyloImpact
+	group = SpaceTuxGroup
+	title = Crash a probe on Tylo!
+	topic = crash
+	subject = Tylo
+	motivation = moar pictures
+	notes = Complete the following:
+	synopsis = Launch an unmanned probe and have it crash onto the Tylo
+	completedMessage = Future generations will remember this day.
+	agent = Space Penguins, Inc
+	minExpiry = 50.0
+	maxExpiry = 100.0
+	deadline = 2600
+	cancellable = true
+	declinable = true
+	prestige = Significant
+	targetBody = Tylo
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 10.0
+	rewardFunds = Random(18000.0, 22000.0)
+	advanceFunds = Random(9000.0, 11000.0)
+	REQUIREMENT
+	{
+		name = ReachSpace5802
+		type = ReachSpace
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = Nolanding5802
+		type = Landing
+		targetBody = Tylo
+		invertRequirement = true
+	}
+	REQUIREMENT
+	{
+		name = AnyGigaDish
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = RTGigaDish1
+			targetBody = @/targetBody
+		}
+		REQUIREMENT
+		{
+			name = PartUnlocked
+			type = PartUnlocked
+			part = RTGigaDish2
+			targetBody = @/targetBody
+		}
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = VPG5802
+		type = VesselParameterGroup
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = HasCrew5802
+			type = HasCrew
+			maxCrew = 0
+			minCrew = 0
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = ReachState5802
+			type = ReachState
+			minAltitude = 0
+			maxAltitude = 75000
+			minSpeed = 500
+			maxSpeed = 5000
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VesselDestroyed5801
+			type = VesselDestroyed
+			mustImpactTerrain = true
+			completeInSequence = true
+			targetBody = @/targetBody
+		}
+	}
+}
+
+Data Nodes:
+FirstTyloImpact
+    SpaceTuxGroup:name = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:displayName = SpaceTuxGroup, deterministic = True
+    SpaceTuxGroup:minVersion = 0.7.0, deterministic = True
+    SpaceTuxGroup:maxCompletions = 0, deterministic = True
+    SpaceTuxGroup:maxSimultaneous = 4, deterministic = True
+    SpaceTuxGroup:disabledContractType = [], deterministic = True
+    name = FirstTyloImpact, deterministic = True
+    trace = False, deterministic = True
+    title = Crash a probe on Tylo!, deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = crash, deterministic = True
+    subject = Tylo, deterministic = True
+    motivation = moar pictures, deterministic = True
+    notes = Complete the following:, deterministic = True
+    synopsis = Launch an unmanned probe and have it crash onto the Tylo, deterministic = True
+    completedMessage = Future generations will remember this day., deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 50, deterministic = True
+    maxExpiry = 100, deterministic = True
+    deadline = 2600, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Tylo (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 1, deterministic = True
+    rewardFunds = 20309.21, deterministic = False
+    rewardReputation = 10, deterministic = True
+    rewardScience = 25, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 10568.72, deterministic = False
+    weight = 1, deterministic = True
+
+	VPG5802
+	    type = VesselParameterGroup, deterministic = True
+	    name = VPG5802, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 00:00:00, deterministic = True
+	    define = null, deterministic = True
+	    defineList = null, deterministic = True
+	    vessel = [], deterministic = True
+	    dissassociateVesselsOnContractFailure = True, deterministic = True
+	    dissassociateVesselsOnContractCompletion = False, deterministic = True
+	    hideVesselName = False, deterministic = True
+	
+		HasCrew5802
+		    type = HasCrew, deterministic = True
+		    name = HasCrew5802, deterministic = True
+		    targetBody = Tylo (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    trait = null, deterministic = True
+		    minExperience = 0, deterministic = True
+		    maxExperience = 5, deterministic = True
+		    minCrew = 0, deterministic = True
+		    maxCrew = 0, deterministic = True
+		    kerbal = [], deterministic = True
+		
+		ReachState5802
+		    type = ReachState, deterministic = True
+		    name = ReachState5802, deterministic = True
+		    targetBody = Tylo (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    failWhenUnmet = False, deterministic = True
+		    biome = null, deterministic = True
+		    situation = [], deterministic = True
+		    minAltitude = 0, deterministic = True
+		    maxAltitude = 75000, deterministic = True
+		    minTerrainAltitude = 0, deterministic = True
+		    maxTerrainAltitude = 3.402823E+38, deterministic = True
+		    minSpeed = 500, deterministic = True
+		    maxSpeed = 5000, deterministic = True
+		    minRateOfClimb = -1.79769313486232E+308, deterministic = True
+		    maxRateOfClimb = 1.79769313486232E+308, deterministic = True
+		    minAcceleration = 0, deterministic = True
+		    maxAcceleration = 3.402823E+38, deterministic = True
+		
+		VesselDestroyed5801
+		    type = VesselDestroyed, deterministic = True
+		    name = VesselDestroyed5801, deterministic = True
+		    targetBody = Tylo (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = True, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    mustImpactTerrain = True, deterministic = True
+		
+	ReachSpace5802
+	    type = ReachSpace, deterministic = True
+	    name = ReachSpace5802, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+	Nolanding5802
+	    type = Landing, deterministic = True
+	    name = Nolanding5802, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = True, deterministic = True
+	    checkType = null, deterministic = True
+	
+	AnyGigaDish
+	    type = Any, deterministic = True
+	    name = AnyGigaDish, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		PartUnlocked
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Tylo (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish1 ], deterministic = False
+		
+		PartUnlocked_1
+		    type = PartUnlocked, deterministic = True
+		    name = PartUnlocked, deterministic = True
+		    targetBody = Tylo (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    part = [ RTGigaDish2 ], deterministic = False
+		
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Tylo (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'FirstTyloImpact'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'FirstTyloImpact'

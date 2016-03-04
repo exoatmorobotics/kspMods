@@ -1,0 +1,371 @@
+Debug information for CONTRACT_TYPE 'AS_Kerbin_IslandAirfield':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Kerbin_IslandAirfield
+	group = AnomalySurveyor
+	title = Investigate the Island Airfield.
+	description = There's an old airfield on an island across from the KSC.  Why don't you go check it out between launches?
+	synopsis = Visit the island airfield.
+	completedMessage = Hope you had fun, time to get back to work!
+	prestige = Trivial
+	targetBody = Kerbin
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 25000.0
+	rewardReputation = 2.0
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Climb to the top of the control tower
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 5
+			targetBody = @/targetBody
+		}
+	}
+	PARAMETER
+	{
+		name = WP1
+		type = All
+		title = Look for the burnt out pod in the hangar
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 1
+			distance = 25
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		PQS_CITY
+		{
+			name = Control Tower
+			icon = ContractPacks/AnomalySurveyor/Icons/unknown
+			pqsCity = IslandAirfield
+			pqsOffset = -25.5440407030383, -180.724966497429, 59.493380329812
+			altitude = 59.493380329812
+			targetBody = @/targetBody
+		}
+		PQS_CITY
+		{
+			name = Pod in Hangar
+			icon = ContractPacks/AnomalySurveyor/Icons/unknown
+			pqsCity = IslandAirfield
+			pqsOffset = -102.891933658238, -107.91985303655, 18.1263730936462
+			altitude = 18.1263730936462
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = Control Tower
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = true_smileA
+			}
+			TEXT
+			{
+				text = Great view, maybe we should start launching from here!
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Kerpollo 1
+			condition = PARAMETER_COMPLETED
+			parameter = WP1
+			INSTRUCTOR
+			{
+				name = Instructor_Gene
+				animation = false_sadA
+			}
+			TEXT
+			{
+				text = Never forget those that gave their lives to get us where we are.
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = FirstLaunch
+		type = FirstLaunch
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Kerbin_IslandAirfield
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Kerbin_IslandAirfield, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate the Island Airfield., deterministic = True
+    tag = , deterministic = True
+    description = There's an old airfield on an island across from the KSC.  Why don't you go check it out between launches?, deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Visit the island airfield., deterministic = True
+    completedMessage = Hope you had fun, time to get back to work!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Trivial ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 25000, deterministic = True
+    rewardReputation = 2, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Climb to the top of the control tower, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 5, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WP1
+	    type = All, deterministic = True
+	    name = WP1, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Look for the burnt out pod in the hangar, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 1, deterministic = True
+		    distance = 25, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ Control Tower ], deterministic = True
+		    altitude = 59.493380329812, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/unknown, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = IslandAirfield, deterministic = True
+		    pqsOffset = [-25.5440407030383, -180.724966497429, 59.493380329812], deterministic = True
+		
+		WAYPOINT_1
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ Pod in Hangar ], deterministic = True
+		    altitude = 18.1263730936462, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/unknown, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = IslandAirfield, deterministic = True
+		    pqsOffset = [-102.891933658238, -107.91985303655, 18.1263730936462], deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Control Tower, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_smileA, deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = Great view, maybe we should start launching from here!, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Kerpollo 1, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP1, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Instructor_Gene, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = false_sadA, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = Never forget those that gave their lives to get us where we are., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	FirstLaunch
+	    type = FirstLaunch, deterministic = True
+	    name = FirstLaunch, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Kerbin_IslandAirfield'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Kerbin_IslandAirfield'

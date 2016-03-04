@@ -1,0 +1,303 @@
+Debug information for CONTRACT_TYPE 'AS_Kerbin_Pyramids':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = AS_Kerbin_Pyramids
+	group = AnomalySurveyor
+	title = Investigate the Pyramids.
+	description = They say the ancient Mun worshippers of the western deserts were the first to launch a rocket into orbit.  Make a pilgrimage out to the ancient pyramids.
+	synopsis = Visit the pyramids.
+	completedMessage = Hope you had fun, time to get back to work!
+	prestige = Trivial
+	targetBody = Kerbin
+	agent = Anomaly Surveyor Group
+	maxCompletions = 1
+	rewardFunds = 35000.0
+	rewardReputation = 5.0
+	PARAMETER
+	{
+		name = WP0
+		type = All
+		title = Check out the pyramids
+		targetBody = @/targetBody
+		PARAMETER
+		{
+			name = VesselIsType
+			type = VesselIsType
+			vesselType = EVA
+			targetBody = @/targetBody
+		}
+		PARAMETER
+		{
+			name = VisitWaypoint
+			type = VisitWaypoint
+			index = 0
+			distance = 150
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		name = WaypointGenerator
+		type = WaypointGenerator
+		PQS_CITY
+		{
+			name = Pyramids
+			icon = ContractPacks/AnomalySurveyor/Icons/pyramids
+			pqsCity = Pyramids
+			pqsOffset = 0.0594870703295953, 0.426517593654211, -30.48978089377
+			altitude = 64.4701229560901
+			targetBody = @/targetBody
+		}
+	}
+	BEHAVIOUR
+	{
+		type = DialogBox
+		DIALOG_BOX
+		{
+			title = Great Sphinx
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			KERBAL
+			{
+			}
+			TEXT
+			{
+				text = There's an inscription on the statue: "Which creature has one voice and yet becomes four-footed and two-footed and three-footed?"
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Great Sphinx
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			INSTRUCTOR
+			{
+				name = Strategy_MechanicGuy
+				animation = true_thumbsUp
+			}
+			TEXT
+			{
+				text = A Kerbal!
+			}
+		}
+		DIALOG_BOX
+		{
+			title = Great Sphinx
+			condition = PARAMETER_COMPLETED
+			parameter = WP0
+			KERBAL
+			{
+			}
+			TEXT
+			{
+				text = ... I knew that one.
+			}
+		}
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+AS_Kerbin_Pyramids
+    AnomalySurveyor:name = AnomalySurveyor, deterministic = True
+    AnomalySurveyor:displayName = Anomaly Surveyor, deterministic = True
+    AnomalySurveyor:minVersion = 1.7.3, deterministic = True
+    AnomalySurveyor:maxCompletions = 0, deterministic = True
+    AnomalySurveyor:maxSimultaneous = 5, deterministic = True
+    AnomalySurveyor:disabledContractType = [], deterministic = True
+    name = AS_Kerbin_Pyramids, deterministic = True
+    trace = False, deterministic = True
+    title = Investigate the Pyramids., deterministic = True
+    tag = , deterministic = True
+    description = They say the ancient Mun worshippers of the western deserts were the first to launch a rocket into orbit.  Make a pilgrimage out to the ancient pyramids., deterministic = True
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Visit the pyramids., deterministic = True
+    completedMessage = Hope you had fun, time to get back to work!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Trivial ], deterministic = True
+    targetBody = Kerbin (CelestialBody), deterministic = True
+    maxCompletions = 1, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 35000, deterministic = True
+    rewardReputation = 5, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 0, deterministic = True
+    weight = 1, deterministic = True
+
+	WP0
+	    type = All, deterministic = True
+	    name = WP0, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = Check out the pyramids, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	
+		VesselIsType
+		    type = VesselIsType, deterministic = True
+		    name = VesselIsType, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    vesselType = EVA, deterministic = True
+		
+		VisitWaypoint
+		    type = VisitWaypoint, deterministic = True
+		    name = VisitWaypoint, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    rewardFunds = 0, deterministic = True
+		    rewardReputation = 0, deterministic = True
+		    rewardScience = 0, deterministic = True
+		    failureFunds = 0, deterministic = True
+		    failureReputation = 0, deterministic = True
+		    optional = False, deterministic = True
+		    disableOnStateChange = null, deterministic = True
+		    completeInSequence = False, deterministic = True
+		    hidden = False, deterministic = True
+		    hideChildren = False, deterministic = True
+		    title = null, deterministic = True
+		    notes = null, deterministic = True
+		    completedMessage = null, deterministic = True
+		    index = 0, deterministic = True
+		    distance = 150, deterministic = True
+		    hideOnCompletion = True, deterministic = True
+		    showMessages = False, deterministic = True
+		
+	WaypointGenerator
+	    type = WaypointGenerator, deterministic = True
+	    name = WaypointGenerator, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		WAYPOINT_0
+		    type = PQS_CITY, deterministic = True
+		    targetBody = Kerbin (CelestialBody), deterministic = True
+		    name = [ Pyramids ], deterministic = True
+		    altitude = 64.4701229560901, deterministic = True
+		    parameter = [], deterministic = True
+		    hidden = False, deterministic = True
+		    icon = ContractPacks/AnomalySurveyor/Icons/pyramids, deterministic = True
+		    underwater = False, deterministic = True
+		    clustered = False, deterministic = True
+		    pqsCity = Pyramids, deterministic = True
+		    pqsOffset = [0.0594870703295953, 0.426517593654211, -30.48978089377], deterministic = True
+		
+	DialogBox
+	    type = DialogBox, deterministic = True
+	    name = DialogBox, deterministic = True
+	    targetBody = null, deterministic = True
+	
+		DIALOG_BOX_0
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Great Sphinx, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_0_0
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    gender = Male, deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    crewIndex = 0, deterministic = True
+			    excludeName = [], deterministic = True
+			
+			DIALOG_BOX_0_1
+			    text = There's an inscription on the statue: "Which creature has one voice and yet becomes four-footed and two-footed and three-footed?", deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_1
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Great Sphinx, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_1_0
+			    name = Strategy_MechanicGuy, deterministic = True
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    animation = true_thumbsUp, deterministic = True
+			
+			DIALOG_BOX_1_1
+			    text = A Kerbal!, deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+		DIALOG_BOX_2
+		    condition = PARAMETER_COMPLETED, deterministic = True
+		    position = LEFT, deterministic = True
+		    width = 0.8, deterministic = True
+		    height = 0, deterministic = True
+		    title = Great Sphinx, deterministic = True
+		    titleColor = RGBA(1.000, 1.000, 1.000, 1.000), deterministic = True
+		    parameter = WP0, deterministic = True
+		
+			DIALOG_BOX_2_0
+			    showName = True, deterministic = True
+			    characterName = , deterministic = True
+			    gender = Male, deterministic = True
+			    textColor = RGBA(0.729, 0.855, 0.333, 1.000), deterministic = True
+			    crewIndex = 0, deterministic = True
+			    excludeName = [], deterministic = True
+			
+			DIALOG_BOX_2_1
+			    text = ... I knew that one., deterministic = True
+			    textColor = RGBA(0.800, 0.800, 0.800, 1.000), deterministic = True
+			    fontSize = 20, deterministic = True
+			
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'AS_Kerbin_Pyramids'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'AS_Kerbin_Pyramids'

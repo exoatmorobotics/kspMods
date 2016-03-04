@@ -1,0 +1,191 @@
+Debug information for CONTRACT_TYPE 'RT_MoonRelay':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = RT_MoonRelay
+	title = RemoteTech: Create a network for @targetBody.
+	description = @isMinmus ? @descMinmus : @descDefault
+	synopsis = Build a communication network that provides coverage of @targetBody with a link back to mission control.
+	completedMessage = The network is up and transmitting, and our shake-out testing is complete!
+	group = RemoteTech
+	prestige = Significant
+	targetBody = @targetMoon
+	agent = Communication Satellite Group
+	rewardReputation = 2.0
+	rewardFunds = @advanceFunds * 3.0
+	advanceFunds = 40000.0
+	weight = 2.0
+	DATA
+	{
+		type = bool
+		isMinmus = @targetBody.Name() == "Minmus"
+	}
+	DATA
+	{
+		type = CelestialBody
+		uniqueValue = true
+		targetMoon = HomeWorld().Children().Where(cb => cb.RemoteTechCoverage() < 0.7).Random()
+	}
+	DATA
+	{
+		type = string
+		descDefault = Mission control has decided they'd like to find out what's on the far side of @targetBody.  In order to do that, we need to set up a relay network.
+		descMinmus = They say that Minmus is too small to bother with setting up a dedicated communications network.  Let's prove them wrong!
+	}
+	PARAMETER
+	{
+		name = MoonCoverage
+		type = CelestialBodyCoverage
+		coverage = 0.95
+		targetBody = @/targetBody
+	}
+	PARAMETER
+	{
+		name = Duration
+		type = Duration
+		duration = 3d
+		preWaitText = Testing time after network up
+		waitingText = Performing shake-out testing
+		completionText = Shake-out testing completed
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = CelestialBodyCoverage
+		type = CelestialBodyCoverage
+		targetBody = HomeWorld()
+		minCoverage = 0.7
+		maxCoverage = 1.0
+	}
+	REQUIREMENT
+	{
+		name = ActiveVesselRange
+		type = ActiveVesselRange
+		targetBody = HomeWorld()
+		range = @/targetBody.SemiMajorAxis()
+	}
+	REQUIREMENT
+	{
+		name = PartModuleTypeUnlocked
+		type = PartModuleTypeUnlocked
+		partModuleType = Antenna
+		partModuleType = Power
+		targetBody = @/targetBody
+	}
+}
+
+Data Nodes:
+RT_MoonRelay
+    RemoteTech:name = RemoteTech, deterministic = True
+    RemoteTech:displayName = RemoteTech, deterministic = True
+    RemoteTech:minVersion = 1.5.2, deterministic = True
+    RemoteTech:maxCompletions = 0, deterministic = True
+    RemoteTech:maxSimultaneous = 3, deterministic = True
+    RemoteTech:disabledContractType = [], deterministic = True
+    name = RT_MoonRelay, deterministic = True
+    trace = False, deterministic = True
+    title = RemoteTech: Create a network for the Mun., deterministic = False
+    tag = , deterministic = True
+    description = Mission control has decided they'd like to find out what's on the far side of the Mun.  In order to do that, we need to set up a relay network., deterministic = False
+    topic = , deterministic = True
+    subject = , deterministic = True
+    motivation = , deterministic = True
+    notes = null, deterministic = True
+    synopsis = Build a communication network that provides coverage of the Mun with a link back to mission control., deterministic = False
+    completedMessage = The network is up and transmitting, and our shake-out testing is complete!, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 0, deterministic = True
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Significant ], deterministic = True
+    targetBody = Mun (CelestialBody), deterministic = False
+    maxCompletions = 0, deterministic = True
+    maxSimultaneous = 0, deterministic = True
+    rewardFunds = 120000, deterministic = True
+    rewardReputation = 2, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 0, deterministic = True
+    failureReputation = 0, deterministic = True
+    advanceFunds = 40000, deterministic = True
+    weight = 2, deterministic = True
+    isMinmus = False, deterministic = False
+    targetMoon = Mun (CelestialBody), deterministic = False
+    descDefault = Mission control has decided they'd like to find out what's on the far side of the Mun.  In order to do that, we need to set up a relay network., deterministic = False
+    descMinmus = They say that Minmus is too small to bother with setting up a dedicated communications network.  Let's prove them wrong!, deterministic = True
+
+	MoonCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = MoonCoverage, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 0.95, deterministic = True
+	
+	Duration
+	    type = Duration, deterministic = True
+	    name = Duration, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    duration = 3 days, deterministic = True
+	    preWaitText = Testing time after network up, deterministic = True
+	    waitingText = Performing shake-out testing, deterministic = True
+	    completionText = Shake-out testing completed, deterministic = True
+	    startCriteria = CONTRACT_ACCEPTANCE, deterministic = True
+	    parameter = [], deterministic = True
+	
+	CelestialBodyCoverage
+	    type = CelestialBodyCoverage, deterministic = True
+	    name = CelestialBodyCoverage, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    minCoverage = 0.7, deterministic = True
+	    maxCoverage = 1, deterministic = True
+	
+	ActiveVesselRange
+	    type = ActiveVesselRange, deterministic = True
+	    name = ActiveVesselRange, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    range = 12000000, deterministic = False
+	
+	PartModuleTypeUnlocked
+	    type = PartModuleTypeUnlocked, deterministic = True
+	    name = PartModuleTypeUnlocked, deterministic = True
+	    targetBody = Mun (CelestialBody), deterministic = False
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    partModuleType = [ Antenna, Power ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'RT_MoonRelay'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE: 'RT_MoonRelay'
