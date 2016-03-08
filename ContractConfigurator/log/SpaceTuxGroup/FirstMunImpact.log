@@ -117,12 +117,12 @@ FirstMunImpact
     targetBody = Mun (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20412.49, deterministic = False
+    rewardFunds = 21288.26, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10675.18, deterministic = False
+    advanceFunds = 10431.13, deterministic = False
     weight = 10, deterministic = True
 
 	VPG5702

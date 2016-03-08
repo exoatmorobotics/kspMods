@@ -109,14 +109,14 @@ RT_InnerPlanetRelay
     RemoteTech:disabledContractType = [], deterministic = True
     name = RT_InnerPlanetRelay, deterministic = True
     trace = False, deterministic = True
-    title = RemoteTech: Create a network for Duna., deterministic = False
+    title = RemoteTech: Create a network for Eve., deterministic = False
     tag = , deterministic = True
-    description = We'd like to know if our rover wheels will actually work on Duna.  Set up a communication network for us., deterministic = False
+    description = We'd like to know if our antennas are powerful enough to get through Eve's purple clouds.  Set up a communication network for us., deterministic = False
     topic = , deterministic = True
     subject = , deterministic = True
     motivation = , deterministic = True
     notes = null, deterministic = True
-    synopsis = Build a communication network that provides coverage of Duna with a link back to mission control., deterministic = False
+    synopsis = Build a communication network that provides coverage of Eve with a link back to mission control., deterministic = False
     completedMessage = The network is up and transmitting, and our shake-out testing is complete!, deterministic = True
     agent = Contracts.Agents.Agent, deterministic = True
     minExpiry = 1, deterministic = True
@@ -126,7 +126,7 @@ RT_InnerPlanetRelay
     declinable = True, deterministic = True
     autoAccept = False, deterministic = True
     prestige = [ Significant ], deterministic = True
-    targetBody = Duna (CelestialBody), deterministic = False
+    targetBody = Eve (CelestialBody), deterministic = False
     maxCompletions = 0, deterministic = True
     maxSimultaneous = 0, deterministic = True
     rewardFunds = 210000, deterministic = True
@@ -138,21 +138,21 @@ RT_InnerPlanetRelay
     weight = 1, deterministic = True
     sma = 13599840256, deterministic = True
     targetSMA = 21079752396.8, deterministic = True
-    descDefault = We'd like to know more about Duna.  Set up a communication network for us., deterministic = False
-    descMoho = We'd like to find out if our probes can survive the temperatures on Duna.  Set up a communication network for us., deterministic = False
-    descDuna = We'd like to know if our rover wheels will actually work on Duna.  Set up a communication network for us., deterministic = False
+    descDefault = We'd like to know more about Eve.  Set up a communication network for us., deterministic = False
+    descMoho = We'd like to find out if our probes can survive the temperatures on Eve.  Set up a communication network for us., deterministic = False
+    descDuna = We'd like to know if our rover wheels will actually work on Eve.  Set up a communication network for us., deterministic = False
     descEve = We'd like to know if our antennas are powerful enough to get through Eve's purple clouds.  Set up a communication network for us., deterministic = True
     descVenus = We'd like to know if our antennas are powerful enough to get through to the surface of Venus.  Set up a communication network for us., deterministic = True
-    targetPlanet = Duna (CelestialBody), deterministic = False
+    targetPlanet = Eve (CelestialBody), deterministic = False
     isMoho = False, deterministic = False
-    isDuna = True, deterministic = False
-    isEve = False, deterministic = False
+    isDuna = False, deterministic = False
+    isEve = True, deterministic = False
     isVenus = False, deterministic = False
 
 	CoverageParameter
 	    type = CelestialBodyCoverage, deterministic = True
 	    name = CoverageParameter, deterministic = True
-	    targetBody = Duna (CelestialBody), deterministic = False
+	    targetBody = Eve (CelestialBody), deterministic = False
 	    rewardFunds = 0, deterministic = True
 	    rewardReputation = 0, deterministic = True
 	    rewardScience = 0, deterministic = True
@@ -171,7 +171,7 @@ RT_InnerPlanetRelay
 	Duration
 	    type = Duration, deterministic = True
 	    name = Duration, deterministic = True
-	    targetBody = Duna (CelestialBody), deterministic = False
+	    targetBody = Eve (CelestialBody), deterministic = False
 	    rewardFunds = 0, deterministic = True
 	    rewardReputation = 0, deterministic = True
 	    rewardScience = 0, deterministic = True
@@ -204,14 +204,14 @@ RT_InnerPlanetRelay
 	CommDish
 	    type = Any, deterministic = True
 	    name = CommDish, deterministic = True
-	    targetBody = Duna (CelestialBody), deterministic = False
+	    targetBody = Eve (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	
 		PartUnlocked1
 		    type = PartUnlocked, deterministic = True
 		    name = PartUnlocked1, deterministic = True
-		    targetBody = Duna (CelestialBody), deterministic = False
+		    targetBody = Eve (CelestialBody), deterministic = False
 		    checkOnActiveContract = False, deterministic = True
 		    invertRequirement = False, deterministic = True
 		    part = [ commDish ], deterministic = False
@@ -219,7 +219,7 @@ RT_InnerPlanetRelay
 		PartUnlocked2
 		    type = PartUnlocked, deterministic = True
 		    name = PartUnlocked2, deterministic = True
-		    targetBody = Duna (CelestialBody), deterministic = False
+		    targetBody = Eve (CelestialBody), deterministic = False
 		    checkOnActiveContract = False, deterministic = True
 		    invertRequirement = False, deterministic = True
 		    part = [ RTLongDish2 ], deterministic = False
@@ -227,7 +227,7 @@ RT_InnerPlanetRelay
 	PartModuleTypeUnlocked
 	    type = PartModuleTypeUnlocked, deterministic = True
 	    name = PartModuleTypeUnlocked, deterministic = True
-	    targetBody = Duna (CelestialBody), deterministic = False
+	    targetBody = Eve (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	    partModuleType = [ Antenna, Power ], deterministic = True

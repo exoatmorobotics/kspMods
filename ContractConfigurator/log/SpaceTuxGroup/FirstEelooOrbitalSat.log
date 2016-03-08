@@ -111,12 +111,12 @@ FirstEelooOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31724.92, deterministic = False
+    rewardFunds = 28964.58, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9565.313, deterministic = False
+    advanceFunds = 9520.417, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5844

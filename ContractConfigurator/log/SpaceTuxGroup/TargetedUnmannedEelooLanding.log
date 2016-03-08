@@ -148,12 +148,12 @@ TargetedUnmannedEelooLanding
     targetBody = Eeloo (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 43288.81, deterministic = False
+    rewardFunds = 45524.22, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 19208.85, deterministic = False
+    advanceFunds = 20545.5, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

@@ -103,12 +103,12 @@ FirstUnmannedMunFlyby
     targetBody = Mun (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20010.87, deterministic = False
+    rewardFunds = 20672.53, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10788.77, deterministic = False
+    advanceFunds = 10483.08, deterministic = False
     weight = 99, deterministic = True
 
 	Sequence5701

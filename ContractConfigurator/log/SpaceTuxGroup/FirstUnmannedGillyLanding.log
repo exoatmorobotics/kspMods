@@ -118,12 +118,12 @@ FirstUnmannedGillyLanding
     targetBody = Gilly (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 39180.89, deterministic = False
+    rewardFunds = 40919.3, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 19751.8, deterministic = False
+    advanceFunds = 19930.61, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5746

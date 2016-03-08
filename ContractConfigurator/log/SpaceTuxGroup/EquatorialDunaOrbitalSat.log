@@ -109,12 +109,12 @@ EquatorialDunaOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28420.85, deterministic = False
+    rewardFunds = 28214.09, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9771.636, deterministic = False
+    advanceFunds = 10659.01, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5754
@@ -185,6 +185,7 @@ EquatorialDunaOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	EquatorialOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

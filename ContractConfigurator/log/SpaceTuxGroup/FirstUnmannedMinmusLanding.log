@@ -118,12 +118,12 @@ FirstUnmannedMinmusLanding
     targetBody = Minmus (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 38237.38, deterministic = False
+    rewardFunds = 40475.81, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20379.4, deterministic = False
+    advanceFunds = 20535.03, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5716

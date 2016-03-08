@@ -150,12 +150,12 @@ TargetedMinmusImpact
     targetBody = Minmus (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28130.8, deterministic = False
+    rewardFunds = 29092.61, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10227.38, deterministic = False
+    advanceFunds = 9570.359, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5713

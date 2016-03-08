@@ -135,12 +135,12 @@ TargetedUnmannedEveLanding
     targetBody = Eve (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 44359.84, deterministic = False
+    rewardFunds = 46103.86, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 19866.24, deterministic = False
+    advanceFunds = 20984.17, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

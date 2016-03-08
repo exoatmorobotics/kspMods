@@ -117,12 +117,12 @@ FirstUnmannedJoolFlyby
     targetBody = Jool (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 18228.79, deterministic = False
+    rewardFunds = 21709.57, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10515.7, deterministic = False
+    advanceFunds = 9851.5, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5781

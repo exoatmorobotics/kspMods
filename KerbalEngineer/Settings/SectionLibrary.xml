@@ -15,7 +15,7 @@
         <IsHud>false</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>false</IsVisible>
-        <LineCount>9</LineCount>
+        <LineCount>19</LineCount>
         <Name>ORBITAL</Name>
         <ReadoutModuleNames>
           <string>Orbital.ApoapsisHeight</string>
@@ -51,7 +51,7 @@
         <IsHud>false</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>false</IsVisible>
-        <LineCount>12</LineCount>
+        <LineCount>9</LineCount>
         <Name>SURFACE</Name>
         <ReadoutModuleNames>
           <string>Surface.AltitudeTerrain</string>
@@ -80,7 +80,7 @@
         <IsHud>false</IsHud>
         <IsHudBackground>true</IsHudBackground>
         <IsVisible>false</IsVisible>
-        <LineCount>13</LineCount>
+        <LineCount>12</LineCount>
         <Name>VESSEL</Name>
         <ReadoutModuleNames>
           <string>Vessel.DeltaVStaged</string>
@@ -173,7 +173,7 @@
         <IsHud>true</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>true</IsVisible>
-        <LineCount>11</LineCount>
+        <LineCount>10</LineCount>
         <Name>HUD 1</Name>
         <ReadoutModuleNames>
           <string>Orbital.ApoapsisHeight</string>
@@ -191,9 +191,6 @@
           <string>Orbital.NodeTimeToHalfBurn</string>
           <string>Orbital.NodeTimeToManoeuvre</string>
           <string>Miscellaneous.Separator</string>
-          <string>Rendezvous.RelativeVelocity</string>
-          <string>Rendezvous.RelativeSpeed</string>
-          <string>Rendezvous.Distance</string>
           <string>Vessel.DeltaVCurrentTotal</string>
           <string>Vessel.ThrustToWeight</string>
           <string>Vessel.SuicideBurnAltitude</string>
@@ -212,7 +209,7 @@
         <IsHud>true</IsHud>
         <IsHudBackground>false</IsHudBackground>
         <IsVisible>true</IsVisible>
-        <LineCount>7</LineCount>
+        <LineCount>8</LineCount>
         <Name>HUD 2</Name>
         <ReadoutModuleNames>
           <string>Surface.AltitudeTerrain</string>
@@ -228,6 +225,8 @@
           <string>Rendezvous.RelativeVelocity</string>
           <string>Rendezvous.RelativeSpeed</string>
           <string>Rendezvous.Distance</string>
+          <string>Vessel.Mass</string>
+          <string>Vessel.Thrust</string>
         </ReadoutModuleNames>
       </SectionModule>
     </Value>

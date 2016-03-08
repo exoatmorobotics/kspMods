@@ -104,12 +104,12 @@ FirstUnmannedMohoFlyby
     targetBody = Moho (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 21270.04, deterministic = False
+    rewardFunds = 18741.55, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10592.33, deterministic = False
+    advanceFunds = 9747.908, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5721

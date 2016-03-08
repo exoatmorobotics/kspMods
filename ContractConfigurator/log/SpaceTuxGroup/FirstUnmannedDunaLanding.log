@@ -118,12 +118,12 @@ FirstUnmannedDunaLanding
     targetBody = Duna (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 38537.14, deterministic = False
+    rewardFunds = 40634, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20383.7, deterministic = False
+    advanceFunds = 19293.05, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5756

@@ -99,7 +99,7 @@ SCAN_LoRes
     agent = Contracts.Agents.Agent, deterministic = True
     minExpiry = 1, deterministic = True
     maxExpiry = 7, deterministic = True
-    deadline = 1196.35, deterministic = False
+    deadline = 825.7035, deterministic = False
     cancellable = True, deterministic = True
     declinable = True, deterministic = True
     autoAccept = False, deterministic = True
@@ -107,12 +107,12 @@ SCAN_LoRes
     targetBody = Minmus (CelestialBody), deterministic = False
     maxCompletions = 0, deterministic = True
     maxSimultaneous = 0, deterministic = True
-    rewardFunds = 47752.36, deterministic = False
+    rewardFunds = 48365.14, deterministic = False
     rewardReputation = 1, deterministic = True
     rewardScience = 0, deterministic = True
-    failureFunds = 6064.118, deterministic = False
+    failureFunds = 1002.645, deterministic = False
     failureReputation = 1, deterministic = True
-    advanceFunds = 3761.251, deterministic = False
+    advanceFunds = 9813.115, deterministic = False
     weight = 1, deterministic = True
     targetBody1 = Minmus (CelestialBody), deterministic = False
     diffModifier1 = 0, deterministic = False

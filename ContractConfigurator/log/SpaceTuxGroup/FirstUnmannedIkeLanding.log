@@ -118,12 +118,12 @@ FirstUnmannedIkeLanding
     targetBody = Ike (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 40482.91, deterministic = False
+    rewardFunds = 40747.29, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20240.19, deterministic = False
+    advanceFunds = 19418.84, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5766

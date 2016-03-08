@@ -131,12 +131,12 @@ FirstTyloImpact
     targetBody = Tylo (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20309.21, deterministic = False
+    rewardFunds = 21339.8, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10568.72, deterministic = False
+    advanceFunds = 10932.51, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5802

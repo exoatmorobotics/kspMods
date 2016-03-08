@@ -87,34 +87,34 @@ SCAN_M700
     ScanSatOfficial:p3Bodies = [], deterministic = False
     name = SCAN_M700, deterministic = True
     trace = False, deterministic = True
-    title = Scan the Mun for resources, deterministic = False
+    title = Scan Kerbin for resources, deterministic = False
     tag = , deterministic = True
     description = null, deterministic = True
     topic = Science, deterministic = True
     subject = Kerbal, deterministic = True
     motivation = Scanning, deterministic = True
     notes = Scanning can take place while the vessel is not loaded., deterministic = True
-    synopsis = Scan the Mun with the M700 Scanner, deterministic = False
+    synopsis = Scan Kerbin with the M700 Scanner, deterministic = False
     completedMessage = Look at all those lovely resources. We'll have to get a survey team together!, deterministic = True
     agent = Contracts.Agents.Agent, deterministic = True
     minExpiry = 1, deterministic = True
     maxExpiry = 7, deterministic = True
-    deadline = 975.3305, deterministic = False
+    deadline = 488.9171, deterministic = False
     cancellable = True, deterministic = True
     declinable = True, deterministic = True
     autoAccept = False, deterministic = True
     prestige = [ Trivial, Significant ], deterministic = True
-    targetBody = Mun (CelestialBody), deterministic = False
+    targetBody = Kerbin (CelestialBody), deterministic = False
     maxCompletions = 0, deterministic = True
     maxSimultaneous = 0, deterministic = True
-    rewardFunds = 47320.93, deterministic = False
+    rewardFunds = 65868.44, deterministic = False
     rewardReputation = 1, deterministic = True
     rewardScience = 0, deterministic = True
-    failureFunds = 5544.823, deterministic = False
+    failureFunds = 7480.367, deterministic = False
     failureReputation = 1, deterministic = True
-    advanceFunds = 4976.864, deterministic = False
+    advanceFunds = 5475.269, deterministic = False
     weight = 1, deterministic = True
-    targetBody4 = Mun (CelestialBody), deterministic = False
+    targetBody4 = Kerbin (CelestialBody), deterministic = False
     diffModifier4 = 0, deterministic = False
     scanRequired4 = 75, deterministic = False
     minScan4 = 70, deterministic = False
@@ -122,7 +122,7 @@ SCAN_M700
 	SCANsatCoverage
 	    type = SCANsatCoverage, deterministic = True
 	    name = SCANsatCoverage, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    rewardFunds = 0, deterministic = True
 	    rewardReputation = 0, deterministic = True
 	    rewardScience = 0, deterministic = True
@@ -142,7 +142,7 @@ SCAN_M700
 	SCANsatCoverage_1
 	    type = SCANsatCoverage, deterministic = True
 	    name = SCANsatCoverage, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	    minCoverage = 0, deterministic = True
@@ -160,7 +160,7 @@ SCAN_M700
 	PartUnlocked
 	    type = PartUnlocked, deterministic = True
 	    name = PartUnlocked, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	    part = [ SurveyScanner ], deterministic = False

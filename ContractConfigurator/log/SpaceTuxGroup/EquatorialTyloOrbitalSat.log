@@ -122,12 +122,12 @@ EquatorialTyloOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28492.79, deterministic = False
+    rewardFunds = 30371.76, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10015.71, deterministic = False
+    advanceFunds = 10459.76, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5804
@@ -198,6 +198,7 @@ EquatorialTyloOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	EquatorialOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

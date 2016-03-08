@@ -109,12 +109,12 @@ EquatorialIkeOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 30910.79, deterministic = False
+    rewardFunds = 31190.58, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9201.429, deterministic = False
+    advanceFunds = 10952.87, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5764
@@ -185,6 +185,7 @@ EquatorialIkeOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	EquatorialOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

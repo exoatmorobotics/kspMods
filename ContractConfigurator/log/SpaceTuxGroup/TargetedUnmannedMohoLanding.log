@@ -135,12 +135,12 @@ TargetedUnmannedMohoLanding
     targetBody = Moho (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 43110.91, deterministic = False
+    rewardFunds = 46853.97, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20934.61, deterministic = False
+    advanceFunds = 20209.45, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

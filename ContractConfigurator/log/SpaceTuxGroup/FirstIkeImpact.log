@@ -118,12 +118,12 @@ FirstIkeImpact
     targetBody = Ike (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20190.55, deterministic = False
+    rewardFunds = 19879.85, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9588.298, deterministic = False
+    advanceFunds = 10318.45, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5762

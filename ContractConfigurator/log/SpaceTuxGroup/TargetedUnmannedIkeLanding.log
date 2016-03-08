@@ -135,12 +135,12 @@ TargetedUnmannedIkeLanding
     targetBody = Ike (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 44190.36, deterministic = False
+    rewardFunds = 43555.36, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20655.85, deterministic = False
+    advanceFunds = 19255.76, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

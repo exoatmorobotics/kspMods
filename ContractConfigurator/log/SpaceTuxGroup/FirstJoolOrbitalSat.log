@@ -111,12 +111,12 @@ FirstJoolOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31088.81, deterministic = False
+    rewardFunds = 28849.57, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9142.357, deterministic = False
+    advanceFunds = 10863.8, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5784

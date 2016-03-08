@@ -99,7 +99,7 @@ SCAN_HiRes
     agent = Contracts.Agents.Agent, deterministic = True
     minExpiry = 1, deterministic = True
     maxExpiry = 7, deterministic = True
-    deadline = 538.4761, deterministic = False
+    deadline = 539.7727, deterministic = False
     cancellable = True, deterministic = True
     declinable = True, deterministic = True
     autoAccept = False, deterministic = True
@@ -107,12 +107,12 @@ SCAN_HiRes
     targetBody = null, deterministic = False
     maxCompletions = 0, deterministic = True
     maxSimultaneous = 0, deterministic = True
-    rewardFunds = 65391.72, deterministic = False
+    rewardFunds = 63090.82, deterministic = False
     rewardReputation = 1, deterministic = True
     rewardScience = 0, deterministic = True
-    failureFunds = 4953.186, deterministic = False
+    failureFunds = 2834.143, deterministic = False
     failureReputation = 1, deterministic = True
-    advanceFunds = 12043.82, deterministic = False
+    advanceFunds = 5351.581, deterministic = False
     weight = 1, deterministic = True
     targetBody3 = null, deterministic = False
     diffModifier3 = 10, deterministic = False

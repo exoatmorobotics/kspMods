@@ -109,12 +109,12 @@ EquatorialDresOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 30928.6, deterministic = False
+    rewardFunds = 31323.28, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10098.95, deterministic = False
+    advanceFunds = 10627.94, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5774
@@ -185,6 +185,7 @@ EquatorialDresOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	EquatorialOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

@@ -148,12 +148,12 @@ TargetedUnmannedPolLanding
     targetBody = Pol (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 45292.83, deterministic = False
+    rewardFunds = 45725.63, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 19627.12, deterministic = False
+    advanceFunds = 19727.14, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

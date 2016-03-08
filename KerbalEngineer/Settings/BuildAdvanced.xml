@@ -34,6 +34,6 @@
   </SettingItem>
   <SettingItem>
     <Name>selectedBodyName</Name>
-    <Value xsi:type="string">Minmus</Value>
+    <Value xsi:type="string">Kerbin</Value>
   </SettingItem>
 </ArrayOfSettingItem>

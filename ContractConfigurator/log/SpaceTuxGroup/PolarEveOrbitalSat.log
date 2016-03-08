@@ -109,12 +109,12 @@ PolarEveOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31475.23, deterministic = False
+    rewardFunds = 31789.1, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10516.77, deterministic = False
+    advanceFunds = 9386.391, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5734
@@ -185,6 +185,7 @@ PolarEveOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	PolarOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

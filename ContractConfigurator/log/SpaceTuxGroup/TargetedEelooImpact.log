@@ -163,12 +163,12 @@ TargetedEelooImpact
     targetBody = Eeloo (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 30326.93, deterministic = False
+    rewardFunds = 31103.03, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10211.87, deterministic = False
+    advanceFunds = 10873.15, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5843

@@ -134,12 +134,12 @@ TargetedUnmannedMunLanding
     targetBody = Mun (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 46682.93, deterministic = False
+    rewardFunds = 44337.09, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20279.72, deterministic = False
+    advanceFunds = 20439.02, deterministic = False
     weight = 10, deterministic = True
 
 	VPG_5707

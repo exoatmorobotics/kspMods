@@ -148,12 +148,12 @@ TargetedUnmannedVallLanding
     targetBody = Vall (CelestialBody), deterministic = True
     maxCompletions = 5, deterministic = True
     maxSimultaneous = 2, deterministic = True
-    rewardFunds = 44725.8, deterministic = False
+    rewardFunds = 45434.15, deterministic = False
     rewardReputation = 25, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20039.74, deterministic = False
+    advanceFunds = 19467.23, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_<NUM_7>

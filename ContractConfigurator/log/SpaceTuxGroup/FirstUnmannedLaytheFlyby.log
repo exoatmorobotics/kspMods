@@ -117,12 +117,12 @@ FirstUnmannedLaytheFlyby
     targetBody = Laythe (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 18850.19, deterministic = False
+    rewardFunds = 19847.67, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9076.374, deterministic = False
+    advanceFunds = 10053.74, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5791

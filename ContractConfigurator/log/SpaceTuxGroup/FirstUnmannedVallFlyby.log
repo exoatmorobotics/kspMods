@@ -117,12 +117,12 @@ FirstUnmannedVallFlyby
     targetBody = Vall (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20530.73, deterministic = False
+    rewardFunds = 19539.61, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10888.95, deterministic = False
+    advanceFunds = 9169.948, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5811

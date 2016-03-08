@@ -98,12 +98,12 @@ FirstIkeOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28894.31, deterministic = False
+    rewardFunds = 29103.77, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9286.402, deterministic = False
+    advanceFunds = 10040.1, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5764

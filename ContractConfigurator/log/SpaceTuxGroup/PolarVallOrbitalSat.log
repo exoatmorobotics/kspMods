@@ -122,12 +122,12 @@ PolarVallOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31305.06, deterministic = False
+    rewardFunds = 29110.05, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10006.98, deterministic = False
+    advanceFunds = 9765.895, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5814
@@ -198,6 +198,7 @@ PolarVallOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	PolarOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

@@ -163,12 +163,12 @@ TargetedBopImpact
     targetBody = Bop (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 29932.52, deterministic = False
+    rewardFunds = 31050.37, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10582.8, deterministic = False
+    advanceFunds = 9957.729, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5823

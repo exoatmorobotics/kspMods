@@ -122,12 +122,12 @@ PolarEelooOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 29337.04, deterministic = False
+    rewardFunds = 28633.84, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10187.24, deterministic = False
+    advanceFunds = 10911.31, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5844
@@ -198,6 +198,7 @@ PolarEelooOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	PolarOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

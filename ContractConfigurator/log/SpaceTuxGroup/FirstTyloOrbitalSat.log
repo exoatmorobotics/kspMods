@@ -111,12 +111,12 @@ FirstTyloOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28458.17, deterministic = False
+    rewardFunds = 30872.72, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9991.646, deterministic = False
+    advanceFunds = 10946.95, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5804

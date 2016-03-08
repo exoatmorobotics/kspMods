@@ -118,12 +118,12 @@ FirstMohoImpact
     targetBody = Moho (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 19227.76, deterministic = False
+    rewardFunds = 18210.39, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10141.14, deterministic = False
+    advanceFunds = 10547.47, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5722

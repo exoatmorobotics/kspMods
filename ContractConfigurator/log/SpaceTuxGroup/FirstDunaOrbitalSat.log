@@ -98,12 +98,12 @@ FirstDunaOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31280.31, deterministic = False
+    rewardFunds = 28204.73, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9908.343, deterministic = False
+    advanceFunds = 10624.09, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5754

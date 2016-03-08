@@ -117,12 +117,12 @@ FirstUnmannedTyloFlyby
     targetBody = Tylo (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 21838.94, deterministic = False
+    rewardFunds = 20287.56, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9945.924, deterministic = False
+    advanceFunds = 9808.264, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5801

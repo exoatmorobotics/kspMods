@@ -104,12 +104,12 @@ FirstUnmannedDresFlyby
     targetBody = Dres (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20333.52, deterministic = False
+    rewardFunds = 21844.67, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9274.075, deterministic = False
+    advanceFunds = 10281.48, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5771

@@ -118,12 +118,12 @@ FirstDunaImpact
     targetBody = Duna (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 21989.51, deterministic = False
+    rewardFunds = 21199.89, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10876.25, deterministic = False
+    advanceFunds = 10578.13, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5752

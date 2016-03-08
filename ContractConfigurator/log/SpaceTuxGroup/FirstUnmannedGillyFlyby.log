@@ -104,12 +104,12 @@ FirstUnmannedGillyFlyby
     targetBody = Gilly (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 19529.43, deterministic = False
+    rewardFunds = 20642.54, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10576.06, deterministic = False
+    advanceFunds = 10442.19, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5741

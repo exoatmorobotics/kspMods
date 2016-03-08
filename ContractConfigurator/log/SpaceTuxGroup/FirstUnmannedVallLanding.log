@@ -131,12 +131,12 @@ FirstUnmannedVallLanding
     targetBody = Vall (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 41074.32, deterministic = False
+    rewardFunds = 39475.89, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 20769.84, deterministic = False
+    advanceFunds = 19272.17, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5816

@@ -4,17 +4,17 @@
     <bool name="DisplayDescentProfileGUI">0</bool>
     <bool name="DisplaySettingsGUI">1</bool>
     <bool name="UseBlizzyToolbar">1</bool>
-    <bool name="DisplayTrajectories">1</bool>
+    <bool name="DisplayTrajectories">0</bool>
     <bool name="DisplayCompleteTrajectory">0</bool>
-    <bool name="BodyFixedMode">0</bool>
+    <bool name="BodyFixedMode">1</bool>
     <bool name="AutoUpdateAerodynamicModel">1</bool>
     <rect name="MapGUIWindowPos">
-        <xmin>66</xmin>
-        <xmax>314</xmax>
-        <ymin>90</ymin>
-        <ymax>504</ymax>
+        <xmin>1618</xmin>
+        <xmax>1619</xmax>
+        <ymin>494</ymin>
+        <ymax>909</ymax>
     </rect>
-    <bool name="GUIEnabled">1</bool>
+    <bool name="GUIEnabled">0</bool>
     <int name="MaxPatchCount">10</int>
     <int name="MaxFramesPerPatch">50</int>
     <bool name="AutoPilotAvailable">0</bool>

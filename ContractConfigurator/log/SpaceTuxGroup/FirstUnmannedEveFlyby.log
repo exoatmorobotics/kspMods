@@ -104,12 +104,12 @@ FirstUnmannedEveFlyby
     targetBody = Eve (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 19354.56, deterministic = False
+    rewardFunds = 20325.1, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9838.701, deterministic = False
+    advanceFunds = 9568.131, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5731

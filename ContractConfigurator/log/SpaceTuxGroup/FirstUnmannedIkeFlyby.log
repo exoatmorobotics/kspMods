@@ -104,12 +104,12 @@ FirstUnmannedIkeFlyby
     targetBody = Ike (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 18354.93, deterministic = False
+    rewardFunds = 19351.82, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9534.826, deterministic = False
+    advanceFunds = 9104.494, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5761

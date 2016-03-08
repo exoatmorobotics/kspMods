@@ -122,12 +122,12 @@ PolarBopOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 30126.99, deterministic = False
+    rewardFunds = 30978.88, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10521.12, deterministic = False
+    advanceFunds = 10928.17, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5824
@@ -198,6 +198,7 @@ PolarBopOrbitalSat
 		    completedMessage = null, deterministic = True
 		    index = 0, deterministic = True
 		    deviationWindow = 3, deterministic = True
+		    displayNotes = True, deterministic = True
 		
 	PolarOrbitGenerator
 	    type = OrbitGenerator, deterministic = True

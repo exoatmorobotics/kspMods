@@ -150,12 +150,12 @@ TargetedEveImpact
     targetBody = Eve (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28487.4, deterministic = False
+    rewardFunds = 31393.2, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10721.87, deterministic = False
+    advanceFunds = 10100.69, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5733

@@ -131,12 +131,12 @@ FirstUnmannedBopLanding
     targetBody = Bop (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 38986.06, deterministic = False
+    rewardFunds = 40524.22, deterministic = False
     rewardReputation = 20, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 19354.83, deterministic = False
+    advanceFunds = 20369.16, deterministic = False
     weight = 1, deterministic = True
 
 	VPG_5826

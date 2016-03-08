@@ -13,8 +13,8 @@
     <string name="pageConics">KeypadEnter</string>
     <string name="hideWindow">P</string>
     <string name="addWidget">O</string>
-    <int name="mainWindowX">1382</int>
-    <int name="mainWindowY">100</int>
+    <int name="mainWindowX">29</int>
+    <int name="mainWindowY">203</int>
     <int name="optWindowX">590</int>
     <int name="optWindowY">485</int>
     <int name="keyWindowX">382</int>

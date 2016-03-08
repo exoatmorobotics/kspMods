@@ -111,12 +111,12 @@ FirstVallOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28485.66, deterministic = False
+    rewardFunds = 29768.17, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10025.47, deterministic = False
+    advanceFunds = 9426.673, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5814

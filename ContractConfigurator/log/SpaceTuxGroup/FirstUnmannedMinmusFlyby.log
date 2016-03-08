@@ -104,12 +104,12 @@ FirstUnmannedMinmusFlyby
     targetBody = Minmus (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 21088.61, deterministic = False
+    rewardFunds = 21233.13, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10441.13, deterministic = False
+    advanceFunds = 9883.552, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5711

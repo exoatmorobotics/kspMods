@@ -117,12 +117,12 @@ FirstUnmannedBopFlyby
     targetBody = Bop (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 18217.13, deterministic = False
+    rewardFunds = 19282.94, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9137.35, deterministic = False
+    advanceFunds = 9332.335, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5821

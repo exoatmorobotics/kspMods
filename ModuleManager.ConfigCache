@@ -1,4 +1,4 @@
-patchedNodeCount = 2070
+patchedNodeCount = 2082
 catEatenCount = 0
 UrlConfig
 {
@@ -6001,6 +6001,14 @@ UrlConfig
 		{
 			name = AnomalyScan
 		}
+		EXPERIMENT
+		{
+			name = dmbathymetryscan
+		}
+		EXPERIMENT
+		{
+			name = dmseismicHammer
+		}
 		MODULE
 		{
 			name = DMModuleScienceAnimate
@@ -6040,6 +6048,14 @@ UrlConfig
 		MODULE
 		{
 			name = DMXRayDiffract
+		}
+		MODULE
+		{
+			name = DMBathymetry
+		}
+		MODULE
+		{
+			name = DMSeismicSensor
 		}
 	}
 }
@@ -38308,6 +38324,15 @@ UrlConfig
 			maxVolume = 300
 			openSndPath = KIS/Sounds/inventoryOpen
 			closeSndPath = KIS/Sounds/inventoryClose
+			slotHotkeysEnabled = true
+			slotHotkey1 = Alpha1
+			slotHotkey2 = Alpha2
+			slotHotkey3 = Alpha3
+			slotHotkey4 = Alpha4
+			slotHotkey5 = Alpha5
+			slotHotkey6 = Alpha6
+			slotHotkey7 = Alpha7
+			slotHotkey8 = Alpha8
 		}
 		EvaPickup
 		{
@@ -38669,7 +38694,7 @@ UrlConfig
 		subcategory = 0
 		title = ISC-6K Container
 		manufacturer = KIS
-		description = The ISC-6K is a small in-line container designed to be accessible from the inside of a ship and remove the need to go EVA to access spare hardware. However as it is pressurized, the IMC-250 has an extra mass compared to other containers and doesn't have dedicated mount.
+		description = The ISC-6K is a small in-line container designed to be accessible from the inside of a ship and remove the need to go EVA to access spare hardware. However as it is pressurized, the ISC-6K has an extra mass compared to other containers and doesn't have dedicated mount.
 		attachRules = 1,0,1,1,1
 		mass = 0.5
 		dragModelType = default
@@ -38911,6 +38936,405 @@ UrlConfig
 			equipBoneName = bn_jetpack01
 			equipPos = (0.06,0.04,-0.09)
 			equipDir = (10,0,0)
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_basketball
+	type = PART
+	parentUrl = KIS/Parts/fun_basketball/part
+	url = KIS/Parts/fun_basketball/part/KIS_basketball
+	PART
+	{
+		name = KIS_basketball
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, -0.09297, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = fieldScience
+		entryCost = 150
+		cost = 50
+		category = none
+		subcategory = 0
+		title = Basket Ball
+		manufacturer = KIS
+		description = A great tool to try gravitationals experimentations.
+		attachRules = 0,0,0,0,0
+		mass = 0.001
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItem
+			shortcutKeyAction = equip
+			equipable = true
+			equipSlot = leftHand
+			equipMeshName = body01
+			equipBoneName = bn_r_mid_a01
+			equipPos = (0.08,0.07,0)
+			equipDir = (90,0,0)
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_beer
+	type = PART
+	parentUrl = KIS/Parts/fun_beer/part
+	url = KIS/Parts/fun_beer/part/KIS_beer
+	PART
+	{
+		name = KIS_beer
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_stack_bottom = 0.0, -0.096678, 0.0, 0.0, 1.0, 0.0
+		node_attach = 0.01942, -0.047706, 0.0, 1.0, 0.0, 0.0, 1
+		TechRequired = spaceExploration
+		entryCost = 10
+		cost = 4
+		category = none
+		subcategory = 0
+		title = Bub's Beer
+		manufacturer = KIS
+		description = A tasty and affordable beer. Every thougfull space agency manager should definitly offers some to their grateful crew to keep moral and motivation high.
+		attachRules = 0,0,0,0,0
+		mass = 0.001
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItemFood
+			shortcutKeyAction = equip
+			usableFromEva = true
+			usableFromContainer = false
+			usableFromPod = false
+			usableFromEditor = false
+			equipable = true
+			equipSlot = leftHand
+			useName = Drink
+			stackable = true
+			equipMeshName = body01
+			equipBoneName = bn_l_mid_a01
+			equipPos = (0,-0.04,0.05)
+			equipDir = (90,0,0)
+			moveSndPath = KIS/Sounds/itemMoveBottle
+			eatSndPath = KIS/Sounds/foodDrink
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_ghettoblaster
+	type = PART
+	parentUrl = KIS/Parts/fun_ghettoblaster/part
+	url = KIS/Parts/fun_ghettoblaster/part/KIS_ghettoblaster
+	PART
+	{
+		name = KIS_ghettoblaster
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_stack_bottom = 0.0, -0.06662, 0.0, 0.0, 1.0, 0.0
+		node_attach = -0.059292, 0.0, 0.0, 0.0, 0.0, -1.0, 1
+		TechRequired = electrics
+		entryCost = 150
+		cost = 50
+		category = none
+		subcategory = 0
+		title = Ghetto Blaster
+		manufacturer = KIS
+		description = Killing time in long space travel or waiting rescues are not easy tasks. The Boombox (TM) should keep our kerbonauts busy.
+		attachRules = 0,1,0,0,0
+		mass = 0.008
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItemSoundPlayer
+			shortcutKeyAction = equip
+			usableFromEva = true
+			usableFromContainer = true
+			usableFromPod = true
+			usableFromEditor = false
+			equipable = true
+			equipSlot = leftHand
+			useName = Play
+			equipMeshName = body01
+			equipBoneName = bn_l_mid_a01
+			equipPos = (-0.12,-0.02,0)
+			equipDir = (90,90,0)
+			loop = true
+			sndPath = KIS/Parts/fun_ghettoblaster/ghettoBlaster1
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_golfclub
+	type = PART
+	parentUrl = KIS/Parts/fun_golfclub/part
+	url = KIS/Parts/fun_golfclub/part/KIS_golfclub
+	PART
+	{
+		name = KIS_golfclub
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_attach = -0.010281, 0, 0.0, 0.0, 0.0, -1.0, 1
+		TechRequired = fieldScience
+		entryCost = 360
+		cost = 120
+		category = none
+		subcategory = 0
+		title = Alpard Kerman's Golf club
+		manufacturer = KIS
+		description = Another unapproved gravity experimentation is to play Mun Golf.
+		attachRules = 0,0,0,0,0
+		mass = 0.002
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItem
+			shortcutKeyAction = equip
+			equipable = true
+			equipSlot = leftHand
+			useName = Swing
+			equipMeshName = body01
+			equipBoneName = bn_r_mid_b01
+			equipPos = (0,0.13,-0.28)
+			equipDir = (180,270,270)
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_guitar
+	type = PART
+	parentUrl = KIS/Parts/fun_guitar/part
+	url = KIS/Parts/fun_guitar/part/KIS_guitar
+	PART
+	{
+		name = KIS_guitar
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_attach = -0.088087, 0.0, 0.0, 0.0, 0.0, 1.0, 1
+		TechRequired = advExploration
+		entryCost = 360
+		cost = 120
+		category = none
+		subcategory = 0
+		title = Davwie Kerman's Guitar
+		manufacturer = KIS
+		description = Space oddities sometime needs a guitar cover.
+		attachRules = 0,0,0,0,0
+		mass = 0.002
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItemSoundPlayer
+			shortcutKeyAction = equip
+			equipable = true
+			equipSlot = rightHand
+			useName = Play
+			equipMeshName = body01
+			equipBoneName = bn_spA01
+			equipPos = (-0.05,-0.23,-0.07)
+			equipDir = (270,10,0)
+			sndPath = KIS/Parts/fun_guitar/guitar
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Scrap Part
+			ResourceName = Recyclables
+			Efficiency = .8
+		}
+		MODULE
+		{
+			name = USI_ModuleRecycleablePart
+			Menu = Salvage Part
+			ResourceName = SpecializedParts
+			Efficiency = .4
+		}
+		MODULE
+		{
+			name = KOSNameTag
+		}
+	}
+}
+UrlConfig
+{
+	name = KIS_taco
+	type = PART
+	parentUrl = KIS/Parts/fun_taco/part
+	url = KIS/Parts/fun_taco/part/KIS_taco
+	PART
+	{
+		name = KIS_taco
+		module = Part
+		mesh = model.mu
+		scale = 1
+		node_attach = 0, -0.012923, 0.0, 0.0, -1.0, 0.0, 1
+		TechRequired = advExploration
+		entryCost = 15
+		cost = 5
+		category = none
+		subcategory = 0
+		title = Chradfield Kerman's Taco
+		manufacturer = KIS
+		description = Beef, vegetables and hot sauce in a tortilla. Everything our kerbonauts need for a zero G meals.
+		attachRules = 0,0,0,0,0
+		mass = 0.001
+		dragModelType = default
+		maximum_drag = 0.2
+		minimum_drag = 0.3
+		angularDrag = 2
+		crashTolerance = 6
+		maxTemp = 2900
+		breakingForce = 1
+		breakingTorque = 1
+		MODULE
+		{
+			name = ModuleKISItemFood
+			shortcutKeyAction = equip
+			usableFromEva = true
+			usableFromContainer = false
+			usableFromPod = false
+			usableFromEditor = false
+			equipSlot = leftHand
+			useName = Eat
+			stackable = true
+			equipable = true
+			equipMeshName = body01
+			equipBoneName = bn_l_mid_a01
+			equipPos = (-0.05,-0.03,0)
+			equipDir = (0,180,0)
+			eatSndPath = KIS/Sounds/foodEat
 		}
 		MODULE
 		{
@@ -42496,118 +42920,6 @@ UrlConfig
 				scale = 1
 				max_size = 0
 			}
-		}
-	}
-}
-UrlConfig
-{
-	name = protractor_plain
-	type = PART
-	parentUrl = Protractor/Parts/protractor - plain/part
-	url = Protractor/Parts/protractor - plain/part/protractor_plain
-	PART
-	{
-		name = protractor_plain
-		module = Part
-		author = Enigma, model by Shanakin
-		mesh = calc.dae
-		texture = calc.png
-		scale = 1
-		node_attach = 0.0, 0.0, -0.01477, 0, 0.0, 0.0
-		TechRequired = flightControl
-		entryCost = 4400
-		cost = 400
-		category = Science
-		subcategory = 0
-		title = Protractor
-		manufacturer = Enigma
-		description = Tired of holding a protractor up to your screen? Use this instead!
-		attachRules = 0,1,0,0,1
-		mass = 0.00001
-		dragModelType = default
-		maximum_drag = 0.00001
-		minimum_drag = 0.00001
-		angularDrag = 0.00001
-		crashTolerance = 20
-		maxTemp = 3200
-		physicalSignificance = 0
-		MODULE
-		{
-			name = ProtractorModule
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = KOSNameTag
-		}
-	}
-}
-UrlConfig
-{
-	name = protractor_tape
-	type = PART
-	parentUrl = Protractor/Parts/protractor - tape/part
-	url = Protractor/Parts/protractor - tape/part/protractor_tape
-	PART
-	{
-		name = protractor_tape
-		module = Part
-		author = Enigma, model by Shanakin
-		mesh = calc.dae
-		texture = calc.png
-		scale = 1
-		node_attach = 0.0, 0.0, -0.01477, 0, 0.0, 0.0
-		TechRequired = flightControl
-		entryCost = 4400
-		cost = 400
-		category = Science
-		subcategory = 0
-		title = Protractor
-		manufacturer = Enigma
-		description = Tired of holding a protractor up to your screen? Use this instead! Now with tape to keep it from flying off!
-		attachRules = 0,1,0,0,1
-		mass = 0.00001
-		dragModelType = default
-		maximum_drag = 0.00001
-		minimum_drag = 0.00001
-		angularDrag = 0.00001
-		crashTolerance = 20
-		maxTemp = 3200
-		physicalSignificance = 0
-		MODULE
-		{
-			name = ProtractorModule
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Scrap Part
-			ResourceName = Recyclables
-			Efficiency = .8
-		}
-		MODULE
-		{
-			name = USI_ModuleRecycleablePart
-			Menu = Salvage Part
-			ResourceName = SpecializedParts
-			Efficiency = .4
-		}
-		MODULE
-		{
-			name = KOSNameTag
 		}
 	}
 }
@@ -96365,9 +96677,9 @@ UrlConfig
 	url = TriggerTech/KerbalAlarmClock/settings/Settings
 	Settings
 	{
-		WindowVisible = False
+		WindowVisible = True
 		WindowMinimized = False
-		WindowVisible_SpaceCenter = False
+		WindowVisible_SpaceCenter = True
 		WindowMinimized_SpaceCenter = False
 		WindowVisible_TrackingStation = True
 		WindowMinimized_TrackingStation = False
@@ -96466,22 +96778,22 @@ UrlConfig
 		RSSShowCalendarToggled = False
 		AppLauncherSetTrueTimeOut = 6
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2016-02-29
-		VersionCheckDate_SuccessStored = 2016-02-29
+		VersionCheckDate_AttemptStored = 2016-03-07
+		VersionCheckDate_SuccessStored = 2016-03-07
 		VersionWeb = 3.5.0.0
 		WindowPositionStored
 		{
-			x = 345
-			y = 624
+			x = 1157
+			y = 53
 			width = 340
-			height = 111
+			height = 149
 		}
 		WindowPos_SpaceCenterStored
 		{
 			x = 3
 			y = 36
 			width = 340
-			height = 111
+			height = 149
 		}
 		WindowPos_TrackingStationStored
 		{
@@ -96713,8 +97025,8 @@ UrlConfig
 		ClickThroughProtect_Editor = True
 		ClickThroughProtect_Flight = True
 		DailyVersionCheck = True
-		VersionCheckDate_AttemptStored = 2016-02-29
-		VersionCheckDate_SuccessStored = 2016-02-29
+		VersionCheckDate_AttemptStored = 2016-03-07
+		VersionCheckDate_SuccessStored = 2016-03-07
 		VersionWeb = 1.4.0.0
 	}
 }

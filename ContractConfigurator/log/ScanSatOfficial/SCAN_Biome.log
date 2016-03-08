@@ -87,34 +87,34 @@ SCAN_Biome
     ScanSatOfficial:p3Bodies = [], deterministic = False
     name = SCAN_Biome, deterministic = True
     trace = False, deterministic = True
-    title = Do a Biome Scan of the Mun, deterministic = False
+    title = Do a Biome Scan of Kerbin, deterministic = False
     tag = , deterministic = True
     description = null, deterministic = True
     topic = Science, deterministic = True
     subject = Kerbal, deterministic = True
     motivation = Scanning, deterministic = True
     notes = Scanning can take place while the vessel is not loaded., deterministic = True
-    synopsis = Perform a MultiSpectral scan of the Mun, deterministic = False
+    synopsis = Perform a MultiSpectral scan of Kerbin, deterministic = False
     completedMessage = Stunning, through the advances with this scanner we have identified several different biomes for further study., deterministic = True
     agent = Contracts.Agents.Agent, deterministic = True
     minExpiry = 1, deterministic = True
     maxExpiry = 7, deterministic = True
-    deadline = 843.3209, deterministic = False
+    deadline = 338.8208, deterministic = False
     cancellable = True, deterministic = True
     declinable = True, deterministic = True
     autoAccept = False, deterministic = True
     prestige = [ Trivial, Significant ], deterministic = True
-    targetBody = Mun (CelestialBody), deterministic = False
+    targetBody = Kerbin (CelestialBody), deterministic = False
     maxCompletions = 0, deterministic = True
     maxSimultaneous = 0, deterministic = True
-    rewardFunds = 59169.51, deterministic = False
+    rewardFunds = 41896.17, deterministic = False
     rewardReputation = 1, deterministic = True
     rewardScience = 0, deterministic = True
-    failureFunds = 1420.915, deterministic = False
+    failureFunds = 8406.103, deterministic = False
     failureReputation = 1, deterministic = True
-    advanceFunds = 2265.831, deterministic = False
+    advanceFunds = 6645.738, deterministic = False
     weight = 1, deterministic = True
-    targetBody2 = Mun (CelestialBody), deterministic = False
+    targetBody2 = Kerbin (CelestialBody), deterministic = False
     diffModifier2 = 0, deterministic = False
     scanRequired2 = 75, deterministic = False
     minScan2 = 70, deterministic = False
@@ -122,7 +122,7 @@ SCAN_Biome
 	SCANsatCoverage
 	    type = SCANsatCoverage, deterministic = True
 	    name = SCANsatCoverage, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    rewardFunds = 0, deterministic = True
 	    rewardReputation = 0, deterministic = True
 	    rewardScience = 0, deterministic = True
@@ -142,7 +142,7 @@ SCAN_Biome
 	SCANsatCoverage_1
 	    type = SCANsatCoverage, deterministic = True
 	    name = SCANsatCoverage, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	    minCoverage = 0, deterministic = True
@@ -160,7 +160,7 @@ SCAN_Biome
 	PartUnlocked
 	    type = PartUnlocked, deterministic = True
 	    name = PartUnlocked, deterministic = True
-	    targetBody = Mun (CelestialBody), deterministic = False
+	    targetBody = Kerbin (CelestialBody), deterministic = False
 	    checkOnActiveContract = False, deterministic = True
 	    invertRequirement = False, deterministic = True
 	    part = [ SCANsat.Scanner24 ], deterministic = False

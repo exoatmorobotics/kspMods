@@ -97,12 +97,12 @@ FirstMunOrbitalSat
     targetBody = Kerbin (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 28542.99, deterministic = False
+    rewardFunds = 29181.88, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10052.53, deterministic = False
+    advanceFunds = 10984.01, deterministic = False
     weight = 10, deterministic = True
 
 	VPG5704

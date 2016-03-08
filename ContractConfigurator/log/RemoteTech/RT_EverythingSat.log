@@ -1576,6 +1576,7 @@ RT_EverythingSat
 			    completedMessage = null, deterministic = True
 			    index = 0, deterministic = True
 			    deviationWindow = 1, deterministic = True
+			    displayNotes = True, deterministic = True
 			
 			VisitWaypoint1
 			    type = VisitWaypoint, deterministic = True

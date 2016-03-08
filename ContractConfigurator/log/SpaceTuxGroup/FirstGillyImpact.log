@@ -118,12 +118,12 @@ FirstGillyImpact
     targetBody = Gilly (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 20498.49, deterministic = False
+    rewardFunds = 19249.13, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10572.5, deterministic = False
+    advanceFunds = 9678.349, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5742

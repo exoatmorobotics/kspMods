@@ -117,12 +117,12 @@ FirstUnmannedPolFlyby
     targetBody = Pol (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 19996.58, deterministic = False
+    rewardFunds = 20268, deterministic = False
     rewardReputation = 5, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 10118.08, deterministic = False
+    advanceFunds = 10233.71, deterministic = False
     weight = 1, deterministic = True
 
 	Sequence5831

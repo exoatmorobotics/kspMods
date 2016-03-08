@@ -131,12 +131,12 @@ FirstPolImpact
     targetBody = Pol (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 21915.37, deterministic = False
+    rewardFunds = 21631.67, deterministic = False
     rewardReputation = 10, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9346.107, deterministic = False
+    advanceFunds = 9420.969, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5832

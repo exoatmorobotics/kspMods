@@ -163,12 +163,12 @@ TargetedVallImpact
     targetBody = Vall (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 31989.44, deterministic = False
+    rewardFunds = 28369.3, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9084.579, deterministic = False
+    advanceFunds = 9947.047, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5813

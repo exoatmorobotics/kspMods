@@ -150,12 +150,12 @@ TargetedDresImpact
     targetBody = Dres (CelestialBody), deterministic = True
     maxCompletions = 1, deterministic = True
     maxSimultaneous = 1, deterministic = True
-    rewardFunds = 30271.65, deterministic = False
+    rewardFunds = 29844.52, deterministic = False
     rewardReputation = 15, deterministic = True
     rewardScience = 25, deterministic = True
     failureFunds = 0, deterministic = True
     failureReputation = 0, deterministic = True
-    advanceFunds = 9953.174, deterministic = False
+    advanceFunds = 9892.473, deterministic = False
     weight = 1, deterministic = True
 
 	VPG5773
